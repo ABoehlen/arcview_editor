@@ -1,0 +1,70 @@
+' Subroutine checks if an edit session is running on the proper geometry type,
+' and if there is a selection, if necessary
+' 15.10.2022, A. Boehlen
+'###############################
+
+'# local variables
+theTheme =  Self.Get(0) ' the editable theme
+geometry =  Self.Get(1) ' "point", "polyline", "polygon", "polyline-or-polygon" or "point-or-polyline-or-polygon"
+selection = Self.Get(2) ' "true" (selection is necessary) or "false" (no selection required)
+selCount =  Self.Get(3) ' number of features that have to be selected
+                        ' a "number" means, exactly this count, a "number+" means, at least this count
+                        
+msgBoxGeom =  "Please choose a " + geometry + " theme."
+msgBoxGeomT = "Wrong Geometry Type"
+msgBoxSelT =  "Wrong Selection Count"
+
+
+'# check if an edit session is running
+if (theTheme = nil) then
+  MsgBox.Info("Start Editing a " + geometry + " theme.","No Theme in Edit Mode")
+  return nil
+end
+
+
+'# check the geometry type
+fldShape = theTheme.GetFTab.FindField("shape")
+if (geometry = "point") then
+  if (fldShape.GetType <> #FIELD_SHAPEPOINT) then
+    MsgBox.Info(msgBoxGeom, msgBoxGeomT)
+    return nil
+  end
+elseif (geometry = "polyline") then
+  if (fldShape.GetType <> #FIELD_SHAPELINE) then
+    MsgBox.Info(msgBoxGeom, msgBoxGeomT)
+    return nil
+  end
+elseif (geometry = "polygon") then
+  if (fldShape.GetType <> #FIELD_SHAPEPOLY) then
+    MsgBox.Info(msgBoxGeom, msgBoxGeomT)
+    return nil
+  end
+elseif (geometry = "polyline-or-polygon") then
+  if (fldShape.GetType = #FIELD_SHAPEPOINT) then
+    MsgBox.Info(msgBoxGeom, msgBoxGeomT)
+    return nil
+  end
+end
+
+
+'# check the selection
+if (selection = "true") then
+  if (selCount.Contains("+")) then
+    selCount = selCount.AsTokens("+")
+    if (theTheme.GetFTab.GetSelection.Count < selCount.Get(0).AsNumber) then
+      MsgBox.Info("Please select at least " + selCount.Get(0) + " features.",msgBoxSelT)
+      return nil
+    end
+  else
+    if (theTheme.GetFTab.GetSelection.Count <> selCount.AsNumber) then
+      MsgBox.Info("Please select " + selCount.AsString + " features.",msgBoxSelT)
+      return nil
+    end
+  end
+end
+
+
+'# return 1 if all checks are OK
+return 1
+
+

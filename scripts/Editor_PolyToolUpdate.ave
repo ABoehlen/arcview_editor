@@ -1,0 +1,14 @@
+' update script for the built-in function View.PolyTool
+' 20.12.2021, A. Boehlen
+'###############################
+
+theView = av.GetActiveDoc
+theTheme = theView.GetEditableTheme
+
+if (theTheme = nil) then
+  SELF.SetEnabled(TRUE) 
+else
+  SELF.SetEnabled(theTheme.GetFTab.FindField("Shape").GetType = #FIELD_SHAPEPOLY)
+end
+ 
+

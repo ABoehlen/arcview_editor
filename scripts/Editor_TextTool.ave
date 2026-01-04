@@ -1,0 +1,50 @@
+' uses the built-in function View.TextTool
+' 27.01.2023, A. Boehlen
+'###############################
+
+CPC = av.FindDialog("Graphic.Label Defaults")
+IconList = CPC.FindByName("CalloutIcons")
+thePrefs = IconList.GetObjectTag.Get("Ttool1")
+
+      '(0) Font Family    (String) 
+      '(1) Font Style     (String)
+      '(2) Font Size      (Number)
+      '(3) Font Color     (String)
+      '(10) UseDefFont    (Boolean)
+      
+if (_defaultValues = nil) then
+  MsgBox.Warning("No default values defined." +NL+ "Please define them using the button 'D'","No default values")
+  return nil
+end
+      
+thePrefs.Set(0, _defaultValues.Get("schriftart"))
+thePrefs.Set(1, _defaultValues.Get("schriftschnitt"))
+thePrefs.Set(2, _defaultValues.Get("schriftgroesse_karte"))
+
+CFont =      thePrefs.Get(0)
+CStyle =     thePrefs.Get(1)
+CSize =      thePrefs.Get(2)
+UseDef =     thePrefs.Get(10)
+
+if (thePrefs.Get(3) = "Unnamed Color") then
+  CColor = av.GetSymbolwin.ReturnCurrentSymbol(#SYMBOL_TEXT).Clone.GetColor
+else 
+  CColor = av.Run("View.Return Color",thePrefs.Get(3))
+end
+
+theView = av.GetActiveDoc
+if (theView.GetGraphics.EditText.Not) then
+  pt = theView.GetDisplay.ReturnUserPoint
+  t = GraphicText.Make("", pt)
+  t.SetDisplay(theView.GetDisplay)
+  theView.GetDisplay.HookupSymbol(t.GetSymbol)
+  theView.GetGraphics.UnselectAll
+  t.SetSelected(TRUE)
+  if (t.EditText) then
+    theView.GetGraphics.Add(t)
+  end
+  t.GetSymbol.SetFont(Font.make(Cfont,CStyle))
+  t.GetSymbol.SetSize(CSize)
+  t.GetSymbol.SetColor(CColor)
+ av.GetProject.SetModified(true)
+end

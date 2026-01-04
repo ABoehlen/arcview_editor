@@ -1,0 +1,23 @@
+' update script for the built-in function View.SelectToEdit
+' 20.12.2021, A. Boehlen
+'###############################
+
+theView = av.GetActiveDoc
+theTheme = theView.GetEditableTheme
+
+if (theTheme <> nil) then
+  theField = theTheme.GetFTab.FindField("Shape")
+  theType = theField.GetType
+  if (theType <> #FIELD_SHAPEPOINT) then
+    SELF.SetEnabled(true)
+    return nil
+  end
+end
+           
+theGraphics = theView.GetGraphics
+if (theGraphics.Count > 0) then
+  SELF.SetEnabled(true)
+  return nil
+end
+              
+SELF.SetEnabled(false)

@@ -1,0 +1,13 @@
+' update script for the built-in function View.SplitTool
+' 20.12.2021, A. Boehlen
+'###############################
+
+theView = av.GetActiveDoc
+theTheme = theView.GetEditableTheme
+
+if (theTheme = nil) then
+  SELF.SetEnabled(False) 
+else
+  theType = theTheme.GetFTab.FindField("Shape").GetType
+  SELF.SetEnabled(theType = #FIELD_SHAPEPOLY)
+end  

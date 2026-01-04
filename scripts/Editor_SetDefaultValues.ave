@@ -1,0 +1,46 @@
+'##############################################################################
+'#
+'# Filename:     Editor_SetDefaultValues.ave
+'# Author:       Adrian Boehlen
+'# Date:         31.01.2023
+'# Version:      1.2
+'#
+'# Purpose:      liest Defaultwerte aus default_values.dbf ein und speichert
+'#               sie im globalen Dictionary _defaultValues
+'#
+'#               wird auch in den LayoutTool verwendet
+'#
+'##############################################################################
+
+if (_defaultValues = nil) then
+  theVTab = av.Run("Editor.SubReadTable", {"Select Default Values Table"})
+else
+  return nil
+end
+
+if (theVTab = nil) then
+  MsgBox.Warning("No default values defined. Use the button 'D' to define them later.", "No default values")
+  return nil
+end
+
+theFields = theVTab.GetFields
+
+_defaultValues = Dictionary.Make(2)
+
+for each rec in theVTab
+  for each feld in theFields
+    if (feld.AsString = "Key") then
+      theKey = theVTab.ReturnValue(feld, rec)
+    elseif (feld.AsString = "Value") then
+      theValue = theVTab.ReturnValue(feld, rec)
+      if (theValue.IsNumber) then
+        theValue = theValue.AsNumber
+      end
+    else
+      MsgBox.Error("Wrong table structure. Please select the default values table.", "")
+      return nil
+    end
+  end
+  _defaultValues.Add(theKey, theValue)
+end
+

@@ -1,0 +1,17 @@
+' uses the built-in function View.SelectToEdit
+' 20.12.2021, A. Boehlen
+'###############################
+
+theView = av.GetActiveDoc
+theTheme = theView.GetEditableTheme
+
+if (theTheme = nil) then
+  MsgBox.Info("Start an Edit Session.","No Theme in Edit Mode")
+  return nil
+end
+
+theTheme.GetFTab.BeginTransaction
+theTheme.SelectToEdit
+theTheme.GetFTab.EndTransaction
+av.GetProject.SetModified(true)
+

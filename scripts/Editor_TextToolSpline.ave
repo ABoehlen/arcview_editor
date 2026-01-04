@@ -1,0 +1,52 @@
+' uses the built-in function View.SplineTextTool
+' 27.01.2023, A. Boehlen
+'###############################
+
+
+CPC = av.FindDialog("Graphic.Label Defaults")
+IconList = CPC.FindByName("CalloutIcons")
+thePrefs = IconList.GetObjectTag.Get("TTool6")
+
+if (_defaultValues = nil) then
+  MsgBox.Warning("No default values defined." +NL+ "Please define them using the button 'D'","No default values")
+  return nil
+end
+
+thePrefs.Set(0, _defaultValues.Get("schriftart"))
+thePrefs.Set(1, _defaultValues.Get("schriftschnitt"))
+thePrefs.Set(2, _defaultValues.Get("schriftgroesse_karte"))
+
+CFont =      thePrefs.Get(0)
+CStyle =     thePrefs.Get(1)
+CSize =      thePrefs.Get(2)
+UseDef =     thePrefs.Get(10)
+if (thePrefs.Get(3) = "Unnamed Color") then
+  CColor = av.GetSymbolwin.ReturnCurrentSymbol(#SYMBOL_TEXT).Clone.GetColor
+else 
+  CColor = av.Run("View.Return Color",thePrefs.Get(3))
+end
+
+theDoc = av.GetActiveDoc
+if (theDoc.Is(View) )then
+  theTheme = theDoc.GetEditableTheme
+  if (theTheme <> nil) then return nil end
+end
+if (theDoc.GetGraphics.EditText.Not) then
+
+  l = theDoc.ReturnUserPolyLine
+  if (l.IsNull) then return nil end
+  st = SplineText.Make("",l)
+  st.EditText
+  if (st.GetText <> "") then
+    theDoc.GetGraphics.UnselectAll
+    st.SetSelected(TRUE)
+    theDoc.GetGraphics.Add(st)
+  end
+  
+  av.GetProject.SetModified(true)
+  st.GetSymbol.SetFont(Font.Make(CFont,CStyle))
+  st.GetSymbol.SetSize(CSize)
+  st.GetSymbol.SetColor(CColor)
+  st.SetDisplay(theDoc.GetDisplay)
+end  
+

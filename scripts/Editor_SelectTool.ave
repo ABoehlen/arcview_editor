@@ -1,0 +1,12 @@
+' uses the built-in function View.SelectTool
+' 22.01.2023, A. Boehlen
+'###############################
+
+theView = av.GetActiveDoc
+
+if (theView.Is(view).Not) then
+  MsgBox.Warning("Start this tool from an active View.","")
+  return nil
+end
+
+theView.SetSelectMode(#GRAPHICS_SELECT_NORMAL)

@@ -1,0 +1,33 @@
+line1 = SELF.Get(0)
+line2 = SELF.Get(1)
+
+ptStartLine1 = line1.ReturnStart
+ptEndLine1   = line1.ReturnEnd
+
+ptStartLine2 = line2.ReturnStart
+ptEndLine2   = line2.ReturnEnd
+
+dx2 = ptEndLine2.GetX - ptStartLine2.GetX
+dy2 = ptEndLine2.GetY - ptStartLine2.GetY
+
+areaLeft  = ( dy2 * (ptStartLine2.GetX - ptStartLine1.GetX)) -
+            ( dx2 * (ptStartLine2.GetY - ptStartLine1.GetY))          
+areaRight = ( dy2 * (ptEndLine1.GetX - ptStartLine2.GetX)) -
+            ( dx2 * (ptEndLine1.GetY - ptStartLine2.GetY))
+ 
+           
+areaTotal = areaLeft + areaRight
+
+if (areaTotal <> 0) then
+  t = areaLeft / areaTotal
+  t1 = 1 - t  
+  x = (t1 * ptStartLine1.GetX) + (t * ptEndLine1.GetX)
+  y = (t1 * ptStartLine1.GetY) + (t * ptEndLine1.GetY)
+  return(x@y)
+else
+  ' 
+  ' not solvable!
+  '
+  return(-1)
+end
+

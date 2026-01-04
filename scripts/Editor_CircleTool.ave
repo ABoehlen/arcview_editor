@@ -1,0 +1,31 @@
+' uses the built-in script View.CircleTool
+' 20.12.2021, A. Boehlen
+'###############################
+
+theView = av.GetActiveDoc
+theTheme = theView.GetEditableTheme
+
+if (av.Run("Editor.SubCheckTheme", {theTheme, "polygon", "false", "0"}) = nil) then
+  return nil
+end
+
+c = theView.ReturnUserCircle
+if (c.IsNull) then
+  return nil
+else
+  theTheme.GetFTab.BeginTransaction
+  p = c.AsPolygon
+  thePrj = theView.GetProjection
+  if (thePrj.IsNull.Not) then
+    p = p.ReturnUnprojected(thePrj)
+  end
+  theField = theTheme.GetFTab.FindField("Shape")
+  rec = theTheme.GetFTab.AddRecord
+  theTheme.GetFTab.SetValue(theField, rec, p)
+  theTheme.GetFTab.GetSelection.ClearAll
+  theTheme.GetFTab.GetSelection.Set(rec)
+  theTheme.GetFTab.UpdateSelection
+  theTheme.GetFTab.EndTransaction
+  av.GetProject.SetModified(true)
+end
+

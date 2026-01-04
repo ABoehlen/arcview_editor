@@ -1,0 +1,48 @@
+' combines pointer and select tool
+' 22.01.2023, A. Boehlen
+'###############################
+
+theView = av.GetActiveDoc
+
+editThm = theView.GetEditableTheme
+
+if (editThm = nil) then
+  
+  theView.Select
+
+  r = theView.ReturnUserRect
+  theThemes = theView.GetActiveThemes 
+  if (r.IsNull) then 
+    p = theView.GetDisplay.ReturnUserPoint
+    if (System.IsShiftKeyDown) then
+      op = #VTAB_SELTYPE_XOR
+    else
+      op = #VTAB_SELTYPE_NEW
+    end
+    for each t in theThemes
+      if (t.CanSelect) then
+        t.SelectByPoint(p, op)
+      end
+    end
+  else
+    if (System.IsShiftKeyDown) then
+      op = #VTAB_SELTYPE_OR
+    else
+     op = #VTAB_SELTYPE_NEW
+    end
+    for each t in theThemes
+      if (t.CanSelect) then
+        t.SelectByRect(r, op)
+      end
+    end
+  end
+  
+
+else
+  editThm.GetFTab.BeginTransaction
+  editThm.Select
+  editThm.GetFTab.EndTransaction
+end
+
+av.GetProject.SetModified(true)
+

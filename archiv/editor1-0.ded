@@ -1,0 +1,1348 @@
+/3.2
+(ODB.1
+	Dependencies:	"$AVEXT/dialog.avx\n"
+	FirstRootClassName:	"DEd"
+	Roots:	2
+	Roots:	101
+	Roots:	105
+	Version:	32
+)
+
+(DEd.2
+	Name:	"Editor"
+	Creator:	"Adrian Böhlen"
+	CreationDate:	"Sam 06 Apr 2013 14:57:19 CEST"
+	Comments:	"Version 1.0"
+	GUIName:	"DialogEditor"
+	Win:	3
+	CSMgr:	4
+	DocExts:	6
+	DocExts:	7
+	Graphics:	8
+	Dpy:	47
+	Dialog:	50
+	DialogExtent:	100
+	Compiled:	1
+)
+
+(DocWin.3
+	Owner:	2
+	Open:	1
+	X:	295
+	Y:	159
+	W:	519
+	H:	295
+)
+
+(CSMgr.4
+	Client:	5
+)
+
+(CSClient.5
+	Client:	6
+	ReqName:	"ClientNfy"
+)
+
+(PanMgr.6
+	Doc:	2
+)
+
+(DocAct.7
+	Doc:	2
+)
+
+(GList.8
+	Child:	9
+	Child:	12
+	Child:	16
+	Child:	20
+	Child:	24
+	Child:	28
+	Child:	31
+	Child:	35
+	Child:	39
+	Child:	43
+	Dpy:	47
+	FormatNumb:	49
+)
+
+(GCtrl.9
+	Name:	"aControlPanel2"
+	Bounds:	10
+	ControlConstraints:	0x55
+	Control:	11
+	Editable:	1
+)
+
+(RectD.10
+	Left:	0.61458333333333
+	Top:	1.97916666666667
+	Right:	3.68750000000000
+	Bottom:	1.61458333333333
+)
+
+(CPanel.11
+	InternalName:	"aControlPanel2"
+	UseGraphicNfy:	1
+	Constraints:	0x55
+	VisibleBorder:	1
+	Listening:	1
+)
+
+(GCtrl.12
+	Name:	"StartEditing"
+	Bounds:	13
+	ControlConstraints:	0x55
+	Control:	14
+	Editable:	1
+)
+
+(RectD.13
+	Left:	0.68750000000000
+	Top:	1.91666666666667
+	Right:	0.93750000000000
+	Bottom:	1.66666666666667
+)
+
+(Butn.14
+	InternalName:	"StartEditing"
+	UseGraphicNfy:	1
+	Help:	"Starts or stops editing of shapefile//"
+	Icon:	15
+	Click:	"View.ToggleEditing"
+)
+
+(AVIcon.15
+	Name:	"start_editing2.bmp"
+	Data:	4e442049 6d616765 00010016 00170000 
+	Data:	0228d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 0000d1d1 d1d1d1d1 
+	Data:	d1d1d1d1 d1d1d1d1 d1d1d1d1 d1d1d1d1 
+	Data:	0000d3d3 d3d3d3d3 d3d3d3d3 d3d3d3d3 
+	Data:	d3d3d3d3 d3d3d3d3 0000d4d4 d4d4d4d4 
+	Data:	d4d4d4d4 d4d4d4d4 d4d4d4d4 d4d4d4d4 
+	Data:	0000d6d6 d6d6d600 0080d6d6 d6d6d6d6 
+	Data:	d6d6d6d6 d6d6d6d6 0000d8d8 d8d8d800 
+	Data:	00808080 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	0000d9d9 d9d9d980 80ffffff 0000d9d9 
+	Data:	d9d9d9d9 d9d9d9d9 0000dbdb dbdbdbdb 
+	Data:	80ffffff 008000db dbdbdbdb dbdbdbdb 
+	Data:	0000dcdc dcdcdcdc 80ffff00 00808000 
+	Data:	dcdcdcdc dcdcdcdc 0000dede dededede 
+	Data:	de0000ed ed008080 00dedede dededede 
+	Data:	0000e0e0 e0e0e0e0 e0007700 eded0080 
+	Data:	8000e0e0 e0e0e0e0 0000e1e1 e1e1e1e1 
+	Data:	e1e10077 00eded00 808000e1 e1e1e1e1 
+	Data:	0000e3e3 e3e3bfbf e3b0e360 bf00eded 
+	Data:	00808000 e3e3e3e3 0000e4e4 e4e4bfb7 
+	Data:	ecc0ecb7 607700ed ed000036 00e4e4e4 
+	Data:	0000e6e6 e6e6e6ea fee6fdec e6007700 
+	Data:	ed003636 3600e6e6 0000e8e8 e8e8aabf 
+	Data:	edfee6bf b7e80077 00363636 00e8e8e8 
+	Data:	0000e9e9 e9e9e9ea fee6fdec e9e9e900 
+	Data:	36363600 e9e9e9e9 0000ebeb ebebbfb7 
+	Data:	ecc0ecb7 bfebebeb 003600eb ebebebeb 
+	Data:	0000ecec ececbfbf ecb0ecbf bfececec 
+	Data:	ec00ecec ecececec 0000eeee eeeeeeee 
+	Data:	eeeeeeee eeeeeeee eeeeeeee eeeeeeee 
+	Data:	0000f0f0 f0f0f0f0 f0f0f0f0 f0f0f0f0 
+	Data:	f0f0f0f0 f0f0f0f0 0000f1f1 f1f1f1f1 
+	Data:	f1f1f1f1 f1f1f1f1 f1f1f1f1 f1f1f1f1 
+	Data:	0000f3f3 f3f3f3f3 f3f3f3f3 f3f3f3f3 
+	Data:	f3f3f3f3 f3f3f3f3 00000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(GCtrl.16
+	Name:	"Unselect"
+	Bounds:	17
+	ControlConstraints:	0x55
+	Control:	18
+	Editable:	1
+)
+
+(RectD.17
+	Left:	1.61458333333333
+	Top:	1.91666666666667
+	Right:	1.86458333333333
+	Bottom:	1.66666666666667
+)
+
+(Butn.18
+	InternalName:	"Unselect"
+	UseGraphicNfy:	1
+	Help:	"Clear selected features//"
+	HelpTopic:	" "
+	Icon:	19
+	Click:	"View.ClearSelect"
+)
+
+(AVIcon.19
+	Name:	"SelectNone"
+	Res:	"Icons.SelectNone"
+
+)
+
+(GCtrl.20
+	Name:	"Union"
+	Bounds:	21
+	ControlConstraints:	0x55
+	Control:	22
+	Editable:	1
+)
+
+(RectD.21
+	Left:	1.92708333333333
+	Top:	1.91666666666667
+	Right:	2.17708333333333
+	Bottom:	1.66666666666667
+)
+
+(Butn.22
+	InternalName:	"Union"
+	UseGraphicNfy:	1
+	Help:	"Merge polygons//"
+	Icon:	23
+	Click:	"View.UnionGraphics"
+)
+
+(AVIcon.23
+	Name:	"merge2.bmp"
+	Data:	4e442049 6d616765 00010013 00120000 
+	Data:	0168d4d4 d4d4d4d4 d4d4d4d4 d4d4d4d4 
+	Data:	d4d4d4d4 d400d6d6 80d6d6d6 d6d6d61b 
+	Data:	1b1b1b1b 1bd6d6d6 d600d8d8 d880d800 
+	Data:	0000d81b 36363636 1bd8d8d8 d800d9d9 
+	Data:	d9d980d9 0000d91b 36363636 1bd9d9d9 
+	Data:	d900dbdb dbdbdb00 db00db1b 36363636 
+	Data:	1b1b1b1b db00dcdc dcdc00dc 80dcdc1b 
+	Data:	36363636 3636361b dc00dede de00dede 
+	Data:	de80de1b 1b1b1b36 3636361b de00e0e0 
+	Data:	e0e0e0e0 e0e080e0 e0e01b36 3636361b 
+	Data:	e000e1e1 1b1b1b1b 1b1be180 e1e11b36 
+	Data:	3636361b e100e3e3 1bededed ed1be3e3 
+	Data:	80e31b1b 1b1b1b1b e300e4e4 1bededed 
+	Data:	ed1be4e4 e480e4e4 e4e4e4e4 e400e6e6 
+	Data:	1beded24 24240909 09e680e6 000000e6 
+	Data:	e600e8e8 1beded24 24241212 09e8e880 
+	Data:	e80000e8 e800e9e9 1b1b1b24 24241212 
+	Data:	09e9e9e9 00e900e9 e900ebeb ebebeb09 
+	Data:	12121212 09ebeb00 eb80ebeb eb00ecec 
+	Data:	ececec09 12121212 09ec00ec ecec80ec 
+	Data:	ec00eeee eeeeee09 09090909 09eeeeee 
+	Data:	eeeeee80 ee00f0f0 f0f0f0f0 f0f0f0f0 
+	Data:	f0f0f0f0 f0f0f0f0 f0000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(GCtrl.24
+	Name:	"Subtract"
+	Bounds:	25
+	ControlConstraints:	0x55
+	Control:	26
+	Editable:	1
+)
+
+(RectD.25
+	Left:	2.23958333333333
+	Top:	1.91666666666667
+	Right:	2.48958333333333
+	Bottom:	1.66666666666667
+)
+
+(Butn.26
+	InternalName:	"Subtract"
+	UseGraphicNfy:	1
+	Help:	"Subtracts one selected polygon from the other selected polygon//"
+	Icon:	27
+	Click:	"View.SubtractGraphics"
+)
+
+(AVIcon.27
+	Name:	"Reduce"
+	Res:	"Icons.Reduce"
+
+)
+
+(GCtrl.28
+	Name:	"Close"
+	Bounds:	29
+	ControlConstraints:	0x55
+	Control:	30
+	Editable:	1
+)
+
+(RectD.29
+	Left:	3.16666666666667
+	Top:	1.91666666666667
+	Right:	3.61458333333333
+	Bottom:	1.66666666666667
+)
+
+(LButn.30
+	InternalName:	"Close"
+	UseGraphicNfy:	1
+	Help:	"Close Editor Toolbar//"
+	Label:	"Close"
+	Click:	"Editor.close"
+)
+
+(GCtrl.31
+	Name:	"Select"
+	Bounds:	32
+	ControlConstraints:	0x55
+	Control:	33
+	Editable:	1
+)
+
+(RectD.32
+	Left:	1.00000000000000
+	Top:	1.91666666666667
+	Right:	1.25000000000000
+	Bottom:	1.66666666666667
+)
+
+(Tool.33
+	InternalName:	"Select"
+	UseGraphicNfy:	1
+	Help:	"Select Tool//"
+	HelpTopic:	"Pointer_tool"
+	Update:	"View.HasDataUpdate"
+	Icon:	34
+	Cursor:	"Cursors.Default"
+	Apply:	"View.Select"
+	Click:	"View.SelectTool"
+)
+
+(AVIcon.34
+	Name:	"Select"
+	Res:	"Icons.Select"
+
+)
+
+(GCtrl.35
+	Name:	"SelectToEdit"
+	Bounds:	36
+	ControlConstraints:	0x55
+	Control:	37
+	Editable:	1
+)
+
+(RectD.36
+	Left:	1.31250000000000
+	Top:	1.91666666666667
+	Right:	1.56250000000000
+	Bottom:	1.66666666666667
+)
+
+(Tool.37
+	InternalName:	"SelectToEdit"
+	UseGraphicNfy:	1
+	Help:	"Vertex Edit//"
+	HelpTopic:	"Vertex_Edit_tool"
+	Update:	"View.SelectToEditUpdate"
+	Icon:	38
+	Cursor:	"Cursors.SelectEdit"
+	Apply:	"View.SelectToEdit"
+	Click:	"View.SelectToEditTool"
+)
+
+(AVIcon.38
+	Name:	"SelectEdit"
+	Res:	"Icons.SelectEdit"
+
+)
+
+(GCtrl.39
+	Name:	"EditAttributes"
+	Bounds:	40
+	ControlConstraints:	0x55
+	Control:	41
+	Editable:	1
+)
+
+(RectD.40
+	Left:	2.85416666666667
+	Top:	1.91666666666667
+	Right:	3.10416666666667
+	Bottom:	1.66666666666667
+)
+
+(Tool.41
+	InternalName:	"EditAttributes"
+	UseGraphicNfy:	1
+	Help:	"Edit attributes//"
+	Icon:	42
+	Cursor:	"Cursors.Default"
+	Apply:	"Editor.CorrFeatureAttr"
+)
+
+(AVIcon.42
+	Name:	"FrameText2"
+	Res:	"Icons.FrameText2"
+
+)
+
+(GCtrl.43
+	Name:	"Combine"
+	Bounds:	44
+	ControlConstraints:	0x55
+	Control:	45
+	Editable:	1
+)
+
+(RectD.44
+	Left:	2.55208333333333
+	Top:	1.91666666666667
+	Right:	2.80208333333333
+	Bottom:	1.66666666666667
+)
+
+(Butn.45
+	InternalName:	"Combine"
+	UseGraphicNfy:	1
+	Help:	"Create hole//"
+	Icon:	46
+	Click:	"View.CombineGraphics"
+)
+
+(AVIcon.46
+	Name:	"create_hole.bmp"
+	Data:	4e442049 6d616765 00010016 00160000 
+	Data:	0210d1d1 d1d1d1d1 d1d1d1d1 d1d1d1d1 
+	Data:	d1d1d1d1 d1d1d1d1 0000d3d3 d3d3d3d3 
+	Data:	d3d3d3d3 d3d3d3d3 d3d3d3d3 d3d3d3d3 
+	Data:	0000d4d4 4e4e4e4e 4e4e4e4e 4e4e4e4e 
+	Data:	4e4e4e4e 4e4ed4d4 0000d6d6 4e4e4e4e 
+	Data:	4e4e4e4e 4e4e4e4e 4e4e4e4e 4e4ed6d6 
+	Data:	0000d8d8 4e4e4e4e 4e4e4e4e 4e4e4e4e 
+	Data:	4e4e4e4e 4e4ed8d8 0000d9d9 4e4e4e4e 
+	Data:	4e4e4e4e 4e4e4e4e 4e4e4e4e 4e4ed9d9 
+	Data:	0000dbdb 4e4e4e4e 4e4e4e4e 4e4e4e4e 
+	Data:	4e4e4e4e 4e4edbdb 0000dcdc 4e4e4e4e 
+	Data:	4effffff ffffffff ff4e4e4e 4e4edcdc 
+	Data:	0000dede 4e4e4e4e 4effffff ffffffff 
+	Data:	ff4e4e4e 4e4edede 0000e0e0 4e4e4e4e 
+	Data:	4effffff ffffffff ff4e4e4e 4e4ee0e0 
+	Data:	0000e1e1 4e4e4e4e 4effffff ffffffff 
+	Data:	ff4e4e4e 4e4ee1e1 0000e3e3 4e4e4e4e 
+	Data:	4effffff ffffffff ff4e4e4e 4e4ee3e3 
+	Data:	0000e4e4 4e4e4e4e 4effffff ffffffff 
+	Data:	ff4e4e4e 4e4ee4e4 0000e6e6 4e4e4e4e 
+	Data:	4effffff ffffffff ff4e4e4e 4e4ee6e6 
+	Data:	0000e8e8 4e4e4e4e 4effffff ffffffff 
+	Data:	ff4e4e4e 4e4ee8e8 0000e9e9 4e4e4e4e 
+	Data:	4e4e4e4e 4e4e4e4e 4e4e4e4e 4e4ee9e9 
+	Data:	0000ebeb 4e4e4e4e 4e4e4e4e 4e4e4e4e 
+	Data:	4e4e4e4e 4e4eebeb 0000ecec 4e4e4e4e 
+	Data:	4e4e4e4e 4e4e4e4e 4e4e4e4e 4e4eecec 
+	Data:	0000eeee 4e4e4e4e 4e4e4e4e 4e4e4e4e 
+	Data:	4e4e4e4e 4e4eeeee 0000f0f0 4e4e4e4e 
+	Data:	4e4e4e4e 4e4e4e4e 4e4e4e4e 4e4ef0f0 
+	Data:	0000f1f1 f1f1f1f1 f1f1f1f1 f1f1f1f1 
+	Data:	f1f1f1f1 f1f1f1f1 0000f3f3 f3f3f3f3 
+	Data:	f3f3f3f3 f3f3f3f3 f3f3f3f3 f3f3f3f3 
+	Data:	00000000 04000000 00000101 01000202 
+	Data:	02000303 03000404 04000505 05000606 
+	Data:	06000707 07000808 08000909 09000a0a 
+	Data:	0a000b0b 0b000c0c 0c000d0d 0d000e0e 
+	Data:	0e000f0f 0f001010 10001111 11001212 
+	Data:	12001313 13001414 14001515 15001616 
+	Data:	16001717 17001818 18001919 19001a1a 
+	Data:	1a001b1b 1b001c1c 1c001d1d 1d001e1e 
+	Data:	1e001f1f 1f002020 20002121 21002222 
+	Data:	22002323 23002424 24002525 25002626 
+	Data:	26002727 27002828 28002929 29002a2a 
+	Data:	2a002b2b 2b002c2c 2c002d2d 2d002e2e 
+	Data:	2e002f2f 2f003030 30003131 31003232 
+	Data:	32003333 33003434 34003535 35003636 
+	Data:	36003737 37003838 38003939 39003a3a 
+	Data:	3a003b3b 3b003c3c 3c003d3d 3d003e3e 
+	Data:	3e003f3f 3f004040 40004141 41004242 
+	Data:	42004343 43004444 44004545 45004646 
+	Data:	46004747 47004848 48004949 49004a4a 
+	Data:	4a004b4b 4b004c4c 4c004d4d 4d004e4e 
+	Data:	4e004f4f 4f005050 50005151 51005252 
+	Data:	52005353 53005454 54005555 55005656 
+	Data:	56005757 57005858 58005959 59005a5a 
+	Data:	5a005b5b 5b005c5c 5c005d5d 5d005e5e 
+	Data:	5e005f5f 5f006060 60006161 61006262 
+	Data:	62006363 63006464 64006565 65006666 
+	Data:	66006767 67006868 68006969 69006a6a 
+	Data:	6a006b6b 6b006c6c 6c006d6d 6d006e6e 
+	Data:	6e006f6f 6f007070 70007171 71007272 
+	Data:	72007373 73007474 74007575 75007676 
+	Data:	76007777 77007878 78007979 79007a7a 
+	Data:	7a007b7b 7b007c7c 7c007d7d 7d007e7e 
+	Data:	7e007f7f 7f008080 80008181 81008282 
+	Data:	82008383 83008484 84008585 85008686 
+	Data:	86008787 87008888 88008989 89008a8a 
+	Data:	8a008b8b 8b008c8c 8c008d8d 8d008e8e 
+	Data:	8e008f8f 8f009090 90009191 91009292 
+	Data:	92009393 93009494 94009595 95009696 
+	Data:	96009797 97009898 98009999 99009a9a 
+	Data:	9a009b9b 9b009c9c 9c009d9d 9d009e9e 
+	Data:	9e009f9f 9f00a0a0 a000a1a1 a100a2a2 
+	Data:	a200a3a3 a300a4a4 a400a5a5 a500a6a6 
+	Data:	a600a7a7 a700a8a8 a800a9a9 a900aaaa 
+	Data:	aa00abab ab00acac ac00adad ad00aeae 
+	Data:	ae00afaf af00b0b0 b000b1b1 b100b2b2 
+	Data:	b200b3b3 b300b4b4 b400b5b5 b500b6b6 
+	Data:	b600b7b7 b700b8b8 b800b9b9 b900baba 
+	Data:	ba00bbbb bb00bcbc bc00bdbd bd00bebe 
+	Data:	be00bfbf bf00c0c0 c000c1c1 c100c2c2 
+	Data:	c200c3c3 c300c4c4 c400c5c5 c500c6c6 
+	Data:	c600c7c7 c700c8c8 c800c9c9 c900caca 
+	Data:	ca00cbcb cb00cccc cc00cdcd cd00cece 
+	Data:	ce00cfcf cf00d0d0 d000d1d1 d100d2d2 
+	Data:	d200d3d3 d300d4d4 d400d5d5 d500d6d6 
+	Data:	d600d7d7 d700d8d8 d800d9d9 d900dada 
+	Data:	da00dbdb db00dcdc dc00dddd dd00dede 
+	Data:	de00dfdf df00e0e0 e000e1e1 e100e2e2 
+	Data:	e200e3e3 e300e4e4 e400e5e5 e500e6e6 
+	Data:	e600e7e7 e700e8e8 e800e9e9 e900eaea 
+	Data:	ea00ebeb eb00ecec ec00eded ed00eeee 
+	Data:	ee00efef ef00f0f0 f000f1f1 f100f2f2 
+	Data:	f200f3f3 f300f4f4 f400f5f5 f500f6f6 
+	Data:	f600f7f7 f700f8f8 f800f9f9 f900fafa 
+	Data:	fa00fbfb fb00fcfc fc00fdfd fd00fefe 
+	Data:	fe00ffff ff000002 00080007 00200001 
+	Data:	00020000 00000000 0000
+)
+
+(PageDpy.47
+	Top:	2.81250000000000
+	Right:	5.33333333333333
+	ReportUnits:	1
+	Units:	1
+	Scale:	48
+	ZoomRight:	5.33333333333333
+	ZoomTop:	2.81250000000000
+	GridSpacingX:	0.10000000000000
+	GridSpacingY:	0.10000000000000
+)
+
+(Numb.48
+	N:	96.00000000000000
+)
+
+(Numb.49
+)
+
+(AVDLog.50
+	Name:	"Editor"
+	X:	56
+	Y:	94
+	W:	306
+	H:	47
+	ConstrainedControlNames:	51
+	ConstrainedControlNames:	52
+	ConstrainedControlNames:	53
+	ConstrainedControlNames:	54
+	ConstrainedControlNames:	55
+	ConstrainedControlNames:	56
+	ConstrainedControlNames:	57
+	ConstrainedControlNames:	58
+	ConstrainedControlNames:	59
+	Constraints:	60
+	Constraints:	61
+	Constraints:	62
+	Constraints:	63
+	Constraints:	64
+	Constraints:	65
+	Constraints:	66
+	Constraints:	67
+	Constraints:	68
+	Server:	69
+	ControlPanel:	70
+	Title:	"Editor"
+	EscapeEnabled:	1
+	AlwaysOnTop:	1
+	HasTitleBar:	1
+	Closeable:	1
+	DefaultButton:	99
+)
+
+(AVStr.51
+	S:	"Close"
+)
+
+(AVStr.52
+	S:	"StartEditing"
+)
+
+(AVStr.53
+	S:	"Unselect"
+)
+
+(AVStr.54
+	S:	"Union"
+)
+
+(AVStr.55
+	S:	"Subtract"
+)
+
+(AVStr.56
+	S:	"Combine"
+)
+
+(AVStr.57
+	S:	"Select"
+)
+
+(AVStr.58
+	S:	"SelectToEdit"
+)
+
+(AVStr.59
+	S:	"EditAttributes"
+)
+
+(Numb.60
+	N:	85.00000000000000
+)
+
+(Numb.61
+	N:	85.00000000000000
+)
+
+(Numb.62
+	N:	85.00000000000000
+)
+
+(Numb.63
+	N:	85.00000000000000
+)
+
+(Numb.64
+	N:	85.00000000000000
+)
+
+(Numb.65
+	N:	85.00000000000000
+)
+
+(Numb.66
+	N:	85.00000000000000
+)
+
+(Numb.67
+	N:	85.00000000000000
+)
+
+(Numb.68
+	N:	85.00000000000000
+)
+
+(Nil.69
+)
+
+(CPanel.70
+	Child:	71
+	ResBox:	98
+	Listening:	1
+)
+
+(CPanel.71
+	InternalName:	"aControlPanel2"
+	Child:	72
+	Child:	74
+	Child:	76
+	Child:	78
+	Child:	80
+	Child:	81
+	Child:	83
+	Child:	85
+	Child:	87
+	Constraints:	0x55
+	ResBox:	89
+	ResBox:	90
+	ResBox:	91
+	ResBox:	92
+	ResBox:	93
+	ResBox:	94
+	ResBox:	95
+	ResBox:	96
+	ResBox:	97
+	VisibleBorder:	1
+	Listening:	1
+)
+
+(Butn.72
+	InternalName:	"StartEditing"
+	Help:	"Starts or stops editing of shapefile//"
+	Icon:	73
+	Click:	"View.ToggleEditing"
+)
+
+(AVIcon.73
+	Name:	"start_editing2.bmp"
+	Data:	4e442049 6d616765 00010016 00170000 
+	Data:	0228d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 0000d1d1 d1d1d1d1 
+	Data:	d1d1d1d1 d1d1d1d1 d1d1d1d1 d1d1d1d1 
+	Data:	0000d3d3 d3d3d3d3 d3d3d3d3 d3d3d3d3 
+	Data:	d3d3d3d3 d3d3d3d3 0000d4d4 d4d4d4d4 
+	Data:	d4d4d4d4 d4d4d4d4 d4d4d4d4 d4d4d4d4 
+	Data:	0000d6d6 d6d6d600 0080d6d6 d6d6d6d6 
+	Data:	d6d6d6d6 d6d6d6d6 0000d8d8 d8d8d800 
+	Data:	00808080 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	0000d9d9 d9d9d980 80ffffff 0000d9d9 
+	Data:	d9d9d9d9 d9d9d9d9 0000dbdb dbdbdbdb 
+	Data:	80ffffff 008000db dbdbdbdb dbdbdbdb 
+	Data:	0000dcdc dcdcdcdc 80ffff00 00808000 
+	Data:	dcdcdcdc dcdcdcdc 0000dede dededede 
+	Data:	de0000ed ed008080 00dedede dededede 
+	Data:	0000e0e0 e0e0e0e0 e0007700 eded0080 
+	Data:	8000e0e0 e0e0e0e0 0000e1e1 e1e1e1e1 
+	Data:	e1e10077 00eded00 808000e1 e1e1e1e1 
+	Data:	0000e3e3 e3e3bfbf e3b0e360 bf00eded 
+	Data:	00808000 e3e3e3e3 0000e4e4 e4e4bfb7 
+	Data:	ecc0ecb7 607700ed ed000036 00e4e4e4 
+	Data:	0000e6e6 e6e6e6ea fee6fdec e6007700 
+	Data:	ed003636 3600e6e6 0000e8e8 e8e8aabf 
+	Data:	edfee6bf b7e80077 00363636 00e8e8e8 
+	Data:	0000e9e9 e9e9e9ea fee6fdec e9e9e900 
+	Data:	36363600 e9e9e9e9 0000ebeb ebebbfb7 
+	Data:	ecc0ecb7 bfebebeb 003600eb ebebebeb 
+	Data:	0000ecec ececbfbf ecb0ecbf bfececec 
+	Data:	ec00ecec ecececec 0000eeee eeeeeeee 
+	Data:	eeeeeeee eeeeeeee eeeeeeee eeeeeeee 
+	Data:	0000f0f0 f0f0f0f0 f0f0f0f0 f0f0f0f0 
+	Data:	f0f0f0f0 f0f0f0f0 0000f1f1 f1f1f1f1 
+	Data:	f1f1f1f1 f1f1f1f1 f1f1f1f1 f1f1f1f1 
+	Data:	0000f3f3 f3f3f3f3 f3f3f3f3 f3f3f3f3 
+	Data:	f3f3f3f3 f3f3f3f3 00000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(Butn.74
+	InternalName:	"Unselect"
+	Help:	"Clear selected features//"
+	HelpTopic:	" "
+	Icon:	75
+	Click:	"View.ClearSelect"
+)
+
+(AVIcon.75
+	Name:	"SelectNone"
+	Res:	"Icons.SelectNone"
+
+)
+
+(Butn.76
+	InternalName:	"Union"
+	Help:	"Merge polygons//"
+	Icon:	77
+	Click:	"View.UnionGraphics"
+)
+
+(AVIcon.77
+	Name:	"merge2.bmp"
+	Data:	4e442049 6d616765 00010013 00120000 
+	Data:	0168d4d4 d4d4d4d4 d4d4d4d4 d4d4d4d4 
+	Data:	d4d4d4d4 d400d6d6 80d6d6d6 d6d6d61b 
+	Data:	1b1b1b1b 1bd6d6d6 d600d8d8 d880d800 
+	Data:	0000d81b 36363636 1bd8d8d8 d800d9d9 
+	Data:	d9d980d9 0000d91b 36363636 1bd9d9d9 
+	Data:	d900dbdb dbdbdb00 db00db1b 36363636 
+	Data:	1b1b1b1b db00dcdc dcdc00dc 80dcdc1b 
+	Data:	36363636 3636361b dc00dede de00dede 
+	Data:	de80de1b 1b1b1b36 3636361b de00e0e0 
+	Data:	e0e0e0e0 e0e080e0 e0e01b36 3636361b 
+	Data:	e000e1e1 1b1b1b1b 1b1be180 e1e11b36 
+	Data:	3636361b e100e3e3 1bededed ed1be3e3 
+	Data:	80e31b1b 1b1b1b1b e300e4e4 1bededed 
+	Data:	ed1be4e4 e480e4e4 e4e4e4e4 e400e6e6 
+	Data:	1beded24 24240909 09e680e6 000000e6 
+	Data:	e600e8e8 1beded24 24241212 09e8e880 
+	Data:	e80000e8 e800e9e9 1b1b1b24 24241212 
+	Data:	09e9e9e9 00e900e9 e900ebeb ebebeb09 
+	Data:	12121212 09ebeb00 eb80ebeb eb00ecec 
+	Data:	ececec09 12121212 09ec00ec ecec80ec 
+	Data:	ec00eeee eeeeee09 09090909 09eeeeee 
+	Data:	eeeeee80 ee00f0f0 f0f0f0f0 f0f0f0f0 
+	Data:	f0f0f0f0 f0f0f0f0 f0000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(Butn.78
+	InternalName:	"Subtract"
+	Help:	"Subtracts one selected polygon from the other selected polygon//"
+	Icon:	79
+	Click:	"View.SubtractGraphics"
+)
+
+(AVIcon.79
+	Name:	"Reduce"
+	Res:	"Icons.Reduce"
+
+)
+
+(LButn.80
+	InternalName:	"Close"
+	Help:	"Close Editor Toolbar//"
+	Label:	"Close"
+	Click:	"Editor.close"
+)
+
+(Tool.81
+	InternalName:	"Select"
+	Help:	"Select Tool//"
+	HelpTopic:	"Pointer_tool"
+	Update:	"View.HasDataUpdate"
+	Icon:	82
+	Cursor:	"Cursors.Default"
+	Apply:	"View.Select"
+	Click:	"View.SelectTool"
+)
+
+(AVIcon.82
+	Name:	"Select"
+	Res:	"Icons.Select"
+
+)
+
+(Tool.83
+	InternalName:	"SelectToEdit"
+	Help:	"Vertex Edit//"
+	HelpTopic:	"Vertex_Edit_tool"
+	Update:	"View.SelectToEditUpdate"
+	Icon:	84
+	Cursor:	"Cursors.SelectEdit"
+	Apply:	"View.SelectToEdit"
+	Click:	"View.SelectToEditTool"
+)
+
+(AVIcon.84
+	Name:	"SelectEdit"
+	Res:	"Icons.SelectEdit"
+
+)
+
+(Tool.85
+	InternalName:	"EditAttributes"
+	Help:	"Edit attributes//"
+	Icon:	86
+	Cursor:	"Cursors.Default"
+	Apply:	"Editor.CorrFeatureAttr"
+)
+
+(AVIcon.86
+	Name:	"FrameText2"
+	Res:	"Icons.FrameText2"
+
+)
+
+(Butn.87
+	InternalName:	"Combine"
+	Help:	"Create hole//"
+	Icon:	88
+	Click:	"View.CombineGraphics"
+)
+
+(AVIcon.88
+	Name:	"create_hole.bmp"
+	Data:	4e442049 6d616765 00010016 00160000 
+	Data:	0210d1d1 d1d1d1d1 d1d1d1d1 d1d1d1d1 
+	Data:	d1d1d1d1 d1d1d1d1 0000d3d3 d3d3d3d3 
+	Data:	d3d3d3d3 d3d3d3d3 d3d3d3d3 d3d3d3d3 
+	Data:	0000d4d4 4e4e4e4e 4e4e4e4e 4e4e4e4e 
+	Data:	4e4e4e4e 4e4ed4d4 0000d6d6 4e4e4e4e 
+	Data:	4e4e4e4e 4e4e4e4e 4e4e4e4e 4e4ed6d6 
+	Data:	0000d8d8 4e4e4e4e 4e4e4e4e 4e4e4e4e 
+	Data:	4e4e4e4e 4e4ed8d8 0000d9d9 4e4e4e4e 
+	Data:	4e4e4e4e 4e4e4e4e 4e4e4e4e 4e4ed9d9 
+	Data:	0000dbdb 4e4e4e4e 4e4e4e4e 4e4e4e4e 
+	Data:	4e4e4e4e 4e4edbdb 0000dcdc 4e4e4e4e 
+	Data:	4effffff ffffffff ff4e4e4e 4e4edcdc 
+	Data:	0000dede 4e4e4e4e 4effffff ffffffff 
+	Data:	ff4e4e4e 4e4edede 0000e0e0 4e4e4e4e 
+	Data:	4effffff ffffffff ff4e4e4e 4e4ee0e0 
+	Data:	0000e1e1 4e4e4e4e 4effffff ffffffff 
+	Data:	ff4e4e4e 4e4ee1e1 0000e3e3 4e4e4e4e 
+	Data:	4effffff ffffffff ff4e4e4e 4e4ee3e3 
+	Data:	0000e4e4 4e4e4e4e 4effffff ffffffff 
+	Data:	ff4e4e4e 4e4ee4e4 0000e6e6 4e4e4e4e 
+	Data:	4effffff ffffffff ff4e4e4e 4e4ee6e6 
+	Data:	0000e8e8 4e4e4e4e 4effffff ffffffff 
+	Data:	ff4e4e4e 4e4ee8e8 0000e9e9 4e4e4e4e 
+	Data:	4e4e4e4e 4e4e4e4e 4e4e4e4e 4e4ee9e9 
+	Data:	0000ebeb 4e4e4e4e 4e4e4e4e 4e4e4e4e 
+	Data:	4e4e4e4e 4e4eebeb 0000ecec 4e4e4e4e 
+	Data:	4e4e4e4e 4e4e4e4e 4e4e4e4e 4e4eecec 
+	Data:	0000eeee 4e4e4e4e 4e4e4e4e 4e4e4e4e 
+	Data:	4e4e4e4e 4e4eeeee 0000f0f0 4e4e4e4e 
+	Data:	4e4e4e4e 4e4e4e4e 4e4e4e4e 4e4ef0f0 
+	Data:	0000f1f1 f1f1f1f1 f1f1f1f1 f1f1f1f1 
+	Data:	f1f1f1f1 f1f1f1f1 0000f3f3 f3f3f3f3 
+	Data:	f3f3f3f3 f3f3f3f3 f3f3f3f3 f3f3f3f3 
+	Data:	00000000 04000000 00000101 01000202 
+	Data:	02000303 03000404 04000505 05000606 
+	Data:	06000707 07000808 08000909 09000a0a 
+	Data:	0a000b0b 0b000c0c 0c000d0d 0d000e0e 
+	Data:	0e000f0f 0f001010 10001111 11001212 
+	Data:	12001313 13001414 14001515 15001616 
+	Data:	16001717 17001818 18001919 19001a1a 
+	Data:	1a001b1b 1b001c1c 1c001d1d 1d001e1e 
+	Data:	1e001f1f 1f002020 20002121 21002222 
+	Data:	22002323 23002424 24002525 25002626 
+	Data:	26002727 27002828 28002929 29002a2a 
+	Data:	2a002b2b 2b002c2c 2c002d2d 2d002e2e 
+	Data:	2e002f2f 2f003030 30003131 31003232 
+	Data:	32003333 33003434 34003535 35003636 
+	Data:	36003737 37003838 38003939 39003a3a 
+	Data:	3a003b3b 3b003c3c 3c003d3d 3d003e3e 
+	Data:	3e003f3f 3f004040 40004141 41004242 
+	Data:	42004343 43004444 44004545 45004646 
+	Data:	46004747 47004848 48004949 49004a4a 
+	Data:	4a004b4b 4b004c4c 4c004d4d 4d004e4e 
+	Data:	4e004f4f 4f005050 50005151 51005252 
+	Data:	52005353 53005454 54005555 55005656 
+	Data:	56005757 57005858 58005959 59005a5a 
+	Data:	5a005b5b 5b005c5c 5c005d5d 5d005e5e 
+	Data:	5e005f5f 5f006060 60006161 61006262 
+	Data:	62006363 63006464 64006565 65006666 
+	Data:	66006767 67006868 68006969 69006a6a 
+	Data:	6a006b6b 6b006c6c 6c006d6d 6d006e6e 
+	Data:	6e006f6f 6f007070 70007171 71007272 
+	Data:	72007373 73007474 74007575 75007676 
+	Data:	76007777 77007878 78007979 79007a7a 
+	Data:	7a007b7b 7b007c7c 7c007d7d 7d007e7e 
+	Data:	7e007f7f 7f008080 80008181 81008282 
+	Data:	82008383 83008484 84008585 85008686 
+	Data:	86008787 87008888 88008989 89008a8a 
+	Data:	8a008b8b 8b008c8c 8c008d8d 8d008e8e 
+	Data:	8e008f8f 8f009090 90009191 91009292 
+	Data:	92009393 93009494 94009595 95009696 
+	Data:	96009797 97009898 98009999 99009a9a 
+	Data:	9a009b9b 9b009c9c 9c009d9d 9d009e9e 
+	Data:	9e009f9f 9f00a0a0 a000a1a1 a100a2a2 
+	Data:	a200a3a3 a300a4a4 a400a5a5 a500a6a6 
+	Data:	a600a7a7 a700a8a8 a800a9a9 a900aaaa 
+	Data:	aa00abab ab00acac ac00adad ad00aeae 
+	Data:	ae00afaf af00b0b0 b000b1b1 b100b2b2 
+	Data:	b200b3b3 b300b4b4 b400b5b5 b500b6b6 
+	Data:	b600b7b7 b700b8b8 b800b9b9 b900baba 
+	Data:	ba00bbbb bb00bcbc bc00bdbd bd00bebe 
+	Data:	be00bfbf bf00c0c0 c000c1c1 c100c2c2 
+	Data:	c200c3c3 c300c4c4 c400c5c5 c500c6c6 
+	Data:	c600c7c7 c700c8c8 c800c9c9 c900caca 
+	Data:	ca00cbcb cb00cccc cc00cdcd cd00cece 
+	Data:	ce00cfcf cf00d0d0 d000d1d1 d100d2d2 
+	Data:	d200d3d3 d300d4d4 d400d5d5 d500d6d6 
+	Data:	d600d7d7 d700d8d8 d800d9d9 d900dada 
+	Data:	da00dbdb db00dcdc dc00dddd dd00dede 
+	Data:	de00dfdf df00e0e0 e000e1e1 e100e2e2 
+	Data:	e200e3e3 e300e4e4 e400e5e5 e500e6e6 
+	Data:	e600e7e7 e700e8e8 e800e9e9 e900eaea 
+	Data:	ea00ebeb eb00ecec ec00eded ed00eeee 
+	Data:	ee00efef ef00f0f0 f000f1f1 f100f2f2 
+	Data:	f200f3f3 f300f4f4 f400f5f5 f500f6f6 
+	Data:	f600f7f7 f700f8f8 f800f9f9 f900fafa 
+	Data:	fa00fbfb fb00fcfc fc00fdfd fd00fefe 
+	Data:	fe00ffff ff000002 00080007 00200001 
+	Data:	00020000 00000000 0000
+)
+
+(RectD.89
+	Left:	7.00000000000000
+	Top:	30.00000000000000
+	Right:	31.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.90
+	Left:	96.00000000000000
+	Top:	30.00000000000000
+	Right:	120.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.91
+	Left:	126.00000000000000
+	Top:	30.00000000000000
+	Right:	150.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.92
+	Left:	156.00000000000000
+	Top:	30.00000000000000
+	Right:	180.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.93
+	Left:	245.00000000000000
+	Top:	30.00000000000000
+	Right:	288.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.94
+	Left:	37.00000000000000
+	Top:	30.00000000000000
+	Right:	61.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.95
+	Left:	67.00000000000000
+	Top:	30.00000000000000
+	Right:	91.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.96
+	Left:	215.00000000000000
+	Top:	30.00000000000000
+	Right:	239.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.97
+	Left:	186.00000000000000
+	Top:	30.00000000000000
+	Right:	210.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.98
+	Left:	6.00000000000000
+	Top:	43.00000000000000
+	Right:	301.00000000000000
+	Bottom:	8.00000000000000
+)
+
+(Nil.99
+)
+
+(RectD.100
+	Left:	0.55208333333333
+	Top:	2.06250000000000
+	Right:	3.73958333333333
+	Bottom:	1.57291666666667
+)
+
+(SEd.101
+	Name:	"Editor.close"
+	Creator:	"adrian"
+	CreationDate:	"Sam 06 Apr 2013 16:04:28 CEST"
+	GUIName:	"Script"
+	Win:	102
+	CSMgr:	103
+	DocExts:	104
+	Source:	"self.getdialog.close"
+)
+
+(DocWin.102
+	Owner:	101
+	X:	80
+	Y:	80
+	W:	363
+	H:	245
+)
+
+(CSMgr.103
+)
+
+(DocAct.104
+	Doc:	101
+)
+
+(SEd.105
+	Name:	"Editor.CorrFeatureAttr"
+	Creator:	"adrian"
+	CreationDate:	"Mon 11 Feb 2013 17:06:43 CET"
+	GUIName:	"Script"
+	Win:	106
+	CSMgr:	107
+	DocExts:	108
+	Source:	"'Author  : Georg A.Zelenin, Odessa(UKRAINE)\n'          Position:GIS programmer.  \n'          Municipality Dpt.on Land Resources and Parcels Control\n'          (tel/fax.(0482) 373 076 )\n'    \n'Script Class: Simple User Edit Interface - \"One Click Editors\". \n'Script Name:  View_CorrFeatureAttr\n'\n'Title:   Single-Click Themes Attributes Edits directly from the View.\n'    .                    \n'Topics:  Pick Up (Click) on the Feature ( Polygon,PolyLine,Point) \n'         wich Atributes row you wish to edit. Scri
+pt Tool unfolds-Open \n'         the MultiInput Box, where each attribute Field looks like \n'         editable text line.\n'         Each Input Box contains up to 20 lines (total Screen)\n'         and automatically gives new portion of the data if number of \n'         the DB fields are more then 20 (Cadastre DB e.c.t.),  \n'  \n'      For a Numeric/String Fiels only.\n'       \n'Usage: \n'      Preparation step \n'          a) Attach the compiled Script on Tool/Apply button in a View environment.\n'      Usage steps
+: \n'          1) Click on the Polygon, Atributes you wish to edit by this Tool.\n'          2) Makes your Edits in the Open MultiInput Box, press OK(Save Edits)or\n'             Cancel(Discard Edits.)\n'\n' Evidently, you remains in the View Projects environment, do Not need Open-Table,\n' ...Save-Close-Table, Open-View editing cycle.The edits performs directly \n' in a View window, as quick as possible! One-Click attributes editing are friendly \n' and comfortable.  \n'\ntheView     = av.GetActiveDoc\ntheDisplay  = 
+theView.getDisplay\n         pt = theDisplay.ReturnUserPoint\n  theThemes = theView.getActiveThemes      \n for each t in theThemes\n    if (t.CanSelect) then\n      t.SelectByPoint(pt,#VTAB_SELTYPE_NEW )\n    end\n  end\n'  \n    numThemes=theThemes.Count \n      if(numThemes=1) then        \n         theTheme = theThemes.get(0)\n       elseif(numThemes>1) then\n   msgbox.error(\"Too many (\"+numThemes.AsString+\") Active Themes...\",\"Make Active single Editable Theme !\")\n      else\n        exit\n      end\n' \ntheScale    = 
+theView.ReturnScale\n\ntheName     = theTheme.getName\ntheFTab     = theTheme.getFtab\ntotFields   = theFTab.getFields\n\n         nf = (totFields.count-1)\n         c   = 20\n\n res = nf mod c\n n = (nf - res) / c\n b = (n*c) + res\n         \nfor each i in 0..n \n\n   from =  i*c\n   to   = ((i+1)*c-1)\nif (to>nf) then\n    to = from+res\nend\n \n   nmFields    = {}\n   valFields   = {}\n   lstFields   = {}\n   \n  for each j in from..to\n     f=totFields.Get(j)\n     lstFields.Add(f)\n  end\n \n                      \n'...try aligned 
+left fields by spaces             \n\n maxl = 1      \n for each f in lstFields \n    nmf = f.getName\n    lnf = nmf.count\n   maxl = (maxl max lnf)\n end\n\n\nfor each f in lstFields\n   fnm  = f.getName\n   fout = fnm\n dspace = ( maxl - fnm.count )\n     if( dspace>0 ) then\n         buff=\"\"\n       for each i in 0..dspace\n         buff = buff + 160.AsChar\n       end\n          fout = fnm + buff\n     end\n   nmFields.Add(fout)  \nend\n\n  numSel = theFTab.getNumSelRecords \n  \n    if ( numSel=0 ) then exit end\n    if ( numSel
+>1 ) then exit end\n\nfor each sel in theFTab.getSelection\n   for each f in lstFields\n     val = theFtab.ReturnValueString(f,sel)\n     if(val=\"\") then val=\" \" end\n     valFields.Add(val)\n   end   \nend\n\nvalUserSettings = MsgBox.MultiInput(\"Set parameters:\", \"Define new values for the Theme\"++theName, nmFields, valFields)\n\n   if ( valUserSettings.count = 0) then\n        theTheme.ClearSelection\n        exit\n   end  \n         \nfor each i in 0..(lstFields.count-1)\n\n  f = lstFields.get(i)\n  v = valUserSettings.get(
+i)\n  \n    if( f.getName=\"shape\" ) then continue end\n    fType = f.getType\n    aType = fType.AsString.AsTokens(\"_\").get(1)\n    \n     if ( (aType=\"LONG\")or(aType=\"DOUBLE\")or(aType=\"DECIMAL\")or(aType=\"FLOAT\") ) then    \n      if(v.IsNumber) then\n                       val = v.AsNumber\n                     end               \n      elseif(aType=\"DATE\") then\n                       val = v.AsDate\n      elseif(aType=\"CHAR\") then\n                       val = v\n    end\n    \n        theFtab.SetEditable(TRUE)\n    if(th
+eFtab.IsEditable) then\n        for each sel in theFTab.getSelection\n           theFTab.SetValue(f,sel,val)\n        end \n    end   \n end\ntheFtab.SetEditable(FALSE)\n\nend'...if>20\n\ntheTheme.ClearSelection\n\n\n\n"
+)
+
+(DocWin.106
+	Owner:	105
+	X:	65
+	Y:	65
+	W:	726
+	H:	494
+)
+
+(CSMgr.107
+)
+
+(DocAct.108
+	Doc:	105
+)
+

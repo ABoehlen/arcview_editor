@@ -1,0 +1,16 @@
+' update script for the built-in function View.UnionGraphics
+' 20.12.2021, A. Boehlen
+'###############################
+
+theView = av.GetActiveDoc
+theTheme = theView.GetEditableTheme
+enabled = FALSE
+SELF.SetLabel("U&nion Features")
+SELF.SetHelpTopic("Union_Features")
+SELF.SetHelp("Unions the selected features to create a new feature")
+fCount = theTheme.GetFTab.GetSelection.Count
+theType = theTheme.GetFTab.FindField("Shape").GetType
+enabled =  ((fcount > 1) and ((theType = #FIELD_SHAPEPOLY) or
+                 (theType = #FIELD_SHAPELINE))) 
+SELF.SetEnabled(enabled)
+

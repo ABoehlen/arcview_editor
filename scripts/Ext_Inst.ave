@@ -1,0 +1,32 @@
+'#########################################################################
+'#
+'# Filename:     Ext_Inst.ave
+'# Author:       Adrian Boehlen
+'# Date:         03.11.2022
+'# Version:      0.4
+'#
+'# Purpose:      installiert die Extension 
+'#
+'#########################################################################
+
+if (av.GetProject = nil) then
+  return nil
+end
+
+Sack = self '# Der 'Sack' vom makescript, wo alles Benoetigte drin ist
+
+Schaltflaeche = Sack.Get(0)
+viewGUI = av.GetProject.FindGUI( "View" )
+if (viewGUI <> nil) then
+  '# prüfen, ob die Schaltflaeche schon existiert
+  if(viewGUI.GetButtonBar.findbyscript(Schaltflaeche.getclick) = nil) then
+    viewGUI.GetButtonBar.Add( Schaltflaeche, 2)
+  end
+end
+
+av.getproject.AddDialog( Sack.Get(1)) '# Dialog hinzufuegen
+
+
+
+
+

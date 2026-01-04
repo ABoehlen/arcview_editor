@@ -1,0 +1,7 @@
+' update script for the built-in function View.Select
+' 20.12.2021, A. Boehlen
+'###############################
+
+theView = av.GetActiveDoc
+SELF.SetEnabled((theView.GetGraphics.Count > 0) or (theView.GetThemes.Count > 0))
+

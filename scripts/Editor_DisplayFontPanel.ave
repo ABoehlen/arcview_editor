@@ -1,0 +1,7 @@
+' uses the built-in function SymWin.DisplayFontPanel
+' 22.01.2023, A. Boehlen
+'###############################
+
+if ((av.GetSymbolWin.GetPanel = #SYMBOLWIN_PANEL_COLOR).not) then
+  av.GetSymbolWin.SetPanel(#SYMBOLWIN_PANEL_FONT)
+end

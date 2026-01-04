@@ -1,0 +1,18 @@
+' uses the built-in function View.TextToolUpdate
+' 22.01.2023, A. Boehlen
+'###############################
+
+
+theView = av.GetActiveDoc
+if (Extension.GetExtensions.Get("Label & Text Tools") = NIL) then
+  SELF.SetEnabled(FALSE)
+  return nil
+end  
+theTheme = theView.GetEditableTheme
+if (theTheme = nil) then
+  SELF.SetEnabled(TRUE) 
+else
+  SELF.SetEnabled(FALSE)
+end
+ 
+

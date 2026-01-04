@@ -1,0 +1,117 @@
+'###################################################################
+'#
+'# Filename:     Editor.TextHalo
+'# Author:       Adrian Boehlen
+'# Date:         28.01.2023
+'# Version:      1.0
+'#
+'# Purpose:      erzeugt Textfreistellmaske (Halo)
+'#               
+'#               - Idee basiert auf HaloTexter von
+'#                 Michael Silberbauer 2002-03-22 
+'#               - funktioniert auch mit gesperrten, gedrehten
+'#                 oder Spline-Texten
+'#               - Groesse des Halos laesst sich eingeschraenkt
+'#                 definieren
+'#               - existierende Halos koennen geloescht werden
+'#               - benoetigt Editor.SubTextShift im gleichen Projekt
+'#            
+'###################################################################
+
+theView = av.GetActiveDoc 
+
+if (theView.Is(view).Not) then
+  MsgBox.Warning("Start this tool from an active View.","")
+  return nil
+end
+
+'# Abbruch, wenn keine Grafikfeatures vorhanden sind
+theGraphics = theView.GetGraphics
+if (theGraphics.Count = 0) then
+  MsgBox.Warning("No graphic featurs found.","No graphic features")
+  return nil
+end
+
+'# Abbruch, wenn keine Textfeatures vorhanden sind
+theGraphicsList = theGraphics.FindAllByClass(GraphicText)
+if (theGraphicsList = nil) then
+  MsgBox.Warning("No text features found.","No text features")
+  return nil
+end
+
+if (MsgBox.YesNo("Create new halos (Yes) or delete existing halos (No) ?","Create or delete halos",true)) then
+
+'# Die Parametrisierung setzt metrische Map Units voraus
+  theMapUnits = theView.GetUnits
+  if (theMapUnits <> #UNITS_LINEAR_METERS) then
+    MsgBox.Warning("Please define the Map Units as Meters","Wrong Map Units")
+    return nil
+  end
+
+  '# der Massstab des View wird benoetigt, um den Shift der Maske zu berechnen
+  theMapscale = theView.ReturnScale
+  if (theMapscale = 0) then
+    MsgBox.Warning("Please define a Map Scale."+NL+"Maybe you have to add a theme first","No Map Scale defined")
+    return nil
+  end
+  
+  '# Die Maske ist immer weiss
+  haloColour = Color.GetWhite 
+
+  '# Auswahl von drei moeglichen Groessen
+  sizeList = {"small", "medium", "big"}
+  theSize = MsgBox.ListAsString(sizeList, "Choose halo size", "Halo size")
+  if (theSize = nil) then 
+    return nil
+  elseif (theSize = "small") then
+    theRefscale = 500
+  elseif (theSize = "medium") then
+    theRefscale = 380
+  elseif (theSize = "big") then
+    theRefscale = 270
+  end
+
+  quot = theMapscale / theRefscale
+
+  '# wenn Textfeatures selektiert sind, nur diese beruecksichtigen
+  if (theGraphics.HasSelected) then 
+    theGraphicsList = TheGraphics.GetSelected 
+  end 
+  theGraphics.UnSelectAll 
+  for each g in theGraphicsList 
+    if (g.CanEditText) then  
+      theGraphics.UnSelectAll     
+      textSize = g.GetSymbol.GetSize  
+      theGraphicGroup = GraphicGroup.Make
+      
+      '# Text 4x kopieren, verschieben und weiss einfaerben
+      for each textCopy in 1..4 
+        gt = av.Run("Editor.SubTextShift", {g, textSize, textCopy, theRefscale, quot, haloColour}) 
+        theView.GetDisplay.HookUpSymbol(gt.GetSymbol) 
+        theGraphicGroup.Add(gt) 
+      end 
+      theGraphicGroup.SetObjectTag("halo") 
+      theGraphics.Add(theGraphicGroup) 
+      theGraphics.Invalidate 
+    end 
+  end 
+  theGraphicsList = theGraphics.FindAllByObjectTag("halo") 
+  theGraphics.UnSelectAll 
+  for each g in theGraphicsList 
+    g.SetSelected(true) 
+  end 
+  theGraphics.MoveSelectedToBack
+  theGraphics.UnSelectAll
+else
+  theGraphicsList = theGraphics.FindAllByObjectTag("halo") 
+  theGraphics.UnSelectAll
+  '# Abbruch, wenn keine Features mit dem Tag "halo" vorhanden sind
+  if (theGraphicsList = nil) then
+    MsgBox.Warning("No halos found.","No halos")
+    return nil
+  end
+  for each g in theGraphicsList 
+    g.SetSelected(true) 
+  end 
+  theGraphics.ClearSelected
+end

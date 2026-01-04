@@ -1,0 +1,23 @@
+' CTRL-KLICK Info (erscheint, wenn das Skript bei gedrueckter Strg- bzw. Ctrl-Taste aufgerufen wird)
+ 
+if (System.IsControlKeyDown) then
+
+  message =
+    " "+nl+
+    
+    "SCRIPTNAME: mm_viewEditTableApply"+nl+nl+
+  
+    "ORIGIN: Matthias Hofschen, modified "+nl+nl+
+    
+    "Selects active theme's features by pointing or dragging and opens a box to edit the selected features in the feature table. "+
+    "You have not to open the FTab or set the theme or the table into editing mode. "+nl+nl+
+    
+    "The table must not have more than 20 Fields (because of the limitation of AV's MultiInput box). "+nl+nl+
+    
+    "The changes will be assigned to all selected features "+nl
+  
+  msgbox.report(message,"INFO: Edit Table Apply")
+  
+  return nil
+end
+

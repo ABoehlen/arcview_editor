@@ -1,0 +1,18 @@
+' CTRL-KLICK Info (erscheint, wenn das Skript bei gedrueckter Strg- bzw. Ctrl-Taste aufgerufen wird)
+ 
+if (System.IsControlKeyDown) then
+
+  message =
+    " "+nl+
+    
+    "SCRIPT NAME:  mm_ViewSplitLineWithoutTrace"+nl+nl+
+    
+    "ORIGIN:  Harald, February 8, 2003 "+nl+nl+
+    
+    "Draws a line to split line feature, clears the cutting line (the standard split tool "+
+    "converts the splitting lines to features)." +nl
+    
+  msgbox.report(message,"INFO: Cut Line Without Trace...")
+  
+  return nil
+end

@@ -1,0 +1,12 @@
+theView = av.GetActiveDoc
+theTheme = theView.GetEditableTheme
+
+if((theTheme <> NIL) AND
+  (theTheme.GetFTab.GetSelection.Count > 0) AND
+  ((theTheme.GetFTab.FindField("shape").GetType = #FIELD_SHAPEPOLY) OR
+  (theTheme.GetFTab.FindField("shape").GetType = #FIELD_SHAPELINE))) then
+  SELF.SetEnabled(TRUE)
+else
+  SELF.SetEnabled(FALSE)
+end
+

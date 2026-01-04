@@ -1,0 +1,30 @@
+theView = av.GetActiveDoc
+
+r = theView.ReturnUserRect
+theTheme = theView.GetEditableTheme
+
+if (r.IsNull) then
+  return nil
+else
+  if (theTheme <> nil) then
+    p = r.AsPolygon
+    thePrj = theView.GetProjection
+    if (thePrj.IsNull.Not) then
+      p = p.ReturnUnprojected(thePrj)
+    end
+    theTheme.getFTab.BeginTransaction
+    theField = theTheme.GetFTab.FindField("Shape")
+    rec = theTheme.GetFTab.AddRecord
+    theTheme.GetFTab.SetValue(theField, rec, p)
+    theTheme.GetFTab.EndTransaction
+    theTheme.GetFTab.GetSelection.ClearAll
+    theTheme.GetFTab.GetSelection.Set(rec)
+    theTheme.GetFTab.UpdateSelection
+  else
+    gr = GraphicShape.Make(r)
+    theView.GetGraphics.UnselectAll
+    gr.SetSelected(TRUE)
+    theView.GetGraphics.Add(gr)
+  end
+  av.GetProject.SetModified(true)
+end

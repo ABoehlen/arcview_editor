@@ -1,0 +1,22 @@
+' uses the built-in function View.AutoCompleteTool
+' 20.12.2021, A. Boehlen
+'###############################
+
+theView = av.GetActiveDoc
+theTheme = theView.GetEditableTheme
+
+if (av.Run("Editor.SubCheckTheme", {theTheme, "polygon", "false", "0"}) = nil) then
+  return nil
+end
+
+l = theView.ReturnUserPolyLine
+if (l.IsNull) then
+  return nil
+else
+  theTheme.GetFtab.BeginTransaction
+  theTheme.AutoComplete(l)
+  theTheme.GetFtab.EndTransaction  
+  av.GetProject.SetModified(true)
+end
+
+

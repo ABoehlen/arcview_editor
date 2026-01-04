@@ -1,0 +1,232 @@
+' NAME: mm_viewEditTableApply
+' HERKUNFT: Mathias Hofschen, veraendert
+' EINBINDUNG MTOOLS: Tool
+' HILFE: Attr-Tab des aktivierten Themas per Klick ins View bearbeiten//
+
+'***************************************************************
+
+'' CTRL-KLICK Info (erscheint, wenn das Skript bei gedrueckter Strg- bzw. Ctrl-Taste aufgerufen wird)
+' 
+'if (System.IsControlKeyDown) then
+'
+'  message =
+'    " "+nl+
+'    
+'    "SCRIPTNAME: mm_viewEditTableApply "+nl+nl+
+'  
+'    "ORIGIN: Matthias Hofschen, modified "+nl+nl+
+'    
+'    "Selects active theme's features by pointing or dragging and opens a box to edit the selected features in the feature table. "+
+'    "You have not to open the FTab or set the theme or the table into editing mode. "+nl+nl+
+'    
+'    "The table must not have more than 20 Fields (because of the limitation of AV's MultiInput box). "+nl+nl+
+'    
+'    "The changes will be assigned to all selected features "+nl
+'  
+'  msgbox.report(message,"INFO: Edit Table Apply")
+'  
+'  return nil
+'end
+
+
+'-------------------------------------------------------
+
+theView = av.GetActiveDoc
+
+if (theView.is(View).not) then
+  msgBox.Info("This is an Apply Script. Use it with a view tool.","")
+  return NIL
+end
+
+if (System.IsControlKeyDown) then
+  av.GetProject.SetModified(true)
+  theView.GetDisplay.Pan
+  return NIL
+end
+
+
+ActThms = theView.GetActiveThemes
+    
+if (ActThms.Count = 0) then
+  MsgBox.info("You need to have a feature theme activated!"," No active Theme")
+  return NIL
+end
+
+theTheme = theView.GetActiveThemes.Get(0)
+
+if (theTheme.is(FTheme).not) then
+  MsgBox.Info("You need to have a feature theme activated!"," No fitting Themetype active")
+  return NIL
+end
+
+theFtab = theTheme.getFtab
+
+if (theFtab.CanEdit.not) then
+    MsgBox.Info("Can not edit the Table of '"+theTheme.getName+"'. Check writing permission!","")
+  return NIL
+end
+
+
+'--Selektion der Objekte -------------------------------
+
+r = theView.ReturnUserRect
+if (r.IsNull) then 
+  p = theView.GetDisplay.ReturnUserPoint
+  if (System.IsShiftKeyDown) then
+    op = #VTAB_SELTYPE_XOR
+  else
+    op = #VTAB_SELTYPE_NEW
+  end
+  if (theTheme.CanSelect) then
+    theTheme.SelectByPoint(p, op)
+  end
+else
+  if (System.IsShiftKeyDown) then
+    op = #VTAB_SELTYPE_OR
+  else
+    op = #VTAB_SELTYPE_NEW
+  end
+  if (theTheme.CanSelect) then
+    theTheme.SelectByRect(r, op)
+  end
+end
+
+av.GetProject.SetModified(true)
+
+
+theSel = theTheme.getFTab.GetSelection
+
+if (theSel.Count = 0) then
+  return NIL
+end
+
+theFlist = list.make
+theValueList = list.make
+
+
+'--Erstellen einer Liste aller sichtbaren vorhandener Felder-------
+
+for each f in theFtab.getfields
+  if (f.asstring <> "Shape") then
+    if (f.isVisible) then
+      theFlist.Add (f.getAlias)
+    end
+  end
+end
+
+if (theFList.count = 0) then
+  MsgBox.Info(" No (or no visible) fields in the table.","'"+theTheme.getName+"':  No Fields")
+  return NIL
+end
+
+if (theFList.count>20) then
+  MsgBox.Info("There is a maximum 20 fields limit (+ Shapefield) because of the MultiInput box limitation."+
+         "Make some fields invisible via 'Table | Properties' to continue...","'"+theTheme.getName+"':  "+theFList.count.asstring+" Fields in the Table")
+  return NIL
+end
+
+for each s in theSel
+  for each fl in theFlist 'theFtab.getfields
+    f = theFtab.FindField(fl)
+    if (f.asstring <> "Shape") then
+      if (f.isVisible) then  
+        valuestring = theFTab.ReturnValueString (f, s)
+        if (valuestring = "") then 
+          valuestring = " "
+        end 
+        theValueList.Add(valuestring)
+      end
+    end
+  end
+end
+
+'--Hier werden die Benutzereingaben in l gespeichert-----
+
+theView.getDisplay.Flush
+
+if (theSel.count > 1) then
+  countString = theSel.count.AsString+" Objects"
+else
+  countString = theSel.count.AsString+" Object"
+end
+
+theInput = MsgBox.MultiInput("Enter information (for "+countString+"):",
+           " Add or change attributes ("+countString+" selected):", theFlist, theValueList)
+    
+if ((theInput.count = 0) or (theInput = NIL)) then
+  return nil
+end
+
+'--Hier werden die Benutzereingaben geprueft----
+
+i = 0
+for each fl in theFlist 'theFtab.getfields
+  f = theFtab.FindField(fl)
+  if (f.asstring <> "Shape") then
+    if (f.isVisible) then  
+      if (f.IsTypeNumber) then
+        if (theInput.get(i).isNumber.Not) then
+          if (theInput.get(i) = " ") then
+            theInput.Set(i,Number.MakeNull)
+          else
+            theInput.Set(i,theInput.get(i).Substitute(",",".").trim)
+            if (theInput.get(i).isNumber.Not) then
+              msgBox.Info("Wrong entry in number field  ["+f.getAlias+"]:   "+theInput.get(i).quote," Breakup")
+              return nil
+            end
+          end
+        end
+      end
+    end
+  i = i + 1
+  end
+end
+
+'--Hier wird die Editierbarkeit der Tabelle geprueft---
+
+check = 0
+if (theFTab.IsEditable = false) then
+  check = 1
+  theFtab.SetEditable(true)
+end
+
+'--Hier werden die Eingaben in die Tabelle geschrieben---
+'i = 0
+'for each s in theSel
+'    for each f in theFtab.getfields
+'      if (f.asstring <> "Shape") then 
+'       theFtab.setvalue(f, s, l.get(i))
+'       i = i + 1
+'      end
+'    end
+'end
+
+i = 0
+theFTab.BeginTransaction
+for each fl in theFlist 'theFtab.getfields
+  f = theFtab.FindField(fl)
+  if (f.asString <> "Shape") then 
+    if (f.isVisible) then  
+      for each sl in theSel
+       theFtab.setValue(f, sl, theInput.get(i))
+      end
+    end
+  i = i + 1
+  end
+end
+theFTab.EndTransaction
+theFTab.Refresh
+
+'--Hier wird Editierung beendet wenn vorher nicht offen---
+if (check = 1) then
+   theFtab.SetEditable(false)
+end
+
+'--Hier als Orientierungshilfe die ID als Label-----------
+
+'theTheme.setlabelfield(theFtab.findField("ID"))
+'theView.Label(thePoint)
+
+
+
+

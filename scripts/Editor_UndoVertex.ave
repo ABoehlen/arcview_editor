@@ -1,0 +1,31 @@
+if (SELF = NIL) then
+  MsgBox.Warning("Error in undoing transaction."+NL+
+    "Nothing to Undo.", "Editor.UndoVertex")
+  exit
+end
+
+theView  = av.GetActiveDoc
+theTheme = theView.GetEditableTheme
+fldShape = theTheme.GetFTab.FindField("Shape")
+r = SELF.Get(0)
+
+' undoLast = MsgBox.YesNo
+'   ("Do you really want to undo previous edit?","Undo Edit",TRUE)
+undoLast = TRUE
+
+if (undoLast) then
+  shpUndo = SELF.Get(1)
+  if ((fldShape.GetType = #FIELD_SHAPEPOLY) AND (shpUndo.Is(POLYGON).Not)) then
+    MsgBox.Info("Previous shape edited was a POLYLINE - Nothing to Undo.","Undo Edit")
+    exit
+  elseif ((fldShape.GetType = #FIELD_SHAPELINE) AND (shpUndo.Is(POLYGON))) then
+    MsgBox.Info("Previous shape edited was a POLYGON - Nothing to Undo.","Undo Edit")
+    exit
+  end
+
+  theTheme.GetFTab.SetValue(fldShape, r, shpUndo)
+  theTheme.GetFTab.Flush
+  theTheme.Invalidate(TRUE)
+end
+
+

@@ -1,0 +1,26 @@
+' uses the built-in function View.SplitTool
+' 20.12.2021, A. Boehlen
+'###############################
+
+theView = av.GetActiveDoc
+theTheme = theView.GetEditableTheme
+
+if (av.Run("Editor.SubCheckTheme", {theTheme, "polygon", "true", "1"}) = nil) then
+  return nil
+end
+
+l = theView.ReturnUserPolyLine
+if (l.IsNull) then
+  return nil
+else
+  theTheme.GetFtab.BeginTransaction
+  theField = theTheme.GetFTab.FindField("Shape")
+  theType = theField.GetType
+  if ((theType = #FIELD_SHAPEPOLY) or (theType = #FIELD_SHAPELINE)) then
+    theTheme.Split(l)
+  end
+  theTheme.GetFtab.EndTransaction 
+  av.GetProject.SetModified(true)
+end
+
+

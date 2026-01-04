@@ -1,0 +1,22 @@
+' uses the built-in function View.UnionGraphics
+' 20.12.2021, A. Boehlen
+'###############################
+
+theView = av.GetActiveDoc
+
+if (theView.Is(view).Not) then
+  MsgBox.Info("Start this tool from an active View.","")
+  return nil
+end
+
+theTheme = theView.GetEditableTheme
+
+if (av.Run("Editor.SubCheckTheme", {theTheme, "polyline-or-polygon", "true", "2+"}) = nil) then
+  return nil
+end
+
+theTheme.GetFTab.BeginTransaction
+theTheme.UnionSelected 
+theTheme.GetFTab.EndTransaction 
+theTheme.Invalidate(TRUE)
+

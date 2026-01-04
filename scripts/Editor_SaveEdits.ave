@@ -1,0 +1,35 @@
+' uses the built-in function View.SaveEdits
+' 20.12.2021, A. Boehlen
+'###############################
+
+theView = av.GetActiveDoc
+
+if (theView.Is(view).Not) then
+  MsgBox.Info("Start this tool from an active View.","")
+  return nil
+end
+
+editThm = theView.GetEditableTheme
+if (editThm <> nil) then
+  doSave = MsgBox.YesNoCancel("Save edits to "+editThm.GetName+
+  "?","Save Edits",true)
+  if (doSave = nil) then
+    return nil
+  end
+  if (doSave.not) then
+    ' user changed her mind
+    return nil
+  else
+    ' save edits and stop editing
+    if (editThm.StopEditing(TRUE).Not) then
+      ' save failed, remain editing
+     MsgBox.Info("Unable to Save Edits, please use the Save Edits As option", "")
+     return nil
+    end   
+    ' restart editing
+    theView.SetEditableTheme(editThm)
+  end
+end  
+
+
+

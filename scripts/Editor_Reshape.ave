@@ -1,0 +1,273 @@
+' hacked from http://webapp1.dlib.indiana.edu/virtual_disk_library/index.cgi/4288321/FID3756/PROGRAM/ETC/AVEDIT.APR
+' 18.11.2015 A. Boehlen
+' REV: 15.10.2022
+'###############################
+theView  = av.GetActiveDoc
+theTheme = theView.GetEditableTheme
+
+if (av.Run("Editor.SubCheckTheme", {theTheme, "polyline-or-polygon", "true", "1"}) = nil) then
+  return nil
+end
+
+fldShape = theTheme.GetFTab.FindField("shape")
+
+plinUser  = theView.GetDisplay.ReturnUserPolyLine
+if (plinUser = NIL) then
+  exit
+end
+ 
+av.UseWaitCursor  
+  
+for each r in theTheme.GetFTab.GetSelection
+  shpSelected = theTheme.GetFTab.ReturnValue(fldShape, r)
+  if (shpSelected.AsList.Count > 1) then
+  ' Currently multi-part shapes are not supported, only the first 
+  ' list of points in the list of lists of points for MultiPoint 
+  ' objects is considered...
+    MsgBox.Error(
+    "Unable to reshape multi-part shape at record"++(r+1).AsString,
+    "Editor.Reshape")
+    continue
+  end
+  lstShapePoints = shpSelected.AsList.Get(0)
+  numShapePoints = lstShapePoints.Count
+  
+  lstUserPoints  = plinUser.AsList.Get(0)
+  numUserPoints  = lstUserPoints.Count
+  
+  if (numUserPoints < 2) then
+    exit
+  end
+  
+  sPtr = 0
+  uPtr = 0
+  xFwdUSeg = 1
+  xFwdSSeg = 1
+  done = FALSE
+  xFound = FALSE
+  
+  av.ShowMsg("Searching for intersections...")
+  total = numShapePoints * numUserPoints * 2
+  counter = 0
+  
+  ' First search in the forward direction of the selected shape and
+  ' the Gentle User's PolyLine for intersecting segments...
+
+  while (done.Not)
+    counter = counter + 1
+    if (sPtr = (numShapePoints - 1)) then
+      done = TRUE
+    else
+      sPt1 = lstShapePoints.Get(sPtr)
+      sPt2 = lstShapePoints.Get(sPtr + 1)
+      linShapeSegment = Line.Make(sPt1,sPt2)
+    
+      uPt1 = lstUserPoints.Get(uPtr)
+      uPt2 = lstUserPoints.Get(uPtr + 1)
+      linUserSegment = Line.Make(uPt1,uPt2)
+    
+      if (linShapeSegment.Intersects(linUserSegment)) then
+        xFound = TRUE
+        done = TRUE
+        ptrShapeFwd = sPtr
+        ptVertexFwd = av.Run("Editor.SubReturnIntersection", {linShapeSegment, linUserSegment})
+        ptrUserFwd = uPtr  
+      else
+        if (uPtr = (numUserPoints - 2)) then
+          sPtr = sPtr + 1
+          xFwdSSeg = xFwdSSeg + 1
+          uPtr = 0
+          xFwdUSeg = 1
+        else
+          uPtr = uPtr + 1
+          xFwdUSeg = xFwdUSeg + 1
+        end
+      end
+    end
+  
+    proceed = av.SetStatus((counter / total) * 100)
+    if (proceed.Not) then
+      av.ClearStatus
+      av.ShowMsg( "Stopped." )
+      exit
+    end
+  end
+
+  ' No intersection was found, don't waste any more time...
+  if (xFound.Not) then
+    av.ClearStatus
+    av.ShowMsg("Reshape line does not intersect feature at record:"+ r.AsString++"twice.")
+    continue
+  end
+  
+  ' If an intersection was found working forwards, work in the reverse 
+  ' direction to find another pair of intersecting segments....
+
+  uPtr = numUserPoints - 1
+  sPtr = numShapePoints - 1
+  xRevUSeg = numUserPoints - 1
+  xRevSSeg = numShapePoints - 1
+  xFound = FALSE
+  done = FALSE
+  counter = total / 2
+  
+  while (done.Not)
+    counter = counter + 1
+    if (sPtr = 0) then
+      done = TRUE
+    else
+      sPt1 = lstShapePoints.Get(sPtr)
+      sPt2 = lstShapePoints.Get(sPtr - 1)
+      linShapeSegment = Line.Make(sPt1,sPt2)
+    
+      uPt1 = lstUserPoints.Get(uPtr)
+      uPt2 = lstUserPoints.Get(uPtr - 1)
+      linUserSegment = Line.Make(uPt1,uPt2)
+    
+      if (linShapeSegment.Intersects(linUserSegment)) then
+        xFound = TRUE
+        done = TRUE
+        ptrShapeRev = sPtr
+        ptVertexRev = av.Run("Editor.SubReturnIntersection", {linShapeSegment, linUserSegment})
+        ptrUserRev = uPtr
+      else   
+        if (uPtr = 1) then
+          sPtr = sPtr - 1
+          xRevSSeg = xRevSSeg - 1
+          uPtr = (numUserPoints - 1)
+          xRevUSeg = (numUserPoints - 1)
+        else
+          uPtr = uPtr - 1
+          xRevUseg = xRevUSeg - 1
+        end
+      end
+    end
+    proceed = av.SetStatus((counter / total) * 100)
+ 
+    if (proceed.Not) then
+      av.ClearStatus
+      av.ShowMsg( "Stopped." )
+      exit
+    end
+  end
+
+  av.SetStatus(100)
+  
+  if (not xFound) then
+    av.ClearStatus
+    av.ShowMsg("Reshape line does not intersect feature at record:"+ r.AsString++"twice.")
+    continue
+  end
+  
+  ' Double check to make sure that the new pline has crossed twice, not
+  ' just once, by comparing segments where intersections have been found...
+
+  if ((xFwdUSeg = xRevUSeg) AND (xFwdSSeg = xRevSSeg)) then
+    av.ClearStatus
+    av.ShowMsg("Reshape line does not intersect feature at record:"+ r.AsString++"twice.")
+    continue
+  end
+  
+  ' An intersection has been found from both directions, and new vertices
+  ' have been calculated, now construct the new shape from the appropriate 
+  ' combinations of vertices from the original shape and the new polyline 
+  ' created by the Gentle User...
+  
+  av.ShowMsg("Assembling shape...")
+  lstNewPoints = {}
+  
+  ' Collect vertices from original shape up until first intersection...
+
+  for each i in 0 .. ptrShapeFwd
+    lstNewPoints.Add(lstShapePoints.Get(i))
+  end
+
+  ' Add first of the two new vertices.  If both new vertices fall on the
+  ' same shape segment the order of the new Vertices in relation to the
+  ' direction of the shape segment must be considered...
+
+  if ((xFwdSSeg = xRevSSeg) AND 
+    ((lstShapePoints.Get(ptrShapeFwd).Distance(ptVertexFwd)) > 
+     (lstShapePoints.Get(ptrShapeFwd).Distance(ptVertexRev)))) then
+    lstNewPoints.Add(ptVertexRev)
+  else
+    lstNewPoints.Add(ptVertexFwd)
+  end
+  
+  ' Add vertices from user pline that fall between the intersections...
+
+  if (xFwdSSeg <> xRevSSeg) then
+    if (xFwdUseg > xRevUSeg) then
+      for each i in ptrUserFwd .. ptrUserRev
+        lstNewPoints.Add(lstUserPoints.Get(i))
+      end
+    elseif (xFwdUSeg < xRevUSeg) then
+      ptrUserFwd = ptrUserFwd + 1
+      ptrUserRev = ptrUserRev - 1 
+      for each i in ptrUserFwd .. ptrUserRev
+        lstNewPoints.Add(lstUserPoints.Get(i))
+      end
+    else
+      ' Do not consider vertices in user PLine...
+    end
+  else 
+    if ((lstShapePoints.Get(ptrShapeFwd).Distance(ptVertexFwd)) > 
+     (lstShapePoints.Get(ptrShapeFwd).Distance(ptVertexRev))) then
+      ptrUserFwd = ptrUserFwd + 1
+      ptrUserRev = ptrUserRev - 1 
+      for each i in ptrUserRev .. ptrUserFwd
+        lstNewPoints.Add(lstUserPoints.Get(i))
+      end
+    else 
+      ptrUserFwd = ptrUserFwd + 1
+      ptrUserRev = ptrUserRev - 1 
+      for each i in ptrUserFwd .. ptrUserRev
+        lstNewPoints.Add(lstUserPoints.Get(i))
+      end
+    end
+  end
+
+  ' Add vertex for second intersection using same rules as used
+  ' for first intersection...
+
+  if ((xFwdSSeg = xRevSSeg) AND 
+    ((lstShapePoints.Get(ptrShapeFwd).Distance(ptVertexFwd)) > 
+    (lstShapePoints.Get(ptrShapeFwd).Distance(ptVertexRev)))) then
+    lstNewPoints.Add(ptVertexFwd)
+  else
+    lstNewPoints.Add(ptVertexRev)
+  end
+
+  ' Add rest of vertices from original shape...
+
+  for each i in ptrShapeRev .. (lstShapePoints.Count - 1)
+    lstNewPoints.Add(lstShapePoints.Get(i))
+  end
+  
+  ' Assemble new shape from the collected vertices and replace 
+  ' previous shape in the FTab...
+
+  if (fldShape.GetType = #FIELD_SHAPEPOLY) then
+    shpNew = Polygon.Make({ lstNewPoints })
+    shpNew.Clean
+  else  
+    ' the other possible case is #FIELD_SHAPELINE
+    shpNew = PolyLine.Make({ lstNewpoints })
+  end
+  
+  ' Push transaction onto transaction stack...
+  av.Run("Editor.SubPushTransaction",
+      {{"Editor.UndoVertex",{r.Clone, shpSelected}},
+      {"Editor.RedoVertex",{r.Clone, shpNew}}})  
+  
+  av.ClearStatus
+  av.ClearMsg
+  theTheme.GetFTab.SetValue(fldShape, r, shpNew)
+end
+
+theTheme.GetFTab.Flush
+
+theTheme.Invalidate (TRUE)
+theView.Invalidate
+System.RefreshWindows
+

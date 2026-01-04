@@ -1,0 +1,26 @@
+' uses the built-in function View.PointTool
+' 20.12.2021, A. Boehlen
+'###############################
+
+theView = av.GetActiveDoc
+theTheme = theView.GetEditableTheme
+
+if (av.Run("Editor.SubCheckTheme", {theTheme, "point", "false", "0"}) = nil) then
+  return nil
+end
+
+pt = theView.GetDisplay.ReturnUserPoint
+thePrj = theView.GetProjection
+if (thePrj.IsNull.Not) then
+  pt = pt.ReturnUnprojected(thePrj)
+end
+theField = theTheme.GetFTab.FindField("Shape")
+theTheme.GetFTab.BeginTransaction
+rec = theTheme.GetFTab.AddRecord
+theTheme.GetFTab.SetValue(theField, rec, pt)
+theTheme.GetFTab.EndTransaction
+theTheme.GetFTab.GetSelection.ClearAll
+theTheme.GetFTab.GetSelection.Set(rec)
+theTheme.GetFTab.UpdateSelection
+av.GetProject.SetModified(true)
+

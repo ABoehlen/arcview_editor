@@ -1,0 +1,7 @@
+' opens the editor toolbar and reads default values
+' 22.01.2023, A. Boehlen
+'###############################
+
+av.getproject.finddialog("Editor").open
+av.Run("Editor.SetDefaultValues", {})
+

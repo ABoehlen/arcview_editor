@@ -1,0 +1,14 @@
+' update script for Editor.Subtract
+' 20.12.2021, A. Boehlen
+'###############################
+
+theView = av.GetActiveDoc
+theTheme = theView.GetEditableTheme
+enabled = FALSE
+SELF.SetLabel("&Subtract Features")
+SELF.SetHelpTopic("Subtract_Features")
+fCount = theTheme.GetFTab.GetSelection.Count
+shapeClass = theTheme.GetFTab.FindField("shape").GetType
+enabled =  ((fcount = 2) and (shapeClass = #FIELD_SHAPEPOLY))
+
+SELF.SetEnabled(enabled)

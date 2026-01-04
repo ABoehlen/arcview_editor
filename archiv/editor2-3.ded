@@ -1,0 +1,4941 @@
+/3.2
+(ODB.1
+	Dependencies:	"$AVEXT/dialog.avx\n"
+	FirstRootClassName:	"DEd"
+	Roots:	2
+	Roots:	263
+	Roots:	267
+	Roots:	271
+	Roots:	275
+	Roots:	279
+	Roots:	283
+	Roots:	287
+	Roots:	291
+	Roots:	295
+	Roots:	299
+	Roots:	303
+	Roots:	307
+	Roots:	311
+	Roots:	315
+	Roots:	319
+	Roots:	323
+	Roots:	327
+	Roots:	331
+	Roots:	335
+	Roots:	339
+	Roots:	343
+	Roots:	347
+	Roots:	351
+	Roots:	355
+	Roots:	359
+	Roots:	363
+	Roots:	367
+	Roots:	371
+	Roots:	375
+	Roots:	379
+	Roots:	383
+	Roots:	387
+	Roots:	391
+	Roots:	395
+	Roots:	399
+	Roots:	403
+	Roots:	407
+	Roots:	411
+	Roots:	415
+	Roots:	419
+	Roots:	423
+	Roots:	427
+	Roots:	431
+	Roots:	435
+	Roots:	439
+	Roots:	443
+	Roots:	447
+	Roots:	451
+	Roots:	455
+	Roots:	459
+	Version:	32
+)
+
+(DEd.2
+	Name:	"Editor"
+	Creator:	"adrian"
+	CreationDate:	"Sam 06 Apr 2013 14:57:19 CEST"
+	Comments:	"Version 2.3"
+	GUIName:	"DialogEditor"
+	Win:	3
+	CSMgr:	4
+	DocExts:	6
+	DocExts:	7
+	Graphics:	8
+	Dpy:	119
+	Dialog:	122
+	DialogExtent:	262
+	Compiled:	1
+)
+
+(DocWin.3
+	Owner:	2
+	Open:	1
+	X:	167
+	Y:	114
+	W:	1084
+	H:	239
+)
+
+(CSMgr.4
+	Client:	5
+)
+
+(CSClient.5
+	Client:	6
+	ReqName:	"ClientNfy"
+)
+
+(PanMgr.6
+	Doc:	2
+)
+
+(DocAct.7
+	Doc:	2
+)
+
+(GList.8
+	Child:	9
+	Child:	12
+	Child:	16
+	Child:	20
+	Child:	24
+	Child:	28
+	Child:	31
+	Child:	35
+	Child:	39
+	Child:	43
+	Child:	47
+	Child:	51
+	Child:	55
+	Child:	59
+	Child:	63
+	Child:	67
+	Child:	71
+	Child:	75
+	Child:	79
+	Child:	83
+	Child:	87
+	Child:	91
+	Child:	95
+	Child:	99
+	Child:	103
+	Child:	107
+	Child:	111
+	Child:	115
+	Dpy:	119
+	FormatNumb:	121
+)
+
+(GCtrl.9
+	Name:	"aControlPanel2"
+	Bounds:	10
+	ControlConstraints:	0x55
+	Control:	11
+	Editable:	1
+)
+
+(RectD.10
+	Left:	1.46875000000000
+	Top:	1.48958333333333
+	Right:	10.05208333333333
+	Bottom:	1.12500000000000
+)
+
+(CPanel.11
+	InternalName:	"aControlPanel2"
+	UseGraphicNfy:	1
+	Constraints:	0x55
+	VisibleBorder:	1
+	Listening:	1
+)
+
+(GCtrl.12
+	Name:	"SaveEdits"
+	Bounds:	13
+	ControlConstraints:	0x55
+	Control:	14
+	Editable:	1
+)
+
+(RectD.13
+	Left:	1.80208333333333
+	Top:	1.42708333333333
+	Right:	2.05208333333333
+	Bottom:	1.17708333333333
+)
+
+(Butn.14
+	InternalName:	"SaveEdits"
+	UseGraphicNfy:	1
+	Help:	"Save edits//"
+	Icon:	15
+	Click:	"Editor.SaveEdits"
+)
+
+(AVIcon.15
+	Name:	"save_edits.bmp"
+	Data:	4e442049 6d616765 0001000f 000f0000 
+	Data:	00f0f2e7 bc556db7 bbb9b9b9 b9b9b9bb 
+	Data:	f200e7a1 30477c9b 4e231f1d 1c1a1921 
+	Data:	f300a23b 5c17cddb 854f3731 0c57541a 
+	Data:	f4003764 8c13c3da c86b5346 11775a1c 
+	Data:	f500328a ab17e5e9 ddca7356 197c601f 
+	Data:	f5003591 9e1ceaf0 cbe2ca6b 477f6621 
+	Data:	f6003797 9b174041 2ac1decb 745e6424 
+	Data:	f600399d a29da1a5 a3a8dddc cb633d26 
+	Data:	f7003da4 a09b9da1 a4a2a2d5 c3af582c 
+	Data:	e9003fab 9d847e7a 76726e6b 8bb5af6a 
+	Data:	6b0043b1 9a81fbaa aaaaaaf6 6896bfbf 
+	Data:	830045b7 9785fcfb faf9f9f7 699da5bf 
+	Data:	dc0048be 9489fdaa aaaaaaf8 6daa9633 
+	Data:	f9004ac4 c08dfefd fcfbfaf9 71a09c36 
+	Data:	f900544b 49477573 716f6e6e 3c3b3944 
+	Data:	fa000000 04000000 00000101 01000202 
+	Data:	02000303 03000404 04000505 05000606 
+	Data:	06000707 07000808 08000909 09000a0a 
+	Data:	0a000b0b 0b000c0c 0c000d0d 0d000e0e 
+	Data:	0e000f0f 0f001010 10001111 11001212 
+	Data:	12001313 13001414 14001515 15001616 
+	Data:	16001717 17001818 18001919 19001a1a 
+	Data:	1a001b1b 1b001c1c 1c001d1d 1d001e1e 
+	Data:	1e001f1f 1f002020 20002121 21002222 
+	Data:	22002323 23002424 24002525 25002626 
+	Data:	26002727 27002828 28002929 29002a2a 
+	Data:	2a002b2b 2b002c2c 2c002d2d 2d002e2e 
+	Data:	2e002f2f 2f003030 30003131 31003232 
+	Data:	32003333 33003434 34003535 35003636 
+	Data:	36003737 37003838 38003939 39003a3a 
+	Data:	3a003b3b 3b003c3c 3c003d3d 3d003e3e 
+	Data:	3e003f3f 3f004040 40004141 41004242 
+	Data:	42004343 43004444 44004545 45004646 
+	Data:	46004747 47004848 48004949 49004a4a 
+	Data:	4a004b4b 4b004c4c 4c004d4d 4d004e4e 
+	Data:	4e004f4f 4f005050 50005151 51005252 
+	Data:	52005353 53005454 54005555 55005656 
+	Data:	56005757 57005858 58005959 59005a5a 
+	Data:	5a005b5b 5b005c5c 5c005d5d 5d005e5e 
+	Data:	5e005f5f 5f006060 60006161 61006262 
+	Data:	62006363 63006464 64006565 65006666 
+	Data:	66006767 67006868 68006969 69006a6a 
+	Data:	6a006b6b 6b006c6c 6c006d6d 6d006e6e 
+	Data:	6e006f6f 6f007070 70007171 71007272 
+	Data:	72007373 73007474 74007575 75007676 
+	Data:	76007777 77007878 78007979 79007a7a 
+	Data:	7a007b7b 7b007c7c 7c007d7d 7d007e7e 
+	Data:	7e007f7f 7f008080 80008181 81008282 
+	Data:	82008383 83008484 84008585 85008686 
+	Data:	86008787 87008888 88008989 89008a8a 
+	Data:	8a008b8b 8b008c8c 8c008d8d 8d008e8e 
+	Data:	8e008f8f 8f009090 90009191 91009292 
+	Data:	92009393 93009494 94009595 95009696 
+	Data:	96009797 97009898 98009999 99009a9a 
+	Data:	9a009b9b 9b009c9c 9c009d9d 9d009e9e 
+	Data:	9e009f9f 9f00a0a0 a000a1a1 a100a2a2 
+	Data:	a200a3a3 a300a4a4 a400a5a5 a500a6a6 
+	Data:	a600a7a7 a700a8a8 a800a9a9 a900aaaa 
+	Data:	aa00abab ab00acac ac00adad ad00aeae 
+	Data:	ae00afaf af00b0b0 b000b1b1 b100b2b2 
+	Data:	b200b3b3 b300b4b4 b400b5b5 b500b6b6 
+	Data:	b600b7b7 b700b8b8 b800b9b9 b900baba 
+	Data:	ba00bbbb bb00bcbc bc00bdbd bd00bebe 
+	Data:	be00bfbf bf00c0c0 c000c1c1 c100c2c2 
+	Data:	c200c3c3 c300c4c4 c400c5c5 c500c6c6 
+	Data:	c600c7c7 c700c8c8 c800c9c9 c900caca 
+	Data:	ca00cbcb cb00cccc cc00cdcd cd00cece 
+	Data:	ce00cfcf cf00d0d0 d000d1d1 d100d2d2 
+	Data:	d200d3d3 d300d4d4 d400d5d5 d500d6d6 
+	Data:	d600d7d7 d700d8d8 d800d9d9 d900dada 
+	Data:	da00dbdb db00dcdc dc00dddd dd00dede 
+	Data:	de00dfdf df00e0e0 e000e1e1 e100e2e2 
+	Data:	e200e3e3 e300e4e4 e400e5e5 e500e6e6 
+	Data:	e600e7e7 e700e8e8 e800e9e9 e900eaea 
+	Data:	ea00ebeb eb00ecec ec00eded ed00eeee 
+	Data:	ee00efef ef00f0f0 f000f1f1 f100f2f2 
+	Data:	f200f3f3 f300f4f4 f400f5f5 f500f6f6 
+	Data:	f600f7f7 f700f8f8 f800f9f9 f900fafa 
+	Data:	fa00fbfb fb00fcfc fc00fdfd fd00fefe 
+	Data:	fe00ffff ff000002 00080007 00200001 
+	Data:	00020000 00000000 0000
+)
+
+(GCtrl.16
+	Name:	"Unselect"
+	Bounds:	17
+	ControlConstraints:	0x55
+	Control:	18
+	Editable:	1
+)
+
+(RectD.17
+	Left:	2.63541666666667
+	Top:	1.42708333333333
+	Right:	2.88541666666667
+	Bottom:	1.17708333333333
+)
+
+(Butn.18
+	InternalName:	"Unselect"
+	UseGraphicNfy:	1
+	Help:	"Clear selected features//"
+	HelpTopic:	" "
+	Icon:	19
+	Click:	"Editor.Unselect"
+)
+
+(AVIcon.19
+	Name:	"SelectNone"
+	Res:	"Icons.SelectNone"
+
+)
+
+(GCtrl.20
+	Name:	"Merge"
+	Bounds:	21
+	ControlConstraints:	0x55
+	Control:	22
+	Editable:	1
+)
+
+(RectD.21
+	Left:	7.54166666666667
+	Top:	1.42708333333333
+	Right:	7.79166666666667
+	Bottom:	1.17708333333333
+)
+
+(Butn.22
+	InternalName:	"Merge"
+	UseGraphicNfy:	1
+	Help:	"Merge features//"
+	Update:	"Editor.MergeUpdate"
+	Icon:	23
+	Click:	"Editor.Merge"
+)
+
+(AVIcon.23
+	Name:	"merge2.bmp"
+	Data:	4e442049 6d616765 00010013 00120000 
+	Data:	0168d4d4 d4d4d4d4 d4d4d4d4 d4d4d4d4 
+	Data:	d4d4d4d4 d400d6d6 80d6d6d6 d6d6d61b 
+	Data:	1b1b1b1b 1bd6d6d6 d600d8d8 d880d800 
+	Data:	0000d81b 36363636 1bd8d8d8 d800d9d9 
+	Data:	d9d980d9 0000d91b 36363636 1bd9d9d9 
+	Data:	d900dbdb dbdbdb00 db00db1b 36363636 
+	Data:	1b1b1b1b db00dcdc dcdc00dc 80dcdc1b 
+	Data:	36363636 3636361b dc00dede de00dede 
+	Data:	de80de1b 1b1b1b36 3636361b de00e0e0 
+	Data:	e0e0e0e0 e0e080e0 e0e01b36 3636361b 
+	Data:	e000e1e1 1b1b1b1b 1b1be180 e1e11b36 
+	Data:	3636361b e100e3e3 1bededed ed1be3e3 
+	Data:	80e31b1b 1b1b1b1b e300e4e4 1bededed 
+	Data:	ed1be4e4 e480e4e4 e4e4e4e4 e400e6e6 
+	Data:	1beded24 24240909 09e680e6 000000e6 
+	Data:	e600e8e8 1beded24 24241212 09e8e880 
+	Data:	e80000e8 e800e9e9 1b1b1b24 24241212 
+	Data:	09e9e9e9 00e900e9 e900ebeb ebebeb09 
+	Data:	12121212 09ebeb00 eb80ebeb eb00ecec 
+	Data:	ececec09 12121212 09ec00ec ecec80ec 
+	Data:	ec00eeee eeeeee09 09090909 09eeeeee 
+	Data:	eeeeee80 ee00f0f0 f0f0f0f0 f0f0f0f0 
+	Data:	f0f0f0f0 f0f0f0f0 f0000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(GCtrl.24
+	Name:	"Subtract"
+	Bounds:	25
+	ControlConstraints:	0x55
+	Control:	26
+	Editable:	1
+)
+
+(RectD.25
+	Left:	6.33333333333333
+	Top:	1.42708333333333
+	Right:	6.58333333333333
+	Bottom:	1.17708333333333
+)
+
+(Butn.26
+	InternalName:	"Subtract"
+	UseGraphicNfy:	1
+	Help:	"Subtracts one selected polygon from the other selected polygon//"
+	Update:	"Editor.SubtractUpdate"
+	Icon:	27
+	Click:	"Editor.Subtract"
+)
+
+(AVIcon.27
+	Name:	"Reduce"
+	Res:	"Icons.Reduce"
+
+)
+
+(GCtrl.28
+	Name:	"Close"
+	Bounds:	29
+	ControlConstraints:	0x55
+	Control:	30
+	Editable:	1
+)
+
+(RectD.29
+	Left:	9.53125000000000
+	Top:	1.42708333333333
+	Right:	9.97916666666667
+	Bottom:	1.17708333333333
+)
+
+(LButn.30
+	InternalName:	"Close"
+	UseGraphicNfy:	1
+	Help:	"Close Editor Toolbar//"
+	Label:	"Close"
+	Click:	"Editor.close"
+)
+
+(GCtrl.31
+	Name:	"Select"
+	Bounds:	32
+	ControlConstraints:	0x55
+	Control:	33
+	Editable:	1
+)
+
+(RectD.32
+	Left:	2.07291666666667
+	Top:	1.42708333333333
+	Right:	2.32291666666667
+	Bottom:	1.17708333333333
+)
+
+(Tool.33
+	InternalName:	"Select"
+	UseGraphicNfy:	1
+	Help:	"Select Tool//"
+	HelpTopic:	"Pointer_tool"
+	Update:	"Editor.HasDataUpdate"
+	Icon:	34
+	Cursor:	"Cursors.Select"
+	Apply:	"Editor.Select"
+	Click:	"Editor.SelectTool"
+)
+
+(AVIcon.34
+	Name:	"Select"
+	Res:	"Icons.Select"
+
+)
+
+(GCtrl.35
+	Name:	"SelectToEdit"
+	Bounds:	36
+	ControlConstraints:	0x55
+	Control:	37
+	Editable:	1
+)
+
+(RectD.36
+	Left:	2.35416666666667
+	Top:	1.42708333333333
+	Right:	2.60416666666667
+	Bottom:	1.17708333333333
+)
+
+(Tool.37
+	InternalName:	"SelectToEdit"
+	UseGraphicNfy:	1
+	Help:	"Vertex Edit//"
+	HelpTopic:	"Vertex_Edit_tool"
+	Update:	"Editor.SelectToEditUpdate"
+	Icon:	38
+	Cursor:	"Cursors.SelectEdit"
+	Apply:	"Editor.SelectToEdit"
+	Click:	"Editor.SelectToEditTool"
+)
+
+(AVIcon.38
+	Name:	"SelectEdit"
+	Res:	"Icons.SelectEdit"
+
+)
+
+(GCtrl.39
+	Name:	"EditAttributes"
+	Bounds:	40
+	ControlConstraints:	0x55
+	Control:	41
+	Editable:	1
+)
+
+(RectD.40
+	Left:	2.91666666666667
+	Top:	1.42708333333333
+	Right:	3.16666666666667
+	Bottom:	1.17708333333333
+)
+
+(Tool.41
+	InternalName:	"EditAttributes"
+	UseGraphicNfy:	1
+	Help:	"Edit attributes//"
+	Icon:	42
+	Cursor:	"Cursors.Default"
+	Apply:	"Editor.EditAttributes"
+	Click:	"Editor.EditAttributes"
+)
+
+(AVIcon.42
+	Name:	"FrameText2"
+	Res:	"Icons.FrameText2"
+
+)
+
+(GCtrl.43
+	Name:	"Combine"
+	Bounds:	44
+	ControlConstraints:	0x55
+	Control:	45
+	Editable:	1
+)
+
+(RectD.44
+	Left:	6.60416666666667
+	Top:	1.42708333333333
+	Right:	6.85416666666667
+	Bottom:	1.17708333333333
+)
+
+(Butn.45
+	InternalName:	"Combine"
+	UseGraphicNfy:	1
+	Help:	"Create hole from two overlapping selected polygons//"
+	Icon:	46
+	Click:	"Editor.CutHole"
+)
+
+(AVIcon.46
+	Name:	"create_hole.bmp"
+	Data:	4e442049 6d616765 00010016 00160000 
+	Data:	0210d1d1 d1d1d1d1 d1d1d1d1 d1d1d1d1 
+	Data:	d1d1d1d1 d1d1d1d1 0000d3d3 d3d3d3d3 
+	Data:	d3d3d3d3 d3d3d3d3 d3d3d3d3 d3d3d3d3 
+	Data:	0000d4d4 4e4e4e4e 4e4e4e4e 4e4e4e4e 
+	Data:	4e4e4e4e 4e4ed4d4 0000d6d6 4e4e4e4e 
+	Data:	4e4e4e4e 4e4e4e4e 4e4e4e4e 4e4ed6d6 
+	Data:	0000d8d8 4e4e4e4e 4e4e4e4e 4e4e4e4e 
+	Data:	4e4e4e4e 4e4ed8d8 0000d9d9 4e4e4e4e 
+	Data:	4e4e4e4e 4e4e4e4e 4e4e4e4e 4e4ed9d9 
+	Data:	0000dbdb 4e4e4e4e 4e4e4e4e 4e4e4e4e 
+	Data:	4e4e4e4e 4e4edbdb 0000dcdc 4e4e4e4e 
+	Data:	4effffff ffffffff ff4e4e4e 4e4edcdc 
+	Data:	0000dede 4e4e4e4e 4effffff ffffffff 
+	Data:	ff4e4e4e 4e4edede 0000e0e0 4e4e4e4e 
+	Data:	4effffff ffffffff ff4e4e4e 4e4ee0e0 
+	Data:	0000e1e1 4e4e4e4e 4effffff ffffffff 
+	Data:	ff4e4e4e 4e4ee1e1 0000e3e3 4e4e4e4e 
+	Data:	4effffff ffffffff ff4e4e4e 4e4ee3e3 
+	Data:	0000e4e4 4e4e4e4e 4effffff ffffffff 
+	Data:	ff4e4e4e 4e4ee4e4 0000e6e6 4e4e4e4e 
+	Data:	4effffff ffffffff ff4e4e4e 4e4ee6e6 
+	Data:	0000e8e8 4e4e4e4e 4effffff ffffffff 
+	Data:	ff4e4e4e 4e4ee8e8 0000e9e9 4e4e4e4e 
+	Data:	4e4e4e4e 4e4e4e4e 4e4e4e4e 4e4ee9e9 
+	Data:	0000ebeb 4e4e4e4e 4e4e4e4e 4e4e4e4e 
+	Data:	4e4e4e4e 4e4eebeb 0000ecec 4e4e4e4e 
+	Data:	4e4e4e4e 4e4e4e4e 4e4e4e4e 4e4eecec 
+	Data:	0000eeee 4e4e4e4e 4e4e4e4e 4e4e4e4e 
+	Data:	4e4e4e4e 4e4eeeee 0000f0f0 4e4e4e4e 
+	Data:	4e4e4e4e 4e4e4e4e 4e4e4e4e 4e4ef0f0 
+	Data:	0000f1f1 f1f1f1f1 f1f1f1f1 f1f1f1f1 
+	Data:	f1f1f1f1 f1f1f1f1 0000f3f3 f3f3f3f3 
+	Data:	f3f3f3f3 f3f3f3f3 f3f3f3f3 f3f3f3f3 
+	Data:	00000000 04000000 00000101 01000202 
+	Data:	02000303 03000404 04000505 05000606 
+	Data:	06000707 07000808 08000909 09000a0a 
+	Data:	0a000b0b 0b000c0c 0c000d0d 0d000e0e 
+	Data:	0e000f0f 0f001010 10001111 11001212 
+	Data:	12001313 13001414 14001515 15001616 
+	Data:	16001717 17001818 18001919 19001a1a 
+	Data:	1a001b1b 1b001c1c 1c001d1d 1d001e1e 
+	Data:	1e001f1f 1f002020 20002121 21002222 
+	Data:	22002323 23002424 24002525 25002626 
+	Data:	26002727 27002828 28002929 29002a2a 
+	Data:	2a002b2b 2b002c2c 2c002d2d 2d002e2e 
+	Data:	2e002f2f 2f003030 30003131 31003232 
+	Data:	32003333 33003434 34003535 35003636 
+	Data:	36003737 37003838 38003939 39003a3a 
+	Data:	3a003b3b 3b003c3c 3c003d3d 3d003e3e 
+	Data:	3e003f3f 3f004040 40004141 41004242 
+	Data:	42004343 43004444 44004545 45004646 
+	Data:	46004747 47004848 48004949 49004a4a 
+	Data:	4a004b4b 4b004c4c 4c004d4d 4d004e4e 
+	Data:	4e004f4f 4f005050 50005151 51005252 
+	Data:	52005353 53005454 54005555 55005656 
+	Data:	56005757 57005858 58005959 59005a5a 
+	Data:	5a005b5b 5b005c5c 5c005d5d 5d005e5e 
+	Data:	5e005f5f 5f006060 60006161 61006262 
+	Data:	62006363 63006464 64006565 65006666 
+	Data:	66006767 67006868 68006969 69006a6a 
+	Data:	6a006b6b 6b006c6c 6c006d6d 6d006e6e 
+	Data:	6e006f6f 6f007070 70007171 71007272 
+	Data:	72007373 73007474 74007575 75007676 
+	Data:	76007777 77007878 78007979 79007a7a 
+	Data:	7a007b7b 7b007c7c 7c007d7d 7d007e7e 
+	Data:	7e007f7f 7f008080 80008181 81008282 
+	Data:	82008383 83008484 84008585 85008686 
+	Data:	86008787 87008888 88008989 89008a8a 
+	Data:	8a008b8b 8b008c8c 8c008d8d 8d008e8e 
+	Data:	8e008f8f 8f009090 90009191 91009292 
+	Data:	92009393 93009494 94009595 95009696 
+	Data:	96009797 97009898 98009999 99009a9a 
+	Data:	9a009b9b 9b009c9c 9c009d9d 9d009e9e 
+	Data:	9e009f9f 9f00a0a0 a000a1a1 a100a2a2 
+	Data:	a200a3a3 a300a4a4 a400a5a5 a500a6a6 
+	Data:	a600a7a7 a700a8a8 a800a9a9 a900aaaa 
+	Data:	aa00abab ab00acac ac00adad ad00aeae 
+	Data:	ae00afaf af00b0b0 b000b1b1 b100b2b2 
+	Data:	b200b3b3 b300b4b4 b400b5b5 b500b6b6 
+	Data:	b600b7b7 b700b8b8 b800b9b9 b900baba 
+	Data:	ba00bbbb bb00bcbc bc00bdbd bd00bebe 
+	Data:	be00bfbf bf00c0c0 c000c1c1 c100c2c2 
+	Data:	c200c3c3 c300c4c4 c400c5c5 c500c6c6 
+	Data:	c600c7c7 c700c8c8 c800c9c9 c900caca 
+	Data:	ca00cbcb cb00cccc cc00cdcd cd00cece 
+	Data:	ce00cfcf cf00d0d0 d000d1d1 d100d2d2 
+	Data:	d200d3d3 d300d4d4 d400d5d5 d500d6d6 
+	Data:	d600d7d7 d700d8d8 d800d9d9 d900dada 
+	Data:	da00dbdb db00dcdc dc00dddd dd00dede 
+	Data:	de00dfdf df00e0e0 e000e1e1 e100e2e2 
+	Data:	e200e3e3 e300e4e4 e400e5e5 e500e6e6 
+	Data:	e600e7e7 e700e8e8 e800e9e9 e900eaea 
+	Data:	ea00ebeb eb00ecec ec00eded ed00eeee 
+	Data:	ee00efef ef00f0f0 f000f1f1 f100f2f2 
+	Data:	f200f3f3 f300f4f4 f400f5f5 f500f6f6 
+	Data:	f600f7f7 f700f8f8 f800f9f9 f900fafa 
+	Data:	fa00fbfb fb00fcfc fc00fdfd fd00fefe 
+	Data:	fe00ffff ff000002 00080007 00200001 
+	Data:	00020000 00000000 0000
+)
+
+(GCtrl.47
+	Name:	"DrawPoint"
+	Bounds:	48
+	ControlConstraints:	0x55
+	Control:	49
+	Editable:	1
+)
+
+(RectD.48
+	Left:	3.29166666666667
+	Top:	1.42708333333333
+	Right:	3.54166666666667
+	Bottom:	1.17708333333333
+)
+
+(Tool.49
+	InternalName:	"DrawPoint"
+	UseGraphicNfy:	1
+	Help:	"Create point//"
+	Icon:	50
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.Point"
+	Click:	"Editor.DisplayMarkerPanel"
+)
+
+(AVIcon.50
+	Name:	"Point"
+	Res:	"Icons.Point"
+
+)
+
+(GCtrl.51
+	Name:	"DrawLine"
+	Bounds:	52
+	ControlConstraints:	0x55
+	Control:	53
+	Editable:	1
+)
+
+(RectD.52
+	Left:	3.96875000000000
+	Top:	1.42708333333333
+	Right:	4.21875000000000
+	Bottom:	1.17708333333333
+)
+
+(Tool.53
+	InternalName:	"DrawLine"
+	UseGraphicNfy:	1
+	Help:	"Create polyline//"
+	Update:	"Editor.PolyLineUpdate"
+	Icon:	54
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.PolyLine"
+	Click:	"Editor.DisplayMarkerPanel"
+)
+
+(AVIcon.54
+	Name:	"Lines"
+	Res:	"Icons.Lines"
+
+)
+
+(GCtrl.55
+	Name:	"DrawPolygon"
+	Bounds:	56
+	ControlConstraints:	0x55
+	Control:	57
+	Editable:	1
+)
+
+(RectD.56
+	Left:	5.47916666666667
+	Top:	1.42708333333333
+	Right:	5.72916666666667
+	Bottom:	1.17708333333333
+)
+
+(Tool.57
+	InternalName:	"DrawPolygon"
+	UseGraphicNfy:	1
+	Help:	"Create polygon//"
+	Update:	"Editor.PolyToolUpdate"
+	Icon:	58
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.Polygon"
+	Click:	"Editor.DisplayMarkerPanel"
+)
+
+(AVIcon.58
+	Name:	"Poly"
+	Res:	"Icons.Poly"
+
+)
+
+(GCtrl.59
+	Name:	"SplitLine"
+	Bounds:	60
+	ControlConstraints:	0x55
+	Control:	61
+	Editable:	1
+)
+
+(RectD.60
+	Left:	4.23958333333333
+	Top:	1.42708333333333
+	Right:	4.48958333333333
+	Bottom:	1.17708333333333
+)
+
+(Tool.61
+	InternalName:	"SplitLine"
+	UseGraphicNfy:	1
+	Help:	"Create line to split feature (keep line)//"
+	Update:	"Editor.SplitLineToolUpdate"
+	Icon:	62
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.SplitLine"
+	Click:	"Editor.DisplayMarkerPanel"
+)
+
+(AVIcon.62
+	Name:	"SplitLine"
+	Res:	"Icons.SplitLine"
+
+)
+
+(GCtrl.63
+	Name:	"CircleTool"
+	Bounds:	64
+	ControlConstraints:	0x55
+	Control:	65
+	Editable:	1
+)
+
+(RectD.64
+	Left:	4.91666666666667
+	Top:	1.42708333333333
+	Right:	5.16666666666667
+	Bottom:	1.17708333333333
+)
+
+(Tool.65
+	InternalName:	"CircleTool"
+	UseGraphicNfy:	1
+	Help:	"Create circle//"
+	Update:	"Editor.PolyToolUpdate"
+	Icon:	66
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.CircleTool"
+	Click:	"Editor.DisplayMarkerPanel"
+)
+
+(AVIcon.66
+	Name:	"Disk"
+	Res:	"Icons.Disk"
+
+)
+
+(GCtrl.67
+	Name:	"SplitLineWithoutTrace"
+	Bounds:	68
+	ControlConstraints:	0x55
+	Control:	69
+	Editable:	1
+)
+
+(RectD.68
+	Left:	4.52083333333333
+	Top:	1.42708333333333
+	Right:	4.77083333333333
+	Bottom:	1.17708333333333
+)
+
+(Tool.69
+	InternalName:	"SplitLineWithoutTrace"
+	UseGraphicNfy:	1
+	Help:	"Create line to split feature//"
+	Update:	"Editor.SplitLineToolUpdate"
+	Icon:	70
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.SplitLineWithoutTrace"
+	Click:	"Editor.SplitLineWithoutTraceInfo"
+)
+
+(AVIcon.70
+	Name:	"line_b3.gif"
+	Data:	4e442049 6d616765 00010010 00100000 
+	Data:	0100d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d83dd8d8 d8d8d8d8 d8d800d8 
+	Data:	d8d8d8d8 d8d813d8 d8d8d8d8 d800d8d8 
+	Data:	d8d8d8d8 d8d8d813 d8d8d8d8 00d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8b4b400 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 b4d7d7b4 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 b4d0d7b4 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 00b4b4d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d800 d8d8d8d8 13d8d8d8 
+	Data:	d8d8d8d8 d8d800d8 d8d8d8d8 d813d8d8 
+	Data:	d8d8d8d8 d800d8d8 d8d8d8d8 d8d813d8 
+	Data:	d8d8d8d8 00d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d80000 04000000 00000000 00330000 
+	Data:	00660000 00990000 00cc0000 00ff0000 
+	Data:	33000000 33330000 33660000 33990000 
+	Data:	33cc0000 33ff0000 66000000 66330000 
+	Data:	66660000 66990000 66cc0000 66ff0000 
+	Data:	99000000 99330000 99660000 99990000 
+	Data:	99cc0000 99ff0000 cc000000 cc330000 
+	Data:	cc660000 cc990000 cccc0000 ccff0000 
+	Data:	ff000000 ff330000 ff660000 ff990000 
+	Data:	ffcc0000 ffff0033 00000033 00330033 
+	Data:	00660033 00990033 00cc0033 00ff0033 
+	Data:	33000033 33330033 33660033 33990033 
+	Data:	33cc0033 33ff0033 66000033 66330033 
+	Data:	66660033 66990033 66cc0033 66ff0033 
+	Data:	99000033 99330033 99660033 99990033 
+	Data:	99cc0033 99ff0033 cc000033 cc330033 
+	Data:	cc660033 cc990033 cccc0033 ccff0033 
+	Data:	ff000033 ff330033 ff660033 ff990033 
+	Data:	ffcc0033 ffff0066 00000066 00330066 
+	Data:	00660066 00990066 00cc0066 00ff0066 
+	Data:	33000066 33330066 33660066 33990066 
+	Data:	33cc0066 33ff0066 66000066 66330066 
+	Data:	66660066 66990066 66cc0066 66ff0066 
+	Data:	99000066 99330066 99660066 99990066 
+	Data:	99cc0066 99ff0066 cc000066 cc330066 
+	Data:	cc660066 cc990066 cccc0066 ccff0066 
+	Data:	ff000066 ff330066 ff660066 ff990066 
+	Data:	ffcc0066 ffff0099 00000099 00330099 
+	Data:	00660099 00990099 00cc0099 00ff0099 
+	Data:	33000099 33330099 33660099 33990099 
+	Data:	33cc0099 33ff0099 66000099 66330099 
+	Data:	66660099 66990099 66cc0099 66ff0099 
+	Data:	99000099 99330099 99660099 99990099 
+	Data:	99cc0099 99ff0099 cc000099 cc330099 
+	Data:	cc660099 cc990099 cccc0099 ccff0099 
+	Data:	ff000099 ff330099 ff660099 ff990099 
+	Data:	ffcc0099 ffff00cc 000000cc 003300cc 
+	Data:	006600cc 009900cc 00cc00cc 00ff00cc 
+	Data:	330000cc 333300cc 336600cc 339900cc 
+	Data:	33cc00cc 33ff00cc 660000cc 663300cc 
+	Data:	666600cc 669900cc 66cc00cc 66ff00cc 
+	Data:	990000cc 993300cc 996600cc 999900cc 
+	Data:	99cc00cc 99ff00cc cc0000cc cc3300cc 
+	Data:	cc6600cc cc9900cc cccc00cc ccff00cc 
+	Data:	ff0000cc ff3300cc ff6600cc ff9900cc 
+	Data:	ffcc00cc ffff00ff 000000ff 003300ff 
+	Data:	006600ff 009900ff 00cc00ff 00ff00ff 
+	Data:	330000ff 333300ff 336600ff 339900ff 
+	Data:	33cc00ff 33ff00ff 660000ff 663300ff 
+	Data:	666600ff 669900ff 66cc00ff 66ff00ff 
+	Data:	990000ff 993300ff 996600ff 999900ff 
+	Data:	99cc00ff 99ff00ff cc0000ff cc3300ff 
+	Data:	cc6600ff cc9900ff cccc00ff ccff00ff 
+	Data:	ff0000ff ff3300ff ff6600ff ff9900ff 
+	Data:	ffcc00ff ffff02d4 d0c80000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000002 0008000a 00200000 
+	Data:	00000000 00000000 0000
+)
+
+(GCtrl.71
+	Name:	"DrawPointByCoordinate"
+	Bounds:	72
+	ControlConstraints:	0x55
+	Control:	73
+	Editable:	1
+)
+
+(RectD.72
+	Left:	3.58333333333333
+	Top:	1.42708333333333
+	Right:	3.83333333333333
+	Bottom:	1.17708333333333
+)
+
+(Tool.73
+	InternalName:	"DrawPointByCoordinate"
+	UseGraphicNfy:	1
+	Help:	"Create point from coordinate//"
+	Icon:	74
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.MakePointByCoord"
+	Click:	"Editor.DisplayMarkerPanel"
+)
+
+(AVIcon.74
+	Name:	"mr_dotboxpnt2.gif"
+	Data:	4e442049 6d616765 00010010 00100000 
+	Data:	0100d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8acac d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d82e0505 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 ac05052f acd8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d82f0505 acd8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d882d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d80000 04000000 00000000 00330000 
+	Data:	00660000 00990000 00cc0000 00ff0000 
+	Data:	33000000 33330000 33660000 33990000 
+	Data:	33cc0000 33ff0000 66000000 66330000 
+	Data:	66660000 66990000 66cc0000 66ff0000 
+	Data:	99000000 99330000 99660000 99990000 
+	Data:	99cc0000 99ff0000 cc000000 cc330000 
+	Data:	cc660000 cc990000 cccc0000 ccff0000 
+	Data:	ff000000 ff330000 ff660000 ff990000 
+	Data:	ffcc0000 ffff0033 00000033 00330033 
+	Data:	00660033 00990033 00cc0033 00ff0033 
+	Data:	33000033 33330033 33660033 33990033 
+	Data:	33cc0033 33ff0033 66000033 66330033 
+	Data:	66660033 66990033 66cc0033 66ff0033 
+	Data:	99000033 99330033 99660033 99990033 
+	Data:	99cc0033 99ff0033 cc000033 cc330033 
+	Data:	cc660033 cc990033 cccc0033 ccff0033 
+	Data:	ff000033 ff330033 ff660033 ff990033 
+	Data:	ffcc0033 ffff0066 00000066 00330066 
+	Data:	00660066 00990066 00cc0066 00ff0066 
+	Data:	33000066 33330066 33660066 33990066 
+	Data:	33cc0066 33ff0066 66000066 66330066 
+	Data:	66660066 66990066 66cc0066 66ff0066 
+	Data:	99000066 99330066 99660066 99990066 
+	Data:	99cc0066 99ff0066 cc000066 cc330066 
+	Data:	cc660066 cc990066 cccc0066 ccff0066 
+	Data:	ff000066 ff330066 ff660066 ff990066 
+	Data:	ffcc0066 ffff0099 00000099 00330099 
+	Data:	00660099 00990099 00cc0099 00ff0099 
+	Data:	33000099 33330099 33660099 33990099 
+	Data:	33cc0099 33ff0099 66000099 66330099 
+	Data:	66660099 66990099 66cc0099 66ff0099 
+	Data:	99000099 99330099 99660099 99990099 
+	Data:	99cc0099 99ff0099 cc000099 cc330099 
+	Data:	cc660099 cc990099 cccc0099 ccff0099 
+	Data:	ff000099 ff330099 ff660099 ff990099 
+	Data:	ffcc0099 ffff00cc 000000cc 003300cc 
+	Data:	006600cc 009900cc 00cc00cc 00ff00cc 
+	Data:	330000cc 333300cc 336600cc 339900cc 
+	Data:	33cc00cc 33ff00cc 660000cc 663300cc 
+	Data:	666600cc 669900cc 66cc00cc 66ff00cc 
+	Data:	990000cc 993300cc 996600cc 999900cc 
+	Data:	99cc00cc 99ff00cc cc0000cc cc3300cc 
+	Data:	cc6600cc cc9900cc cccc00cc ccff00cc 
+	Data:	ff0000cc ff3300cc ff6600cc ff9900cc 
+	Data:	ffcc00cc ffff00ff 000000ff 003300ff 
+	Data:	006600ff 009900ff 00cc00ff 00ff00ff 
+	Data:	330000ff 333300ff 336600ff 339900ff 
+	Data:	33cc00ff 33ff00ff 660000ff 663300ff 
+	Data:	666600ff 669900ff 66cc00ff 66ff00ff 
+	Data:	990000ff 993300ff 996600ff 999900ff 
+	Data:	99cc00ff 99ff00ff cc0000ff cc3300ff 
+	Data:	cc6600ff cc9900ff cccc00ff ccff00ff 
+	Data:	ff0000ff ff3300ff ff6600ff ff9900ff 
+	Data:	ffcc00ff ffff0266 66000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000002 0008000a 00200000 
+	Data:	00000000 00000000 0000
+)
+
+(GCtrl.75
+	Name:	"RefreshView"
+	Bounds:	76
+	ControlConstraints:	0x55
+	Control:	77
+	Editable:	1
+)
+
+(RectD.76
+	Left:	8.91666666666667
+	Top:	1.42708333333333
+	Right:	9.16666666666667
+	Bottom:	1.17708333333333
+)
+
+(Butn.77
+	InternalName:	"RefreshView"
+	UseGraphicNfy:	1
+	Help:	"Refresh the view//"
+	HelpTopic:	" "
+	Icon:	78
+	Click:	"Editor.RefreshView"
+)
+
+(AVIcon.78
+	Name:	"R"
+	Res:	"Icons.R"
+
+)
+
+(GCtrl.79
+	Name:	"StartEditing"
+	Bounds:	80
+	ControlConstraints:	0x55
+	Control:	81
+	Editable:	1
+)
+
+(RectD.80
+	Left:	1.53125000000000
+	Top:	1.42708333333333
+	Right:	1.78125000000000
+	Bottom:	1.17708333333333
+)
+
+(Butn.81
+	InternalName:	"StartEditing"
+	UseGraphicNfy:	1
+	Help:	"Start or stop editing//"
+	Icon:	82
+	Click:	"Editor.ToggleEdit"
+)
+
+(AVIcon.82
+	Name:	"start_editing2.bmp"
+	Data:	4e442049 6d616765 00010016 00170000 
+	Data:	0228d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 0000d1d1 d1d1d1d1 
+	Data:	d1d1d1d1 d1d1d1d1 d1d1d1d1 d1d1d1d1 
+	Data:	0000d3d3 d3d3d3d3 d3d3d3d3 d3d3d3d3 
+	Data:	d3d3d3d3 d3d3d3d3 0000d4d4 d4d4d4d4 
+	Data:	d4d4d4d4 d4d4d4d4 d4d4d4d4 d4d4d4d4 
+	Data:	0000d6d6 d6d6d600 0080d6d6 d6d6d6d6 
+	Data:	d6d6d6d6 d6d6d6d6 0000d8d8 d8d8d800 
+	Data:	00808080 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	0000d9d9 d9d9d980 80ffffff 0000d9d9 
+	Data:	d9d9d9d9 d9d9d9d9 0000dbdb dbdbdbdb 
+	Data:	80ffffff 008000db dbdbdbdb dbdbdbdb 
+	Data:	0000dcdc dcdcdcdc 80ffff00 00808000 
+	Data:	dcdcdcdc dcdcdcdc 0000dede dededede 
+	Data:	de0000ed ed008080 00dedede dededede 
+	Data:	0000e0e0 e0e0e0e0 e0007700 eded0080 
+	Data:	8000e0e0 e0e0e0e0 0000e1e1 e1e1e1e1 
+	Data:	e1e10077 00eded00 808000e1 e1e1e1e1 
+	Data:	0000e3e3 e3e3bfbf e3b0e360 bf00eded 
+	Data:	00808000 e3e3e3e3 0000e4e4 e4e4bfb7 
+	Data:	ecc0ecb7 607700ed ed000036 00e4e4e4 
+	Data:	0000e6e6 e6e6e6ea fee6fdec e6007700 
+	Data:	ed003636 3600e6e6 0000e8e8 e8e8aabf 
+	Data:	edfee6bf b7e80077 00363636 00e8e8e8 
+	Data:	0000e9e9 e9e9e9ea fee6fdec e9e9e900 
+	Data:	36363600 e9e9e9e9 0000ebeb ebebbfb7 
+	Data:	ecc0ecb7 bfebebeb 003600eb ebebebeb 
+	Data:	0000ecec ececbfbf ecb0ecbf bfececec 
+	Data:	ec00ecec ecececec 0000eeee eeeeeeee 
+	Data:	eeeeeeee eeeeeeee eeeeeeee eeeeeeee 
+	Data:	0000f0f0 f0f0f0f0 f0f0f0f0 f0f0f0f0 
+	Data:	f0f0f0f0 f0f0f0f0 0000f1f1 f1f1f1f1 
+	Data:	f1f1f1f1 f1f1f1f1 f1f1f1f1 f1f1f1f1 
+	Data:	0000f3f3 f3f3f3f3 f3f3f3f3 f3f3f3f3 
+	Data:	f3f3f3f3 f3f3f3f3 00000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(GCtrl.83
+	Name:	"DeleteVertex"
+	Bounds:	84
+	ControlConstraints:	0x55
+	Control:	85
+	Editable:	1
+)
+
+(RectD.84
+	Left:	6.97916666666667
+	Top:	1.42708333333333
+	Right:	7.22916666666667
+	Bottom:	1.17708333333333
+)
+
+(Tool.85
+	InternalName:	"DeleteVertex"
+	UseGraphicNfy:	1
+	Help:	"Delete one or more vertices by drawing a box around it//"
+	Icon:	86
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.DeleteVertex"
+	Click:	"Editor.DeleteVertex"
+)
+
+(AVIcon.86
+	Name:	"delete_vertex.bmp"
+	Data:	4e442049 6d616765 00010012 00100000 
+	Data:	0140d0c0 c0c0c0c0 c0c0c0c0 c0c0c0c0 
+	Data:	c0c0c0d0 0000d0c0 c0c0c0c0 c0c0c0c0 
+	Data:	c0c0c0c0 c0c0c0d0 0000d0c0 c0c0c0c0 
+	Data:	c0c0c0c0 c0c0c0c0 36c0c0d0 0000d0c0 
+	Data:	c0c036c0 c0c0c0c0 c0c0c0c0 c0c0c0d0 
+	Data:	0000d0c0 c0363636 c0c0c0c0 c0c0c036 
+	Data:	c0c0c0d0 0000d0c0 c0363636 c0c0c0c0 
+	Data:	c0c036c0 c0c0c0d0 0000d0c0 c0c03636 
+	Data:	36c0c0c0 c03636c0 c0c0c0d0 0000d0c0 
+	Data:	c0c0c036 3636c0c0 3636c0c0 c0c0c0d0 
+	Data:	0000d0c0 c0c0c0c0 36000000 36c0c0c0 
+	Data:	c0c0c0d0 0000d0c0 c0c0c0c0 c000ff00 
+	Data:	c0c0c0c0 c0c0c0d0 0000d0c0 c0c0c0c0 
+	Data:	36000000 36c0c0c0 c0c0c0d0 0000d0c0 
+	Data:	c0c0c036 3636c0c0 36c0c0c0 c0c0c0d0 
+	Data:	0000d0c0 c0363636 36c0c0c0 c03636c0 
+	Data:	c0c0c0d0 0000d0c0 36363636 c0c0c0c0 
+	Data:	c0c03636 c0c0c0d0 0000d0c0 3636c0c0 
+	Data:	c0c0c0c0 c0c0c036 36c0c0d0 0000d0c0 
+	Data:	c0c0c0c0 c0c0c0c0 c0c0c0c0 c0c0c0d0 
+	Data:	00000000 04000000 00000101 01000202 
+	Data:	02000303 03000404 04000505 05000606 
+	Data:	06000707 07000808 08000909 09000a0a 
+	Data:	0a000b0b 0b000c0c 0c000d0d 0d000e0e 
+	Data:	0e000f0f 0f001010 10001111 11001212 
+	Data:	12001313 13001414 14001515 15001616 
+	Data:	16001717 17001818 18001919 19001a1a 
+	Data:	1a001b1b 1b001c1c 1c001d1d 1d001e1e 
+	Data:	1e001f1f 1f002020 20002121 21002222 
+	Data:	22002323 23002424 24002525 25002626 
+	Data:	26002727 27002828 28002929 29002a2a 
+	Data:	2a002b2b 2b002c2c 2c002d2d 2d002e2e 
+	Data:	2e002f2f 2f003030 30003131 31003232 
+	Data:	32003333 33003434 34003535 35003636 
+	Data:	36003737 37003838 38003939 39003a3a 
+	Data:	3a003b3b 3b003c3c 3c003d3d 3d003e3e 
+	Data:	3e003f3f 3f004040 40004141 41004242 
+	Data:	42004343 43004444 44004545 45004646 
+	Data:	46004747 47004848 48004949 49004a4a 
+	Data:	4a004b4b 4b004c4c 4c004d4d 4d004e4e 
+	Data:	4e004f4f 4f005050 50005151 51005252 
+	Data:	52005353 53005454 54005555 55005656 
+	Data:	56005757 57005858 58005959 59005a5a 
+	Data:	5a005b5b 5b005c5c 5c005d5d 5d005e5e 
+	Data:	5e005f5f 5f006060 60006161 61006262 
+	Data:	62006363 63006464 64006565 65006666 
+	Data:	66006767 67006868 68006969 69006a6a 
+	Data:	6a006b6b 6b006c6c 6c006d6d 6d006e6e 
+	Data:	6e006f6f 6f007070 70007171 71007272 
+	Data:	72007373 73007474 74007575 75007676 
+	Data:	76007777 77007878 78007979 79007a7a 
+	Data:	7a007b7b 7b007c7c 7c007d7d 7d007e7e 
+	Data:	7e007f7f 7f008080 80008181 81008282 
+	Data:	82008383 83008484 84008585 85008686 
+	Data:	86008787 87008888 88008989 89008a8a 
+	Data:	8a008b8b 8b008c8c 8c008d8d 8d008e8e 
+	Data:	8e008f8f 8f009090 90009191 91009292 
+	Data:	92009393 93009494 94009595 95009696 
+	Data:	96009797 97009898 98009999 99009a9a 
+	Data:	9a009b9b 9b009c9c 9c009d9d 9d009e9e 
+	Data:	9e009f9f 9f00a0a0 a000a1a1 a100a2a2 
+	Data:	a200a3a3 a300a4a4 a400a5a5 a500a6a6 
+	Data:	a600a7a7 a700a8a8 a800a9a9 a900aaaa 
+	Data:	aa00abab ab00acac ac00adad ad00aeae 
+	Data:	ae00afaf af00b0b0 b000b1b1 b100b2b2 
+	Data:	b200b3b3 b300b4b4 b400b5b5 b500b6b6 
+	Data:	b600b7b7 b700b8b8 b800b9b9 b900baba 
+	Data:	ba00bbbb bb00bcbc bc00bdbd bd00bebe 
+	Data:	be00bfbf bf00c0c0 c000c1c1 c100c2c2 
+	Data:	c200c3c3 c300c4c4 c400c5c5 c500c6c6 
+	Data:	c600c7c7 c700c8c8 c800c9c9 c900caca 
+	Data:	ca00cbcb cb00cccc cc00cdcd cd00cece 
+	Data:	ce00cfcf cf00d0d0 d000d1d1 d100d2d2 
+	Data:	d200d3d3 d300d4d4 d400d5d5 d500d6d6 
+	Data:	d600d7d7 d700d8d8 d800d9d9 d900dada 
+	Data:	da00dbdb db00dcdc dc00dddd dd00dede 
+	Data:	de00dfdf df00e0e0 e000e1e1 e100e2e2 
+	Data:	e200e3e3 e300e4e4 e400e5e5 e500e6e6 
+	Data:	e600e7e7 e700e8e8 e800e9e9 e900eaea 
+	Data:	ea00ebeb eb00ecec ec00eded ed00eeee 
+	Data:	ee00efef ef00f0f0 f000f1f1 f100f2f2 
+	Data:	f200f3f3 f300f4f4 f400f5f5 f500f6f6 
+	Data:	f600f7f7 f700f8f8 f800f9f9 f900fafa 
+	Data:	fa00fbfb fb00fcfc fc00fdfd fd00fefe 
+	Data:	fe00ffff ff000002 00080007 00200001 
+	Data:	00020000 00000000 0000
+)
+
+(GCtrl.87
+	Name:	"Reshape"
+	Bounds:	88
+	ControlConstraints:	0x55
+	Control:	89
+	Editable:	1
+)
+
+(RectD.88
+	Left:	7.26041666666667
+	Top:	1.42708333333333
+	Right:	7.51041666666667
+	Bottom:	1.17708333333333
+)
+
+(Tool.89
+	InternalName:	"Reshape"
+	UseGraphicNfy:	1
+	Help:	"Reshape feature//"
+	Update:	"Editor.ReshapeUpdate"
+	Icon:	90
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.Reshape"
+	Click:	"Editor.ReshapeTool"
+)
+
+(AVIcon.90
+	Name:	"reshape.bmp"
+	Data:	4e442049 6d616765 00010012 00110000 
+	Data:	0154f5f5 f5f5f5f5 f5f5f5f5 f5f5f5f5 
+	Data:	f5f5f5f5 0000f540 40404040 40404040 
+	Data:	f5f5f5f5 f5f5f5f5 0000f540 eaeaeaea 
+	Data:	eaeaea40 f5f5f5f5 f5f5f5f5 0000f540 
+	Data:	eaea5c5c 5ceaeaf5 f5f55c5c 5cf5f5f5 
+	Data:	0000f540 eaea5c00 5c5c5c5c 5c5c5c00 
+	Data:	5cf5f5f5 0000f540 eaea5c5c 5cf5eaf5 
+	Data:	f5f55c5c 5cf5f5f5 0000f540 eaeaea5c 
+	Data:	f5eaf540 f5f5f5f5 f5f5f5f5 0000f540 
+	Data:	eaeaea5c eaf5ea40 f5f5f5f5 f5f5f5f5 
+	Data:	0000f540 eaeaea5c f5eaf5f5 f5f5f5f5 
+	Data:	f5f5f5f5 0000f540 eaeaea5c eaf5ea40 
+	Data:	f5f5f500 f5f5f5f5 0000f540 eaeaea5c 
+	Data:	f5eaf540 f5f5ff00 fff5f5f5 0000f540 
+	Data:	eaea3636 36f5eaf5 f5ffc9c9 c9fff5f5 
+	Data:	0000f540 eaea361b 365c5c5c 0000c900 
+	Data:	c90000f5 0000f540 eaea3636 36eaeaf5 
+	Data:	f5ffc9c9 c9fff5f5 0000f540 eaeaeaea 
+	Data:	eaeaea40 f5f5ff00 fff5f5f5 0000f540 
+	Data:	40404040 40404040 f5f5f500 f5f5f5f5 
+	Data:	0000f5f5 f5f5f5f5 f5f5f5f5 f5f5f5f5 
+	Data:	f5f5f5f5 00000000 04000000 00000101 
+	Data:	01000202 02000303 03000404 04000505 
+	Data:	05000606 06000707 07000808 08000909 
+	Data:	09000a0a 0a000b0b 0b000c0c 0c000d0d 
+	Data:	0d000e0e 0e000f0f 0f001010 10001111 
+	Data:	11001212 12001313 13001414 14001515 
+	Data:	15001616 16001717 17001818 18001919 
+	Data:	19001a1a 1a001b1b 1b001c1c 1c001d1d 
+	Data:	1d001e1e 1e001f1f 1f002020 20002121 
+	Data:	21002222 22002323 23002424 24002525 
+	Data:	25002626 26002727 27002828 28002929 
+	Data:	29002a2a 2a002b2b 2b002c2c 2c002d2d 
+	Data:	2d002e2e 2e002f2f 2f003030 30003131 
+	Data:	31003232 32003333 33003434 34003535 
+	Data:	35003636 36003737 37003838 38003939 
+	Data:	39003a3a 3a003b3b 3b003c3c 3c003d3d 
+	Data:	3d003e3e 3e003f3f 3f004040 40004141 
+	Data:	41004242 42004343 43004444 44004545 
+	Data:	45004646 46004747 47004848 48004949 
+	Data:	49004a4a 4a004b4b 4b004c4c 4c004d4d 
+	Data:	4d004e4e 4e004f4f 4f005050 50005151 
+	Data:	51005252 52005353 53005454 54005555 
+	Data:	55005656 56005757 57005858 58005959 
+	Data:	59005a5a 5a005b5b 5b005c5c 5c005d5d 
+	Data:	5d005e5e 5e005f5f 5f006060 60006161 
+	Data:	61006262 62006363 63006464 64006565 
+	Data:	65006666 66006767 67006868 68006969 
+	Data:	69006a6a 6a006b6b 6b006c6c 6c006d6d 
+	Data:	6d006e6e 6e006f6f 6f007070 70007171 
+	Data:	71007272 72007373 73007474 74007575 
+	Data:	75007676 76007777 77007878 78007979 
+	Data:	79007a7a 7a007b7b 7b007c7c 7c007d7d 
+	Data:	7d007e7e 7e007f7f 7f008080 80008181 
+	Data:	81008282 82008383 83008484 84008585 
+	Data:	85008686 86008787 87008888 88008989 
+	Data:	89008a8a 8a008b8b 8b008c8c 8c008d8d 
+	Data:	8d008e8e 8e008f8f 8f009090 90009191 
+	Data:	91009292 92009393 93009494 94009595 
+	Data:	95009696 96009797 97009898 98009999 
+	Data:	99009a9a 9a009b9b 9b009c9c 9c009d9d 
+	Data:	9d009e9e 9e009f9f 9f00a0a0 a000a1a1 
+	Data:	a100a2a2 a200a3a3 a300a4a4 a400a5a5 
+	Data:	a500a6a6 a600a7a7 a700a8a8 a800a9a9 
+	Data:	a900aaaa aa00abab ab00acac ac00adad 
+	Data:	ad00aeae ae00afaf af00b0b0 b000b1b1 
+	Data:	b100b2b2 b200b3b3 b300b4b4 b400b5b5 
+	Data:	b500b6b6 b600b7b7 b700b8b8 b800b9b9 
+	Data:	b900baba ba00bbbb bb00bcbc bc00bdbd 
+	Data:	bd00bebe be00bfbf bf00c0c0 c000c1c1 
+	Data:	c100c2c2 c200c3c3 c300c4c4 c400c5c5 
+	Data:	c500c6c6 c600c7c7 c700c8c8 c800c9c9 
+	Data:	c900caca ca00cbcb cb00cccc cc00cdcd 
+	Data:	cd00cece ce00cfcf cf00d0d0 d000d1d1 
+	Data:	d100d2d2 d200d3d3 d300d4d4 d400d5d5 
+	Data:	d500d6d6 d600d7d7 d700d8d8 d800d9d9 
+	Data:	d900dada da00dbdb db00dcdc dc00dddd 
+	Data:	dd00dede de00dfdf df00e0e0 e000e1e1 
+	Data:	e100e2e2 e200e3e3 e300e4e4 e400e5e5 
+	Data:	e500e6e6 e600e7e7 e700e8e8 e800e9e9 
+	Data:	e900eaea ea00ebeb eb00ecec ec00eded 
+	Data:	ed00eeee ee00efef ef00f0f0 f000f1f1 
+	Data:	f100f2f2 f200f3f3 f300f4f4 f400f5f5 
+	Data:	f500f6f6 f600f7f7 f700f8f8 f800f9f9 
+	Data:	f900fafa fa00fbfb fb00fcfc fc00fdfd 
+	Data:	fd00fefe fe00ffff ff000002 00080007 
+	Data:	00200001 00020000 00000000 0000
+)
+
+(GCtrl.91
+	Name:	"AutoComplete"
+	Bounds:	92
+	ControlConstraints:	0x55
+	Control:	93
+	Editable:	1
+)
+
+(RectD.92
+	Left:	5.76041666666667
+	Top:	1.42708333333333
+	Right:	6.01041666666667
+	Bottom:	1.17708333333333
+)
+
+(Tool.93
+	InternalName:	"AutoComplete"
+	UseGraphicNfy:	1
+	Help:	"Autocomplete polygon//"
+	Update:	"Editor.AutoCompleteUpdate"
+	Icon:	94
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.AutoComplete"
+	Click:	"Editor.DisplayMarkerPanel"
+)
+
+(AVIcon.94
+	Name:	"AutoComplete"
+	Res:	"Icons.AutoComplete"
+
+)
+
+(GCtrl.95
+	Name:	"CutPoly"
+	Bounds:	96
+	ControlConstraints:	0x55
+	Control:	97
+	Editable:	1
+)
+
+(RectD.96
+	Left:	6.04166666666667
+	Top:	1.42708333333333
+	Right:	6.29166666666667
+	Bottom:	1.17708333333333
+)
+
+(Tool.97
+	InternalName:	"CutPoly"
+	UseGraphicNfy:	1
+	Help:	"Cut selected polygon//"
+	Update:	"Editor.CutPolyUpdate"
+	Icon:	98
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.CutPoly"
+)
+
+(AVIcon.98
+	Name:	"SplitPoly"
+	Res:	"Icons.SplitPoly"
+
+)
+
+(GCtrl.99
+	Name:	"Text"
+	Bounds:	100
+	ControlConstraints:	0x55
+	Control:	101
+	Editable:	1
+)
+
+(RectD.100
+	Left:	7.92708333333333
+	Top:	1.42708333333333
+	Right:	8.17708333333333
+	Bottom:	1.17708333333333
+)
+
+(Tool.101
+	InternalName:	"Text"
+	UseGraphicNfy:	1
+	Help:	"Add horizontal text//"
+	HelpTopic:	"Text_tool"
+	Update:	"Editor.TextToolUpdate"
+	Icon:	102
+	Cursor:	"Cursors.Text"
+	Apply:	"Editor.TextTool"
+	Click:	"Editor.DisplayFontPanel"
+)
+
+(AVIcon.102
+	Name:	"Text"
+	Res:	"Icons.Text"
+
+)
+
+(GCtrl.103
+	Name:	"SplineText"
+	Bounds:	104
+	ControlConstraints:	0x55
+	Control:	105
+	Editable:	1
+)
+
+(RectD.104
+	Left:	8.21875000000000
+	Top:	1.42708333333333
+	Right:	8.46875000000000
+	Bottom:	1.17708333333333
+)
+
+(Tool.105
+	InternalName:	"SplineText"
+	UseGraphicNfy:	1
+	Help:	"Add text that is aligned to a splined baseline//"
+	HelpTopic:	"Text_tool"
+	Update:	"Editor.TextToolUpdate"
+	Icon:	106
+	Cursor:	"Cursors.Bullseye"
+	Apply:	"Editor.TextToolSpline"
+)
+
+(AVIcon.106
+	Name:	"TextAligned"
+	Res:	"Icons.TextAligned"
+
+)
+
+(GCtrl.107
+	Name:	"SetDefaultValues"
+	Bounds:	108
+	ControlConstraints:	0x55
+	Control:	109
+	Editable:	1
+)
+
+(RectD.108
+	Left:	9.20833333333333
+	Top:	1.42708333333333
+	Right:	9.45833333333333
+	Bottom:	1.17708333333333
+)
+
+(Butn.109
+	InternalName:	"SetDefaultValues"
+	UseGraphicNfy:	1
+	Help:	"Set Default Values//"
+	HelpTopic:	" "
+	Icon:	110
+	Click:	"Editor.SetDefaultValues"
+)
+
+(AVIcon.110
+	Name:	"D"
+	Res:	"Icons.D"
+
+)
+
+(GCtrl.111
+	Name:	"HaloText"
+	Bounds:	112
+	ControlConstraints:	0x55
+	Control:	113
+	Editable:	1
+)
+
+(RectD.112
+	Left:	8.52083333333333
+	Top:	1.42708333333333
+	Right:	8.77083333333333
+	Bottom:	1.17708333333333
+)
+
+(Butn.113
+	InternalName:	"HaloText"
+	UseGraphicNfy:	1
+	Help:	"Draw halo around text//"
+	HelpTopic:	" "
+	Icon:	114
+	Click:	"Editor.TextHalo"
+)
+
+(AVIcon.114
+	Name:	"halotext.bmp"
+	Data:	4e442049 6d616765 00010014 00110000 
+	Data:	0154d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0ffff 
+	Data:	ffffd0d0 d0d0ffff ffffd0d0 d0d0d0d0 
+	Data:	d0d0ff00 00ffd0d0 d0d0ff00 00ffd0d0 
+	Data:	d0d0d0d0 d0d0ff00 00ffd0d0 d0d0ff00 
+	Data:	00ffd0d0 d0d0d0d0 d0d0ff00 00ffd0d0 
+	Data:	d0d0ff00 00ffd0d0 d0d0d0d0 d0d0ff00 
+	Data:	00ffd0d0 d0d0ff00 00ffd0d0 d0d0d0d0 
+	Data:	d0d0ff00 00ffffff ffffff00 00ffd0d0 
+	Data:	d0d0d0d0 d0d0ff00 00000000 00000000 
+	Data:	00ffd0d0 d0d0d0d0 d0d0ff00 00000000 
+	Data:	00000000 00ffd0d0 d0d0d0d0 d0d0ff00 
+	Data:	00ffffff ffffff00 00ffd0d0 d0d0d0d0 
+	Data:	d0d0ff00 00ffd0d0 d0d0ff00 00ffd0d0 
+	Data:	d0d0d0d0 d0d0ff00 00ffd0d0 d0d0ff00 
+	Data:	00ffd0d0 d0d0d0d0 d0d0ff00 00ffd0d0 
+	Data:	d0d0ff00 00ffd0d0 d0d0d0d0 d0d0ff00 
+	Data:	00ffd0d0 d0d0ff00 00ffd0d0 d0d0d0d0 
+	Data:	d0d0ffff ffffd0d0 d0d0ffff ffffd0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d00000 04000000 00000101 
+	Data:	01000202 02000303 03000404 04000505 
+	Data:	05000606 06000707 07000808 08000909 
+	Data:	09000a0a 0a000b0b 0b000c0c 0c000d0d 
+	Data:	0d000e0e 0e000f0f 0f001010 10001111 
+	Data:	11001212 12001313 13001414 14001515 
+	Data:	15001616 16001717 17001818 18001919 
+	Data:	19001a1a 1a001b1b 1b001c1c 1c001d1d 
+	Data:	1d001e1e 1e001f1f 1f002020 20002121 
+	Data:	21002222 22002323 23002424 24002525 
+	Data:	25002626 26002727 27002828 28002929 
+	Data:	29002a2a 2a002b2b 2b002c2c 2c002d2d 
+	Data:	2d002e2e 2e002f2f 2f003030 30003131 
+	Data:	31003232 32003333 33003434 34003535 
+	Data:	35003636 36003737 37003838 38003939 
+	Data:	39003a3a 3a003b3b 3b003c3c 3c003d3d 
+	Data:	3d003e3e 3e003f3f 3f004040 40004141 
+	Data:	41004242 42004343 43004444 44004545 
+	Data:	45004646 46004747 47004848 48004949 
+	Data:	49004a4a 4a004b4b 4b004c4c 4c004d4d 
+	Data:	4d004e4e 4e004f4f 4f005050 50005151 
+	Data:	51005252 52005353 53005454 54005555 
+	Data:	55005656 56005757 57005858 58005959 
+	Data:	59005a5a 5a005b5b 5b005c5c 5c005d5d 
+	Data:	5d005e5e 5e005f5f 5f006060 60006161 
+	Data:	61006262 62006363 63006464 64006565 
+	Data:	65006666 66006767 67006868 68006969 
+	Data:	69006a6a 6a006b6b 6b006c6c 6c006d6d 
+	Data:	6d006e6e 6e006f6f 6f007070 70007171 
+	Data:	71007272 72007373 73007474 74007575 
+	Data:	75007676 76007777 77007878 78007979 
+	Data:	79007a7a 7a007b7b 7b007c7c 7c007d7d 
+	Data:	7d007e7e 7e007f7f 7f008080 80008181 
+	Data:	81008282 82008383 83008484 84008585 
+	Data:	85008686 86008787 87008888 88008989 
+	Data:	89008a8a 8a008b8b 8b008c8c 8c008d8d 
+	Data:	8d008e8e 8e008f8f 8f009090 90009191 
+	Data:	91009292 92009393 93009494 94009595 
+	Data:	95009696 96009797 97009898 98009999 
+	Data:	99009a9a 9a009b9b 9b009c9c 9c009d9d 
+	Data:	9d009e9e 9e009f9f 9f00a0a0 a000a1a1 
+	Data:	a100a2a2 a200a3a3 a300a4a4 a400a5a5 
+	Data:	a500a6a6 a600a7a7 a700a8a8 a800a9a9 
+	Data:	a900aaaa aa00abab ab00acac ac00adad 
+	Data:	ad00aeae ae00afaf af00b0b0 b000b1b1 
+	Data:	b100b2b2 b200b3b3 b300b4b4 b400b5b5 
+	Data:	b500b6b6 b600b7b7 b700b8b8 b800b9b9 
+	Data:	b900baba ba00bbbb bb00bcbc bc00bdbd 
+	Data:	bd00bebe be00bfbf bf00c0c0 c000c1c1 
+	Data:	c100c2c2 c200c3c3 c300c4c4 c400c5c5 
+	Data:	c500c6c6 c600c7c7 c700c8c8 c800c9c9 
+	Data:	c900caca ca00cbcb cb00cccc cc00cdcd 
+	Data:	cd00cece ce00cfcf cf00d0d0 d000d1d1 
+	Data:	d100d2d2 d200d3d3 d300d4d4 d400d5d5 
+	Data:	d500d6d6 d600d7d7 d700d8d8 d800d9d9 
+	Data:	d900dada da00dbdb db00dcdc dc00dddd 
+	Data:	dd00dede de00dfdf df00e0e0 e000e1e1 
+	Data:	e100e2e2 e200e3e3 e300e4e4 e400e5e5 
+	Data:	e500e6e6 e600e7e7 e700e8e8 e800e9e9 
+	Data:	e900eaea ea00ebeb eb00ecec ec00eded 
+	Data:	ed00eeee ee00efef ef00f0f0 f000f1f1 
+	Data:	f100f2f2 f200f3f3 f300f4f4 f400f5f5 
+	Data:	f500f6f6 f600f7f7 f700f8f8 f800f9f9 
+	Data:	f900fafa fa00fbfb fb00fcfc fc00fdfd 
+	Data:	fd00fefe fe00ffff ff000002 00080007 
+	Data:	00200001 00020000 00000000 0000
+)
+
+(GCtrl.115
+	Name:	"Rectangle Tool"
+	Bounds:	116
+	ControlConstraints:	0x55
+	Control:	117
+	Editable:	1
+)
+
+(RectD.116
+	Left:	5.19791666666667
+	Top:	1.42708333333333
+	Right:	5.44791666666667
+	Bottom:	1.17708333333333
+)
+
+(Tool.117
+	InternalName:	"Rectangle Tool"
+	UseGraphicNfy:	1
+	Help:	"Create rectangle//"
+	Update:	"Editor.PolyToolUpdate"
+	Icon:	118
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.RectTool"
+	Click:	"Editor.DisplayFillPanel"
+)
+
+(AVIcon.118
+	Name:	"Rect"
+	Res:	"Icons.Rect"
+
+)
+
+(PageDpy.119
+	Top:	2.22916666666667
+	Right:	11.21875000000000
+	ReportUnits:	1
+	Units:	1
+	Scale:	120
+	ZoomRight:	11.21875000000000
+	ZoomTop:	2.22916666666667
+	GridSpacingX:	0.10000000000000
+	GridSpacingY:	0.10000000000000
+)
+
+(Numb.120
+	N:	96.00000000000000
+)
+
+(Numb.121
+)
+
+(AVDLog.122
+	Name:	"Editor"
+	X:	140
+	Y:	90
+	W:	829
+	H:	40
+	ConstrainedControlNames:	123
+	ConstrainedControlNames:	124
+	ConstrainedControlNames:	125
+	ConstrainedControlNames:	126
+	ConstrainedControlNames:	127
+	ConstrainedControlNames:	128
+	ConstrainedControlNames:	129
+	ConstrainedControlNames:	130
+	ConstrainedControlNames:	131
+	ConstrainedControlNames:	132
+	ConstrainedControlNames:	133
+	ConstrainedControlNames:	134
+	ConstrainedControlNames:	135
+	ConstrainedControlNames:	136
+	ConstrainedControlNames:	137
+	ConstrainedControlNames:	138
+	ConstrainedControlNames:	139
+	ConstrainedControlNames:	140
+	ConstrainedControlNames:	141
+	ConstrainedControlNames:	142
+	ConstrainedControlNames:	143
+	ConstrainedControlNames:	144
+	ConstrainedControlNames:	145
+	ConstrainedControlNames:	146
+	ConstrainedControlNames:	147
+	ConstrainedControlNames:	148
+	ConstrainedControlNames:	149
+	Constraints:	150
+	Constraints:	151
+	Constraints:	152
+	Constraints:	153
+	Constraints:	154
+	Constraints:	155
+	Constraints:	156
+	Constraints:	157
+	Constraints:	158
+	Constraints:	159
+	Constraints:	160
+	Constraints:	161
+	Constraints:	162
+	Constraints:	163
+	Constraints:	164
+	Constraints:	165
+	Constraints:	166
+	Constraints:	167
+	Constraints:	168
+	Constraints:	169
+	Constraints:	170
+	Constraints:	171
+	Constraints:	172
+	Constraints:	173
+	Constraints:	174
+	Constraints:	175
+	Constraints:	176
+	Server:	177
+	ControlPanel:	178
+	Title:	"Editor"
+	EscapeEnabled:	1
+	AlwaysOnTop:	1
+	HasTitleBar:	1
+	Closeable:	1
+	DefaultButton:	261
+)
+
+(AVStr.123
+	S:	"Close"
+)
+
+(AVStr.124
+	S:	"SaveEdits"
+)
+
+(AVStr.125
+	S:	"Unselect"
+)
+
+(AVStr.126
+	S:	"Merge"
+)
+
+(AVStr.127
+	S:	"Subtract"
+)
+
+(AVStr.128
+	S:	"Combine"
+)
+
+(AVStr.129
+	S:	"RefreshView"
+)
+
+(AVStr.130
+	S:	"StartEditing"
+)
+
+(AVStr.131
+	S:	"SetDefaultValues"
+)
+
+(AVStr.132
+	S:	"HaloText"
+)
+
+(AVStr.133
+	S:	"Select"
+)
+
+(AVStr.134
+	S:	"SelectToEdit"
+)
+
+(AVStr.135
+	S:	"EditAttributes"
+)
+
+(AVStr.136
+	S:	"DrawPoint"
+)
+
+(AVStr.137
+	S:	"DrawLine"
+)
+
+(AVStr.138
+	S:	"DrawPolygon"
+)
+
+(AVStr.139
+	S:	"SplitLine"
+)
+
+(AVStr.140
+	S:	"CircleTool"
+)
+
+(AVStr.141
+	S:	"SplitLineWithoutTrace"
+)
+
+(AVStr.142
+	S:	"DrawPointByCoordinate"
+)
+
+(AVStr.143
+	S:	"DeleteVertex"
+)
+
+(AVStr.144
+	S:	"Reshape"
+)
+
+(AVStr.145
+	S:	"AutoComplete"
+)
+
+(AVStr.146
+	S:	"CutPoly"
+)
+
+(AVStr.147
+	S:	"Text"
+)
+
+(AVStr.148
+	S:	"SplineText"
+)
+
+(AVStr.149
+	S:	"Rectangle Tool"
+)
+
+(Numb.150
+	N:	85.00000000000000
+)
+
+(Numb.151
+	N:	85.00000000000000
+)
+
+(Numb.152
+	N:	85.00000000000000
+)
+
+(Numb.153
+	N:	85.00000000000000
+)
+
+(Numb.154
+	N:	85.00000000000000
+)
+
+(Numb.155
+	N:	85.00000000000000
+)
+
+(Numb.156
+	N:	85.00000000000000
+)
+
+(Numb.157
+	N:	85.00000000000000
+)
+
+(Numb.158
+	N:	85.00000000000000
+)
+
+(Numb.159
+	N:	85.00000000000000
+)
+
+(Numb.160
+	N:	85.00000000000000
+)
+
+(Numb.161
+	N:	85.00000000000000
+)
+
+(Numb.162
+	N:	85.00000000000000
+)
+
+(Numb.163
+	N:	85.00000000000000
+)
+
+(Numb.164
+	N:	85.00000000000000
+)
+
+(Numb.165
+	N:	85.00000000000000
+)
+
+(Numb.166
+	N:	85.00000000000000
+)
+
+(Numb.167
+	N:	85.00000000000000
+)
+
+(Numb.168
+	N:	85.00000000000000
+)
+
+(Numb.169
+	N:	85.00000000000000
+)
+
+(Numb.170
+	N:	85.00000000000000
+)
+
+(Numb.171
+	N:	85.00000000000000
+)
+
+(Numb.172
+	N:	85.00000000000000
+)
+
+(Numb.173
+	N:	85.00000000000000
+)
+
+(Numb.174
+	N:	85.00000000000000
+)
+
+(Numb.175
+	N:	85.00000000000000
+)
+
+(Numb.176
+	N:	85.00000000000000
+)
+
+(Nil.177
+)
+
+(CPanel.178
+	Child:	179
+	ResBox:	260
+	Listening:	1
+)
+
+(CPanel.179
+	InternalName:	"aControlPanel2"
+	Child:	180
+	Child:	182
+	Child:	184
+	Child:	186
+	Child:	188
+	Child:	189
+	Child:	191
+	Child:	193
+	Child:	195
+	Child:	197
+	Child:	199
+	Child:	201
+	Child:	203
+	Child:	205
+	Child:	207
+	Child:	209
+	Child:	211
+	Child:	213
+	Child:	215
+	Child:	217
+	Child:	219
+	Child:	221
+	Child:	223
+	Child:	225
+	Child:	227
+	Child:	229
+	Child:	231
+	Constraints:	0x55
+	ResBox:	233
+	ResBox:	234
+	ResBox:	235
+	ResBox:	236
+	ResBox:	237
+	ResBox:	238
+	ResBox:	239
+	ResBox:	240
+	ResBox:	241
+	ResBox:	242
+	ResBox:	243
+	ResBox:	244
+	ResBox:	245
+	ResBox:	246
+	ResBox:	247
+	ResBox:	248
+	ResBox:	249
+	ResBox:	250
+	ResBox:	251
+	ResBox:	252
+	ResBox:	253
+	ResBox:	254
+	ResBox:	255
+	ResBox:	256
+	ResBox:	257
+	ResBox:	258
+	ResBox:	259
+	VisibleBorder:	1
+	Listening:	1
+)
+
+(Butn.180
+	InternalName:	"SaveEdits"
+	Help:	"Save edits//"
+	Icon:	181
+	Click:	"Editor.SaveEdits"
+)
+
+(AVIcon.181
+	Name:	"save_edits.bmp"
+	Data:	4e442049 6d616765 0001000f 000f0000 
+	Data:	00f0f2e7 bc556db7 bbb9b9b9 b9b9b9bb 
+	Data:	f200e7a1 30477c9b 4e231f1d 1c1a1921 
+	Data:	f300a23b 5c17cddb 854f3731 0c57541a 
+	Data:	f4003764 8c13c3da c86b5346 11775a1c 
+	Data:	f500328a ab17e5e9 ddca7356 197c601f 
+	Data:	f5003591 9e1ceaf0 cbe2ca6b 477f6621 
+	Data:	f6003797 9b174041 2ac1decb 745e6424 
+	Data:	f600399d a29da1a5 a3a8dddc cb633d26 
+	Data:	f7003da4 a09b9da1 a4a2a2d5 c3af582c 
+	Data:	e9003fab 9d847e7a 76726e6b 8bb5af6a 
+	Data:	6b0043b1 9a81fbaa aaaaaaf6 6896bfbf 
+	Data:	830045b7 9785fcfb faf9f9f7 699da5bf 
+	Data:	dc0048be 9489fdaa aaaaaaf8 6daa9633 
+	Data:	f9004ac4 c08dfefd fcfbfaf9 71a09c36 
+	Data:	f900544b 49477573 716f6e6e 3c3b3944 
+	Data:	fa000000 04000000 00000101 01000202 
+	Data:	02000303 03000404 04000505 05000606 
+	Data:	06000707 07000808 08000909 09000a0a 
+	Data:	0a000b0b 0b000c0c 0c000d0d 0d000e0e 
+	Data:	0e000f0f 0f001010 10001111 11001212 
+	Data:	12001313 13001414 14001515 15001616 
+	Data:	16001717 17001818 18001919 19001a1a 
+	Data:	1a001b1b 1b001c1c 1c001d1d 1d001e1e 
+	Data:	1e001f1f 1f002020 20002121 21002222 
+	Data:	22002323 23002424 24002525 25002626 
+	Data:	26002727 27002828 28002929 29002a2a 
+	Data:	2a002b2b 2b002c2c 2c002d2d 2d002e2e 
+	Data:	2e002f2f 2f003030 30003131 31003232 
+	Data:	32003333 33003434 34003535 35003636 
+	Data:	36003737 37003838 38003939 39003a3a 
+	Data:	3a003b3b 3b003c3c 3c003d3d 3d003e3e 
+	Data:	3e003f3f 3f004040 40004141 41004242 
+	Data:	42004343 43004444 44004545 45004646 
+	Data:	46004747 47004848 48004949 49004a4a 
+	Data:	4a004b4b 4b004c4c 4c004d4d 4d004e4e 
+	Data:	4e004f4f 4f005050 50005151 51005252 
+	Data:	52005353 53005454 54005555 55005656 
+	Data:	56005757 57005858 58005959 59005a5a 
+	Data:	5a005b5b 5b005c5c 5c005d5d 5d005e5e 
+	Data:	5e005f5f 5f006060 60006161 61006262 
+	Data:	62006363 63006464 64006565 65006666 
+	Data:	66006767 67006868 68006969 69006a6a 
+	Data:	6a006b6b 6b006c6c 6c006d6d 6d006e6e 
+	Data:	6e006f6f 6f007070 70007171 71007272 
+	Data:	72007373 73007474 74007575 75007676 
+	Data:	76007777 77007878 78007979 79007a7a 
+	Data:	7a007b7b 7b007c7c 7c007d7d 7d007e7e 
+	Data:	7e007f7f 7f008080 80008181 81008282 
+	Data:	82008383 83008484 84008585 85008686 
+	Data:	86008787 87008888 88008989 89008a8a 
+	Data:	8a008b8b 8b008c8c 8c008d8d 8d008e8e 
+	Data:	8e008f8f 8f009090 90009191 91009292 
+	Data:	92009393 93009494 94009595 95009696 
+	Data:	96009797 97009898 98009999 99009a9a 
+	Data:	9a009b9b 9b009c9c 9c009d9d 9d009e9e 
+	Data:	9e009f9f 9f00a0a0 a000a1a1 a100a2a2 
+	Data:	a200a3a3 a300a4a4 a400a5a5 a500a6a6 
+	Data:	a600a7a7 a700a8a8 a800a9a9 a900aaaa 
+	Data:	aa00abab ab00acac ac00adad ad00aeae 
+	Data:	ae00afaf af00b0b0 b000b1b1 b100b2b2 
+	Data:	b200b3b3 b300b4b4 b400b5b5 b500b6b6 
+	Data:	b600b7b7 b700b8b8 b800b9b9 b900baba 
+	Data:	ba00bbbb bb00bcbc bc00bdbd bd00bebe 
+	Data:	be00bfbf bf00c0c0 c000c1c1 c100c2c2 
+	Data:	c200c3c3 c300c4c4 c400c5c5 c500c6c6 
+	Data:	c600c7c7 c700c8c8 c800c9c9 c900caca 
+	Data:	ca00cbcb cb00cccc cc00cdcd cd00cece 
+	Data:	ce00cfcf cf00d0d0 d000d1d1 d100d2d2 
+	Data:	d200d3d3 d300d4d4 d400d5d5 d500d6d6 
+	Data:	d600d7d7 d700d8d8 d800d9d9 d900dada 
+	Data:	da00dbdb db00dcdc dc00dddd dd00dede 
+	Data:	de00dfdf df00e0e0 e000e1e1 e100e2e2 
+	Data:	e200e3e3 e300e4e4 e400e5e5 e500e6e6 
+	Data:	e600e7e7 e700e8e8 e800e9e9 e900eaea 
+	Data:	ea00ebeb eb00ecec ec00eded ed00eeee 
+	Data:	ee00efef ef00f0f0 f000f1f1 f100f2f2 
+	Data:	f200f3f3 f300f4f4 f400f5f5 f500f6f6 
+	Data:	f600f7f7 f700f8f8 f800f9f9 f900fafa 
+	Data:	fa00fbfb fb00fcfc fc00fdfd fd00fefe 
+	Data:	fe00ffff ff000002 00080007 00200001 
+	Data:	00020000 00000000 0000
+)
+
+(Butn.182
+	InternalName:	"Unselect"
+	Help:	"Clear selected features//"
+	HelpTopic:	" "
+	Icon:	183
+	Click:	"Editor.Unselect"
+)
+
+(AVIcon.183
+	Name:	"SelectNone"
+	Res:	"Icons.SelectNone"
+
+)
+
+(Butn.184
+	InternalName:	"Merge"
+	Help:	"Merge features//"
+	Update:	"Editor.MergeUpdate"
+	Icon:	185
+	Click:	"Editor.Merge"
+)
+
+(AVIcon.185
+	Name:	"merge2.bmp"
+	Data:	4e442049 6d616765 00010013 00120000 
+	Data:	0168d4d4 d4d4d4d4 d4d4d4d4 d4d4d4d4 
+	Data:	d4d4d4d4 d400d6d6 80d6d6d6 d6d6d61b 
+	Data:	1b1b1b1b 1bd6d6d6 d600d8d8 d880d800 
+	Data:	0000d81b 36363636 1bd8d8d8 d800d9d9 
+	Data:	d9d980d9 0000d91b 36363636 1bd9d9d9 
+	Data:	d900dbdb dbdbdb00 db00db1b 36363636 
+	Data:	1b1b1b1b db00dcdc dcdc00dc 80dcdc1b 
+	Data:	36363636 3636361b dc00dede de00dede 
+	Data:	de80de1b 1b1b1b36 3636361b de00e0e0 
+	Data:	e0e0e0e0 e0e080e0 e0e01b36 3636361b 
+	Data:	e000e1e1 1b1b1b1b 1b1be180 e1e11b36 
+	Data:	3636361b e100e3e3 1bededed ed1be3e3 
+	Data:	80e31b1b 1b1b1b1b e300e4e4 1bededed 
+	Data:	ed1be4e4 e480e4e4 e4e4e4e4 e400e6e6 
+	Data:	1beded24 24240909 09e680e6 000000e6 
+	Data:	e600e8e8 1beded24 24241212 09e8e880 
+	Data:	e80000e8 e800e9e9 1b1b1b24 24241212 
+	Data:	09e9e9e9 00e900e9 e900ebeb ebebeb09 
+	Data:	12121212 09ebeb00 eb80ebeb eb00ecec 
+	Data:	ececec09 12121212 09ec00ec ecec80ec 
+	Data:	ec00eeee eeeeee09 09090909 09eeeeee 
+	Data:	eeeeee80 ee00f0f0 f0f0f0f0 f0f0f0f0 
+	Data:	f0f0f0f0 f0f0f0f0 f0000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(Butn.186
+	InternalName:	"Subtract"
+	Help:	"Subtracts one selected polygon from the other selected polygon//"
+	Update:	"Editor.SubtractUpdate"
+	Icon:	187
+	Click:	"Editor.Subtract"
+)
+
+(AVIcon.187
+	Name:	"Reduce"
+	Res:	"Icons.Reduce"
+
+)
+
+(LButn.188
+	InternalName:	"Close"
+	Help:	"Close Editor Toolbar//"
+	Label:	"Close"
+	Click:	"Editor.close"
+)
+
+(Tool.189
+	InternalName:	"Select"
+	Help:	"Select Tool//"
+	HelpTopic:	"Pointer_tool"
+	Update:	"Editor.HasDataUpdate"
+	Icon:	190
+	Cursor:	"Cursors.Select"
+	Apply:	"Editor.Select"
+	Click:	"Editor.SelectTool"
+)
+
+(AVIcon.190
+	Name:	"Select"
+	Res:	"Icons.Select"
+
+)
+
+(Tool.191
+	InternalName:	"SelectToEdit"
+	Help:	"Vertex Edit//"
+	HelpTopic:	"Vertex_Edit_tool"
+	Update:	"Editor.SelectToEditUpdate"
+	Icon:	192
+	Cursor:	"Cursors.SelectEdit"
+	Apply:	"Editor.SelectToEdit"
+	Click:	"Editor.SelectToEditTool"
+)
+
+(AVIcon.192
+	Name:	"SelectEdit"
+	Res:	"Icons.SelectEdit"
+
+)
+
+(Tool.193
+	InternalName:	"EditAttributes"
+	Help:	"Edit attributes//"
+	Icon:	194
+	Cursor:	"Cursors.Default"
+	Apply:	"Editor.EditAttributes"
+	Click:	"Editor.EditAttributes"
+)
+
+(AVIcon.194
+	Name:	"FrameText2"
+	Res:	"Icons.FrameText2"
+
+)
+
+(Butn.195
+	InternalName:	"Combine"
+	Help:	"Create hole from two overlapping selected polygons//"
+	Icon:	196
+	Click:	"Editor.CutHole"
+)
+
+(AVIcon.196
+	Name:	"create_hole.bmp"
+	Data:	4e442049 6d616765 00010016 00160000 
+	Data:	0210d1d1 d1d1d1d1 d1d1d1d1 d1d1d1d1 
+	Data:	d1d1d1d1 d1d1d1d1 0000d3d3 d3d3d3d3 
+	Data:	d3d3d3d3 d3d3d3d3 d3d3d3d3 d3d3d3d3 
+	Data:	0000d4d4 4e4e4e4e 4e4e4e4e 4e4e4e4e 
+	Data:	4e4e4e4e 4e4ed4d4 0000d6d6 4e4e4e4e 
+	Data:	4e4e4e4e 4e4e4e4e 4e4e4e4e 4e4ed6d6 
+	Data:	0000d8d8 4e4e4e4e 4e4e4e4e 4e4e4e4e 
+	Data:	4e4e4e4e 4e4ed8d8 0000d9d9 4e4e4e4e 
+	Data:	4e4e4e4e 4e4e4e4e 4e4e4e4e 4e4ed9d9 
+	Data:	0000dbdb 4e4e4e4e 4e4e4e4e 4e4e4e4e 
+	Data:	4e4e4e4e 4e4edbdb 0000dcdc 4e4e4e4e 
+	Data:	4effffff ffffffff ff4e4e4e 4e4edcdc 
+	Data:	0000dede 4e4e4e4e 4effffff ffffffff 
+	Data:	ff4e4e4e 4e4edede 0000e0e0 4e4e4e4e 
+	Data:	4effffff ffffffff ff4e4e4e 4e4ee0e0 
+	Data:	0000e1e1 4e4e4e4e 4effffff ffffffff 
+	Data:	ff4e4e4e 4e4ee1e1 0000e3e3 4e4e4e4e 
+	Data:	4effffff ffffffff ff4e4e4e 4e4ee3e3 
+	Data:	0000e4e4 4e4e4e4e 4effffff ffffffff 
+	Data:	ff4e4e4e 4e4ee4e4 0000e6e6 4e4e4e4e 
+	Data:	4effffff ffffffff ff4e4e4e 4e4ee6e6 
+	Data:	0000e8e8 4e4e4e4e 4effffff ffffffff 
+	Data:	ff4e4e4e 4e4ee8e8 0000e9e9 4e4e4e4e 
+	Data:	4e4e4e4e 4e4e4e4e 4e4e4e4e 4e4ee9e9 
+	Data:	0000ebeb 4e4e4e4e 4e4e4e4e 4e4e4e4e 
+	Data:	4e4e4e4e 4e4eebeb 0000ecec 4e4e4e4e 
+	Data:	4e4e4e4e 4e4e4e4e 4e4e4e4e 4e4eecec 
+	Data:	0000eeee 4e4e4e4e 4e4e4e4e 4e4e4e4e 
+	Data:	4e4e4e4e 4e4eeeee 0000f0f0 4e4e4e4e 
+	Data:	4e4e4e4e 4e4e4e4e 4e4e4e4e 4e4ef0f0 
+	Data:	0000f1f1 f1f1f1f1 f1f1f1f1 f1f1f1f1 
+	Data:	f1f1f1f1 f1f1f1f1 0000f3f3 f3f3f3f3 
+	Data:	f3f3f3f3 f3f3f3f3 f3f3f3f3 f3f3f3f3 
+	Data:	00000000 04000000 00000101 01000202 
+	Data:	02000303 03000404 04000505 05000606 
+	Data:	06000707 07000808 08000909 09000a0a 
+	Data:	0a000b0b 0b000c0c 0c000d0d 0d000e0e 
+	Data:	0e000f0f 0f001010 10001111 11001212 
+	Data:	12001313 13001414 14001515 15001616 
+	Data:	16001717 17001818 18001919 19001a1a 
+	Data:	1a001b1b 1b001c1c 1c001d1d 1d001e1e 
+	Data:	1e001f1f 1f002020 20002121 21002222 
+	Data:	22002323 23002424 24002525 25002626 
+	Data:	26002727 27002828 28002929 29002a2a 
+	Data:	2a002b2b 2b002c2c 2c002d2d 2d002e2e 
+	Data:	2e002f2f 2f003030 30003131 31003232 
+	Data:	32003333 33003434 34003535 35003636 
+	Data:	36003737 37003838 38003939 39003a3a 
+	Data:	3a003b3b 3b003c3c 3c003d3d 3d003e3e 
+	Data:	3e003f3f 3f004040 40004141 41004242 
+	Data:	42004343 43004444 44004545 45004646 
+	Data:	46004747 47004848 48004949 49004a4a 
+	Data:	4a004b4b 4b004c4c 4c004d4d 4d004e4e 
+	Data:	4e004f4f 4f005050 50005151 51005252 
+	Data:	52005353 53005454 54005555 55005656 
+	Data:	56005757 57005858 58005959 59005a5a 
+	Data:	5a005b5b 5b005c5c 5c005d5d 5d005e5e 
+	Data:	5e005f5f 5f006060 60006161 61006262 
+	Data:	62006363 63006464 64006565 65006666 
+	Data:	66006767 67006868 68006969 69006a6a 
+	Data:	6a006b6b 6b006c6c 6c006d6d 6d006e6e 
+	Data:	6e006f6f 6f007070 70007171 71007272 
+	Data:	72007373 73007474 74007575 75007676 
+	Data:	76007777 77007878 78007979 79007a7a 
+	Data:	7a007b7b 7b007c7c 7c007d7d 7d007e7e 
+	Data:	7e007f7f 7f008080 80008181 81008282 
+	Data:	82008383 83008484 84008585 85008686 
+	Data:	86008787 87008888 88008989 89008a8a 
+	Data:	8a008b8b 8b008c8c 8c008d8d 8d008e8e 
+	Data:	8e008f8f 8f009090 90009191 91009292 
+	Data:	92009393 93009494 94009595 95009696 
+	Data:	96009797 97009898 98009999 99009a9a 
+	Data:	9a009b9b 9b009c9c 9c009d9d 9d009e9e 
+	Data:	9e009f9f 9f00a0a0 a000a1a1 a100a2a2 
+	Data:	a200a3a3 a300a4a4 a400a5a5 a500a6a6 
+	Data:	a600a7a7 a700a8a8 a800a9a9 a900aaaa 
+	Data:	aa00abab ab00acac ac00adad ad00aeae 
+	Data:	ae00afaf af00b0b0 b000b1b1 b100b2b2 
+	Data:	b200b3b3 b300b4b4 b400b5b5 b500b6b6 
+	Data:	b600b7b7 b700b8b8 b800b9b9 b900baba 
+	Data:	ba00bbbb bb00bcbc bc00bdbd bd00bebe 
+	Data:	be00bfbf bf00c0c0 c000c1c1 c100c2c2 
+	Data:	c200c3c3 c300c4c4 c400c5c5 c500c6c6 
+	Data:	c600c7c7 c700c8c8 c800c9c9 c900caca 
+	Data:	ca00cbcb cb00cccc cc00cdcd cd00cece 
+	Data:	ce00cfcf cf00d0d0 d000d1d1 d100d2d2 
+	Data:	d200d3d3 d300d4d4 d400d5d5 d500d6d6 
+	Data:	d600d7d7 d700d8d8 d800d9d9 d900dada 
+	Data:	da00dbdb db00dcdc dc00dddd dd00dede 
+	Data:	de00dfdf df00e0e0 e000e1e1 e100e2e2 
+	Data:	e200e3e3 e300e4e4 e400e5e5 e500e6e6 
+	Data:	e600e7e7 e700e8e8 e800e9e9 e900eaea 
+	Data:	ea00ebeb eb00ecec ec00eded ed00eeee 
+	Data:	ee00efef ef00f0f0 f000f1f1 f100f2f2 
+	Data:	f200f3f3 f300f4f4 f400f5f5 f500f6f6 
+	Data:	f600f7f7 f700f8f8 f800f9f9 f900fafa 
+	Data:	fa00fbfb fb00fcfc fc00fdfd fd00fefe 
+	Data:	fe00ffff ff000002 00080007 00200001 
+	Data:	00020000 00000000 0000
+)
+
+(Tool.197
+	InternalName:	"DrawPoint"
+	Help:	"Create point//"
+	Icon:	198
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.Point"
+	Click:	"Editor.DisplayMarkerPanel"
+)
+
+(AVIcon.198
+	Name:	"Point"
+	Res:	"Icons.Point"
+
+)
+
+(Tool.199
+	InternalName:	"DrawLine"
+	Help:	"Create polyline//"
+	Update:	"Editor.PolyLineUpdate"
+	Icon:	200
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.PolyLine"
+	Click:	"Editor.DisplayMarkerPanel"
+)
+
+(AVIcon.200
+	Name:	"Lines"
+	Res:	"Icons.Lines"
+
+)
+
+(Tool.201
+	InternalName:	"DrawPolygon"
+	Help:	"Create polygon//"
+	Update:	"Editor.PolyToolUpdate"
+	Icon:	202
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.Polygon"
+	Click:	"Editor.DisplayMarkerPanel"
+)
+
+(AVIcon.202
+	Name:	"Poly"
+	Res:	"Icons.Poly"
+
+)
+
+(Tool.203
+	InternalName:	"SplitLine"
+	Help:	"Create line to split feature (keep line)//"
+	Update:	"Editor.SplitLineToolUpdate"
+	Icon:	204
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.SplitLine"
+	Click:	"Editor.DisplayMarkerPanel"
+)
+
+(AVIcon.204
+	Name:	"SplitLine"
+	Res:	"Icons.SplitLine"
+
+)
+
+(Tool.205
+	InternalName:	"CircleTool"
+	Help:	"Create circle//"
+	Update:	"Editor.PolyToolUpdate"
+	Icon:	206
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.CircleTool"
+	Click:	"Editor.DisplayMarkerPanel"
+)
+
+(AVIcon.206
+	Name:	"Disk"
+	Res:	"Icons.Disk"
+
+)
+
+(Tool.207
+	InternalName:	"SplitLineWithoutTrace"
+	Help:	"Create line to split feature//"
+	Update:	"Editor.SplitLineToolUpdate"
+	Icon:	208
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.SplitLineWithoutTrace"
+	Click:	"Editor.SplitLineWithoutTraceInfo"
+)
+
+(AVIcon.208
+	Name:	"line_b3.gif"
+	Data:	4e442049 6d616765 00010010 00100000 
+	Data:	0100d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d83dd8d8 d8d8d8d8 d8d800d8 
+	Data:	d8d8d8d8 d8d813d8 d8d8d8d8 d800d8d8 
+	Data:	d8d8d8d8 d8d8d813 d8d8d8d8 00d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8b4b400 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 b4d7d7b4 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 b4d0d7b4 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 00b4b4d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d800 d8d8d8d8 13d8d8d8 
+	Data:	d8d8d8d8 d8d800d8 d8d8d8d8 d813d8d8 
+	Data:	d8d8d8d8 d800d8d8 d8d8d8d8 d8d813d8 
+	Data:	d8d8d8d8 00d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d80000 04000000 00000000 00330000 
+	Data:	00660000 00990000 00cc0000 00ff0000 
+	Data:	33000000 33330000 33660000 33990000 
+	Data:	33cc0000 33ff0000 66000000 66330000 
+	Data:	66660000 66990000 66cc0000 66ff0000 
+	Data:	99000000 99330000 99660000 99990000 
+	Data:	99cc0000 99ff0000 cc000000 cc330000 
+	Data:	cc660000 cc990000 cccc0000 ccff0000 
+	Data:	ff000000 ff330000 ff660000 ff990000 
+	Data:	ffcc0000 ffff0033 00000033 00330033 
+	Data:	00660033 00990033 00cc0033 00ff0033 
+	Data:	33000033 33330033 33660033 33990033 
+	Data:	33cc0033 33ff0033 66000033 66330033 
+	Data:	66660033 66990033 66cc0033 66ff0033 
+	Data:	99000033 99330033 99660033 99990033 
+	Data:	99cc0033 99ff0033 cc000033 cc330033 
+	Data:	cc660033 cc990033 cccc0033 ccff0033 
+	Data:	ff000033 ff330033 ff660033 ff990033 
+	Data:	ffcc0033 ffff0066 00000066 00330066 
+	Data:	00660066 00990066 00cc0066 00ff0066 
+	Data:	33000066 33330066 33660066 33990066 
+	Data:	33cc0066 33ff0066 66000066 66330066 
+	Data:	66660066 66990066 66cc0066 66ff0066 
+	Data:	99000066 99330066 99660066 99990066 
+	Data:	99cc0066 99ff0066 cc000066 cc330066 
+	Data:	cc660066 cc990066 cccc0066 ccff0066 
+	Data:	ff000066 ff330066 ff660066 ff990066 
+	Data:	ffcc0066 ffff0099 00000099 00330099 
+	Data:	00660099 00990099 00cc0099 00ff0099 
+	Data:	33000099 33330099 33660099 33990099 
+	Data:	33cc0099 33ff0099 66000099 66330099 
+	Data:	66660099 66990099 66cc0099 66ff0099 
+	Data:	99000099 99330099 99660099 99990099 
+	Data:	99cc0099 99ff0099 cc000099 cc330099 
+	Data:	cc660099 cc990099 cccc0099 ccff0099 
+	Data:	ff000099 ff330099 ff660099 ff990099 
+	Data:	ffcc0099 ffff00cc 000000cc 003300cc 
+	Data:	006600cc 009900cc 00cc00cc 00ff00cc 
+	Data:	330000cc 333300cc 336600cc 339900cc 
+	Data:	33cc00cc 33ff00cc 660000cc 663300cc 
+	Data:	666600cc 669900cc 66cc00cc 66ff00cc 
+	Data:	990000cc 993300cc 996600cc 999900cc 
+	Data:	99cc00cc 99ff00cc cc0000cc cc3300cc 
+	Data:	cc6600cc cc9900cc cccc00cc ccff00cc 
+	Data:	ff0000cc ff3300cc ff6600cc ff9900cc 
+	Data:	ffcc00cc ffff00ff 000000ff 003300ff 
+	Data:	006600ff 009900ff 00cc00ff 00ff00ff 
+	Data:	330000ff 333300ff 336600ff 339900ff 
+	Data:	33cc00ff 33ff00ff 660000ff 663300ff 
+	Data:	666600ff 669900ff 66cc00ff 66ff00ff 
+	Data:	990000ff 993300ff 996600ff 999900ff 
+	Data:	99cc00ff 99ff00ff cc0000ff cc3300ff 
+	Data:	cc6600ff cc9900ff cccc00ff ccff00ff 
+	Data:	ff0000ff ff3300ff ff6600ff ff9900ff 
+	Data:	ffcc00ff ffff02d4 d0c80000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000002 0008000a 00200000 
+	Data:	00000000 00000000 0000
+)
+
+(Tool.209
+	InternalName:	"DrawPointByCoordinate"
+	Help:	"Create point from coordinate//"
+	Icon:	210
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.MakePointByCoord"
+	Click:	"Editor.DisplayMarkerPanel"
+)
+
+(AVIcon.210
+	Name:	"mr_dotboxpnt2.gif"
+	Data:	4e442049 6d616765 00010010 00100000 
+	Data:	0100d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8acac d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d82e0505 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 ac05052f acd8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d82f0505 acd8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d882d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d80000 04000000 00000000 00330000 
+	Data:	00660000 00990000 00cc0000 00ff0000 
+	Data:	33000000 33330000 33660000 33990000 
+	Data:	33cc0000 33ff0000 66000000 66330000 
+	Data:	66660000 66990000 66cc0000 66ff0000 
+	Data:	99000000 99330000 99660000 99990000 
+	Data:	99cc0000 99ff0000 cc000000 cc330000 
+	Data:	cc660000 cc990000 cccc0000 ccff0000 
+	Data:	ff000000 ff330000 ff660000 ff990000 
+	Data:	ffcc0000 ffff0033 00000033 00330033 
+	Data:	00660033 00990033 00cc0033 00ff0033 
+	Data:	33000033 33330033 33660033 33990033 
+	Data:	33cc0033 33ff0033 66000033 66330033 
+	Data:	66660033 66990033 66cc0033 66ff0033 
+	Data:	99000033 99330033 99660033 99990033 
+	Data:	99cc0033 99ff0033 cc000033 cc330033 
+	Data:	cc660033 cc990033 cccc0033 ccff0033 
+	Data:	ff000033 ff330033 ff660033 ff990033 
+	Data:	ffcc0033 ffff0066 00000066 00330066 
+	Data:	00660066 00990066 00cc0066 00ff0066 
+	Data:	33000066 33330066 33660066 33990066 
+	Data:	33cc0066 33ff0066 66000066 66330066 
+	Data:	66660066 66990066 66cc0066 66ff0066 
+	Data:	99000066 99330066 99660066 99990066 
+	Data:	99cc0066 99ff0066 cc000066 cc330066 
+	Data:	cc660066 cc990066 cccc0066 ccff0066 
+	Data:	ff000066 ff330066 ff660066 ff990066 
+	Data:	ffcc0066 ffff0099 00000099 00330099 
+	Data:	00660099 00990099 00cc0099 00ff0099 
+	Data:	33000099 33330099 33660099 33990099 
+	Data:	33cc0099 33ff0099 66000099 66330099 
+	Data:	66660099 66990099 66cc0099 66ff0099 
+	Data:	99000099 99330099 99660099 99990099 
+	Data:	99cc0099 99ff0099 cc000099 cc330099 
+	Data:	cc660099 cc990099 cccc0099 ccff0099 
+	Data:	ff000099 ff330099 ff660099 ff990099 
+	Data:	ffcc0099 ffff00cc 000000cc 003300cc 
+	Data:	006600cc 009900cc 00cc00cc 00ff00cc 
+	Data:	330000cc 333300cc 336600cc 339900cc 
+	Data:	33cc00cc 33ff00cc 660000cc 663300cc 
+	Data:	666600cc 669900cc 66cc00cc 66ff00cc 
+	Data:	990000cc 993300cc 996600cc 999900cc 
+	Data:	99cc00cc 99ff00cc cc0000cc cc3300cc 
+	Data:	cc6600cc cc9900cc cccc00cc ccff00cc 
+	Data:	ff0000cc ff3300cc ff6600cc ff9900cc 
+	Data:	ffcc00cc ffff00ff 000000ff 003300ff 
+	Data:	006600ff 009900ff 00cc00ff 00ff00ff 
+	Data:	330000ff 333300ff 336600ff 339900ff 
+	Data:	33cc00ff 33ff00ff 660000ff 663300ff 
+	Data:	666600ff 669900ff 66cc00ff 66ff00ff 
+	Data:	990000ff 993300ff 996600ff 999900ff 
+	Data:	99cc00ff 99ff00ff cc0000ff cc3300ff 
+	Data:	cc6600ff cc9900ff cccc00ff ccff00ff 
+	Data:	ff0000ff ff3300ff ff6600ff ff9900ff 
+	Data:	ffcc00ff ffff0266 66000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000000 00000000 00000000 
+	Data:	00000000 00000002 0008000a 00200000 
+	Data:	00000000 00000000 0000
+)
+
+(Butn.211
+	InternalName:	"RefreshView"
+	Help:	"Refresh the view//"
+	HelpTopic:	" "
+	Icon:	212
+	Click:	"Editor.RefreshView"
+)
+
+(AVIcon.212
+	Name:	"R"
+	Res:	"Icons.R"
+
+)
+
+(Butn.213
+	InternalName:	"StartEditing"
+	Help:	"Start or stop editing//"
+	Icon:	214
+	Click:	"Editor.ToggleEdit"
+)
+
+(AVIcon.214
+	Name:	"start_editing2.bmp"
+	Data:	4e442049 6d616765 00010016 00170000 
+	Data:	0228d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	d8d8d8d8 d8d8d8d8 0000d1d1 d1d1d1d1 
+	Data:	d1d1d1d1 d1d1d1d1 d1d1d1d1 d1d1d1d1 
+	Data:	0000d3d3 d3d3d3d3 d3d3d3d3 d3d3d3d3 
+	Data:	d3d3d3d3 d3d3d3d3 0000d4d4 d4d4d4d4 
+	Data:	d4d4d4d4 d4d4d4d4 d4d4d4d4 d4d4d4d4 
+	Data:	0000d6d6 d6d6d600 0080d6d6 d6d6d6d6 
+	Data:	d6d6d6d6 d6d6d6d6 0000d8d8 d8d8d800 
+	Data:	00808080 d8d8d8d8 d8d8d8d8 d8d8d8d8 
+	Data:	0000d9d9 d9d9d980 80ffffff 0000d9d9 
+	Data:	d9d9d9d9 d9d9d9d9 0000dbdb dbdbdbdb 
+	Data:	80ffffff 008000db dbdbdbdb dbdbdbdb 
+	Data:	0000dcdc dcdcdcdc 80ffff00 00808000 
+	Data:	dcdcdcdc dcdcdcdc 0000dede dededede 
+	Data:	de0000ed ed008080 00dedede dededede 
+	Data:	0000e0e0 e0e0e0e0 e0007700 eded0080 
+	Data:	8000e0e0 e0e0e0e0 0000e1e1 e1e1e1e1 
+	Data:	e1e10077 00eded00 808000e1 e1e1e1e1 
+	Data:	0000e3e3 e3e3bfbf e3b0e360 bf00eded 
+	Data:	00808000 e3e3e3e3 0000e4e4 e4e4bfb7 
+	Data:	ecc0ecb7 607700ed ed000036 00e4e4e4 
+	Data:	0000e6e6 e6e6e6ea fee6fdec e6007700 
+	Data:	ed003636 3600e6e6 0000e8e8 e8e8aabf 
+	Data:	edfee6bf b7e80077 00363636 00e8e8e8 
+	Data:	0000e9e9 e9e9e9ea fee6fdec e9e9e900 
+	Data:	36363600 e9e9e9e9 0000ebeb ebebbfb7 
+	Data:	ecc0ecb7 bfebebeb 003600eb ebebebeb 
+	Data:	0000ecec ececbfbf ecb0ecbf bfececec 
+	Data:	ec00ecec ecececec 0000eeee eeeeeeee 
+	Data:	eeeeeeee eeeeeeee eeeeeeee eeeeeeee 
+	Data:	0000f0f0 f0f0f0f0 f0f0f0f0 f0f0f0f0 
+	Data:	f0f0f0f0 f0f0f0f0 0000f1f1 f1f1f1f1 
+	Data:	f1f1f1f1 f1f1f1f1 f1f1f1f1 f1f1f1f1 
+	Data:	0000f3f3 f3f3f3f3 f3f3f3f3 f3f3f3f3 
+	Data:	f3f3f3f3 f3f3f3f3 00000000 04000000 
+	Data:	00000101 01000202 02000303 03000404 
+	Data:	04000505 05000606 06000707 07000808 
+	Data:	08000909 09000a0a 0a000b0b 0b000c0c 
+	Data:	0c000d0d 0d000e0e 0e000f0f 0f001010 
+	Data:	10001111 11001212 12001313 13001414 
+	Data:	14001515 15001616 16001717 17001818 
+	Data:	18001919 19001a1a 1a001b1b 1b001c1c 
+	Data:	1c001d1d 1d001e1e 1e001f1f 1f002020 
+	Data:	20002121 21002222 22002323 23002424 
+	Data:	24002525 25002626 26002727 27002828 
+	Data:	28002929 29002a2a 2a002b2b 2b002c2c 
+	Data:	2c002d2d 2d002e2e 2e002f2f 2f003030 
+	Data:	30003131 31003232 32003333 33003434 
+	Data:	34003535 35003636 36003737 37003838 
+	Data:	38003939 39003a3a 3a003b3b 3b003c3c 
+	Data:	3c003d3d 3d003e3e 3e003f3f 3f004040 
+	Data:	40004141 41004242 42004343 43004444 
+	Data:	44004545 45004646 46004747 47004848 
+	Data:	48004949 49004a4a 4a004b4b 4b004c4c 
+	Data:	4c004d4d 4d004e4e 4e004f4f 4f005050 
+	Data:	50005151 51005252 52005353 53005454 
+	Data:	54005555 55005656 56005757 57005858 
+	Data:	58005959 59005a5a 5a005b5b 5b005c5c 
+	Data:	5c005d5d 5d005e5e 5e005f5f 5f006060 
+	Data:	60006161 61006262 62006363 63006464 
+	Data:	64006565 65006666 66006767 67006868 
+	Data:	68006969 69006a6a 6a006b6b 6b006c6c 
+	Data:	6c006d6d 6d006e6e 6e006f6f 6f007070 
+	Data:	70007171 71007272 72007373 73007474 
+	Data:	74007575 75007676 76007777 77007878 
+	Data:	78007979 79007a7a 7a007b7b 7b007c7c 
+	Data:	7c007d7d 7d007e7e 7e007f7f 7f008080 
+	Data:	80008181 81008282 82008383 83008484 
+	Data:	84008585 85008686 86008787 87008888 
+	Data:	88008989 89008a8a 8a008b8b 8b008c8c 
+	Data:	8c008d8d 8d008e8e 8e008f8f 8f009090 
+	Data:	90009191 91009292 92009393 93009494 
+	Data:	94009595 95009696 96009797 97009898 
+	Data:	98009999 99009a9a 9a009b9b 9b009c9c 
+	Data:	9c009d9d 9d009e9e 9e009f9f 9f00a0a0 
+	Data:	a000a1a1 a100a2a2 a200a3a3 a300a4a4 
+	Data:	a400a5a5 a500a6a6 a600a7a7 a700a8a8 
+	Data:	a800a9a9 a900aaaa aa00abab ab00acac 
+	Data:	ac00adad ad00aeae ae00afaf af00b0b0 
+	Data:	b000b1b1 b100b2b2 b200b3b3 b300b4b4 
+	Data:	b400b5b5 b500b6b6 b600b7b7 b700b8b8 
+	Data:	b800b9b9 b900baba ba00bbbb bb00bcbc 
+	Data:	bc00bdbd bd00bebe be00bfbf bf00c0c0 
+	Data:	c000c1c1 c100c2c2 c200c3c3 c300c4c4 
+	Data:	c400c5c5 c500c6c6 c600c7c7 c700c8c8 
+	Data:	c800c9c9 c900caca ca00cbcb cb00cccc 
+	Data:	cc00cdcd cd00cece ce00cfcf cf00d0d0 
+	Data:	d000d1d1 d100d2d2 d200d3d3 d300d4d4 
+	Data:	d400d5d5 d500d6d6 d600d7d7 d700d8d8 
+	Data:	d800d9d9 d900dada da00dbdb db00dcdc 
+	Data:	dc00dddd dd00dede de00dfdf df00e0e0 
+	Data:	e000e1e1 e100e2e2 e200e3e3 e300e4e4 
+	Data:	e400e5e5 e500e6e6 e600e7e7 e700e8e8 
+	Data:	e800e9e9 e900eaea ea00ebeb eb00ecec 
+	Data:	ec00eded ed00eeee ee00efef ef00f0f0 
+	Data:	f000f1f1 f100f2f2 f200f3f3 f300f4f4 
+	Data:	f400f5f5 f500f6f6 f600f7f7 f700f8f8 
+	Data:	f800f9f9 f900fafa fa00fbfb fb00fcfc 
+	Data:	fc00fdfd fd00fefe fe00ffff ff000002 
+	Data:	00080007 00200001 00020000 00000000 
+	Data:	0000
+)
+
+(Tool.215
+	InternalName:	"DeleteVertex"
+	Help:	"Delete one or more vertices by drawing a box around it//"
+	Icon:	216
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.DeleteVertex"
+	Click:	"Editor.DeleteVertex"
+)
+
+(AVIcon.216
+	Name:	"delete_vertex.bmp"
+	Data:	4e442049 6d616765 00010012 00100000 
+	Data:	0140d0c0 c0c0c0c0 c0c0c0c0 c0c0c0c0 
+	Data:	c0c0c0d0 0000d0c0 c0c0c0c0 c0c0c0c0 
+	Data:	c0c0c0c0 c0c0c0d0 0000d0c0 c0c0c0c0 
+	Data:	c0c0c0c0 c0c0c0c0 36c0c0d0 0000d0c0 
+	Data:	c0c036c0 c0c0c0c0 c0c0c0c0 c0c0c0d0 
+	Data:	0000d0c0 c0363636 c0c0c0c0 c0c0c036 
+	Data:	c0c0c0d0 0000d0c0 c0363636 c0c0c0c0 
+	Data:	c0c036c0 c0c0c0d0 0000d0c0 c0c03636 
+	Data:	36c0c0c0 c03636c0 c0c0c0d0 0000d0c0 
+	Data:	c0c0c036 3636c0c0 3636c0c0 c0c0c0d0 
+	Data:	0000d0c0 c0c0c0c0 36000000 36c0c0c0 
+	Data:	c0c0c0d0 0000d0c0 c0c0c0c0 c000ff00 
+	Data:	c0c0c0c0 c0c0c0d0 0000d0c0 c0c0c0c0 
+	Data:	36000000 36c0c0c0 c0c0c0d0 0000d0c0 
+	Data:	c0c0c036 3636c0c0 36c0c0c0 c0c0c0d0 
+	Data:	0000d0c0 c0363636 36c0c0c0 c03636c0 
+	Data:	c0c0c0d0 0000d0c0 36363636 c0c0c0c0 
+	Data:	c0c03636 c0c0c0d0 0000d0c0 3636c0c0 
+	Data:	c0c0c0c0 c0c0c036 36c0c0d0 0000d0c0 
+	Data:	c0c0c0c0 c0c0c0c0 c0c0c0c0 c0c0c0d0 
+	Data:	00000000 04000000 00000101 01000202 
+	Data:	02000303 03000404 04000505 05000606 
+	Data:	06000707 07000808 08000909 09000a0a 
+	Data:	0a000b0b 0b000c0c 0c000d0d 0d000e0e 
+	Data:	0e000f0f 0f001010 10001111 11001212 
+	Data:	12001313 13001414 14001515 15001616 
+	Data:	16001717 17001818 18001919 19001a1a 
+	Data:	1a001b1b 1b001c1c 1c001d1d 1d001e1e 
+	Data:	1e001f1f 1f002020 20002121 21002222 
+	Data:	22002323 23002424 24002525 25002626 
+	Data:	26002727 27002828 28002929 29002a2a 
+	Data:	2a002b2b 2b002c2c 2c002d2d 2d002e2e 
+	Data:	2e002f2f 2f003030 30003131 31003232 
+	Data:	32003333 33003434 34003535 35003636 
+	Data:	36003737 37003838 38003939 39003a3a 
+	Data:	3a003b3b 3b003c3c 3c003d3d 3d003e3e 
+	Data:	3e003f3f 3f004040 40004141 41004242 
+	Data:	42004343 43004444 44004545 45004646 
+	Data:	46004747 47004848 48004949 49004a4a 
+	Data:	4a004b4b 4b004c4c 4c004d4d 4d004e4e 
+	Data:	4e004f4f 4f005050 50005151 51005252 
+	Data:	52005353 53005454 54005555 55005656 
+	Data:	56005757 57005858 58005959 59005a5a 
+	Data:	5a005b5b 5b005c5c 5c005d5d 5d005e5e 
+	Data:	5e005f5f 5f006060 60006161 61006262 
+	Data:	62006363 63006464 64006565 65006666 
+	Data:	66006767 67006868 68006969 69006a6a 
+	Data:	6a006b6b 6b006c6c 6c006d6d 6d006e6e 
+	Data:	6e006f6f 6f007070 70007171 71007272 
+	Data:	72007373 73007474 74007575 75007676 
+	Data:	76007777 77007878 78007979 79007a7a 
+	Data:	7a007b7b 7b007c7c 7c007d7d 7d007e7e 
+	Data:	7e007f7f 7f008080 80008181 81008282 
+	Data:	82008383 83008484 84008585 85008686 
+	Data:	86008787 87008888 88008989 89008a8a 
+	Data:	8a008b8b 8b008c8c 8c008d8d 8d008e8e 
+	Data:	8e008f8f 8f009090 90009191 91009292 
+	Data:	92009393 93009494 94009595 95009696 
+	Data:	96009797 97009898 98009999 99009a9a 
+	Data:	9a009b9b 9b009c9c 9c009d9d 9d009e9e 
+	Data:	9e009f9f 9f00a0a0 a000a1a1 a100a2a2 
+	Data:	a200a3a3 a300a4a4 a400a5a5 a500a6a6 
+	Data:	a600a7a7 a700a8a8 a800a9a9 a900aaaa 
+	Data:	aa00abab ab00acac ac00adad ad00aeae 
+	Data:	ae00afaf af00b0b0 b000b1b1 b100b2b2 
+	Data:	b200b3b3 b300b4b4 b400b5b5 b500b6b6 
+	Data:	b600b7b7 b700b8b8 b800b9b9 b900baba 
+	Data:	ba00bbbb bb00bcbc bc00bdbd bd00bebe 
+	Data:	be00bfbf bf00c0c0 c000c1c1 c100c2c2 
+	Data:	c200c3c3 c300c4c4 c400c5c5 c500c6c6 
+	Data:	c600c7c7 c700c8c8 c800c9c9 c900caca 
+	Data:	ca00cbcb cb00cccc cc00cdcd cd00cece 
+	Data:	ce00cfcf cf00d0d0 d000d1d1 d100d2d2 
+	Data:	d200d3d3 d300d4d4 d400d5d5 d500d6d6 
+	Data:	d600d7d7 d700d8d8 d800d9d9 d900dada 
+	Data:	da00dbdb db00dcdc dc00dddd dd00dede 
+	Data:	de00dfdf df00e0e0 e000e1e1 e100e2e2 
+	Data:	e200e3e3 e300e4e4 e400e5e5 e500e6e6 
+	Data:	e600e7e7 e700e8e8 e800e9e9 e900eaea 
+	Data:	ea00ebeb eb00ecec ec00eded ed00eeee 
+	Data:	ee00efef ef00f0f0 f000f1f1 f100f2f2 
+	Data:	f200f3f3 f300f4f4 f400f5f5 f500f6f6 
+	Data:	f600f7f7 f700f8f8 f800f9f9 f900fafa 
+	Data:	fa00fbfb fb00fcfc fc00fdfd fd00fefe 
+	Data:	fe00ffff ff000002 00080007 00200001 
+	Data:	00020000 00000000 0000
+)
+
+(Tool.217
+	InternalName:	"Reshape"
+	Help:	"Reshape feature//"
+	Update:	"Editor.ReshapeUpdate"
+	Icon:	218
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.Reshape"
+	Click:	"Editor.ReshapeTool"
+)
+
+(AVIcon.218
+	Name:	"reshape.bmp"
+	Data:	4e442049 6d616765 00010012 00110000 
+	Data:	0154f5f5 f5f5f5f5 f5f5f5f5 f5f5f5f5 
+	Data:	f5f5f5f5 0000f540 40404040 40404040 
+	Data:	f5f5f5f5 f5f5f5f5 0000f540 eaeaeaea 
+	Data:	eaeaea40 f5f5f5f5 f5f5f5f5 0000f540 
+	Data:	eaea5c5c 5ceaeaf5 f5f55c5c 5cf5f5f5 
+	Data:	0000f540 eaea5c00 5c5c5c5c 5c5c5c00 
+	Data:	5cf5f5f5 0000f540 eaea5c5c 5cf5eaf5 
+	Data:	f5f55c5c 5cf5f5f5 0000f540 eaeaea5c 
+	Data:	f5eaf540 f5f5f5f5 f5f5f5f5 0000f540 
+	Data:	eaeaea5c eaf5ea40 f5f5f5f5 f5f5f5f5 
+	Data:	0000f540 eaeaea5c f5eaf5f5 f5f5f5f5 
+	Data:	f5f5f5f5 0000f540 eaeaea5c eaf5ea40 
+	Data:	f5f5f500 f5f5f5f5 0000f540 eaeaea5c 
+	Data:	f5eaf540 f5f5ff00 fff5f5f5 0000f540 
+	Data:	eaea3636 36f5eaf5 f5ffc9c9 c9fff5f5 
+	Data:	0000f540 eaea361b 365c5c5c 0000c900 
+	Data:	c90000f5 0000f540 eaea3636 36eaeaf5 
+	Data:	f5ffc9c9 c9fff5f5 0000f540 eaeaeaea 
+	Data:	eaeaea40 f5f5ff00 fff5f5f5 0000f540 
+	Data:	40404040 40404040 f5f5f500 f5f5f5f5 
+	Data:	0000f5f5 f5f5f5f5 f5f5f5f5 f5f5f5f5 
+	Data:	f5f5f5f5 00000000 04000000 00000101 
+	Data:	01000202 02000303 03000404 04000505 
+	Data:	05000606 06000707 07000808 08000909 
+	Data:	09000a0a 0a000b0b 0b000c0c 0c000d0d 
+	Data:	0d000e0e 0e000f0f 0f001010 10001111 
+	Data:	11001212 12001313 13001414 14001515 
+	Data:	15001616 16001717 17001818 18001919 
+	Data:	19001a1a 1a001b1b 1b001c1c 1c001d1d 
+	Data:	1d001e1e 1e001f1f 1f002020 20002121 
+	Data:	21002222 22002323 23002424 24002525 
+	Data:	25002626 26002727 27002828 28002929 
+	Data:	29002a2a 2a002b2b 2b002c2c 2c002d2d 
+	Data:	2d002e2e 2e002f2f 2f003030 30003131 
+	Data:	31003232 32003333 33003434 34003535 
+	Data:	35003636 36003737 37003838 38003939 
+	Data:	39003a3a 3a003b3b 3b003c3c 3c003d3d 
+	Data:	3d003e3e 3e003f3f 3f004040 40004141 
+	Data:	41004242 42004343 43004444 44004545 
+	Data:	45004646 46004747 47004848 48004949 
+	Data:	49004a4a 4a004b4b 4b004c4c 4c004d4d 
+	Data:	4d004e4e 4e004f4f 4f005050 50005151 
+	Data:	51005252 52005353 53005454 54005555 
+	Data:	55005656 56005757 57005858 58005959 
+	Data:	59005a5a 5a005b5b 5b005c5c 5c005d5d 
+	Data:	5d005e5e 5e005f5f 5f006060 60006161 
+	Data:	61006262 62006363 63006464 64006565 
+	Data:	65006666 66006767 67006868 68006969 
+	Data:	69006a6a 6a006b6b 6b006c6c 6c006d6d 
+	Data:	6d006e6e 6e006f6f 6f007070 70007171 
+	Data:	71007272 72007373 73007474 74007575 
+	Data:	75007676 76007777 77007878 78007979 
+	Data:	79007a7a 7a007b7b 7b007c7c 7c007d7d 
+	Data:	7d007e7e 7e007f7f 7f008080 80008181 
+	Data:	81008282 82008383 83008484 84008585 
+	Data:	85008686 86008787 87008888 88008989 
+	Data:	89008a8a 8a008b8b 8b008c8c 8c008d8d 
+	Data:	8d008e8e 8e008f8f 8f009090 90009191 
+	Data:	91009292 92009393 93009494 94009595 
+	Data:	95009696 96009797 97009898 98009999 
+	Data:	99009a9a 9a009b9b 9b009c9c 9c009d9d 
+	Data:	9d009e9e 9e009f9f 9f00a0a0 a000a1a1 
+	Data:	a100a2a2 a200a3a3 a300a4a4 a400a5a5 
+	Data:	a500a6a6 a600a7a7 a700a8a8 a800a9a9 
+	Data:	a900aaaa aa00abab ab00acac ac00adad 
+	Data:	ad00aeae ae00afaf af00b0b0 b000b1b1 
+	Data:	b100b2b2 b200b3b3 b300b4b4 b400b5b5 
+	Data:	b500b6b6 b600b7b7 b700b8b8 b800b9b9 
+	Data:	b900baba ba00bbbb bb00bcbc bc00bdbd 
+	Data:	bd00bebe be00bfbf bf00c0c0 c000c1c1 
+	Data:	c100c2c2 c200c3c3 c300c4c4 c400c5c5 
+	Data:	c500c6c6 c600c7c7 c700c8c8 c800c9c9 
+	Data:	c900caca ca00cbcb cb00cccc cc00cdcd 
+	Data:	cd00cece ce00cfcf cf00d0d0 d000d1d1 
+	Data:	d100d2d2 d200d3d3 d300d4d4 d400d5d5 
+	Data:	d500d6d6 d600d7d7 d700d8d8 d800d9d9 
+	Data:	d900dada da00dbdb db00dcdc dc00dddd 
+	Data:	dd00dede de00dfdf df00e0e0 e000e1e1 
+	Data:	e100e2e2 e200e3e3 e300e4e4 e400e5e5 
+	Data:	e500e6e6 e600e7e7 e700e8e8 e800e9e9 
+	Data:	e900eaea ea00ebeb eb00ecec ec00eded 
+	Data:	ed00eeee ee00efef ef00f0f0 f000f1f1 
+	Data:	f100f2f2 f200f3f3 f300f4f4 f400f5f5 
+	Data:	f500f6f6 f600f7f7 f700f8f8 f800f9f9 
+	Data:	f900fafa fa00fbfb fb00fcfc fc00fdfd 
+	Data:	fd00fefe fe00ffff ff000002 00080007 
+	Data:	00200001 00020000 00000000 0000
+)
+
+(Tool.219
+	InternalName:	"AutoComplete"
+	Help:	"Autocomplete polygon//"
+	Update:	"Editor.AutoCompleteUpdate"
+	Icon:	220
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.AutoComplete"
+	Click:	"Editor.DisplayMarkerPanel"
+)
+
+(AVIcon.220
+	Name:	"AutoComplete"
+	Res:	"Icons.AutoComplete"
+
+)
+
+(Tool.221
+	InternalName:	"CutPoly"
+	Help:	"Cut selected polygon//"
+	Update:	"Editor.CutPolyUpdate"
+	Icon:	222
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.CutPoly"
+)
+
+(AVIcon.222
+	Name:	"SplitPoly"
+	Res:	"Icons.SplitPoly"
+
+)
+
+(Tool.223
+	InternalName:	"Text"
+	Help:	"Add horizontal text//"
+	HelpTopic:	"Text_tool"
+	Update:	"Editor.TextToolUpdate"
+	Icon:	224
+	Cursor:	"Cursors.Text"
+	Apply:	"Editor.TextTool"
+	Click:	"Editor.DisplayFontPanel"
+)
+
+(AVIcon.224
+	Name:	"Text"
+	Res:	"Icons.Text"
+
+)
+
+(Tool.225
+	InternalName:	"SplineText"
+	Help:	"Add text that is aligned to a splined baseline//"
+	HelpTopic:	"Text_tool"
+	Update:	"Editor.TextToolUpdate"
+	Icon:	226
+	Cursor:	"Cursors.Bullseye"
+	Apply:	"Editor.TextToolSpline"
+)
+
+(AVIcon.226
+	Name:	"TextAligned"
+	Res:	"Icons.TextAligned"
+
+)
+
+(Butn.227
+	InternalName:	"SetDefaultValues"
+	Help:	"Set Default Values//"
+	HelpTopic:	" "
+	Icon:	228
+	Click:	"Editor.SetDefaultValues"
+)
+
+(AVIcon.228
+	Name:	"D"
+	Res:	"Icons.D"
+
+)
+
+(Butn.229
+	InternalName:	"HaloText"
+	Help:	"Draw halo around text//"
+	HelpTopic:	" "
+	Icon:	230
+	Click:	"Editor.TextHalo"
+)
+
+(AVIcon.230
+	Name:	"halotext.bmp"
+	Data:	4e442049 6d616765 00010014 00110000 
+	Data:	0154d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0ffff 
+	Data:	ffffd0d0 d0d0ffff ffffd0d0 d0d0d0d0 
+	Data:	d0d0ff00 00ffd0d0 d0d0ff00 00ffd0d0 
+	Data:	d0d0d0d0 d0d0ff00 00ffd0d0 d0d0ff00 
+	Data:	00ffd0d0 d0d0d0d0 d0d0ff00 00ffd0d0 
+	Data:	d0d0ff00 00ffd0d0 d0d0d0d0 d0d0ff00 
+	Data:	00ffd0d0 d0d0ff00 00ffd0d0 d0d0d0d0 
+	Data:	d0d0ff00 00ffffff ffffff00 00ffd0d0 
+	Data:	d0d0d0d0 d0d0ff00 00000000 00000000 
+	Data:	00ffd0d0 d0d0d0d0 d0d0ff00 00000000 
+	Data:	00000000 00ffd0d0 d0d0d0d0 d0d0ff00 
+	Data:	00ffffff ffffff00 00ffd0d0 d0d0d0d0 
+	Data:	d0d0ff00 00ffd0d0 d0d0ff00 00ffd0d0 
+	Data:	d0d0d0d0 d0d0ff00 00ffd0d0 d0d0ff00 
+	Data:	00ffd0d0 d0d0d0d0 d0d0ff00 00ffd0d0 
+	Data:	d0d0ff00 00ffd0d0 d0d0d0d0 d0d0ff00 
+	Data:	00ffd0d0 d0d0ff00 00ffd0d0 d0d0d0d0 
+	Data:	d0d0ffff ffffd0d0 d0d0ffff ffffd0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d00000 04000000 00000101 
+	Data:	01000202 02000303 03000404 04000505 
+	Data:	05000606 06000707 07000808 08000909 
+	Data:	09000a0a 0a000b0b 0b000c0c 0c000d0d 
+	Data:	0d000e0e 0e000f0f 0f001010 10001111 
+	Data:	11001212 12001313 13001414 14001515 
+	Data:	15001616 16001717 17001818 18001919 
+	Data:	19001a1a 1a001b1b 1b001c1c 1c001d1d 
+	Data:	1d001e1e 1e001f1f 1f002020 20002121 
+	Data:	21002222 22002323 23002424 24002525 
+	Data:	25002626 26002727 27002828 28002929 
+	Data:	29002a2a 2a002b2b 2b002c2c 2c002d2d 
+	Data:	2d002e2e 2e002f2f 2f003030 30003131 
+	Data:	31003232 32003333 33003434 34003535 
+	Data:	35003636 36003737 37003838 38003939 
+	Data:	39003a3a 3a003b3b 3b003c3c 3c003d3d 
+	Data:	3d003e3e 3e003f3f 3f004040 40004141 
+	Data:	41004242 42004343 43004444 44004545 
+	Data:	45004646 46004747 47004848 48004949 
+	Data:	49004a4a 4a004b4b 4b004c4c 4c004d4d 
+	Data:	4d004e4e 4e004f4f 4f005050 50005151 
+	Data:	51005252 52005353 53005454 54005555 
+	Data:	55005656 56005757 57005858 58005959 
+	Data:	59005a5a 5a005b5b 5b005c5c 5c005d5d 
+	Data:	5d005e5e 5e005f5f 5f006060 60006161 
+	Data:	61006262 62006363 63006464 64006565 
+	Data:	65006666 66006767 67006868 68006969 
+	Data:	69006a6a 6a006b6b 6b006c6c 6c006d6d 
+	Data:	6d006e6e 6e006f6f 6f007070 70007171 
+	Data:	71007272 72007373 73007474 74007575 
+	Data:	75007676 76007777 77007878 78007979 
+	Data:	79007a7a 7a007b7b 7b007c7c 7c007d7d 
+	Data:	7d007e7e 7e007f7f 7f008080 80008181 
+	Data:	81008282 82008383 83008484 84008585 
+	Data:	85008686 86008787 87008888 88008989 
+	Data:	89008a8a 8a008b8b 8b008c8c 8c008d8d 
+	Data:	8d008e8e 8e008f8f 8f009090 90009191 
+	Data:	91009292 92009393 93009494 94009595 
+	Data:	95009696 96009797 97009898 98009999 
+	Data:	99009a9a 9a009b9b 9b009c9c 9c009d9d 
+	Data:	9d009e9e 9e009f9f 9f00a0a0 a000a1a1 
+	Data:	a100a2a2 a200a3a3 a300a4a4 a400a5a5 
+	Data:	a500a6a6 a600a7a7 a700a8a8 a800a9a9 
+	Data:	a900aaaa aa00abab ab00acac ac00adad 
+	Data:	ad00aeae ae00afaf af00b0b0 b000b1b1 
+	Data:	b100b2b2 b200b3b3 b300b4b4 b400b5b5 
+	Data:	b500b6b6 b600b7b7 b700b8b8 b800b9b9 
+	Data:	b900baba ba00bbbb bb00bcbc bc00bdbd 
+	Data:	bd00bebe be00bfbf bf00c0c0 c000c1c1 
+	Data:	c100c2c2 c200c3c3 c300c4c4 c400c5c5 
+	Data:	c500c6c6 c600c7c7 c700c8c8 c800c9c9 
+	Data:	c900caca ca00cbcb cb00cccc cc00cdcd 
+	Data:	cd00cece ce00cfcf cf00d0d0 d000d1d1 
+	Data:	d100d2d2 d200d3d3 d300d4d4 d400d5d5 
+	Data:	d500d6d6 d600d7d7 d700d8d8 d800d9d9 
+	Data:	d900dada da00dbdb db00dcdc dc00dddd 
+	Data:	dd00dede de00dfdf df00e0e0 e000e1e1 
+	Data:	e100e2e2 e200e3e3 e300e4e4 e400e5e5 
+	Data:	e500e6e6 e600e7e7 e700e8e8 e800e9e9 
+	Data:	e900eaea ea00ebeb eb00ecec ec00eded 
+	Data:	ed00eeee ee00efef ef00f0f0 f000f1f1 
+	Data:	f100f2f2 f200f3f3 f300f4f4 f400f5f5 
+	Data:	f500f6f6 f600f7f7 f700f8f8 f800f9f9 
+	Data:	f900fafa fa00fbfb fb00fcfc fc00fdfd 
+	Data:	fd00fefe fe00ffff ff000002 00080007 
+	Data:	00200001 00020000 00000000 0000
+)
+
+(Tool.231
+	InternalName:	"Rectangle Tool"
+	Help:	"Create rectangle//"
+	Update:	"Editor.PolyToolUpdate"
+	Icon:	232
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.RectTool"
+	Click:	"Editor.DisplayFillPanel"
+)
+
+(AVIcon.232
+	Name:	"Rect"
+	Res:	"Icons.Rect"
+
+)
+
+(RectD.233
+	Left:	32.00000000000000
+	Top:	30.00000000000000
+	Right:	56.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.234
+	Left:	112.00000000000000
+	Top:	30.00000000000000
+	Right:	136.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.235
+	Left:	583.00000000000000
+	Top:	30.00000000000000
+	Right:	607.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.236
+	Left:	467.00000000000000
+	Top:	30.00000000000000
+	Right:	491.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.237
+	Left:	774.00000000000000
+	Top:	30.00000000000000
+	Right:	817.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.238
+	Left:	58.00000000000000
+	Top:	30.00000000000000
+	Right:	82.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.239
+	Left:	85.00000000000000
+	Top:	30.00000000000000
+	Right:	109.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.240
+	Left:	139.00000000000000
+	Top:	30.00000000000000
+	Right:	163.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.241
+	Left:	493.00000000000000
+	Top:	30.00000000000000
+	Right:	517.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.242
+	Left:	175.00000000000000
+	Top:	30.00000000000000
+	Right:	199.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.243
+	Left:	240.00000000000000
+	Top:	30.00000000000000
+	Right:	264.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.244
+	Left:	385.00000000000000
+	Top:	30.00000000000000
+	Right:	409.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.245
+	Left:	266.00000000000000
+	Top:	30.00000000000000
+	Right:	290.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.246
+	Left:	331.00000000000000
+	Top:	30.00000000000000
+	Right:	355.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.247
+	Left:	293.00000000000000
+	Top:	30.00000000000000
+	Right:	317.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.248
+	Left:	203.00000000000000
+	Top:	30.00000000000000
+	Right:	227.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.249
+	Left:	715.00000000000000
+	Top:	30.00000000000000
+	Right:	739.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.250
+	Left:	6.00000000000000
+	Top:	30.00000000000000
+	Right:	30.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.251
+	Left:	529.00000000000000
+	Top:	30.00000000000000
+	Right:	553.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.252
+	Left:	556.00000000000000
+	Top:	30.00000000000000
+	Right:	580.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.253
+	Left:	412.00000000000000
+	Top:	30.00000000000000
+	Right:	436.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.254
+	Left:	439.00000000000000
+	Top:	30.00000000000000
+	Right:	463.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.255
+	Left:	620.00000000000000
+	Top:	30.00000000000000
+	Right:	644.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.256
+	Left:	648.00000000000000
+	Top:	30.00000000000000
+	Right:	672.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.257
+	Left:	743.00000000000000
+	Top:	30.00000000000000
+	Right:	767.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.258
+	Left:	677.00000000000000
+	Top:	30.00000000000000
+	Right:	701.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.259
+	Left:	358.00000000000000
+	Top:	30.00000000000000
+	Right:	382.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.260
+	Left:	4.00000000000000
+	Top:	38.00000000000000
+	Right:	828.00000000000000
+	Bottom:	3.00000000000000
+)
+
+(Nil.261
+)
+
+(RectD.262
+	Left:	1.42708333333333
+	Top:	1.52083333333333
+	Right:	10.06250000000000
+	Bottom:	1.10416666666667
+)
+
+(SEd.263
+	Name:	"Editor.AutoComplete"
+	Creator:	"adrian"
+	CreationDate:	"Fre 17 Dez 2021 08:29:53 CET"
+	GUIName:	"Script"
+	Win:	264
+	CSMgr:	265
+	DocExts:	266
+	Source:	"' uses the built-in function View.AutoCompleteTool\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polygon\", \"false\", \"0\"}) = nil) then\n  return nil\nend\n\nl = theView.ReturnUserPolyLine\nif (l.IsNull) then\n  return nil\nelse\n  theTheme.GetFtab.BeginTransaction\n  theTheme.AutoComplete(l)\n  theTheme.GetFtab.EndTransaction  \n  av.GetProject.SetModified(true)\nend\n\n"
+)
+
+(DocWin.264
+	Owner:	263
+	X:	425
+	Y:	236
+	W:	905
+	H:	346
+)
+
+(CSMgr.265
+)
+
+(DocAct.266
+	Doc:	263
+)
+
+(SEd.267
+	Name:	"Editor.AutoCompleteUpdate"
+	Creator:	"adrian"
+	CreationDate:	"Fre 17 Dez 2021 08:30:53 CET"
+	GUIName:	"Script"
+	Win:	268
+	CSMgr:	269
+	DocExts:	270
+	Source:	"' update script for the built-in function View.AutoCompleteTool\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (theTheme = nil) then\n  SELF.SetEnabled(False) \nelse\n  theType = theTheme.GetFTab.FindField(\"Shape\").GetType\n  SELF.SetEnabled(theType = #FIELD_SHAPEPOLY)\nend  \n"
+)
+
+(DocWin.268
+	Owner:	267
+	X:	65
+	Y:	65
+	W:	759
+	H:	301
+)
+
+(CSMgr.269
+)
+
+(DocAct.270
+	Doc:	267
+)
+
+(SEd.271
+	Name:	"Editor.CircleTool"
+	Creator:	"adrian"
+	CreationDate:	"Die 10 Dez 2013 20:27:25 CET"
+	GUIName:	"Script"
+	Win:	272
+	CSMgr:	273
+	DocExts:	274
+	Source:	"' uses the built-in script View.CircleTool\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polygon\", \"false\", \"0\"}) = nil) then\n  return nil\nend\n\nc = theView.ReturnUserCircle\nif (c.IsNull) then\n  return nil\nelse\n  theTheme.GetFTab.BeginTransaction\n  p = c.AsPolygon\n  thePrj = theView.GetProjection\n  if (thePrj.IsNull.Not) then\n    p = p.ReturnUnprojected(thePrj)\n  end\n  theField = theThem
+e.GetFTab.FindField(\"Shape\")\n  rec = theTheme.GetFTab.AddRecord\n  theTheme.GetFTab.SetValue(theField, rec, p)\n  theTheme.GetFTab.GetSelection.ClearAll\n  theTheme.GetFTab.GetSelection.Set(rec)\n  theTheme.GetFTab.UpdateSelection\n  theTheme.GetFTab.EndTransaction\n  av.GetProject.SetModified(true)\nend\n"
+)
+
+(DocWin.272
+	Owner:	271
+	X:	141
+	Y:	148
+	W:	677
+	H:	475
+)
+
+(CSMgr.273
+)
+
+(DocAct.274
+	Doc:	271
+)
+
+(SEd.275
+	Name:	"Editor.close"
+	Creator:	"adrian"
+	CreationDate:	"Sam 06 Apr 2013 16:04:28 CEST"
+	GUIName:	"Script"
+	Win:	276
+	CSMgr:	277
+	DocExts:	278
+	Source:	"' closes the editor toolbar\n' 20.12.2021, A. Boehlen\n'###############################\n\nself.getdialog.close"
+)
+
+(DocWin.276
+	Owner:	275
+	X:	80
+	Y:	80
+	W:	657
+	H:	247
+)
+
+(CSMgr.277
+)
+
+(DocAct.278
+	Doc:	275
+)
+
+(SEd.279
+	Name:	"Editor.CutHole"
+	Creator:	"adrian"
+	CreationDate:	"Die 14 Apr 2015 20:41:07 CEST"
+	GUIName:	"Script"
+	Win:	280
+	CSMgr:	281
+	DocExts:	282
+	Source:	"' uses the built-in function View.CombineGraphics\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Info(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polygon\", \"true\", \"2\"}) = nil) then\n  return nil\nend\n\ntheTheme.GetFtab.BeginTransaction\ntheTheme.MergeSelected\ntheTheme.GetFTab.EndTransaction\ntheTheme.Invalidate( true )\n \n"
+)
+
+(DocWin.280
+	Owner:	279
+	X:	218
+	Y:	148
+	W:	711
+	H:	492
+)
+
+(CSMgr.281
+)
+
+(DocAct.282
+	Doc:	279
+)
+
+(SEd.283
+	Name:	"Editor.CutPoly"
+	Creator:	"adrian"
+	CreationDate:	"Fre 17 Dez 2021 08:40:30 CET"
+	GUIName:	"Script"
+	Win:	284
+	CSMgr:	285
+	DocExts:	286
+	Source:	"' uses the built-in function View.SplitTool\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polygon\", \"true\", \"1\"}) = nil) then\n  return nil\nend\n\nl = theView.ReturnUserPolyLine\nif (l.IsNull) then\n  return nil\nelse\n  theTheme.GetFtab.BeginTransaction\n  theField = theTheme.GetFTab.FindField(\"Shape\")\n  theType = theField.GetType\n  if ((theType = #FIELD_SHAPEPOLY) or (theType = #FIELD_SHAPELI
+NE)) then\n    theTheme.Split(l)\n  end\n  theTheme.GetFtab.EndTransaction \n  av.GetProject.SetModified(true)\nend\n\n"
+)
+
+(DocWin.284
+	Owner:	283
+	X:	184
+	Y:	232
+	W:	806
+	H:	359
+)
+
+(CSMgr.285
+)
+
+(DocAct.286
+	Doc:	283
+)
+
+(SEd.287
+	Name:	"Editor.CutPolyUpdate"
+	Creator:	"adrian"
+	CreationDate:	"Fre 17 Dez 2021 08:43:01 CET"
+	GUIName:	"Script"
+	Win:	288
+	CSMgr:	289
+	DocExts:	290
+	Source:	"' update script for the built-in function View.SplitTool\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (theTheme = nil) then\n  SELF.SetEnabled(False) \nelse\n  theType = theTheme.GetFTab.FindField(\"Shape\").GetType\n  SELF.SetEnabled(theType = #FIELD_SHAPEPOLY)\nend  "
+)
+
+(DocWin.288
+	Owner:	287
+	X:	36
+	Y:	88
+	W:	500
+	H:	285
+)
+
+(CSMgr.289
+)
+
+(DocAct.290
+	Doc:	287
+)
+
+(SEd.291
+	Name:	"Editor.DeleteVertex"
+	Creator:	"adrian"
+	CreationDate:	"Mit 18 Nov 2015 17:47:53 CET"
+	GUIName:	"Script"
+	Win:	292
+	CSMgr:	293
+	DocExts:	294
+	Source:	"' hacked from http://webapp1.dlib.indiana.edu/virtual_disk_library/index.cgi/4288321/FID3756/PROGRAM/ETC/AVEDIT.APR\n' 18.11.2015 A. Boehlen\n' REV: 20.12.2021\n'###############################\n\ntheView  = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Info(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polyline-or-polygon\", \"true\", \"1\"}) = nil) then\n  return nil\nend\n\nrectUser  = theView.GetDisplay.Retur
+nUserRect\nif (rectUser = NIL) then\n  av.ShowMsg(\"NIL rectangle returned.\") \n  exit \nend\n\nfldShape = theTheme.GetFTab.FindField(\"shape\")\nr = theTheme.GetFTab.GetSelection.GetNextSet(-1)\nshpSelected = theTheme.GetFTab.ReturnValue(fldShape, r)\n\n' Currently multi-part features are not supported, only the first \n' list of points in the list of lists of points for MultiPoint \n' objects is considered...\n'\nif (shpSelected.AsList.Count > 1) then\n  MsgBox.Error(\n    \"Unable to delete vertex of multi-part shape at rec
+ord\"++(r+1).AsString,\n    \"Editor.DeleteVertex\")\n  exit\nend\nlstVertex = shpSelected.AsList.Get(0)\n\nav.UseWaitCursor\nav.ShowMsg(\"Searching vertices...\")\ntotal = lstVertex.Count\n\nlstNewVertex = {}\nisOriginDeleted = FALSE\nisVertexDeleted = FALSE\n\nfor each i in 0 ..(lstVertex.Count - 1)\n  ptVertex = lstVertex.Get(i)\n  if (rectUser.Intersects(ptVertex)) then\n    isVertexDeleted = TRUE\n    ' skip the point, but if it is the origin of a polygon we\n    ' must handle the final shape assembly differently.  Check\n    
+' and flag here...\n    if (i = 0) then\n      isOriginDeleted = TRUE\n    end\n  else\n    lstNewVertex.Add(ptVertex)\n  end \n  av.SetStatus((i / total) * 100)\nend\n\nif (lstNewVertex.Count = lstVertex.Count) then\n  av.ClearMsg\n  av.ClearStatus\n  exit\nend\n  \nif (lstNewVertex.Count = 0) then\n  av.ClearMsg\n  av.ClearStatus\n  exit\nend\n\nif (isVertexDeleted) then\n  if (fldShape.GetType = #FIELD_SHAPEPOLY) then\n    if (lstNewVertex.Count < 4) then \n      av.ClearStatus\n      av.ShowMsg(\"Can't delete any more vertices\")\n
+      exit \n    end\n    if (isOriginDeleted) then\n      pt1 = lstNewVertex.Get(0)\n      lstNewVertex.Add(pt1)\n    end\n    shpNew = Polygon.Make({ lstNewVertex })\n  else  \n    ' the other possible case is #FIELD_SHAPELINE\n    if (lstNewVertex.Count < 2) then\n      av.ClearStatus\n      av.ShowMsg(\"Can't delete any more vertices\")\n      exit\n    end \n    shpNew = PolyLine.Make({ lstNewVertex })\n  end\n  \n  ' Push transaction object...\n  av.Run(\"Editor.SubPushTransaction\",\n    {{\"Editor.UndoVertex\",{r,shpSelecte
+d}},\n    {\"Editor.RedoVertex\",{r,shpNew}}})\n\n  av.SetStatus(100)\n  av.ClearMsg\n  theTheme.GetFTab.SetValue(fldShape, r, shpNew)\n  theTheme.GetFTab.flush\n  theTheme.Invalidate(TRUE)\nelse\n  av.ClearStatus\n  av.ClearMsg\nend\n\n\n"
+	SearchStr:	"Run"
+)
+
+(DocWin.292
+	Owner:	291
+	X:	331
+	Y:	43
+	W:	800
+	H:	587
+)
+
+(CSMgr.293
+)
+
+(DocAct.294
+	Doc:	291
+)
+
+(SEd.295
+	Name:	"Editor.DisplayFillPanel"
+	Creator:	"adrian"
+	CreationDate:	"Freitag, 02. Januar 2026 14:26:47"
+	GUIName:	"Script"
+	Win:	296
+	CSMgr:	297
+	DocExts:	298
+	Source:	"if ((av.GetSymbolWin.GetPanel = #SYMBOLWIN_PANEL_COLOR).not) then\n  av.GetSymbolWin.SetPanel(#SYMBOLWIN_PANEL_FILL)\nend"
+)
+
+(DocWin.296
+	Owner:	295
+	X:	20
+	Y:	20
+	W:	734
+	H:	289
+)
+
+(CSMgr.297
+)
+
+(DocAct.298
+	Doc:	295
+)
+
+(SEd.299
+	Name:	"Editor.DisplayFontPanel"
+	Creator:	"adrian"
+	CreationDate:	"Sonntag, 22. Januar 2023 16:20:56"
+	GUIName:	"Script"
+	Win:	300
+	CSMgr:	301
+	DocExts:	302
+	Source:	"' uses the built-in function SymWin.DisplayFontPanel\n' 22.01.2023, A. Boehlen\n'###############################\n\nif ((av.GetSymbolWin.GetPanel = #SYMBOLWIN_PANEL_COLOR).not) then\n  av.GetSymbolWin.SetPanel(#SYMBOLWIN_PANEL_FONT)\nend"
+)
+
+(DocWin.300
+	Owner:	299
+	X:	65
+	Y:	65
+	W:	781
+	H:	324
+)
+
+(CSMgr.301
+)
+
+(DocAct.302
+	Doc:	299
+)
+
+(SEd.303
+	Name:	"Editor.DisplayMarkerPanel"
+	Creator:	"adrian"
+	CreationDate:	"Sam 15 Okt 2022 10:32:57 CEST"
+	GUIName:	"Script"
+	Win:	304
+	CSMgr:	305
+	DocExts:	306
+	Source:	"' uses the built-in function SymWin.DisplayMarkerPanel\n' 15.10.2022, A. Boehlen\n'###############################\n\nif ((av.GetSymbolWin.GetPanel = #SYMBOLWIN_PANEL_COLOR).not) then\n  av.GetSymbolWin.SetPanel(#SYMBOLWIN_PANEL_MARKER)\nend"
+)
+
+(DocWin.304
+	Owner:	303
+	X:	20
+	Y:	22
+	W:	725
+	H:	408
+)
+
+(CSMgr.305
+)
+
+(DocAct.306
+	Doc:	303
+)
+
+(SEd.307
+	Name:	"Editor.EditAttributes"
+	Creator:	"adrian"
+	CreationDate:	"Mon 11 Feb 2013 17:06:43 CET"
+	GUIName:	"Script"
+	Win:	308
+	CSMgr:	309
+	DocExts:	310
+	Source:	"'Author  : Georg A.Zelenin, Odessa(UKRAINE)\n'          Position:GIS programmer.  \n'          Municipality Dpt.on Land Resources and Parcels Control\n'          (tel/fax.(0482) 373 076 )\n'    \n'Script Class: Simple User Edit Interface - \"One Click Editors\". \n'Script Name:  View_CorrFeatureAttr\n'\n'Title:   Single-Click Themes Attributes Edits directly from the View.\n'    .                    \n'Topics:  Pick Up (Click) on the Feature ( Polygon,PolyLine,Point) \n'         wich Atributes row you wish to edit. Scri
+pt Tool unfolds-Open \n'         the MultiInput Box, where each attribute Field looks like \n'         editable text line.\n'         Each Input Box contains up to 20 lines (total Screen)\n'         and automatically gives new portion of the data if number of \n'         the DB fields are more then 20 (Cadastre DB e.c.t.),  \n'  \n'      For a Numeric/String Fiels only.\n'       \n'Usage: \n'      Preparation step \n'          a) Attach the compiled Script on Tool/Apply button in a View environment.\n'      Usage steps
+: \n'          1) Click on the feature, Attributes you wish to edit by this Tool.\n'          2) Makes your Edits in the Open MultiInput Box, press OK (Save Edits)or\n'             Cancel (Discard Edits.)\n\n' ###############################\n' REV: 02.01.2026, A. Boehlen\n' - The shape field will not be displayed\n' - Use this tool as an alternate identify tool by clicking on a non editable feature.\n'   It will then be possible to copy attribute values (not possible by the identify tool)\n'   In this case you will 
+be informed that the theme is read-only.\n' ###############################\n\n\ntheView     = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Info(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\ntheDisplay  = theView.getDisplay\npt =          theDisplay.ReturnUserPoint\ntheThemes =   theView.getActiveThemes      \nfor each t in theThemes\n  if (t.CanSelect) then\n    t.SelectByPoint(pt,#VTAB_SELTYPE_NEW )\n  end\nend\n\ntheTheme = theView.GetActiveThemes.Get(0)\ntheEditTheme = theView.GetEditableTh
+eme\n\n'numThemes=theThemes.Count \n'if (numThemes=1) then        \n'  theTheme = theThemes.get(0)\n'elseif (numThemes>1) then\n'  MsgBox.Error(\"Too many (\"+numThemes.AsString+\") Active Themes...\",\"Make Active single Editable Theme !\")\n'else\n'  exit\n'end\n\ntheScale    = theView.ReturnScale\n\ntheName     = theTheme.getName\ntheFTab     = theTheme.getFtab\ntotFields   = theFTab.getFields\n\nnf =          (totFields.count-1)\nc =           20\n\nres = nf mod c\nn = (nf - res) / c\nb = (n*c) + res\n         \nfor each i in 0..n \n
+  from = i*c\n  to   = ((i+1)*c-1)\n  if (to > nf) then\n    to = from + res\n  end\n\n  nmFields    = {}\n  valFields   = {}\n  lstFields   = {}\n\n  ' read fields and ignore Shape field\n  for each j in from..to\n    f = totFields.Get(j)\n    if (f.getName=\"Shape\") then\n      continue\n    end\n    lstFields.Add(f)\n  end\n\n  '...try aligned left fields by spaces             \n\n  maxl = 1      \n  for each f in lstFields \n    nmf =  f.getName\n    lnf =  nmf.count\n    maxl = (maxl max lnf)\n  end\n\n  for each f in lstFields\n  
+  fnm  = f.getName\n    fout = fnm\n    dspace = (maxl - fnm.count)\n    if (dspace>0 ) then\n      buff=\"\"\n      for each i in 0..dspace\n        buff = buff + 160.AsChar\n      end\n      fout = fnm + buff\n    end\n    nmFields.Add(fout)  \n  end\n\n  numSel = theFTab.getNumSelRecords \n\n  if (numSel = 0) then exit end\n  if (numSel > 1) then exit end\n\n  for each sel in theFTab.getSelection\n    for each f in lstFields\n      val = theFtab.ReturnValueString(f,sel)\n      if (val=\"\") then\n        val = \" \"\n      end\n     
+ valFields.Add(val)\n    end   \n  end\n\n  if (theEditTheme = nil) then\n    theTitle = \"READ ONLY - do not edit.\"\n  else\n    theTitle = \"\"\n  end\n  \n  valUserSettings = MsgBox.MultiInput(theTitle, \"Edit Attributes\", nmFields, valFields)\n\n  if (valUserSettings.count = 0) then\n    theTheme.ClearSelection\n    exit\n  end  \n\n  for each i in 0..(lstFields.count-1)\n    f = lstFields.get(i)\n    v = valUserSettings.get(i)\n\n    if (f.getName=\"Shape\") then\n      continue\n    end\n    fType = f.getType\n    aType = fType.AsS
+tring.AsTokens(\"_\").get(1)\n\n    if ((aType = \"LONG\") or (aType = \"DOUBLE\") or (aType = \"DECIMAL\") or (aType=  \"FLOAT\")) then    \n      if (v.IsNumber) then\n        val = v.AsNumber\n      end               \n    elseif (aType=\"DATE\") then\n      val = v.AsDate\n    elseif (aType=\"CHAR\") then\n      val = v\n    end\n\n    ' set values if theme is editable\n    for each sel in theFTab.getSelection\n      if (theEditTheme = nil) then\n        theTheme.ClearSelection\n        exit\n      else\n        theFTab.SetValue(f,sel
+,val)\n      end\n    end    \n  end\nend'...if>20\n\ntheTheme.ClearSelection\n"
+	SearchStr:	"t"
+)
+
+(DocWin.308
+	Owner:	307
+	X:	227
+	Y:	60
+	W:	1073
+	H:	546
+)
+
+(CSMgr.309
+)
+
+(DocAct.310
+	Doc:	307
+)
+
+(SEd.311
+	Name:	"Editor.HasDataUpdate"
+	Creator:	"adrian"
+	CreationDate:	"Fre 17 Dez 2021 09:37:17 CET"
+	GUIName:	"Script"
+	Win:	312
+	CSMgr:	313
+	DocExts:	314
+	Source:	"' update script for the built-in function View.Select\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\nSELF.SetEnabled((theView.GetGraphics.Count > 0) or (theView.GetThemes.Count > 0))\n"
+)
+
+(DocWin.312
+	Owner:	311
+	X:	236
+	Y:	54
+	W:	934
+	H:	349
+)
+
+(CSMgr.313
+)
+
+(DocAct.314
+	Doc:	311
+)
+
+(SEd.315
+	Name:	"Editor.MakePointByCoord"
+	Creator:	"adrian"
+	CreationDate:	"Mit 19 Feb 2014 19:48:05 CET"
+	GUIName:	"Script"
+	Win:	316
+	CSMgr:	317
+	DocExts:	318
+	Source:	"' NAME: makeRectByCenter\n' HERKUNFT: Harald 11 / 04 / 03,  zur Erstellung von Rastergebieten fuer Windgutachten\n' EINBINDUNG: View-Tool\n' HILFE: Creates Circle from Click Point as Center//Creates a Circle of user defined Radius with User Point as Center (Coordinates can be adjusted)\n\n'*******************************************\n\n' -------------------------------------------------------------------------------------------------\n' SET NUMBER-FORMAT\n\n Script.The.SetNumberFormat( \"d.dddd\" )\n \n' ----------------
+---------------------------------------------------------------------------------\n' TAKE THE VIEW; THE PROJECTION AND THE MAP-UNITS\n\ntheView = av.GetActiveDoc\ntheProjection = theView.GetProjection\n\nViewUnit = theView.GetUnits\nMapU = units.GetUnitString(ViewUnit)\n\nif (MapU = \" \") then\n  MapU = \"Map Units\"\nend\n\n' -------------------------------------------------------------------------------------------------\n' RETURN THE POINT; THE USER CLICKS AT - GIVE HER THE CHANCE TO TAKE THE LAST DEFINED POINT \n' TO CRE
+ATE CONCENTRIC CIRCLES\n\ntheVari = \"theUPX\"\n\ntheTestScript = Script.Make(\"return _\"+theVari)\nif (theTestScript.HasError) then\n  _theUPX = NIL\nend\n\ntheVari = \"theUPY\"\n\ntheTestScript = Script.Make(\"return _\"+theVari)\nif (theTestScript.HasError) then\n  _theUPY = NIL\nend\n\nif ((_theUPX <> NIL) and (_theUPY <> NIL)) then\n  theChoice = MsgBox.YesNoCancel(\"Take the last defined Point  (YES)\"+nl+\n  \"Take the new Click Point  (NO)\",\" Coordinate Takeover\",TRUE)\nelse\n  theChoice = FALSE\nend\n\nif (theChoice = FALSE) then\n
+  theUP = theView.GetDisplay.ReturnUserPoint\n  theUPXString = theUP.getX.AsString\n  theUPYString = theUP.getY.AsString\nelseif (theChoice = TRUE) then\n  theUPXString = _theUPX.AsString\n  theUPYString = _theUPY.AsString\nelse\n  return NIL\nend\n\n' -------------------------------------------------------------------------------------------------\n' GET THE EXTEND AND LET THE USER MODIFY THE CENTER-COORDINATE\n\nlabels = {\"X Coordinate\",\"Y Coordinate\"}  \ndefaults = {theUPXString, theUPYString }\n\ntheExt = MsgBox.MultiI
+nput(\"Point Coordinates (adjust if necessary):\", \" Point Coordinates\", labels, defaults)\n\nif ((theExt = NIL) or (theExt.count = 0)) then\n  av.ShowMsg(\"llll llll llll llll llll   llll llll llll    DROPOUT: Make Point...\")\n  return nil\nend\n\n_theUPX = theExt.get(0).AsNumber\n_theUPY = theExt.get(1).AsNumber\n\n' -------------------------------------------------------------------------------------------------\n' CREATE A GRAPHIC WITH POINT AS CENTER\n\nthePoint = Point.Make(_theUPX,_theUPY)\n\nthePointGR = GraphicShape
+.Make(thePoint)\ntheView.GetGraphics.UnselectAll\nthePointGR.SetSelected(TRUE)\ntheView.GetGraphics.Add(thePointGR)\n\nthePointSH = thePointGR.GetShape\n\ntheCentroid = thePoint.ReturnCenter\ntheCentX = theCentroid.GetX\ntheCentY = theCentroid.GetY\n\nav.GetProject.SetModified(true)\n\n' -------------------------------------------------------------------------------------------------\n' ASK THE USER IF SHE WANTS TO CREATE A POLYGON SHAPE OR JUST KEEP THE GRAPHIC. IF FORMER, THAN ASK HER \n' IF SHE WANTS TO INSERT THE POIN
+T IN AN AVAILABLE THEME OR IF SHE WANTS TO CREATE A NEW ONE\n\n\n' FIRST CREATE A LIST OF VIABLE THEMES\n\nthePointThms = List.Make\n\nfor each t in theView.GetThemes\n  if (t.Is(Ftheme)) then\n      theFTab = t.GetFTab\n      theCN = theFTab.GetShapeClass.GetClassName\n      if ((theCN = \"Point\") or (theCN = \"PointZ\")) then\n      thePointThms.Add(t)\n    end\n  end\nend\n\n' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n' NOW ASK FOR SHAPE - AVAILABLE OR NEW\n\nif (thePoi
+ntThms.Count > 0) then\n  theChoice = MsgBox.YesNoCancel(\"Convert Point to new Theme  (YES) \"+nl+\n                   \"Insert Point into existing Theme  (NO)\"+nl+\n                   \"Create Point as Graphic  (CANCEL)\",\" Convert to Shapefile?\",TRUE)\n  anAvail = TRUE\nelse\n  theChoice = MsgBox.YesNo(\"Convert Point to new Theme  (YES) \"+nl+\n                   \"Create Point as Graphic  (NO)\",\" Convert to Shapefile?\",TRUE)  \n  anAvail = FALSE\nend\n   \n' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ - - - - - - - - - - - - - - - - - \n' IF THERE ARE MORE THAN ONE VIABLE THEMES, ASK FURTHER IF SHE WANTS TO INSERT THE RECTANGLE THERE\n  \nif (anAvail = TRUE) then\n  \n  if (theChoice = FALSE) then    \n\n    nuTheme = FALSE\n\n'     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n'     FIND THE RIGHT THEME IF THERE ARE MORE THAN ONE\n\n    if (thePointThms.Count < 1) then\n      theAvail = NIL\n    elseif (thePointThms.Count = 1) then\n      theAvail = thePointThms.Get(0)
+\n      theOnlyFit = MsgBox.YesNo(\"Insert the Point into  '\"+theAvail.getName+\"'?\",\" Take that?\",TRUE)\n      if (theOnlyFit = FALSE) then\n        av.ShowMsg(\"llll llll llll llll llll   llll llll llll    Point created as a GRAPHIC  (X = \"+_theUPX.AsString+\";  Y = \"+_theUPY.AsString+\") ...\")\n        return NIL\n      end\n\n    else\n      theAvail = Msgbox.List(thePointThms,\"Select a Theme to insert the Point.\",\" Select Theme\")\n    end\n    \n    if (theAvail = NIL) then\n      av.ShowMsg(\"llll llll llll llll llll  
+ llll llll llll    Point created as a GRAPHIC  (X = \"+_theUPX.AsString+\";  Y = \"+_theUPY.AsString+\") ...\")\n      return NIL\n    end\n    \n    theFTab = theAvail.getFTab\n    editState = theFTab.isEditable\n    \n'     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n'     LOOK FOR OUR FIELDS; CREATE THEM IF THEY AREN'T YET\n'\n'    theFldList = List.Make\n'    \n'    if ((theFTab.findField(\"IDN\") = NIL)) then\n'      theIDfld = Field.Make(\"IDN\",#FIELD_LONG,9, 0)\n'     the
+FldList.Add(theIDfld)\n'    else\n'      theIDfld = theFTab.findField(\"IDN\")\n'    end\n'    \n'    if ((theFTab.findField(\"X_Centr\") = NIL)) then\n'      theCoordXZentFld = Field.Make(\"X_Centr\",#FIELD_DECIMAL,21,4)\n'      theFldList.Add(theCoordXZentFld)\n'    else\n'      theCoordXZentFld = theFTab.findField(\"X_Centr\")\n'    end\n'\n'    if ((theFTab.findField(\"Y_Centr\") = NIL)) then\n'      theCoordYZentFld = Field.Make(\"Y_Centr\",#FIELD_DECIMAL,21,4)\n'      theFldList.Add(theCoordYZentFld)\n'    else\n'      theCoordY
+ZentFld = theFTab.findField(\"Y_Centr\")\n'    end\n'    \n    theShapeFld=theFtab.FindField(\"Shape\")\n\n'   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n'    MAKE SURE TABLE IS EDITABLE AND THAT FIELDS CAN BE ADDED\n    \n    if (theFtab.CanEdit) then\n      theFTab.SetEditable(true)\n      if ((theFTab.CanAddFields).Not) then\n        MsgBox.Info(\"Can not add Fields to the FTab. Please check Writing Permission.\"+nl+\n        \"Point will be created as a Graphic...\",\" Not able to edit\")\n     
+   av.ShowMsg(\"llll llll llll llll llll   llll llll llll    Point created as a GRAPHIC  (X = \"+_theUPX.AsString+\";  Y = \"+_theUPY.AsString+\") ...\")\n        theFTab.setEditable(editstate)\n        return NIL\n      end\n    else\n      MsgBox.Info(\"Can not edit the Table. Please check Writing Permission.\",\n      \"Point will be created as a Graphic...\",\" Not able to edit\")\n      av.ShowMsg(\"llll llll llll llll llll   llll llll llll    Point created as a GRAPHIC  (X = \"+_theUPX.AsString+\";  Y = \"+_theUPY.AsString+
+\") ...\")\n      return NIL\n    end\n\n'   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n'   ADD OUR FIELDS AND SET THE VALUES\n'\n'    theFTab.AddFields(theFldList)\n'    \n    theRecNo = theFtab.AddRecord\n'    theFtab.SetValue(theIDfld, theRecNo, theRecNo)\n    if (theProjection.IsNull) then\n      thePointSH2 = thePointSH.Clone\n    else\n      thePointSH2 = thePointSH.ReturnUnProjected(theProjection)\n    end\n    myShape = thePointSH2\n    theFtab.SetValue(theShapeFld,theRecNo,myShape)\n'   
+ \n'    theFtab.SetValue(theCoordXZentFld, theRecNo, theCentX)\n'    theFtab.SetValue(theCoordYZentFld, theRecNo, theCentY)\n'    \n'    theFTab.SetEditable(editState)\n'    theAvail.SetVisible(TRUE)\n'\n    theView.GetGraphics.CutSelected\n    av.GetProject.SetModified(true)\n    \n    av.ShowMsg(\"llll llll llll llll llll   llll llll llll    Inserted the Point in  \"+theAvail.GetName+\"...\")\n\n  elseif (theChoice = TRUE) then  ' USER WANTS TO CREATE A NEW THEME\n    nuTheme = TRUE\n  else                       ' theChoic
+e is NIL: USER DON'T WANT A SHAPEFILE BUT THE GRAPHIC\n    nuTheme = FALSE\n    av.ShowMsg(\"llll llll llll llll llll   llll llll llll    Point created as a GRAPHIC  (X = \"+_theUPX.AsString+\";  Y = \"+_theUPY.AsString+\") ...\")\n    return NIL\n  end\nend\n\n' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n' NOW WE HAVE THE CASES IN WHICH WE SHOULD CREATE A NEW SHAPE\n\nif ((anAvail = FALSE) or (nuTheme = TRUE)) then\n\n  if (theChoice = TRUE) then\n\n    theCWD = FileNam
+e.GetCWD\n    defname = theCWD.MakeTMP(\"mr_pnt\", \"shp\")\n    theOutput = FileDialog.Put(defname,\"*.shp\",\"NAME OF THE NEW THEME\")\n    if (theOutput = nil) then\n      return NIL\n    end\n    \n    theFtab=Ftab.MakeNew(theOutput, Point)\n    theIDfld=Field.Make(\"IDN\", #FIELD_LONG, 6, 0)\n    theCoordXZentFld = Field.Make(\"X_Centr\",#FIELD_DECIMAL,18,4)\n    theCoordYZentFld = Field.Make(\"Y_Centr\",#FIELD_DECIMAL,18,4)\n    theShapeFld=theFtab.FindField(\"Shape\")\n    theFldList = {theIDfld,theCoordXZentFld,theCoordYZentFl
+d}\n    theFtab.AddFields(theFldList)\n    \n    theRecNo=theFtab.AddRecord\n    theFtab.SetValue(theIDfld, theRecNo, theRecNo)\n    if (theProjection.IsNull) then\n      thePointSH2 = thePointSH.Clone\n    else\n      thePointSH2 = thePointSH.ReturnUnProjected(theProjection)\n    end\n    myShape=thePointSH2\n    theFtab.SetValue(theShapeFld, theRecNo, myShape)\n    \n    theFtab.SetValue(theCoordXZentFld, theRecNo, theCentX)\n    theFtab.SetValue(theCoordYZentFld, theRecNo, theCentY)\n  \n    theFTheme=Ftheme.Make(theFTa
+b)\n    theView.AddTheme(theFTheme)\n    \n    theFTab.SetEditable(FALSE)\n    \n  ' -------------------------------------------------------------------------------------------------\n  ' DELETE THE GRAPHIC; SET THE THEME TRANSPARENT AND OUTLINE RED\n  \n    theView.GetGraphics.CutSelected\n    av.GetProject.SetModified(true)\n    \n    theLegend = theFTheme.GetLegend\n    theShapeColor = Color.GetRed\n    theSymList = theLegend.GetSymbols\n    theLegSym = theSymList.Get(0).getColor\n'    theLegSym.SetTransparent (TRUE)\n 
+   theSym = av.GetSymbolWin.GetPalette.GetList(#PALETTE_LIST_Marker).Get(0).Clone\n    theSym.SetColor(theShapeColor)\n    theSym.setSize(8)\n    theSymList.Set(0,theSym)\n  \n    theFTheme.UpdateLegend\n    theFTheme.SetVisible(TRUE)\n    theView.InvalidateTOC(theFTheme)\n    av.ShowMsg(\"llll llll llll llll llll   llll llll llll    Created Point as  \"+theFTheme.GetName+\"...\")\n  else\n    av.ShowMsg(\"llll llll llll llll llll   llll llll llll    Point created as a GRAPHIC  (X = \"+_theUPX.AsString+\";  Y = \"+_theUPY.As
+String+\") ...\")\n  end\nend\n\ntheView.Invalidate\n\n' -------------------------------------------------------------------------------------------------\n' END OF FILE\n"
+	SearchStr:	"Run"
+)
+
+(DocWin.316
+	Owner:	315
+	X:	377
+	Y:	46
+	W:	684
+	H:	559
+)
+
+(CSMgr.317
+)
+
+(DocAct.318
+	Doc:	315
+)
+
+(SEd.319
+	Name:	"Editor.Merge"
+	Creator:	"adrian"
+	CreationDate:	"Die 14 Apr 2015 20:39:06 CEST"
+	GUIName:	"Script"
+	Win:	320
+	CSMgr:	321
+	DocExts:	322
+	Source:	"' uses the built-in function View.UnionGraphics\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Info(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polyline-or-polygon\", \"true\", \"2+\"}) = nil) then\n  return nil\nend\n\ntheTheme.GetFTab.BeginTransaction\ntheTheme.UnionSelected \ntheTheme.GetFTab.EndTransaction \ntheTheme.Invalidate(TRUE)\n"
+)
+
+(DocWin.320
+	Owner:	319
+	X:	50
+	Y:	50
+	W:	816
+	H:	551
+)
+
+(CSMgr.321
+)
+
+(DocAct.322
+	Doc:	319
+)
+
+(SEd.323
+	Name:	"Editor.MergeUpdate"
+	Creator:	"adrian"
+	CreationDate:	"Fre 17 Dez 2021 09:20:52 CET"
+	GUIName:	"Script"
+	Win:	324
+	CSMgr:	325
+	DocExts:	326
+	Source:	"' update script for the built-in function View.UnionGraphics\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\nenabled = FALSE\nSELF.SetLabel(\"U&nion Features\")\nSELF.SetHelpTopic(\"Union_Features\")\nSELF.SetHelp(\"Unions the selected features to create a new feature\")\nfCount = theTheme.GetFTab.GetSelection.Count\ntheType = theTheme.GetFTab.FindField(\"Shape\").GetType\nenabled =  ((fcount > 1) and ((theType = #FIELD_SHAPEPOLY) or\n               
+  (theType = #FIELD_SHAPELINE))) \nSELF.SetEnabled(enabled)\n"
+)
+
+(DocWin.324
+	Owner:	323
+	X:	65
+	Y:	65
+	W:	692
+	H:	522
+)
+
+(CSMgr.325
+)
+
+(DocAct.326
+	Doc:	323
+)
+
+(SEd.327
+	Name:	"Editor.Point"
+	CreationDate:	"Montag, 22. Juli 2013 12:37:25"
+	GUIName:	"Script"
+	Win:	328
+	CSMgr:	329
+	DocExts:	330
+	Source:	"' uses the built-in function View.PointTool\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"point\", \"false\", \"0\"}) = nil) then\n  return nil\nend\n\npt = theView.GetDisplay.ReturnUserPoint\nthePrj = theView.GetProjection\nif (thePrj.IsNull.Not) then\n  pt = pt.ReturnUnprojected(thePrj)\nend\ntheField = theTheme.GetFTab.FindField(\"Shape\")\ntheTheme.GetFTab.BeginTransaction\nrec = theTheme.GetFTab.Add
+Record\ntheTheme.GetFTab.SetValue(theField, rec, pt)\ntheTheme.GetFTab.EndTransaction\ntheTheme.GetFTab.GetSelection.ClearAll\ntheTheme.GetFTab.GetSelection.Set(rec)\ntheTheme.GetFTab.UpdateSelection\nav.GetProject.SetModified(true)\n"
+	SearchStr:	"Run"
+)
+
+(DocWin.328
+	Owner:	327
+	X:	236
+	Y:	197
+	W:	764
+	H:	435
+)
+
+(CSMgr.329
+)
+
+(DocAct.330
+	Doc:	327
+)
+
+(SEd.331
+	Name:	"Editor.Polygon"
+	CreationDate:	"Montag, 22. Juli 2013 12:44:56"
+	GUIName:	"Script"
+	Win:	332
+	CSMgr:	333
+	DocExts:	334
+	Source:	"' uses the built-in function View.PolyTool\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polygon\", \"false\", \"0\"}) = nil) then\n  return nil\nend\n\np = theView.ReturnUserPolygon\nif (p.IsNull) then\n  return nil\nelse\n  theTheme.GetFTab.BeginTransaction\n  thePrj = theView.GetProjection\n  if (thePrj.IsNull.Not) then\n    p = p.ReturnUnprojected(thePrj)\n  end\n  theField = theTheme.GetFTab.FindFie
+ld(\"Shape\")\n  rec = theTheme.GetFTab.AddRecord\n  theTheme.GetFTab.SetValue(theField, rec, p)\n  theTheme.GetFTab.GetSelection.ClearAll\n  theTheme.GetFTab.GetSelection.Set(rec)\n  theTheme.GetFTab.UpdateSelection\n  theTheme.GetFTab.EndTransaction\n  av.GetProject.SetModified(true)\nend\n"
+)
+
+(DocWin.332
+	Owner:	331
+	X:	449
+	Y:	62
+	W:	643
+	H:	452
+)
+
+(CSMgr.333
+)
+
+(DocAct.334
+	Doc:	331
+)
+
+(SEd.335
+	Name:	"Editor.PolyLine"
+	CreationDate:	"Montag, 22. Juli 2013 12:46:12"
+	GUIName:	"Script"
+	Win:	336
+	CSMgr:	337
+	DocExts:	338
+	Source:	"' uses the built-in function View.LineTool\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polyline\", \"false\", \"0\"}) = nil) then\n  return nil\nend\n\nl = theView.ReturnUserPolyLine\nif (l.IsNull) then\n  return nil\nelse\n  theTheme.GetFtab.BeginTransaction\n  thePrj = theView.GetProjection\n  if (thePrj.IsNull.Not) then\n    l = l.ReturnUnprojected(thePrj)\n  end\n  theField = theTheme.GetFTab.FindF
+ield(\"Shape\")\n  rec = theTheme.GetFTab.AddRecord\n  theTheme.GetFTab.SetValue(theField, rec, l)\n  theTheme.GetFTab.GetSelection.ClearAll\n  theTheme.GetFTab.GetSelection.Set(rec)\n  theTheme.GetFTab.UpdateSelection\n  theTheme.GetFtab.EndTransaction\n  av.GetProject.SetModified(true)\nend"
+)
+
+(DocWin.336
+	Owner:	335
+	X:	207
+	Y:	124
+	W:	719
+	H:	465
+)
+
+(CSMgr.337
+)
+
+(DocAct.338
+	Doc:	335
+)
+
+(SEd.339
+	Name:	"Editor.PolyLineUpdate"
+	Creator:	"adrian"
+	CreationDate:	"Fre 17 Dez 2021 08:59:59 CET"
+	GUIName:	"Script"
+	Win:	340
+	CSMgr:	341
+	DocExts:	342
+	Source:	"' update script for the built-in function View.LineTool\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (theTheme = nil) then\n  SELF.SetEnabled(True) \nelse\n  theType = theTheme.GetFTab.FindField(\"Shape\").GetType\n  SELF.SetEnabled(theType = #FIELD_SHAPELINE)\nend"
+)
+
+(DocWin.340
+	Owner:	339
+	X:	35
+	Y:	35
+	W:	517
+	H:	325
+)
+
+(CSMgr.341
+)
+
+(DocAct.342
+	Doc:	339
+)
+
+(SEd.343
+	Name:	"Editor.PolyToolUpdate"
+	Creator:	"adrian"
+	CreationDate:	"Fre 17 Dez 2021 08:34:42 CET"
+	GUIName:	"Script"
+	Win:	344
+	CSMgr:	345
+	DocExts:	346
+	Source:	"' update script for the built-in function View.PolyTool\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (theTheme = nil) then\n  SELF.SetEnabled(TRUE) \nelse\n  SELF.SetEnabled(theTheme.GetFTab.FindField(\"Shape\").GetType = #FIELD_SHAPEPOLY)\nend\n \n"
+)
+
+(DocWin.344
+	Owner:	343
+	X:	291
+	Y:	25
+	W:	745
+	H:	313
+)
+
+(CSMgr.345
+)
+
+(DocAct.346
+	Doc:	343
+)
+
+(SEd.347
+	Name:	"Editor.RectTool"
+	Creator:	"adrian"
+	CreationDate:	"Freitag, 02. Januar 2026 14:27:54"
+	GUIName:	"Script"
+	Win:	348
+	CSMgr:	349
+	DocExts:	350
+	Source:	"theView = av.GetActiveDoc\n\nr = theView.ReturnUserRect\ntheTheme = theView.GetEditableTheme\n\nif (r.IsNull) then\n  return nil\nelse\n  if (theTheme <> nil) then\n    p = r.AsPolygon\n    thePrj = theView.GetProjection\n    if (thePrj.IsNull.Not) then\n      p = p.ReturnUnprojected(thePrj)\n    end\n    theTheme.getFTab.BeginTransaction\n    theField = theTheme.GetFTab.FindField(\"Shape\")\n    rec = theTheme.GetFTab.AddRecord\n    theTheme.GetFTab.SetValue(theField, rec, p)\n    theTheme.GetFTab.EndTransaction\n    theTheme.
+GetFTab.GetSelection.ClearAll\n    theTheme.GetFTab.GetSelection.Set(rec)\n    theTheme.GetFTab.UpdateSelection\n  else\n    gr = GraphicShape.Make(r)\n    theView.GetGraphics.UnselectAll\n    gr.SetSelected(TRUE)\n    theView.GetGraphics.Add(gr)\n  end\n  av.GetProject.SetModified(true)\nend"
+)
+
+(DocWin.348
+	Owner:	347
+	X:	236
+	Y:	51
+	W:	782
+	H:	448
+)
+
+(CSMgr.349
+)
+
+(DocAct.350
+	Doc:	347
+)
+
+(SEd.351
+	Name:	"Editor.RefreshView"
+	Creator:	"adrian"
+	CreationDate:	"Fre 18 Apr 2014 15:26:03 CEST"
+	GUIName:	"Script"
+	Win:	352
+	CSMgr:	353
+	DocExts:	354
+	Source:	"' refreshes the view window\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Info(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\nfor each thm in theView.GetThemes\n  thm.Invalidate (TRUE)\nend\n\ntheView.InvalidateTOC( nil )\ntheView.Invalidate\n\nSystem.RefreshWindows"
+)
+
+(DocWin.352
+	Owner:	351
+	X:	147
+	Y:	189
+	W:	599
+	H:	371
+)
+
+(CSMgr.353
+)
+
+(DocAct.354
+	Doc:	351
+)
+
+(SEd.355
+	Name:	"Editor.Reshape"
+	Creator:	"adrian"
+	CreationDate:	"Mit 18 Nov 2015 17:53:03 CET"
+	GUIName:	"Script"
+	Win:	356
+	CSMgr:	357
+	DocExts:	358
+	Source:	"' hacked from http://webapp1.dlib.indiana.edu/virtual_disk_library/index.cgi/4288321/FID3756/PROGRAM/ETC/AVEDIT.APR\n' 18.11.2015 A. Boehlen\n' REV: 15.10.2022\n'###############################\ntheView  = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polyline-or-polygon\", \"true\", \"1\"}) = nil) then\n  return nil\nend\n\nfldShape = theTheme.GetFTab.FindField(\"shape\")\n\nplinUser  = theView.GetDisplay.ReturnUserPolyLine\nif (plinUser = NIL) then\n  exit\nend\n \nav.UseWa
+itCursor  \n  \nfor each r in theTheme.GetFTab.GetSelection\n  shpSelected = theTheme.GetFTab.ReturnValue(fldShape, r)\n  if (shpSelected.AsList.Count > 1) then\n  ' Currently multi-part shapes are not supported, only the first \n  ' list of points in the list of lists of points for MultiPoint \n  ' objects is considered...\n    MsgBox.Error(\n    \"Unable to reshape multi-part shape at record\"++(r+1).AsString,\n    \"Editor.Reshape\")\n    continue\n  end\n  lstShapePoints = shpSelected.AsList.Get(0)\n  numShapePoints = ls
+tShapePoints.Count\n  \n  lstUserPoints  = plinUser.AsList.Get(0)\n  numUserPoints  = lstUserPoints.Count\n  \n  if (numUserPoints < 2) then\n    exit\n  end\n  \n  sPtr = 0\n  uPtr = 0\n  xFwdUSeg = 1\n  xFwdSSeg = 1\n  done = FALSE\n  xFound = FALSE\n  \n  av.ShowMsg(\"Searching for intersections...\")\n  total = numShapePoints * numUserPoints * 2\n  counter = 0\n  \n  ' First search in the forward direction of the selected shape and\n  ' the Gentle User's PolyLine for intersecting segments...\n\n  while (done.Not)\n    counter = 
+counter + 1\n    if (sPtr = (numShapePoints - 1)) then\n      done = TRUE\n    else\n      sPt1 = lstShapePoints.Get(sPtr)\n      sPt2 = lstShapePoints.Get(sPtr + 1)\n      linShapeSegment = Line.Make(sPt1,sPt2)\n    \n      uPt1 = lstUserPoints.Get(uPtr)\n      uPt2 = lstUserPoints.Get(uPtr + 1)\n      linUserSegment = Line.Make(uPt1,uPt2)\n    \n      if (linShapeSegment.Intersects(linUserSegment)) then\n        xFound = TRUE\n        done = TRUE\n        ptrShapeFwd = sPtr\n        ptVertexFwd = av.Run(\"Editor.SubReturn
+Intersection\", {linShapeSegment, linUserSegment})\n        ptrUserFwd = uPtr  \n      else\n        if (uPtr = (numUserPoints - 2)) then\n          sPtr = sPtr + 1\n          xFwdSSeg = xFwdSSeg + 1\n          uPtr = 0\n          xFwdUSeg = 1\n        else\n          uPtr = uPtr + 1\n          xFwdUSeg = xFwdUSeg + 1\n        end\n      end\n    end\n  \n    proceed = av.SetStatus((counter / total) * 100)\n    if (proceed.Not) then\n      av.ClearStatus\n      av.ShowMsg( \"Stopped.\" )\n      exit\n    end\n  end\n\n  ' No interse
+ction was found, don't waste any more time...\n  if (xFound.Not) then\n    av.ClearStatus\n    av.ShowMsg(\"Reshape line does not intersect feature at record:\"+ r.AsString++\"twice.\")\n    continue\n  end\n  \n  ' If an intersection was found working forwards, work in the reverse \n  ' direction to find another pair of intersecting segments....\n\n  uPtr = numUserPoints - 1\n  sPtr = numShapePoints - 1\n  xRevUSeg = numUserPoints - 1\n  xRevSSeg = numShapePoints - 1\n  xFound = FALSE\n  done = FALSE\n  counter = total / 2\n  
+\n  while (done.Not)\n    counter = counter + 1\n    if (sPtr = 0) then\n      done = TRUE\n    else\n      sPt1 = lstShapePoints.Get(sPtr)\n      sPt2 = lstShapePoints.Get(sPtr - 1)\n      linShapeSegment = Line.Make(sPt1,sPt2)\n    \n      uPt1 = lstUserPoints.Get(uPtr)\n      uPt2 = lstUserPoints.Get(uPtr - 1)\n      linUserSegment = Line.Make(uPt1,uPt2)\n    \n      if (linShapeSegment.Intersects(linUserSegment)) then\n        xFound = TRUE\n        done = TRUE\n        ptrShapeRev = sPtr\n        ptVertexRev = av.Run(\"E
+ditor.SubReturnIntersection\", {linShapeSegment, linUserSegment})\n        ptrUserRev = uPtr\n      else   \n        if (uPtr = 1) then\n          sPtr = sPtr - 1\n          xRevSSeg = xRevSSeg - 1\n          uPtr = (numUserPoints - 1)\n          xRevUSeg = (numUserPoints - 1)\n        else\n          uPtr = uPtr - 1\n          xRevUseg = xRevUSeg - 1\n        end\n      end\n    end\n    proceed = av.SetStatus((counter / total) * 100)\n \n    if (proceed.Not) then\n      av.ClearStatus\n      av.ShowMsg( \"Stopped.\" )\n      e
+xit\n    end\n  end\n\n  av.SetStatus(100)\n  \n  if (not xFound) then\n    av.ClearStatus\n    av.ShowMsg(\"Reshape line does not intersect feature at record:\"+ r.AsString++\"twice.\")\n    continue\n  end\n  \n  ' Double check to make sure that the new pline has crossed twice, not\n  ' just once, by comparing segments where intersections have been found...\n\n  if ((xFwdUSeg = xRevUSeg) AND (xFwdSSeg = xRevSSeg)) then\n    av.ClearStatus\n    av.ShowMsg(\"Reshape line does not intersect feature at record:\"+ r.AsString++\"twice
+.\")\n    continue\n  end\n  \n  ' An intersection has been found from both directions, and new vertices\n  ' have been calculated, now construct the new shape from the appropriate \n  ' combinations of vertices from the original shape and the new polyline \n  ' created by the Gentle User...\n  \n  av.ShowMsg(\"Assembling shape...\")\n  lstNewPoints = {}\n  \n  ' Collect vertices from original shape up until first intersection...\n\n  for each i in 0 .. ptrShapeFwd\n    lstNewPoints.Add(lstShapePoints.Get(i))\n  end\n\n  ' Add 
+first of the two new vertices.  If both new vertices fall on the\n  ' same shape segment the order of the new Vertices in relation to the\n  ' direction of the shape segment must be considered...\n\n  if ((xFwdSSeg = xRevSSeg) AND \n    ((lstShapePoints.Get(ptrShapeFwd).Distance(ptVertexFwd)) > \n     (lstShapePoints.Get(ptrShapeFwd).Distance(ptVertexRev)))) then\n    lstNewPoints.Add(ptVertexRev)\n  else\n    lstNewPoints.Add(ptVertexFwd)\n  end\n  \n  ' Add vertices from user pline that fall between the intersections
+...\n\n  if (xFwdSSeg <> xRevSSeg) then\n    if (xFwdUseg > xRevUSeg) then\n      for each i in ptrUserFwd .. ptrUserRev\n        lstNewPoints.Add(lstUserPoints.Get(i))\n      end\n    elseif (xFwdUSeg < xRevUSeg) then\n      ptrUserFwd = ptrUserFwd + 1\n      ptrUserRev = ptrUserRev - 1 \n      for each i in ptrUserFwd .. ptrUserRev\n        lstNewPoints.Add(lstUserPoints.Get(i))\n      end\n    else\n      ' Do not consider vertices in user PLine...\n    end\n  else \n    if ((lstShapePoints.Get(ptrShapeFwd).Distance(ptVe
+rtexFwd)) > \n     (lstShapePoints.Get(ptrShapeFwd).Distance(ptVertexRev))) then\n      ptrUserFwd = ptrUserFwd + 1\n      ptrUserRev = ptrUserRev - 1 \n      for each i in ptrUserRev .. ptrUserFwd\n        lstNewPoints.Add(lstUserPoints.Get(i))\n      end\n    else \n      ptrUserFwd = ptrUserFwd + 1\n      ptrUserRev = ptrUserRev - 1 \n      for each i in ptrUserFwd .. ptrUserRev\n        lstNewPoints.Add(lstUserPoints.Get(i))\n      end\n    end\n  end\n\n  ' Add vertex for second intersection using same rules as used\n 
+ ' for first intersection...\n\n  if ((xFwdSSeg = xRevSSeg) AND \n    ((lstShapePoints.Get(ptrShapeFwd).Distance(ptVertexFwd)) > \n    (lstShapePoints.Get(ptrShapeFwd).Distance(ptVertexRev)))) then\n    lstNewPoints.Add(ptVertexFwd)\n  else\n    lstNewPoints.Add(ptVertexRev)\n  end\n\n  ' Add rest of vertices from original shape...\n\n  for each i in ptrShapeRev .. (lstShapePoints.Count - 1)\n    lstNewPoints.Add(lstShapePoints.Get(i))\n  end\n  \n  ' Assemble new shape from the collected vertices and replace \n  ' previous
+ shape in the FTab...\n\n  if (fldShape.GetType = #FIELD_SHAPEPOLY) then\n    shpNew = Polygon.Make({ lstNewPoints })\n    shpNew.Clean\n  else  \n    ' the other possible case is #FIELD_SHAPELINE\n    shpNew = PolyLine.Make({ lstNewpoints })\n  end\n  \n  ' Push transaction onto transaction stack...\n  av.Run(\"Editor.SubPushTransaction\",\n      {{\"Editor.UndoVertex\",{r.Clone, shpSelected}},\n      {\"Editor.RedoVertex\",{r.Clone, shpNew}}})  \n  \n  av.ClearStatus\n  av.ClearMsg\n  theTheme.GetFTab.SetValue(fldShape, r, shpN
+ew)\nend\n\ntheTheme.GetFTab.Flush\n\ntheTheme.Invalidate (TRUE)\ntheView.Invalidate\nSystem.RefreshWindows\n"
+	SearchStr:	"Run"
+)
+
+(DocWin.356
+	Owner:	355
+	X:	357
+	Y:	24
+	W:	943
+	H:	611
+)
+
+(CSMgr.357
+)
+
+(DocAct.358
+	Doc:	355
+)
+
+(SEd.359
+	Name:	"Editor.ReshapeTool"
+	Creator:	"adrian"
+	CreationDate:	"Don 16 Dez 2021 17:05:48 CET"
+	GUIName:	"Script"
+	Win:	360
+	CSMgr:	361
+	DocExts:	362
+	Source:	"' the same as View.PolyLineTool\nif ((av.GetSymbolWin.GetPanel = #SYMBOLWIN_PANEL_COLOR).not) then\n  av.GetSymbolWin.SetPanel(#SYMBOLWIN_PANEL_PEN)\nend"
+)
+
+(DocWin.360
+	Owner:	359
+	X:	264
+	Y:	91
+	W:	798
+	H:	523
+)
+
+(CSMgr.361
+)
+
+(DocAct.362
+	Doc:	359
+)
+
+(SEd.363
+	Name:	"Editor.ReshapeUpdate"
+	Creator:	"adrian"
+	CreationDate:	"Mit 18 Nov 2015 17:53:31 CET"
+	GUIName:	"Script"
+	Win:	364
+	CSMgr:	365
+	DocExts:	366
+	Source:	"theView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif((theTheme <> NIL) AND\n  (theTheme.GetFTab.GetSelection.Count > 0) AND\n  ((theTheme.GetFTab.FindField(\"shape\").GetType = #FIELD_SHAPEPOLY) OR\n  (theTheme.GetFTab.FindField(\"shape\").GetType = #FIELD_SHAPELINE))) then\n  SELF.SetEnabled(TRUE)\nelse\n  SELF.SetEnabled(FALSE)\nend\n"
+)
+
+(DocWin.364
+	Owner:	363
+	X:	20
+	Y:	20
+	W:	703
+	H:	384
+)
+
+(CSMgr.365
+)
+
+(DocAct.366
+	Doc:	363
+)
+
+(SEd.367
+	Name:	"Editor.SaveEdits"
+	Creator:	"adrian"
+	CreationDate:	"Die 14 Apr 2015 20:32:50 CEST"
+	GUIName:	"Script"
+	Win:	368
+	CSMgr:	369
+	DocExts:	370
+	Source:	"' uses the built-in function View.SaveEdits\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Info(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\neditThm = theView.GetEditableTheme\nif (editThm <> nil) then\n  doSave = MsgBox.YesNoCancel(\"Save edits to \"+editThm.GetName+\n  \"?\",\"Save Edits\",true)\n  if (doSave = nil) then\n    return nil\n  end\n  if (doSave.not) then\n    ' user changed her mind\n    return nil\n  else\n    ' sa
+ve edits and stop editing\n    if (editThm.StopEditing(TRUE).Not) then\n      ' save failed, remain editing\n     MsgBox.Info(\"Unable to Save Edits, please use the Save Edits As option\", \"\")\n     return nil\n    end   \n    ' restart editing\n    theView.SetEditableTheme(editThm)\n  end\nend  \n\n\n"
+)
+
+(DocWin.368
+	Owner:	367
+	X:	219
+	Y:	59
+	W:	782
+	H:	573
+)
+
+(CSMgr.369
+)
+
+(DocAct.370
+	Doc:	367
+)
+
+(SEd.371
+	Name:	"Editor.Select"
+	Creator:	"adrian"
+	CreationDate:	"Fre 17 Dez 2021 09:36:14 CET"
+	GUIName:	"Script"
+	Win:	372
+	CSMgr:	373
+	DocExts:	374
+	Source:	"' combines pointer and select tool\n' 22.01.2023, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\n\neditThm = theView.GetEditableTheme\n\nif (editThm = nil) then\n  \n  theView.Select\n\n  r = theView.ReturnUserRect\n  theThemes = theView.GetActiveThemes \n  if (r.IsNull) then \n    p = theView.GetDisplay.ReturnUserPoint\n    if (System.IsShiftKeyDown) then\n      op = #VTAB_SELTYPE_XOR\n    else\n      op = #VTAB_SELTYPE_NEW\n    end\n    for each t in theThemes\n      if (t.CanSelect) then\n        t.
+SelectByPoint(p, op)\n      end\n    end\n  else\n    if (System.IsShiftKeyDown) then\n      op = #VTAB_SELTYPE_OR\n    else\n     op = #VTAB_SELTYPE_NEW\n    end\n    for each t in theThemes\n      if (t.CanSelect) then\n        t.SelectByRect(r, op)\n      end\n    end\n  end\n  \n\nelse\n  editThm.GetFTab.BeginTransaction\n  editThm.Select\n  editThm.GetFTab.EndTransaction\nend\n\nav.GetProject.SetModified(true)\n"
+)
+
+(DocWin.372
+	Owner:	371
+	X:	265
+	Y:	25
+	W:	677
+	H:	574
+)
+
+(CSMgr.373
+)
+
+(DocAct.374
+	Doc:	371
+)
+
+(SEd.375
+	Name:	"Editor.SelectToEdit"
+	CreationDate:	"Montag, 22. Juli 2013 10:00:45"
+	GUIName:	"Script"
+	Win:	376
+	CSMgr:	377
+	DocExts:	378
+	Source:	"' uses the built-in function View.SelectToEdit\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (theTheme = nil) then\n  MsgBox.Info(\"Start an Edit Session.\",\"No Theme in Edit Mode\")\n  return nil\nend\n\ntheTheme.GetFTab.BeginTransaction\ntheTheme.SelectToEdit\ntheTheme.GetFTab.EndTransaction\nav.GetProject.SetModified(true)\n"
+)
+
+(DocWin.376
+	Owner:	375
+	X:	167
+	Y:	136
+	W:	832
+	H:	487
+)
+
+(CSMgr.377
+)
+
+(DocAct.378
+	Doc:	375
+)
+
+(SEd.379
+	Name:	"Editor.SelectToEditTool"
+	Creator:	"adrian"
+	CreationDate:	"Fre 17 Dez 2021 09:40:16 CET"
+	GUIName:	"Script"
+	Win:	380
+	CSMgr:	381
+	DocExts:	382
+	Source:	"' uses the built-in function View.SelectToEditTool\n' 22.01.2023, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Warning(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\ntheView.SetSelectMode(#GRAPHICS_SELECT_VERTEX)"
+)
+
+(DocWin.380
+	Owner:	379
+	X:	22
+	Y:	108
+	W:	533
+	H:	245
+)
+
+(CSMgr.381
+)
+
+(DocAct.382
+	Doc:	379
+)
+
+(SEd.383
+	Name:	"Editor.SelectToEditUpdate"
+	Creator:	"adrian"
+	CreationDate:	"Fre 17 Dez 2021 09:40:50 CET"
+	GUIName:	"Script"
+	Win:	384
+	CSMgr:	385
+	DocExts:	386
+	Source:	"' update script for the built-in function View.SelectToEdit\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (theTheme <> nil) then\n  theField = theTheme.GetFTab.FindField(\"Shape\")\n  theType = theField.GetType\n  if (theType <> #FIELD_SHAPEPOINT) then\n    SELF.SetEnabled(true)\n    return nil\n  end\nend\n           \ntheGraphics = theView.GetGraphics\nif (theGraphics.Count > 0) then\n  SELF.SetEnabled(true)\n  return nil\nend\n              \n
+SELF.SetEnabled(false)"
+)
+
+(DocWin.384
+	Owner:	383
+	X:	35
+	Y:	35
+	W:	590
+	H:	362
+)
+
+(CSMgr.385
+)
+
+(DocAct.386
+	Doc:	383
+)
+
+(SEd.387
+	Name:	"Editor.SelectTool"
+	Creator:	"adrian"
+	CreationDate:	"Fre 17 Dez 2021 09:36:35 CET"
+	GUIName:	"Script"
+	Win:	388
+	CSMgr:	389
+	DocExts:	390
+	Source:	"' uses the built-in function View.SelectTool\n' 22.01.2023, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Warning(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\ntheView.SetSelectMode(#GRAPHICS_SELECT_NORMAL)"
+)
+
+(DocWin.388
+	Owner:	387
+	X:	273
+	Y:	222
+	W:	598
+	H:	266
+)
+
+(CSMgr.389
+)
+
+(DocAct.390
+	Doc:	387
+)
+
+(SEd.391
+	Name:	"Editor.SetDefaultValues"
+	Creator:	"adrian"
+	CreationDate:	"Sonntag, 22. Januar 2023 16:55:57"
+	GUIName:	"Script"
+	Win:	392
+	CSMgr:	393
+	DocExts:	394
+	Source:	"'##############################################################################\n'#\n'# Filename:     Editor_SetDefaultValues.ave\n'# Author:       Adrian Boehlen\n'# Date:         31.01.2023\n'# Version:      1.2\n'#\n'# Purpose:      liest Defaultwerte aus default_values.dbf ein und speichert\n'#               sie im globalen Dictionary _defaultValues\n'#\n'#               wird auch in den LayoutTool verwendet\n'#\n'##############################################################################\n\nif (_defaultValues = n
+il) then\n  theVTab = av.Run(\"Editor.SubReadTable\", {\"Select Default Values Table\"})\nelse\n  return nil\nend\n\nif (theVTab = nil) then\n  MsgBox.Warning(\"No default values defined. Use the button 'D' to define them later.\", \"No default values\")\n  return nil\nend\n\ntheFields = theVTab.GetFields\n\n_defaultValues = Dictionary.Make(2)\n\nfor each rec in theVTab\n  for each feld in theFields\n    if (feld.AsString = \"Key\") then\n      theKey = theVTab.ReturnValue(feld, rec)\n    elseif (feld.AsString = \"Value\") then\n      the
+Value = theVTab.ReturnValue(feld, rec)\n      if (theValue.IsNumber) then\n        theValue = theValue.AsNumber\n      end\n    else\n      MsgBox.Error(\"Wrong table structure. Please select the default values table.\", \"\")\n      return nil\n    end\n  end\n  _defaultValues.Add(theKey, theValue)\nend\n"
+)
+
+(DocWin.392
+	Owner:	391
+	X:	282
+	Y:	14
+	W:	912
+	H:	601
+)
+
+(CSMgr.393
+)
+
+(DocAct.394
+	Doc:	391
+)
+
+(SEd.395
+	Name:	"Editor.SplitLine"
+	Creator:	"adrian"
+	CreationDate:	"Die 10 Dez 2013 20:23:00 CET"
+	GUIName:	"Script"
+	Win:	396
+	CSMgr:	397
+	DocExts:	398
+	Source:	"' uses the built-in function View.SplitTool\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polyline\", \"false\", \"0\"}) = nil) then\n  return nil\nend\n\nl = theView.ReturnUserPolyLine\nif (l.IsNull) then\n  return nil\nelse\n  theTheme.GetFtab.BeginTransaction\n  theField = theTheme.GetFTab.FindField(\"Shape\")\n  theType = theField.GetType\n  if ((theType = #FIELD_SHAPEPOLY) or (theType = #FIELD_SHAPE
+LINE)) then\n    theTheme.Split(l)\n  end\n  theTheme.GetFtab.EndTransaction  \n  av.GetProject.SetModified(true)\nend\n\n"
+)
+
+(DocWin.396
+	Owner:	395
+	X:	472
+	Y:	38
+	W:	644
+	H:	486
+)
+
+(CSMgr.397
+)
+
+(DocAct.398
+	Doc:	395
+)
+
+(SEd.399
+	Name:	"Editor.SplitLineToolUpdate"
+	Creator:	"adrian"
+	CreationDate:	"Sam 15 Okt 2022 11:43:04 CEST"
+	GUIName:	"Script"
+	Win:	400
+	CSMgr:	401
+	DocExts:	402
+	Source:	"' uses the built-in function View.SplitLineToolUpdate\n' 15.10.2022, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (theTheme = nil) then\n  SELF.SetEnabled(False) \nelse\n  theType = theTheme.GetFTab.FindField(\"Shape\").GetType\n  SELF.SetEnabled(theType = #FIELD_SHAPELINE)\nend"
+)
+
+(DocWin.400
+	Owner:	399
+	X:	35
+	Y:	35
+	W:	581
+	H:	344
+)
+
+(CSMgr.401
+)
+
+(DocAct.402
+	Doc:	399
+)
+
+(SEd.403
+	Name:	"Editor.SplitLineWithoutTrace"
+	Creator:	"adrian"
+	CreationDate:	"Mon 17 Feb 2014 19:48:57 CET"
+	GUIName:	"Script"
+	Win:	404
+	CSMgr:	405
+	DocExts:	406
+	Source:	"' NAME: mm_ViewSplitLineWithoutTrace\n' ORIGIN: Harald, 08.02.03\n' INTEGRATION: View Tool, Apply Script\n'              Help: Draw Line to Split Feature//Creates a line to split line features, clears the Cutting Line\n'              Update: View.SplitLineToolUpdate\n'              Cursor: Cursor.CrossHair\n'\n' HELP: Draws a Line to Split Line Feature, clears the Cutting Line (the Standard SplitTool \n'       makes Features out of the Splitting Lines)\n'\n' NEEDS: Editable polyline theme\n'\n'*************************
+******************\n'\n' CTRL-KLICK Info (erscheint, wenn das Skript bei gedrueckter Strg- bzw. Ctrl-Taste aufgerufen wird)\n' \n'if (System.IsControlKeyDown) then\n'\n'  message =\n'    \" \"+nl+\n'    \n'    \"SCRIPT NAME:  mm_ViewSplitLineWithoutTrace \"+nl+nl+\n'    \n'    \"ORIGIN:  Harald, February 8, 2003 \"+nl+nl+\n'    \n'    \"Draws a line to split line feature, clears the cutting line (the standard split tool \"+\n'    \"converts the splitting lines to features).\" +nl\n'    \n'  msgbox.report(message,\"INFO: Cut Line With
+out Trace...\")\n'  \n'  return nil\n'end\n'\n'--------------------------------------------------------------------\ntheView = av.GetActiveDoc\n\nif (theView.is(View).not) then\n  msgBox.Info(\"This is an Apply Script. Use it with a view tool.\",\"\")\n  return NIL\nend\n\nif (System.IsControlKeyDown) then\n  av.GetProject.SetModified(true)\n  theView.GetDisplay.Pan\n  return NIL\nend\n\ntheSelMode = theView.GetSelectMode\n\ntheEdtLinThm = theView.GetEditableTheme\n\n'-------------------------------------------------------------------
+-\n\nif (theEdtLinThm = NIL) then\n  MsgBox.Info(\"Start editing a polyline theme.\",\" No Theme in Edit Mode\")\n  return NIL\nelse\n  theType = theEdtLinThm.GetFTab.FindField(\"Shape\").GetType\n  if (theType <> #FIELD_SHAPELINE) then\n    MsgBox.Info(\"Start editing a line theme.\",\" No Line Theme in Edit Mode\")\n    return NIL\n  end\nend\n'--------------------------------------------------------------------\n\ntheUserPL = theView.ReturnUserPolyLine\n\nif (theUserPL.IsNull) then\n  return nil\nelse\n  if (theEdtLinThm <> nil) the
+n\n    thePLGraph = GraphicShape.Make(theUserPL)\n    thePLShape = thePLGraph.getShape\n    theEdtLinThm.GetFtab.BeginTransaction\n    theField = theEdtLinThm.GetFTab.FindField(\"Shape\")\n    theType = theField.GetType\n    if (theType = #FIELD_SHAPELINE) then\n      theEdtLinThm.Split(thePLShape)\n    end\n    theEdtLinThm.GetFtab.EndTransaction\n  end\n  av.GetProject.SetModified(true)\nend\n\ntheVTab = theEdtLinThm.getFTab\ntheVTab.rememberSelection\n\ntheEdtLinThm.SubtractShape (thePLShape)\n\ntheVTab.UpdateSelection\ntheVT
+ab.Flush\ntheBitmap = theVTab.getSelection \n\ntheShpFld = theVTab.FindField(\"Shape\")\n\nfor each rec in theBitmap\n  theVal = theVTab.ReturnValue (theShpFld, rec)\n'  msgbox.info(theVal.asstring,\"\")\n  if ((theVal.asstring) = \"Polyline: Null\") then\n    theBitmap.set(rec)\n  else\n    theBitmap.clear(rec)\n  end\nend\n\ntheView.SetSelectMode(#GRAPHICS_SELECT_NORMAL)\n\ntheVTab.BeginTransaction\ntheEdtLinThm.ClearSelected\ntheVTab.EndTransaction\n\ntheView.SetSelectMode(theSelMode)\n\ntheLastSel = theVTab.GetLastSelection\ntheVTab
+.SetSelection(theLastSel.clone)\n\ntheVTab.UpdateSelection\n"
+	SearchStr:	"Run"
+)
+
+(DocWin.404
+	Owner:	403
+	X:	247
+	Y:	7
+	W:	748
+	H:	552
+)
+
+(CSMgr.405
+)
+
+(DocAct.406
+	Doc:	403
+)
+
+(SEd.407
+	Name:	"Editor.SplitLineWithoutTraceInfo"
+	Creator:	"adrian"
+	CreationDate:	"Mon 17 Feb 2014 19:51:00 CET"
+	GUIName:	"Script"
+	Win:	408
+	CSMgr:	409
+	DocExts:	410
+	Source:	"' CTRL-KLICK Info (erscheint, wenn das Skript bei gedrueckter Strg- bzw. Ctrl-Taste aufgerufen wird)\n \nif (System.IsControlKeyDown) then\n\n  message =\n    \" \"+nl+\n    \n    \"SCRIPT NAME:  mm_ViewSplitLineWithoutTrace\"+nl+nl+\n    \n    \"ORIGIN:  Harald, February 8, 2003 \"+nl+nl+\n    \n    \"Draws a line to split line feature, clears the cutting line (the standard split tool \"+\n    \"converts the splitting lines to features).\" +nl\n    \n  msgbox.report(message,\"INFO: Cut Line Without Trace...\")\n  \n  return nil\nend"
+)
+
+(DocWin.408
+	Owner:	407
+	X:	59
+	Y:	32
+	W:	872
+	H:	591
+)
+
+(CSMgr.409
+)
+
+(DocAct.410
+	Doc:	407
+)
+
+(SEd.411
+	Name:	"Editor.SubCheckTheme"
+	Creator:	"adrian"
+	CreationDate:	"Sam 18 Dez 2021 10:58:39 CET"
+	GUIName:	"Script"
+	Win:	412
+	CSMgr:	413
+	DocExts:	414
+	Source:	"' Subroutine checks if an edit session is running on the proper geometry type,\n' and if there is a selection, if necessary\n' 15.10.2022, A. Boehlen\n'###############################\n\n'# local variables\ntheTheme =  Self.Get(0) ' the editable theme\ngeometry =  Self.Get(1) ' \"point\", \"polyline\", \"polygon\", \"polyline-or-polygon\" or \"point-or-polyline-or-polygon\"\nselection = Self.Get(2) ' \"true\" (selection is necessary) or \"false\" (no selection required)\nselCount =  Self.Get(3) ' number of features that have to b
+e selected\n                        ' a \"number\" means, exactly this count, a \"number+\" means, at least this count\n                        \nmsgBoxGeom =  \"Please choose a \" + geometry + \" theme.\"\nmsgBoxGeomT = \"Wrong Geometry Type\"\nmsgBoxSelT =  \"Wrong Selection Count\"\n\n\n'# check if an edit session is running\nif (theTheme = nil) then\n  MsgBox.Info(\"Start Editing a \" + geometry + \" theme.\",\"No Theme in Edit Mode\")\n  return nil\nend\n\n\n'# check the geometry type\nfldShape = theTheme.GetFTab.FindField(\"shape\")\nif 
+(geometry = \"point\") then\n  if (fldShape.GetType <> #FIELD_SHAPEPOINT) then\n    MsgBox.Info(msgBoxGeom, msgBoxGeomT)\n    return nil\n  end\nelseif (geometry = \"polyline\") then\n  if (fldShape.GetType <> #FIELD_SHAPELINE) then\n    MsgBox.Info(msgBoxGeom, msgBoxGeomT)\n    return nil\n  end\nelseif (geometry = \"polygon\") then\n  if (fldShape.GetType <> #FIELD_SHAPEPOLY) then\n    MsgBox.Info(msgBoxGeom, msgBoxGeomT)\n    return nil\n  end\nelseif (geometry = \"polyline-or-polygon\") then\n  if (fldShape.GetType = #FIELD_SH
+APEPOINT) then\n    MsgBox.Info(msgBoxGeom, msgBoxGeomT)\n    return nil\n  end\nend\n\n\n'# check the selection\nif (selection = \"true\") then\n  if (selCount.Contains(\"+\")) then\n    selCount = selCount.AsTokens(\"+\")\n    if (theTheme.GetFTab.GetSelection.Count < selCount.Get(0).AsNumber) then\n      MsgBox.Info(\"Please select at least \" + selCount.Get(0) + \" features.\",msgBoxSelT)\n      return nil\n    end\n  else\n    if (theTheme.GetFTab.GetSelection.Count <> selCount.AsNumber) then\n      MsgBox.Info(\"Please select \" 
++ selCount.AsString + \" features.\",msgBoxSelT)\n      return nil\n    end\n  end\nend\n\n\n'# return 1 if all checks are OK\nreturn 1\n\n"
+)
+
+(DocWin.412
+	Owner:	411
+	X:	295
+	Y:	66
+	W:	1005
+	H:	523
+)
+
+(CSMgr.413
+)
+
+(DocAct.414
+	Doc:	411
+)
+
+(SEd.415
+	Name:	"Editor.SubPushTransaction"
+	Creator:	"adrian"
+	CreationDate:	"Mit 18 Nov 2015 17:50:48 CET"
+	GUIName:	"Script"
+	Win:	416
+	CSMgr:	417
+	DocExts:	418
+	Source:	"' used by Editor.Reshape and Editor.DeleteVertex\n' 20.12.2021, A. Boehlen\n'###############################\n\n' SELF is the transaction object to push on the transaction stack.\n' If SELF is NIL, then the transaction stack is emptied. Otherwise\n' the transaction object is pushed onto the transaction stack. In\n' either case the Redo object is set to NIL. Redo objects are stored\n' only after an Undo... \n'\nAVEDIT = av.GetActiveDoc.GetObjectTag \nif (SELF = NIL) then\n  AVEDIT.Set(0, Stack.Make)\n  AVEDIT.Set(1, NIL)
+\n  av.GetActiveGUI.Update\n'else\n'  if (AVEDIT.Get(3)) then\n'    AVEDIT.Get(0).Push(SELF)\n'    AVEDIT.Set(1, NIL)\n\n'    if (AVEDIT.Get(2)) then \n'      System.Beep \n'    end\n'    if (AVEDIT.Get(0).Depth > 100) then\n'      MsgBox.Warning(\"Edit list has more than 100 transactions.\",\"\")\n'    end\n'  end\nend\nav.GetActiveDoc.SetObjectTag(AVEDIT)\n"
+	SearchStr:	"Edit."
+)
+
+(DocWin.416
+	Owner:	415
+	X:	65
+	Y:	65
+	W:	727
+	H:	410
+)
+
+(CSMgr.417
+)
+
+(DocAct.418
+	Doc:	415
+)
+
+(SEd.419
+	Name:	"Editor.SubReadTable"
+	Creator:	"adrian"
+	CreationDate:	"Sonntag, 22. Januar 2023 17:02:42"
+	GUIName:	"Script"
+	Win:	420
+	CSMgr:	421
+	DocExts:	422
+	Source:	"'######################################################################\n'#\n'# Filename:     Editor_SubReadTable.ave\n'# Author:       Adrian Boehlen\n'# Date:         02.12.2022\n'# Version:      1.0\n'#\n'# Purpose:      Erzeugt einen Dialog zum Auswaehlen einer Tabelle,\n'#               die anschliessend eingelesen wird.\n'#               Die Tabelle wird nicht zum GUI hinzugefuegt.\n'#               Script liefert das VTab Objekt zurueck.\n'#\n'#               wird auch in den LayoutTool verwendet\n'#\n'###########
+###########################################################\n\nthePattern = \"*.dbf\"\ntheLabel = \"dBASE (*.dbf)\"\ntheTitle = Self.Get(0)\ntheFile = FileDialog.Show(thePattern, theLabel, theTitle)\n\nif (theFile = nil) then\n  return nil\nend\n\ntheVTab = VTab.Make(theFile, FALSE, FALSE)\n\nif (theVTab.HasError) then\n  if (theVTab.HasLockError) then\n    MsgBox.Error(\"Unable to acquire Read Lock for file \" + theFile.GetBaseName, \"\")\n  else\n    MsgBox.Error(\"The file '\" + theFile.GetBaseName + \"' is not valid.\", \"\")\n  end\ne
+lse\n  return theVTab\nend\n"
+)
+
+(DocWin.420
+	Owner:	419
+	X:	305
+	Y:	111
+	W:	721
+	H:	436
+)
+
+(CSMgr.421
+)
+
+(DocAct.422
+	Doc:	419
+)
+
+(SEd.423
+	Name:	"Editor.SubReturnIntersection"
+	Creator:	"adrian"
+	CreationDate:	"Mit 18 Nov 2015 17:54:02 CET"
+	GUIName:	"Script"
+	Win:	424
+	CSMgr:	425
+	DocExts:	426
+	Source:	"line1 = SELF.Get(0)\nline2 = SELF.Get(1)\n\nptStartLine1 = line1.ReturnStart\nptEndLine1   = line1.ReturnEnd\n\nptStartLine2 = line2.ReturnStart\nptEndLine2   = line2.ReturnEnd\n\ndx2 = ptEndLine2.GetX - ptStartLine2.GetX\ndy2 = ptEndLine2.GetY - ptStartLine2.GetY\n\nareaLeft  = ( dy2 * (ptStartLine2.GetX - ptStartLine1.GetX)) -\n            ( dx2 * (ptStartLine2.GetY - ptStartLine1.GetY))          \nareaRight = ( dy2 * (ptEndLine1.GetX - ptStartLine2.GetX)) -\n            ( dx2 * (ptEndLine1.GetY - ptStartLine2.GetY))\n \n
+           \nareaTotal = areaLeft + areaRight\n\nif (areaTotal <> 0) then\n  t = areaLeft / areaTotal\n  t1 = 1 - t  \n  x = (t1 * ptStartLine1.GetX) + (t * ptEndLine1.GetX)\n  y = (t1 * ptStartLine1.GetY) + (t * ptEndLine1.GetY)\n  return(x@y)\nelse\n  ' \n  ' not solvable!\n  '\n  return(-1)\nend\n"
+	SearchStr:	"Edit."
+)
+
+(DocWin.424
+	Owner:	423
+	X:	35
+	Y:	35
+	W:	606
+	H:	481
+)
+
+(CSMgr.425
+)
+
+(DocAct.426
+	Doc:	423
+)
+
+(SEd.427
+	Name:	"Editor.SubTextShift"
+	Creator:	"adrian"
+	CreationDate:	"Freitag, 27. Januar 2023 21:10:27"
+	GUIName:	"Script"
+	Win:	428
+	CSMgr:	429
+	DocExts:	430
+	Source:	"'##############################################################\n'#\n'# Filename:     Editor.SubTextShift\n'# Author:       Adrian Boehlen\n'# Date:         27.01.2023\n'# Version:      1.0\n'#\n'# Purpose:      Subroutine zur Generierung von Text-Halos\n'#               \n'#               kopiert Text 4x und verschiebt Kopie je\n'#               oben rechts / unten rechts / \n'#               unten links / oben links \n'#            \n'##############################################################\n\n'# Variablen ueberne
+hmen\ng = Self.Get(0)\ntextSize = Self.Get(1)\ntextCopy = Self.Get(2)\ntheRefscale = Self.Get(3)\nquot = Self.Get(4)\nhaloColour = Self.Get(5)\n\n'# Textfeature kopieren, verschieben und weiss einfaerben\ngt = g.clone  \ntheOffX = textSize / (theRefscale / quot)\ntheOffY = textSize / (theRefscale / quot)\nif (textCopy = 1) then\n  gt.Offset(Point.Make(theOffX,theOffY))\nelseif (textCopy = 2) then\n  gt.Offset(Point.Make(theOffX,theOffY - (2 * theOffY)))\nelseif (textCopy = 3) then\n  gt.Offset(Point.Make(theOffX - (2 * theO
+ffX),theOffY - (2 * theOffY)))\nelse\n  gt.Offset(Point.Make(theOffX - (2 * theOffX),theOffY))\nend\ngt.GetSymbol.SetColor(haloColour) \nreturn gt"
+)
+
+(DocWin.428
+	Owner:	427
+	X:	378
+	Y:	1
+	W:	834
+	H:	520
+)
+
+(CSMgr.429
+)
+
+(DocAct.430
+	Doc:	427
+)
+
+(SEd.431
+	Name:	"Editor.Subtract"
+	Creator:	"adrian"
+	CreationDate:	"Die 14 Apr 2015 20:40:11 CEST"
+	GUIName:	"Script"
+	Win:	432
+	CSMgr:	433
+	DocExts:	434
+	Source:	"' uses the built-in function View.SubtractGraphics\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Info(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polygon\", \"true\", \"2\"}) = nil) then\n  return nil\nend\n\ntheFTab = theTheme.GetFTab\ntheFTab.BeginTransaction\nfldShape = theFTab.FindField(\"shape\")\n\nr1 = theFTab.GetSelection.GetNextSet(-1)
+\nr2 = theFTab.GetSelection.GetNextSet(r1)\n\nif (r1 < r2) then\n  recBack = r1\n  recFront = r2\nelse\n  recBack = r2\n  recFront = r1\nend\n\nshpBack = theFTab.ReturnValue(fldShape,recBack)\nshpFront = theFTab.ReturnValue(fldShape,recFront)\n\nif (System.IsShiftKeyDown) then\n  shpDiff = shpFront.ReturnDifference(shpBack)   theFTab.SetValue(fldShape,recFront,shpDiff)\nelse\n  shpDiff = shpBack.ReturnDifference(shpFront)\n  theFTab.SetValue(fldShape,recBack,shpDiff)\nend\n\ntheFTab.UpdateSelection\ntheFtab.EndTransaction\ntheThe
+me.Invalidate(TRUE)\n"
+	SearchStr:	"Run"
+)
+
+(DocWin.432
+	Owner:	431
+	X:	469
+	Y:	5
+	W:	656
+	H:	515
+)
+
+(CSMgr.433
+)
+
+(DocAct.434
+	Doc:	431
+)
+
+(SEd.435
+	Name:	"Editor.SubtractUpdate"
+	Creator:	"adrian"
+	CreationDate:	"Fre 17 Dez 2021 09:16:32 CET"
+	GUIName:	"Script"
+	Win:	436
+	CSMgr:	437
+	DocExts:	438
+	Source:	"' update script for Editor.Subtract\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\nenabled = FALSE\nSELF.SetLabel(\"&Subtract Features\")\nSELF.SetHelpTopic(\"Subtract_Features\")\nfCount = theTheme.GetFTab.GetSelection.Count\nshapeClass = theTheme.GetFTab.FindField(\"shape\").GetType\nenabled =  ((fcount = 2) and (shapeClass = #FIELD_SHAPEPOLY))\n\nSELF.SetEnabled(enabled)"
+)
+
+(DocWin.436
+	Owner:	435
+	X:	211
+	Y:	90
+	W:	603
+	H:	450
+)
+
+(CSMgr.437
+)
+
+(DocAct.438
+	Doc:	435
+)
+
+(SEd.439
+	Name:	"Editor.TextHalo"
+	Creator:	"adrian"
+	CreationDate:	"Dienstag, 24. Januar 2023 17:41:23"
+	GUIName:	"Script"
+	Win:	440
+	CSMgr:	441
+	DocExts:	442
+	Source:	"'###################################################################\n'#\n'# Filename:     Editor.TextHalo\n'# Author:       Adrian Boehlen\n'# Date:         28.01.2023\n'# Version:      1.0\n'#\n'# Purpose:      erzeugt Textfreistellmaske (Halo)\n'#               \n'#               - Idee basiert auf HaloTexter von\n'#                 Michael Silberbauer 2002-03-22 \n'#               - funktioniert auch mit gesperrten, gedrehten\n'#                 oder Spline-Texten\n'#               - Groesse des Halos laesst sich ei
+ngeschraenkt\n'#                 definieren\n'#               - existierende Halos koennen geloescht werden\n'#               - benoetigt Editor.SubTextShift im gleichen Projekt\n'#            \n'###################################################################\n\ntheView = av.GetActiveDoc \n\nif (theView.Is(view).Not) then\n  MsgBox.Warning(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\n'# Abbruch, wenn keine Grafikfeatures vorhanden sind\ntheGraphics = theView.GetGraphics\nif (theGraphics.Count = 0) t
+hen\n  MsgBox.Warning(\"No graphic featurs found.\",\"No graphic features\")\n  return nil\nend\n\n'# Abbruch, wenn keine Textfeatures vorhanden sind\ntheGraphicsList = theGraphics.FindAllByClass(GraphicText)\nif (theGraphicsList = nil) then\n  MsgBox.Warning(\"No text features found.\",\"No text features\")\n  return nil\nend\n\nif (MsgBox.YesNo(\"Create new halos (Yes) or delete existing halos (No) ?\",\"Create or delete halos\",true)) then\n\n'# Die Parametrisierung setzt metrische Map Units voraus\n  theMapUnits = theView.GetUnit
+s\n  if (theMapUnits <> #UNITS_LINEAR_METERS) then\n    MsgBox.Warning(\"Please define the Map Units as Meters\",\"Wrong Map Units\")\n    return nil\n  end\n\n  '# der Massstab des View wird benoetigt, um den Shift der Maske zu berechnen\n  theMapscale = theView.ReturnScale\n  if (theMapscale = 0) then\n    MsgBox.Warning(\"Please define a Map Scale.\"+NL+\"Maybe you have to add a theme first\",\"No Map Scale defined\")\n    return nil\n  end\n  \n  '# Die Maske ist immer weiss\n  haloColour = Color.GetWhite \n\n  '# Auswahl von dr
+ei moeglichen Groessen\n  sizeList = {\"small\", \"medium\", \"big\"}\n  theSize = MsgBox.ListAsString(sizeList, \"Choose halo size\", \"Halo size\")\n  if (theSize = nil) then \n    return nil\n  elseif (theSize = \"small\") then\n    theRefscale = 500\n  elseif (theSize = \"medium\") then\n    theRefscale = 380\n  elseif (theSize = \"big\") then\n    theRefscale = 270\n  end\n\n  quot = theMapscale / theRefscale\n\n  '# wenn Textfeatures selektiert sind, nur diese beruecksichtigen\n  if (theGraphics.HasSelected) then \n    theGraphicsLis
+t = TheGraphics.GetSelected \n  end \n  theGraphics.UnSelectAll \n  for each g in theGraphicsList \n    if (g.CanEditText) then  \n      theGraphics.UnSelectAll     \n      textSize = g.GetSymbol.GetSize  \n      theGraphicGroup = GraphicGroup.Make\n      \n      '# Text 4x kopieren, verschieben und weiss einfaerben\n      for each textCopy in 1..4 \n        gt = av.Run(\"Editor.SubTextShift\", {g, textSize, textCopy, theRefscale, quot, haloColour}) \n        theView.GetDisplay.HookUpSymbol(gt.GetSymbol) \n        theGrap
+hicGroup.Add(gt) \n      end \n      theGraphicGroup.SetObjectTag(\"halo\") \n      theGraphics.Add(theGraphicGroup) \n      theGraphics.Invalidate \n    end \n  end \n  theGraphicsList = theGraphics.FindAllByObjectTag(\"halo\") \n  theGraphics.UnSelectAll \n  for each g in theGraphicsList \n    g.SetSelected(true) \n  end \n  theGraphics.MoveSelectedToBack\n  theGraphics.UnSelectAll\nelse\n  theGraphicsList = theGraphics.FindAllByObjectTag(\"halo\") \n  theGraphics.UnSelectAll\n  '# Abbruch, wenn keine Features mit dem Tag \"halo
+\" vorhanden sind\n  if (theGraphicsList = nil) then\n    MsgBox.Warning(\"No halos found.\",\"No halos\")\n    return nil\n  end\n  for each g in theGraphicsList \n    g.SetSelected(true) \n  end \n  theGraphics.ClearSelected\nend"
+)
+
+(DocWin.440
+	Owner:	439
+	X:	242
+	Y:	29
+	W:	1065
+	H:	576
+)
+
+(CSMgr.441
+)
+
+(DocAct.442
+	Doc:	439
+)
+
+(SEd.443
+	Name:	"Editor.TextTool"
+	Creator:	"adrian"
+	CreationDate:	"Sonntag, 22. Januar 2023 16:10:22"
+	GUIName:	"Script"
+	Win:	444
+	CSMgr:	445
+	DocExts:	446
+	Source:	"' uses the built-in function View.TextTool\n' 27.01.2023, A. Boehlen\n'###############################\n\nCPC = av.FindDialog(\"Graphic.Label Defaults\")\nIconList = CPC.FindByName(\"CalloutIcons\")\nthePrefs = IconList.GetObjectTag.Get(\"Ttool1\")\n\n      '(0) Font Family    (String) \n      '(1) Font Style     (String)\n      '(2) Font Size      (Number)\n      '(3) Font Color     (String)\n      '(10) UseDefFont    (Boolean)\n      \nif (_defaultValues = nil) then\n  MsgBox.Warning(\"No default values defined.\" +NL+ \"Please 
+define them using the button 'D'\",\"No default values\")\n  return nil\nend\n      \nthePrefs.Set(0, _defaultValues.Get(\"schriftart\"))\nthePrefs.Set(1, _defaultValues.Get(\"schriftschnitt\"))\nthePrefs.Set(2, _defaultValues.Get(\"schriftgroesse_karte\"))\n\nCFont =      thePrefs.Get(0)\nCStyle =     thePrefs.Get(1)\nCSize =      thePrefs.Get(2)\nUseDef =     thePrefs.Get(10)\n\nif (thePrefs.Get(3) = \"Unnamed Color\") then\n  CColor = av.GetSymbolwin.ReturnCurrentSymbol(#SYMBOL_TEXT).Clone.GetColor\nelse \n  CColor = av.Run(\"View.
+Return Color\",thePrefs.Get(3))\nend\n\ntheView = av.GetActiveDoc\nif (theView.GetGraphics.EditText.Not) then\n  pt = theView.GetDisplay.ReturnUserPoint\n  t = GraphicText.Make(\"\", pt)\n  t.SetDisplay(theView.GetDisplay)\n  theView.GetDisplay.HookupSymbol(t.GetSymbol)\n  theView.GetGraphics.UnselectAll\n  t.SetSelected(TRUE)\n  if (t.EditText) then\n    theView.GetGraphics.Add(t)\n  end\n  t.GetSymbol.SetFont(Font.make(Cfont,CStyle))\n  t.GetSymbol.SetSize(CSize)\n  t.GetSymbol.SetColor(CColor)\n av.GetProject.SetModified(tr
+ue)\nend"
+)
+
+(DocWin.444
+	Owner:	443
+	X:	186
+	Y:	52
+	W:	853
+	H:	474
+)
+
+(CSMgr.445
+)
+
+(DocAct.446
+	Doc:	443
+)
+
+(SEd.447
+	Name:	"Editor.TextToolSpline"
+	Creator:	"adrian"
+	CreationDate:	"Sonntag, 22. Januar 2023 16:32:44"
+	GUIName:	"Script"
+	Win:	448
+	CSMgr:	449
+	DocExts:	450
+	Source:	"' uses the built-in function View.SplineTextTool\n' 27.01.2023, A. Boehlen\n'###############################\n\n\nCPC = av.FindDialog(\"Graphic.Label Defaults\")\nIconList = CPC.FindByName(\"CalloutIcons\")\nthePrefs = IconList.GetObjectTag.Get(\"TTool6\")\n\nif (_defaultValues = nil) then\n  MsgBox.Warning(\"No default values defined.\" +NL+ \"Please define them using the button 'D'\",\"No default values\")\n  return nil\nend\n\nthePrefs.Set(0, _defaultValues.Get(\"schriftart\"))\nthePrefs.Set(1, _defaultValues.Get(\"schriftschnitt\"))\n
+thePrefs.Set(2, _defaultValues.Get(\"schriftgroesse_karte\"))\n\nCFont =      thePrefs.Get(0)\nCStyle =     thePrefs.Get(1)\nCSize =      thePrefs.Get(2)\nUseDef =     thePrefs.Get(10)\nif (thePrefs.Get(3) = \"Unnamed Color\") then\n  CColor = av.GetSymbolwin.ReturnCurrentSymbol(#SYMBOL_TEXT).Clone.GetColor\nelse \n  CColor = av.Run(\"View.Return Color\",thePrefs.Get(3))\nend\n\ntheDoc = av.GetActiveDoc\nif (theDoc.Is(View) )then\n  theTheme = theDoc.GetEditableTheme\n  if (theTheme <> nil) then return nil end\nend\nif (theDoc.Ge
+tGraphics.EditText.Not) then\n\n  l = theDoc.ReturnUserPolyLine\n  if (l.IsNull) then return nil end\n  st = SplineText.Make(\"\",l)\n  st.EditText\n  if (st.GetText <> \"\") then\n    theDoc.GetGraphics.UnselectAll\n    st.SetSelected(TRUE)\n    theDoc.GetGraphics.Add(st)\n  end\n  \n  av.GetProject.SetModified(true)\n  st.GetSymbol.SetFont(Font.Make(CFont,CStyle))\n  st.GetSymbol.SetSize(CSize)\n  st.GetSymbol.SetColor(CColor)\n  st.SetDisplay(theDoc.GetDisplay)\nend  \n"
+)
+
+(DocWin.448
+	Owner:	447
+	X:	648
+	Y:	1
+	W:	654
+	H:	597
+)
+
+(CSMgr.449
+)
+
+(DocAct.450
+	Doc:	447
+)
+
+(SEd.451
+	Name:	"Editor.TextToolUpdate"
+	Creator:	"adrian"
+	CreationDate:	"Sonntag, 22. Januar 2023 16:18:45"
+	GUIName:	"Script"
+	Win:	452
+	CSMgr:	453
+	DocExts:	454
+	Source:	"' uses the built-in function View.TextToolUpdate\n' 22.01.2023, A. Boehlen\n'###############################\n\n\ntheView = av.GetActiveDoc\nif (Extension.GetExtensions.Get(\"Label & Text Tools\") = NIL) then\n  SELF.SetEnabled(FALSE)\n  return nil\nend  \ntheTheme = theView.GetEditableTheme\nif (theTheme = nil) then\n  SELF.SetEnabled(TRUE) \nelse\n  SELF.SetEnabled(FALSE)\nend\n \n"
+)
+
+(DocWin.452
+	Owner:	451
+	X:	324
+	Y:	150
+	W:	656
+	H:	357
+)
+
+(CSMgr.453
+)
+
+(DocAct.454
+	Doc:	451
+)
+
+(SEd.455
+	Name:	"Editor.ToggleEdit"
+	CreationDate:	"Montag, 22. Juli 2013 10:00:04"
+	GUIName:	"Script"
+	Win:	456
+	CSMgr:	457
+	DocExts:	458
+	Source:	"' Starts or stops the edit session\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Info(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\nif (theView.GetActiveThemes.Count = 0) then\n  MsgBox.Info(\"Start this tool from an active Theme.\",\"\")\n  return nil\nend\n\nactive = theView.GetActiveThemes.Get(0)\neditThm = theView.GetEditableTheme\n\nif (editThm <> nil) then\n' we need to stop editing this theme\n\n  doSave = MsgBox.YesNoCan
+cel(\"Save Edits to \"+editThm.GetName+\n  \"?\", \"Stop Editing\", true)\n  if (doSave = nil) then\n    return nil\n  end\n  if (editThm.StopEditing(doSave).Not) then\n  ' save failed, remain editing this theme\n    MsgBox.Info (\"Unable to Save Edits to \"\n                  + editThm.GetName  +\n                  \", please use the Save Edits As option\", \"\")\n    return nil\n  end\n  ' save succeeded  \n  theView.SetEditableTheme(NIL)\n  \n  if (editThm = active) then\n    ' user wanted to stop editing the active theme, were don
+e\n     return nil \n  end \n   \nend\n  \nif (active.GetFTab.IsBeingEditedWithRecovery) then\n\n' user wants to edit the active theme in the view, but its\n' table doc is already being edited - force the \n' user to stop editing the table\n\n  doSave = MsgBox.YesNoCancel(\"Save Edits to the table for \"+\n  active.GetName+\"?\", \"Stop Editing\", True)\n  if (doSave = nil) then\n    return nil\n  end\n  if (active.GetFTab.StopEditingWithRecovery(doSave).Not) then\n      MsgBox.Info (\"Unable to Save Edits, please use the Save Edit
+s As option\", \"\")\n      return nil  'unable to save, remain editing\n  end\nend\n\n' start editing the active theme\ntheView.SetEditableTheme(active)\n"
+	SearchStr:	"Run"
+)
+
+(DocWin.456
+	Owner:	455
+	X:	117
+	Y:	66
+	W:	787
+	H:	480
+)
+
+(CSMgr.457
+)
+
+(DocAct.458
+	Doc:	455
+)
+
+(SEd.459
+	Name:	"Editor.Unselect"
+	Creator:	"adrian"
+	CreationDate:	"Die 14 Apr 2015 20:37:36 CEST"
+	GUIName:	"Script"
+	Win:	460
+	CSMgr:	461
+	DocExts:	462
+	Source:	"' uses the built-in function View.ClearSelect\n' 02.01.2026, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Info(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\n'# unselect features in all themes\nfor each t in theView.GetThemes\n  t.ClearSelection\nend\n\n'# unselect graphics (e.g. text elements)\ntheGraphicsList = theView.GetGraphics\ntheGraphicsList.UnselectAll\n"
+)
+
+(DocWin.460
+	Owner:	459
+	X:	284
+	Y:	131
+	W:	721
+	H:	379
+)
+
+(CSMgr.461
+)
+
+(DocAct.462
+	Doc:	459
+)
+

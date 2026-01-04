@@ -1,0 +1,64 @@
+' Starts or stops the edit session
+' 20.12.2021, A. Boehlen
+'###############################
+
+theView = av.GetActiveDoc
+
+if (theView.Is(view).Not) then
+  MsgBox.Info("Start this tool from an active View.","")
+  return nil
+end
+
+if (theView.GetActiveThemes.Count = 0) then
+  MsgBox.Info("Start this tool from an active Theme.","")
+  return nil
+end
+
+active = theView.GetActiveThemes.Get(0)
+editThm = theView.GetEditableTheme
+
+if (editThm <> nil) then
+' we need to stop editing this theme
+
+  doSave = MsgBox.YesNoCancel("Save Edits to "+editThm.GetName+
+  "?", "Stop Editing", true)
+  if (doSave = nil) then
+    return nil
+  end
+  if (editThm.StopEditing(doSave).Not) then
+  ' save failed, remain editing this theme
+    MsgBox.Info ("Unable to Save Edits to "
+                  + editThm.GetName  +
+                  ", please use the Save Edits As option", "")
+    return nil
+  end
+  ' save succeeded  
+  theView.SetEditableTheme(NIL)
+  
+  if (editThm = active) then
+    ' user wanted to stop editing the active theme, were done
+     return nil 
+  end 
+   
+end
+  
+if (active.GetFTab.IsBeingEditedWithRecovery) then
+
+' user wants to edit the active theme in the view, but its
+' table doc is already being edited - force the 
+' user to stop editing the table
+
+  doSave = MsgBox.YesNoCancel("Save Edits to the table for "+
+  active.GetName+"?", "Stop Editing", True)
+  if (doSave = nil) then
+    return nil
+  end
+  if (active.GetFTab.StopEditingWithRecovery(doSave).Not) then
+      MsgBox.Info ("Unable to Save Edits, please use the Save Edits As option", "")
+      return nil  'unable to save, remain editing
+  end
+end
+
+' start editing the active theme
+theView.SetEditableTheme(active)
+

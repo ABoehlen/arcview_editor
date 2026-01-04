@@ -1,0 +1,118 @@
+' NAME: mm_ViewSplitLineWithoutTrace
+' ORIGIN: Harald, 08.02.03
+' INTEGRATION: View Tool, Apply Script
+'              Help: Draw Line to Split Feature//Creates a line to split line features, clears the Cutting Line
+'              Update: View.SplitLineToolUpdate
+'              Cursor: Cursor.CrossHair
+'
+' HELP: Draws a Line to Split Line Feature, clears the Cutting Line (the Standard SplitTool 
+'       makes Features out of the Splitting Lines)
+'
+' NEEDS: Editable polyline theme
+'
+'*******************************************
+'
+' CTRL-KLICK Info (erscheint, wenn das Skript bei gedrueckter Strg- bzw. Ctrl-Taste aufgerufen wird)
+' 
+'if (System.IsControlKeyDown) then
+'
+'  message =
+'    " "+nl+
+'    
+'    "SCRIPT NAME:  mm_ViewSplitLineWithoutTrace "+nl+nl+
+'    
+'    "ORIGIN:  Harald, February 8, 2003 "+nl+nl+
+'    
+'    "Draws a line to split line feature, clears the cutting line (the standard split tool "+
+'    "converts the splitting lines to features)." +nl
+'    
+'  msgbox.report(message,"INFO: Cut Line Without Trace...")
+'  
+'  return nil
+'end
+'
+'--------------------------------------------------------------------
+theView = av.GetActiveDoc
+
+if (theView.is(View).not) then
+  msgBox.Info("This is an Apply Script. Use it with a view tool.","")
+  return NIL
+end
+
+if (System.IsControlKeyDown) then
+  av.GetProject.SetModified(true)
+  theView.GetDisplay.Pan
+  return NIL
+end
+
+theSelMode = theView.GetSelectMode
+
+theEdtLinThm = theView.GetEditableTheme
+
+'--------------------------------------------------------------------
+
+if (theEdtLinThm = NIL) then
+  MsgBox.Info("Start editing a polyline theme."," No Theme in Edit Mode")
+  return NIL
+else
+  theType = theEdtLinThm.GetFTab.FindField("Shape").GetType
+  if (theType <> #FIELD_SHAPELINE) then
+    MsgBox.Info("Start editing a line theme."," No Line Theme in Edit Mode")
+    return NIL
+  end
+end
+'--------------------------------------------------------------------
+
+theUserPL = theView.ReturnUserPolyLine
+
+if (theUserPL.IsNull) then
+  return nil
+else
+  if (theEdtLinThm <> nil) then
+    thePLGraph = GraphicShape.Make(theUserPL)
+    thePLShape = thePLGraph.getShape
+    theEdtLinThm.GetFtab.BeginTransaction
+    theField = theEdtLinThm.GetFTab.FindField("Shape")
+    theType = theField.GetType
+    if (theType = #FIELD_SHAPELINE) then
+      theEdtLinThm.Split(thePLShape)
+    end
+    theEdtLinThm.GetFtab.EndTransaction
+  end
+  av.GetProject.SetModified(true)
+end
+
+theVTab = theEdtLinThm.getFTab
+theVTab.rememberSelection
+
+theEdtLinThm.SubtractShape (thePLShape)
+
+theVTab.UpdateSelection
+theVTab.Flush
+theBitmap = theVTab.getSelection 
+
+theShpFld = theVTab.FindField("Shape")
+
+for each rec in theBitmap
+  theVal = theVTab.ReturnValue (theShpFld, rec)
+'  msgbox.info(theVal.asstring,"")
+  if ((theVal.asstring) = "Polyline: Null") then
+    theBitmap.set(rec)
+  else
+    theBitmap.clear(rec)
+  end
+end
+
+theView.SetSelectMode(#GRAPHICS_SELECT_NORMAL)
+
+theVTab.BeginTransaction
+theEdtLinThm.ClearSelected
+theVTab.EndTransaction
+
+theView.SetSelectMode(theSelMode)
+
+theLastSel = theVTab.GetLastSelection
+theVTab.SetSelection(theLastSel.clone)
+
+theVTab.UpdateSelection
+

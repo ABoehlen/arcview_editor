@@ -1,0 +1,9 @@
+AVEDIT = av.GetActiveDoc.GetObjectTag
+lstTransObj = AVEDIT.Get(1)
+if (lstTransObj <> NIL) then
+  lstTransRedo = lstTransObj.Get(1)
+  av.Run(lstTransRedo.Get(0), lstTransRedo.Get(1))
+  AVEDIT.Set(1, NIL)
+  av.GetActiveDoc.SetObjectTag(AVEDIT)
+end
+

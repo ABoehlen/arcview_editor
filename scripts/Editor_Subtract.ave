@@ -1,0 +1,46 @@
+' uses the built-in function View.SubtractGraphics
+' 20.12.2021, A. Boehlen
+'###############################
+
+theView = av.GetActiveDoc
+
+if (theView.Is(view).Not) then
+  MsgBox.Info("Start this tool from an active View.","")
+  return nil
+end
+
+theTheme = theView.GetEditableTheme
+
+if (av.Run("Editor.SubCheckTheme", {theTheme, "polygon", "true", "2"}) = nil) then
+  return nil
+end
+
+theFTab = theTheme.GetFTab
+theFTab.BeginTransaction
+fldShape = theFTab.FindField("shape")
+
+r1 = theFTab.GetSelection.GetNextSet(-1)
+r2 = theFTab.GetSelection.GetNextSet(r1)
+
+if (r1 < r2) then
+  recBack = r1
+  recFront = r2
+else
+  recBack = r2
+  recFront = r1
+end
+
+shpBack = theFTab.ReturnValue(fldShape,recBack)
+shpFront = theFTab.ReturnValue(fldShape,recFront)
+
+if (System.IsShiftKeyDown) then
+  shpDiff = shpFront.ReturnDifference(shpBack)   theFTab.SetValue(fldShape,recFront,shpDiff)
+else
+  shpDiff = shpBack.ReturnDifference(shpFront)
+  theFTab.SetValue(fldShape,recBack,shpDiff)
+end
+
+theFTab.UpdateSelection
+theFtab.EndTransaction
+theTheme.Invalidate(TRUE)
+

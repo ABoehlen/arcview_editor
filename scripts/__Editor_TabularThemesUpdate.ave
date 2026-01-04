@@ -1,0 +1,13 @@
+' update script for Editor.EditTableApply
+' 20.12.2021, A. Boehlen
+'###############################
+
+theView = av.GetActiveDoc
+for each t in theView.GetActiveThemes
+  if (t.HasTable) then
+    SELF.SetEnabled(TRUE)
+    return nil
+  end
+end
+SELF.SetEnabled(FALSE)
+

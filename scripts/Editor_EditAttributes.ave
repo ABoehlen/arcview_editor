@@ -1,0 +1,183 @@
+'Author  : Georg A.Zelenin, Odessa(UKRAINE)
+'          Position:GIS programmer.  
+'          Municipality Dpt.on Land Resources and Parcels Control
+'          (tel/fax.(0482) 373 076 )
+'    
+'Script Class: Simple User Edit Interface - "One Click Editors". 
+'Script Name:  View_CorrFeatureAttr
+'
+'Title:   Single-Click Themes Attributes Edits directly from the View.
+'    .                    
+'Topics:  Pick Up (Click) on the Feature ( Polygon,PolyLine,Point) 
+'         wich Atributes row you wish to edit. Script Tool unfolds-Open 
+'         the MultiInput Box, where each attribute Field looks like 
+'         editable text line.
+'         Each Input Box contains up to 20 lines (total Screen)
+'         and automatically gives new portion of the data if number of 
+'         the DB fields are more then 20 (Cadastre DB e.c.t.),  
+'  
+'      For a Numeric/String Fiels only.
+'       
+'Usage: 
+'      Preparation step 
+'          a) Attach the compiled Script on Tool/Apply button in a View environment.
+'      Usage steps: 
+'          1) Click on the feature, Attributes you wish to edit by this Tool.
+'          2) Makes your Edits in the Open MultiInput Box, press OK (Save Edits)or
+'             Cancel (Discard Edits.)
+
+' ###############################
+' REV: 02.01.2026, A. Boehlen
+' - The shape field will not be displayed
+' - Use this tool as an alternate identify tool by clicking on a non editable feature.
+'   It will then be possible to copy attribute values (not possible by the identify tool)
+'   In this case you will be informed that the theme is read-only.
+' ###############################
+
+
+theView     = av.GetActiveDoc
+
+if (theView.Is(view).Not) then
+  MsgBox.Info("Start this tool from an active View.","")
+  return nil
+end
+
+theDisplay  = theView.getDisplay
+pt =          theDisplay.ReturnUserPoint
+theThemes =   theView.getActiveThemes      
+for each t in theThemes
+  if (t.CanSelect) then
+    t.SelectByPoint(pt,#VTAB_SELTYPE_NEW )
+  end
+end
+
+theTheme = theView.GetActiveThemes.Get(0)
+theEditTheme = theView.GetEditableTheme
+
+'numThemes=theThemes.Count 
+'if (numThemes=1) then        
+'  theTheme = theThemes.get(0)
+'elseif (numThemes>1) then
+'  MsgBox.Error("Too many ("+numThemes.AsString+") Active Themes...","Make Active single Editable Theme !")
+'else
+'  exit
+'end
+
+theScale    = theView.ReturnScale
+
+theName     = theTheme.getName
+theFTab     = theTheme.getFtab
+totFields   = theFTab.getFields
+
+nf =          (totFields.count-1)
+c =           20
+
+res = nf mod c
+n = (nf - res) / c
+b = (n*c) + res
+         
+for each i in 0..n 
+  from = i*c
+  to   = ((i+1)*c-1)
+  if (to > nf) then
+    to = from + res
+  end
+
+  nmFields    = {}
+  valFields   = {}
+  lstFields   = {}
+
+  ' read fields and ignore Shape field
+  for each j in from..to
+    f = totFields.Get(j)
+    if (f.getName="Shape") then
+      continue
+    end
+    lstFields.Add(f)
+  end
+
+  '...try aligned left fields by spaces             
+
+  maxl = 1      
+  for each f in lstFields 
+    nmf =  f.getName
+    lnf =  nmf.count
+    maxl = (maxl max lnf)
+  end
+
+  for each f in lstFields
+    fnm  = f.getName
+    fout = fnm
+    dspace = (maxl - fnm.count)
+    if (dspace>0 ) then
+      buff=""
+      for each i in 0..dspace
+        buff = buff + 160.AsChar
+      end
+      fout = fnm + buff
+    end
+    nmFields.Add(fout)  
+  end
+
+  numSel = theFTab.getNumSelRecords 
+
+  if (numSel = 0) then exit end
+  if (numSel > 1) then exit end
+
+  for each sel in theFTab.getSelection
+    for each f in lstFields
+      val = theFtab.ReturnValueString(f,sel)
+      if (val="") then
+        val = " "
+      end
+      valFields.Add(val)
+    end   
+  end
+
+  if (theEditTheme = nil) then
+    theTitle = "READ ONLY - do not edit."
+  else
+    theTitle = ""
+  end
+  
+  valUserSettings = MsgBox.MultiInput(theTitle, "Edit Attributes", nmFields, valFields)
+
+  if (valUserSettings.count = 0) then
+    theTheme.ClearSelection
+    exit
+  end  
+
+  for each i in 0..(lstFields.count-1)
+    f = lstFields.get(i)
+    v = valUserSettings.get(i)
+
+    if (f.getName="Shape") then
+      continue
+    end
+    fType = f.getType
+    aType = fType.AsString.AsTokens("_").get(1)
+
+    if ((aType = "LONG") or (aType = "DOUBLE") or (aType = "DECIMAL") or (aType=  "FLOAT")) then    
+      if (v.IsNumber) then
+        val = v.AsNumber
+      end               
+    elseif (aType="DATE") then
+      val = v.AsDate
+    elseif (aType="CHAR") then
+      val = v
+    end
+
+    ' set values if theme is editable
+    for each sel in theFTab.getSelection
+      if (theEditTheme = nil) then
+        theTheme.ClearSelection
+        exit
+      else
+        theFTab.SetValue(f,sel,val)
+      end
+    end    
+  end
+end'...if>20
+
+theTheme.ClearSelection
+

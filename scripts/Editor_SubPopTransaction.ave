@@ -1,0 +1,16 @@
+AVEDIT = av.GetActiveDoc.GetObjectTag
+stkTransaction = AVEDIT.Get(0)
+if (stkTransaction.IsEmpty.Not) then
+  lstTransObj  = stkTransaction.Pop
+  av.GetActiveDoc.SetObjectTag(AVEDIT)
+  lstTransUndo = lstTransObj.Get(0)
+  lstTransRedo = lstTransObj.Get(1)
+  if (lstTransRedo <> NIL) then
+    AVEDIT.Set(1, lstTransObj)
+  else
+    AVEDIT.Set(1, NIL)
+  end
+  av.Run(lstTransUndo.Get(0),lstTransUndo.Get(1))
+end
+
+

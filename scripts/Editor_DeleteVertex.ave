@@ -1,0 +1,115 @@
+' hacked from http://webapp1.dlib.indiana.edu/virtual_disk_library/index.cgi/4288321/FID3756/PROGRAM/ETC/AVEDIT.APR
+' 18.11.2015 A. Boehlen
+' REV: 20.12.2021
+'###############################
+
+theView  = av.GetActiveDoc
+
+if (theView.Is(view).Not) then
+  MsgBox.Info("Start this tool from an active View.","")
+  return nil
+end
+
+theTheme = theView.GetEditableTheme
+
+if (av.Run("Editor.SubCheckTheme", {theTheme, "polyline-or-polygon", "true", "1"}) = nil) then
+  return nil
+end
+
+rectUser  = theView.GetDisplay.ReturnUserRect
+if (rectUser = NIL) then
+  av.ShowMsg("NIL rectangle returned.") 
+  exit 
+end
+
+fldShape = theTheme.GetFTab.FindField("shape")
+r = theTheme.GetFTab.GetSelection.GetNextSet(-1)
+shpSelected = theTheme.GetFTab.ReturnValue(fldShape, r)
+
+' Currently multi-part features are not supported, only the first 
+' list of points in the list of lists of points for MultiPoint 
+' objects is considered...
+'
+if (shpSelected.AsList.Count > 1) then
+  MsgBox.Error(
+    "Unable to delete vertex of multi-part shape at record"++(r+1).AsString,
+    "Editor.DeleteVertex")
+  exit
+end
+lstVertex = shpSelected.AsList.Get(0)
+
+av.UseWaitCursor
+av.ShowMsg("Searching vertices...")
+total = lstVertex.Count
+
+lstNewVertex = {}
+isOriginDeleted = FALSE
+isVertexDeleted = FALSE
+
+for each i in 0 ..(lstVertex.Count - 1)
+  ptVertex = lstVertex.Get(i)
+  if (rectUser.Intersects(ptVertex)) then
+    isVertexDeleted = TRUE
+    ' skip the point, but if it is the origin of a polygon we
+    ' must handle the final shape assembly differently.  Check
+    ' and flag here...
+    if (i = 0) then
+      isOriginDeleted = TRUE
+    end
+  else
+    lstNewVertex.Add(ptVertex)
+  end 
+  av.SetStatus((i / total) * 100)
+end
+
+if (lstNewVertex.Count = lstVertex.Count) then
+  av.ClearMsg
+  av.ClearStatus
+  exit
+end
+  
+if (lstNewVertex.Count = 0) then
+  av.ClearMsg
+  av.ClearStatus
+  exit
+end
+
+if (isVertexDeleted) then
+  if (fldShape.GetType = #FIELD_SHAPEPOLY) then
+    if (lstNewVertex.Count < 4) then 
+      av.ClearStatus
+      av.ShowMsg("Can't delete any more vertices")
+      exit 
+    end
+    if (isOriginDeleted) then
+      pt1 = lstNewVertex.Get(0)
+      lstNewVertex.Add(pt1)
+    end
+    shpNew = Polygon.Make({ lstNewVertex })
+  else  
+    ' the other possible case is #FIELD_SHAPELINE
+    if (lstNewVertex.Count < 2) then
+      av.ClearStatus
+      av.ShowMsg("Can't delete any more vertices")
+      exit
+    end 
+    shpNew = PolyLine.Make({ lstNewVertex })
+  end
+  
+  ' Push transaction object...
+  av.Run("Editor.SubPushTransaction",
+    {{"Editor.UndoVertex",{r,shpSelected}},
+    {"Editor.RedoVertex",{r,shpNew}}})
+
+  av.SetStatus(100)
+  av.ClearMsg
+  theTheme.GetFTab.SetValue(fldShape, r, shpNew)
+  theTheme.GetFTab.flush
+  theTheme.Invalidate(TRUE)
+else
+  av.ClearStatus
+  av.ClearMsg
+end
+
+
+

@@ -1,0 +1,20 @@
+' uses the built-in function View.ClearSelect
+' 02.01.2026, A. Boehlen
+'###############################
+
+theView = av.GetActiveDoc
+
+if (theView.Is(view).Not) then
+  MsgBox.Info("Start this tool from an active View.","")
+  return nil
+end
+
+'# unselect features in all themes
+for each t in theView.GetThemes
+  t.ClearSelection
+end
+
+'# unselect graphics (e.g. text elements)
+theGraphicsList = theView.GetGraphics
+theGraphicsList.UnselectAll
+

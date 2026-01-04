@@ -1,0 +1,29 @@
+' uses the built-in function View.LineTool
+' 20.12.2021, A. Boehlen
+'###############################
+
+theView = av.GetActiveDoc
+theTheme = theView.GetEditableTheme
+
+if (av.Run("Editor.SubCheckTheme", {theTheme, "polyline", "false", "0"}) = nil) then
+  return nil
+end
+
+l = theView.ReturnUserPolyLine
+if (l.IsNull) then
+  return nil
+else
+  theTheme.GetFtab.BeginTransaction
+  thePrj = theView.GetProjection
+  if (thePrj.IsNull.Not) then
+    l = l.ReturnUnprojected(thePrj)
+  end
+  theField = theTheme.GetFTab.FindField("Shape")
+  rec = theTheme.GetFTab.AddRecord
+  theTheme.GetFTab.SetValue(theField, rec, l)
+  theTheme.GetFTab.GetSelection.ClearAll
+  theTheme.GetFTab.GetSelection.Set(rec)
+  theTheme.GetFTab.UpdateSelection
+  theTheme.GetFtab.EndTransaction
+  av.GetProject.SetModified(true)
+end

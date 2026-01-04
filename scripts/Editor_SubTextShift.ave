@@ -1,0 +1,38 @@
+'##############################################################
+'#
+'# Filename:     Editor.SubTextShift
+'# Author:       Adrian Boehlen
+'# Date:         27.01.2023
+'# Version:      1.0
+'#
+'# Purpose:      Subroutine zur Generierung von Text-Halos
+'#               
+'#               kopiert Text 4x und verschiebt Kopie je
+'#               oben rechts / unten rechts / 
+'#               unten links / oben links 
+'#            
+'##############################################################
+
+'# Variablen uebernehmen
+g = Self.Get(0)
+textSize = Self.Get(1)
+textCopy = Self.Get(2)
+theRefscale = Self.Get(3)
+quot = Self.Get(4)
+haloColour = Self.Get(5)
+
+'# Textfeature kopieren, verschieben und weiss einfaerben
+gt = g.clone  
+theOffX = textSize / (theRefscale / quot)
+theOffY = textSize / (theRefscale / quot)
+if (textCopy = 1) then
+  gt.Offset(Point.Make(theOffX,theOffY))
+elseif (textCopy = 2) then
+  gt.Offset(Point.Make(theOffX,theOffY - (2 * theOffY)))
+elseif (textCopy = 3) then
+  gt.Offset(Point.Make(theOffX - (2 * theOffX),theOffY - (2 * theOffY)))
+else
+  gt.Offset(Point.Make(theOffX - (2 * theOffX),theOffY))
+end
+gt.GetSymbol.SetColor(haloColour) 
+return gt

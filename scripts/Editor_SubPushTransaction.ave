@@ -1,0 +1,30 @@
+' used by Editor.Reshape and Editor.DeleteVertex
+' 20.12.2021, A. Boehlen
+'###############################
+
+' SELF is the transaction object to push on the transaction stack.
+' If SELF is NIL, then the transaction stack is emptied. Otherwise
+' the transaction object is pushed onto the transaction stack. In
+' either case the Redo object is set to NIL. Redo objects are stored
+' only after an Undo... 
+'
+AVEDIT = av.GetActiveDoc.GetObjectTag 
+if (SELF = NIL) then
+  AVEDIT.Set(0, Stack.Make)
+  AVEDIT.Set(1, NIL)
+  av.GetActiveGUI.Update
+'else
+'  if (AVEDIT.Get(3)) then
+'    AVEDIT.Get(0).Push(SELF)
+'    AVEDIT.Set(1, NIL)
+
+'    if (AVEDIT.Get(2)) then 
+'      System.Beep 
+'    end
+'    if (AVEDIT.Get(0).Depth > 100) then
+'      MsgBox.Warning("Edit list has more than 100 transactions.","")
+'    end
+'  end
+end
+av.GetActiveDoc.SetObjectTag(AVEDIT)
+

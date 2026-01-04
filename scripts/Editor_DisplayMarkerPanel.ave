@@ -1,0 +1,7 @@
+' uses the built-in function SymWin.DisplayMarkerPanel
+' 15.10.2022, A. Boehlen
+'###############################
+
+if ((av.GetSymbolWin.GetPanel = #SYMBOLWIN_PANEL_COLOR).not) then
+  av.GetSymbolWin.SetPanel(#SYMBOLWIN_PANEL_MARKER)
+end
