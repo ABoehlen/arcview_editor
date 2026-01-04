@@ -33,7 +33,7 @@ git clone https://github.com/ABoehlen/arcview_editor
 * Choose File –> Extensions
 * Turn on the Extension Editor and close the Extension dialog again.
 * In the View documents open an existing view or create a new one.
-* In the button list of the View document GUI click on the new button "Editor". The toolbar should open. As well opens the dialog where you have to select the default_values.dbf table file.
+* In the button list of the View document GUI click on the new button "Start Editor toolbar". The toolbar should open. As well opens the dialog where you have to select the default_values.dbf table file.
 
 ## License
 
