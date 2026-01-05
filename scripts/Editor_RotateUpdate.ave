@@ -1,0 +1,21 @@
+''
+'' Rotate
+'' Rotates selected PolyLines or Polygons around individual object's centre
+'' Marko Pinteric 2006
+''
+'' Rotate.ave, rotate.avx
+''
+
+ThemeCountCorrect = (av.GetActiveDoc.GetActiveThemes.Count = 1)
+ThemeIs2DPoly = False
+
+if (ThemeCountCorrect) then
+  theTheme = av.GetActiveDoc.GetActiveThemes.Get(0)
+  if (theTheme.Is(FTheme)) then  
+    theThemeType = theTheme.GetFTab.GetShapeClass.GetClassName
+    ThemeIs2DPoly = ((theThemeType = "PolyLine") or (theThemeType = "Polygon"))
+  end
+end
+
+self.SetEnabled(ThemeCountCorrect and ThemeIs2DPoly)
+

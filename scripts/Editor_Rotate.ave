@@ -1,0 +1,83 @@
+''
+'' Rotate
+'' http://www.pinteric.com/arcview.html#rotate
+'' Rotates selected PolyLines or Polygons around individual object's centre
+'' Marko Pinteric 2006
+''
+'' Rotate.ave, rotate.avx
+'' version 1.1, build 120606
+''
+
+' ###############################
+' REV: 04.01.2026, A. Boehlen
+' - Check view and theme
+' ###############################
+
+srcvie = av.GetActiveDoc
+ 
+if (srcvie.Is(view).Not) then
+  MsgBox.Info("Start this tool from an active View.","")
+  return nil
+end
+
+srcthe = srcvie.GetActiveThemes.Get(0)
+
+if (av.Run("Editor.SubCheckTheme", {srcthe, "polyline-or-polygon", "true", "1"}) = nil) then
+  return nil
+end
+
+srctab = srcthe.GetFTab
+srcshf = srctab.FindField("Shape")
+srcfld = srctab.GetFields
+rcvfld = srcfld.DeepClone
+rcvfld.Remove(0)
+
+MsgOut = MsgBox.Input("CCW rotation angle:", "Rotate", "90")  
+rotang = MsgOut.AsNumber
+srcdel = MsgBox.YesNo("Delete original object(s)?", "Rotate", True) 
+
+srcedt = True
+if (srctab.IsEditable = False) then
+  srctab.SetEditable (True)
+  srcedt = False
+end
+
+if (srctab.GetSelection.Count = 0) then
+  srcrec = srctab
+else
+  srcrec = srctab.GetSelection
+end
+
+for each srcele in srcrec
+  srcobj = srctab.ReturnValue(srcshf, srcele)
+  srccen = srcobj.ReturnCenter
+  srcX = srccen.GetX 
+  srcY = srccen.GetY 
+  movX = 0 - srcX 
+  movY = 0 - srcY
+
+  trn = Transform2D.Make 
+  trn.Move(movX@movY) 
+  trn.Rotate(rotang) 
+  trn.Move(srcX@srcY)
+
+  if (srcdel) then
+    srctab.SetValue(srcshf, srcele, srcobj.Transform(trn))
+  else
+    srcnum = srctab.AddRecord
+    srctab.SetValue(srcshf, srcnum, srcobj.Transform(trn))
+    for each srcref in rcvfld  
+      srcref = srctab.FindField(srcref.AsString)
+      srctab.SetValue(srcref, srcnum, srctab.ReturnValue(srcref, srcele))
+    end
+  end
+end
+
+if (srcedt = False) then
+  srctab.SetEditable (False)
+end
+ 
+if (srcdel) then
+  srcvie.Invalidate
+end
+ 

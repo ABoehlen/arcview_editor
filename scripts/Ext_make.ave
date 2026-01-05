@@ -1,9 +1,9 @@
 '#########################################################################
 '#
-'# Filename:     Ext_Make.ave
+'# Filename:     Ext.Make.ave
 '# Author:       Adrian Boehlen
-'# Date:         02.01.2026
-'# Version:      0.5
+'# Date:         05.01.2026
+'# Version:      0.6
 '#
 '# Purpose:      erstellt die Extension
 '#               Zum Erstellen der Extension NUR dieses Script ausfuehren
@@ -12,13 +12,13 @@
 
 '# Make the extension object 
 Editor = Extension.Make("$AVHOME\projects\editor\Editor.avx".AsFileName,
-"Editor",av.FindScript("Ext_inst"),av.FindScript("Ext_unin"), {"$AVBIN\avdlog.dll".AsFileName})
+"Editor",av.FindScript("Ext.Inst"),av.FindScript("Ext.Unin"), {"$AVBIN\avdlog.dll".AsFileName})
 
-Editor.SetExtVersion(1)
+Editor.SetExtVersion(2)
 
 '# Beschreibung (Version jeweils anpassen)
-Editor.SetAbout("Editor-Toolbar (v2.5) ")
-Editor.SetUnloadScript(av.FindScript("ext_unload"))
+Editor.SetAbout("Editor-Toolbar (v2.7) ")
+Editor.SetUnloadScript(av.FindScript("Ext.Unload"))
 
 '# Schaltflaeche und Dialog hinzufuegen
 Schaltflaeche = ( av.FindGUI( "View").GetButtonBar.findbyscript("Editor.start"))  
