@@ -2,7 +2,7 @@
 Editor is an Avenue extension used in ArcView GIS that provides many useful tools for editing shapefiles and graphic text features. 
 
 ## Purpose
-Editor includes tools for convenient editing shapefiles and graphic text elements. There are 7 groups of tools:
+Editor includes tools for convenient editing shapefiles and graphic text elements. There are 5 groups of tools:
 * General editing tools: Tools such as start editing, select and edit attributes
 * Create feature tools: Tools for creating point, line and polygon features
 * Modify features tools: Tools such as reshape, merge, rotate etc. 
