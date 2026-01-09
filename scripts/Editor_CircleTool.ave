@@ -1,12 +1,23 @@
 ' uses the built-in script View.CircleTool
-' 20.12.2021, A. Boehlen
-'###############################
+
+' ################################
+' REV: 09.01.2026, A. Boehlen
+' - Check theme
+' - Set timestamp for new features
+' ################################
 
 theView = av.GetActiveDoc
 theTheme = theView.GetEditableTheme
 
 if (av.Run("Editor.SubCheckTheme", {theTheme, "polygon", "false", "0"}) = nil) then
   return nil
+end
+
+theFTab = theTheme.GetFTab
+
+'# create string field DateOfCr if it doesn't exist
+if (theFTab.FindField("DateOfCr") = nil) then
+  av.Run("Editor.SubCreateField", {theFTab, "DateOfCr", "16"})
 end
 
 c = theView.ReturnUserCircle
@@ -19,13 +30,19 @@ else
   if (thePrj.IsNull.Not) then
     p = p.ReturnUnprojected(thePrj)
   end
-  theField = theTheme.GetFTab.FindField("Shape")
-  rec = theTheme.GetFTab.AddRecord
-  theTheme.GetFTab.SetValue(theField, rec, p)
-  theTheme.GetFTab.GetSelection.ClearAll
-  theTheme.GetFTab.GetSelection.Set(rec)
-  theTheme.GetFTab.UpdateSelection
-  theTheme.GetFTab.EndTransaction
+  theField = theFTab.FindField("Shape")
+  theDate = theTheme.GetFTab.FindField("DateOfCr")
+  rec = theFTab.AddRecord
+  theFTab.SetValue(theField, rec, p)
+  theFTab.GetSelection.ClearAll
+  theFTab.GetSelection.Set(rec)
+  theFTab.UpdateSelection
+  
+  '# set timestamp as string
+  timestampStr = av.Run("Editor.SubCreateDate", {})
+  theFTab.SetValue(theDate,rec,timestampStr)
+
+  theFTab.EndTransaction
   av.GetProject.SetModified(true)
 end
 

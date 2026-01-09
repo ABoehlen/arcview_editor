@@ -1,0 +1,9 @@
+' Subroutine creates a string from the current date/time
+' 07.01.2026, A. Boehlen
+'###############################
+
+timestamp = Date.Now
+timestamp.SetFormat("yyyyMMddhhhhms")
+timestampStr = timestamp.asString
+return timestampStr
+

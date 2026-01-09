@@ -5,6 +5,14 @@
 	FirstRootClassName:	"Butn"
 	Roots:	2
 	Roots:	4
+	Roots:	149
+	Roots:	150
+	Roots:	151
+	Roots:	152
+	Roots:	153
+	Roots:	154
+	Roots:	155
+	Roots:	156
 	Roots:	157
 	Roots:	158
 	Roots:	159
@@ -58,23 +66,12 @@
 	Roots:	207
 	Roots:	208
 	Roots:	209
-	Roots:	210
-	Roots:	211
-	Roots:	212
-	Roots:	213
-	Roots:	214
-	Roots:	215
-	Roots:	216
-	Roots:	217
-	Roots:	218
-	Roots:	219
-	Roots:	220
 	Version:	32
-	About:	"Editor-Toolbar (v3.0) "
-	UnloadScript:	221
-	InstallScript:	222
-	UninstallScript:	223
-	ExtVersion:	3
+	About:	"Editor-Toolbar (v2.7) "
+	UnloadScript:	210
+	InstallScript:	211
+	UninstallScript:	212
+	ExtVersion:	1
 )
 
 (Butn.2
@@ -191,8 +188,8 @@
 
 (AVDLog.4
 	Name:	"Editor"
-	X:	346
-	Y:	102
+	X:	145
+	Y:	112
 	W:	846
 	H:	40
 	ConstrainedControlNames:	5
@@ -258,7 +255,7 @@
 	AlwaysOnTop:	1
 	HasTitleBar:	1
 	Closeable:	1
-	DefaultButton:	156
+	DefaultButton:	148
 )
 
 (AVStr.5
@@ -266,111 +263,111 @@
 )
 
 (AVStr.6
-	S:	"RefreshView"
-)
-
-(AVStr.7
-	S:	"SetDefaultValues"
-)
-
-(AVStr.8
-	S:	"HaloText"
-)
-
-(AVStr.9
-	S:	"Merge"
-)
-
-(AVStr.10
-	S:	"Subtract"
-)
-
-(AVStr.11
-	S:	"Combine"
-)
-
-(AVStr.12
-	S:	"Rotate"
-)
-
-(AVStr.13
 	S:	"SaveEdits"
 )
 
-(AVStr.14
+(AVStr.7
 	S:	"Unselect"
 )
 
-(AVStr.15
+(AVStr.8
+	S:	"Merge"
+)
+
+(AVStr.9
+	S:	"Subtract"
+)
+
+(AVStr.10
+	S:	"Combine"
+)
+
+(AVStr.11
+	S:	"RefreshView"
+)
+
+(AVStr.12
 	S:	"StartEditing"
 )
 
+(AVStr.13
+	S:	"SetDefaultValues"
+)
+
+(AVStr.14
+	S:	"HaloText"
+)
+
+(AVStr.15
+	S:	"Rotate"
+)
+
 (AVStr.16
-	S:	"Text"
-)
-
-(AVStr.17
-	S:	"SplineText"
-)
-
-(AVStr.18
-	S:	"DeleteVertex"
-)
-
-(AVStr.19
-	S:	"Reshape"
-)
-
-(AVStr.20
-	S:	"DrawPoint"
-)
-
-(AVStr.21
-	S:	"DrawLine"
-)
-
-(AVStr.22
-	S:	"DrawPolygon"
-)
-
-(AVStr.23
-	S:	"SplitLine"
-)
-
-(AVStr.24
-	S:	"CircleTool"
-)
-
-(AVStr.25
-	S:	"SplitLineWithoutTrace"
-)
-
-(AVStr.26
-	S:	"DrawPointByCoordinate"
-)
-
-(AVStr.27
-	S:	"AutoComplete"
-)
-
-(AVStr.28
-	S:	"CutPoly"
-)
-
-(AVStr.29
-	S:	"Rectangle Tool"
-)
-
-(AVStr.30
 	S:	"Select"
 )
 
-(AVStr.31
+(AVStr.17
 	S:	"SelectToEdit"
 )
 
-(AVStr.32
+(AVStr.18
 	S:	"EditAttributes"
+)
+
+(AVStr.19
+	S:	"DrawPoint"
+)
+
+(AVStr.20
+	S:	"DrawLine"
+)
+
+(AVStr.21
+	S:	"DrawPolygon"
+)
+
+(AVStr.22
+	S:	"SplitLine"
+)
+
+(AVStr.23
+	S:	"CircleTool"
+)
+
+(AVStr.24
+	S:	"SplitLineWithoutTrace"
+)
+
+(AVStr.25
+	S:	"DrawPointByCoordinate"
+)
+
+(AVStr.26
+	S:	"DeleteVertex"
+)
+
+(AVStr.27
+	S:	"Reshape"
+)
+
+(AVStr.28
+	S:	"AutoComplete"
+)
+
+(AVStr.29
+	S:	"CutPoly"
+)
+
+(AVStr.30
+	S:	"Text"
+)
+
+(AVStr.31
+	S:	"SplineText"
+)
+
+(AVStr.32
+	S:	"Rectangle Tool"
 )
 
 (Numb.33
@@ -490,282 +487,189 @@
 
 (CPanel.62
 	Child:	63
-	Child:	72
-	Child:	82
-	Child:	101
-	Child:	132
-	ResBox:	151
-	ResBox:	152
-	ResBox:	153
-	ResBox:	154
-	ResBox:	155
+	ResBox:	147
 	Listening:	1
 )
 
 (CPanel.63
-	InternalName:	"Misc"
+	InternalName:	"aControlPanel2"
 	Child:	64
-	Child:	65
-	Child:	67
-	Constraints:	0x55
-	ResBox:	69
-	ResBox:	70
-	ResBox:	71
-	VisibleBorder:	1
-	Listening:	1
-)
-
-(LButn.64
-	InternalName:	"Close"
-	Help:	"Close Editor Toolbar//"
-	Label:	"Close"
-	Click:	"Editor.close"
-)
-
-(Butn.65
-	InternalName:	"RefreshView"
-	Help:	"Refresh the view//"
-	HelpTopic:	" "
-	Icon:	66
-	Click:	"Editor.RefreshView"
-)
-
-(AVIcon.66
-	Name:	"R"
-	Res:	"Icons.R"
-
-)
-
-(Butn.67
-	InternalName:	"SetDefaultValues"
-	Help:	"Set Default Values//"
-	HelpTopic:	" "
-	Icon:	68
-	Click:	"Editor.SetDefaultValues"
-)
-
-(AVIcon.68
-	Name:	"D"
-	Res:	"Icons.D"
-
-)
-
-(RectD.69
-	Left:	64.00000000000000
-	Top:	30.00000000000000
-	Right:	107.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.70
-	Left:	5.00000000000000
-	Top:	30.00000000000000
-	Right:	29.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.71
-	Left:	33.00000000000000
-	Top:	30.00000000000000
-	Right:	57.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(CPanel.72
-	InternalName:	"EditText"
+	Child:	66
+	Child:	68
+	Child:	70
+	Child:	72
 	Child:	73
 	Child:	75
 	Child:	77
-	Constraints:	0x55
-	ResBox:	79
-	ResBox:	80
-	ResBox:	81
-	VisibleBorder:	1
-	Listening:	1
-)
-
-(Tool.73
-	InternalName:	"Text"
-	Help:	"Add horizontal text//"
-	HelpTopic:	"Text_tool"
-	Update:	"Editor.TextToolUpdate"
-	Icon:	74
-	Cursor:	"Cursors.Text"
-	Apply:	"Editor.TextTool"
-	Click:	"Editor.DisplayFontPanel"
-)
-
-(AVIcon.74
-	Name:	"Text"
-	Res:	"Icons.Text"
-
-)
-
-(Tool.75
-	InternalName:	"SplineText"
-	Help:	"Add text that is aligned to a splined baseline//"
-	HelpTopic:	"Text_tool"
-	Update:	"Editor.TextToolUpdate"
-	Icon:	76
-	Cursor:	"Cursors.Bullseye"
-	Apply:	"Editor.TextToolSpline"
-)
-
-(AVIcon.76
-	Name:	"TextAligned"
-	Res:	"Icons.TextAligned"
-
-)
-
-(Butn.77
-	InternalName:	"HaloText"
-	Help:	"Draw halo around text//"
-	HelpTopic:	" "
-	Icon:	78
-	Click:	"Editor.TextHalo"
-)
-
-(AVIcon.78
-	Name:	"halotext.bmp"
-	Data:	4e442049 6d616765 00010014 00110000 
-	Data:	0154d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
-	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
-	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0ffff 
-	Data:	ffffd0d0 d0d0ffff ffffd0d0 d0d0d0d0 
-	Data:	d0d0ff00 00ffd0d0 d0d0ff00 00ffd0d0 
-	Data:	d0d0d0d0 d0d0ff00 00ffd0d0 d0d0ff00 
-	Data:	00ffd0d0 d0d0d0d0 d0d0ff00 00ffd0d0 
-	Data:	d0d0ff00 00ffd0d0 d0d0d0d0 d0d0ff00 
-	Data:	00ffd0d0 d0d0ff00 00ffd0d0 d0d0d0d0 
-	Data:	d0d0ff00 00ffffff ffffff00 00ffd0d0 
-	Data:	d0d0d0d0 d0d0ff00 00000000 00000000 
-	Data:	00ffd0d0 d0d0d0d0 d0d0ff00 00000000 
-	Data:	00000000 00ffd0d0 d0d0d0d0 d0d0ff00 
-	Data:	00ffffff ffffff00 00ffd0d0 d0d0d0d0 
-	Data:	d0d0ff00 00ffd0d0 d0d0ff00 00ffd0d0 
-	Data:	d0d0d0d0 d0d0ff00 00ffd0d0 d0d0ff00 
-	Data:	00ffd0d0 d0d0d0d0 d0d0ff00 00ffd0d0 
-	Data:	d0d0ff00 00ffd0d0 d0d0d0d0 d0d0ff00 
-	Data:	00ffd0d0 d0d0ff00 00ffd0d0 d0d0d0d0 
-	Data:	d0d0ffff ffffd0d0 d0d0ffff ffffd0d0 
-	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
-	Data:	d0d0d0d0 d0d00000 04000000 00000101 
-	Data:	01000202 02000303 03000404 04000505 
-	Data:	05000606 06000707 07000808 08000909 
-	Data:	09000a0a 0a000b0b 0b000c0c 0c000d0d 
-	Data:	0d000e0e 0e000f0f 0f001010 10001111 
-	Data:	11001212 12001313 13001414 14001515 
-	Data:	15001616 16001717 17001818 18001919 
-	Data:	19001a1a 1a001b1b 1b001c1c 1c001d1d 
-	Data:	1d001e1e 1e001f1f 1f002020 20002121 
-	Data:	21002222 22002323 23002424 24002525 
-	Data:	25002626 26002727 27002828 28002929 
-	Data:	29002a2a 2a002b2b 2b002c2c 2c002d2d 
-	Data:	2d002e2e 2e002f2f 2f003030 30003131 
-	Data:	31003232 32003333 33003434 34003535 
-	Data:	35003636 36003737 37003838 38003939 
-	Data:	39003a3a 3a003b3b 3b003c3c 3c003d3d 
-	Data:	3d003e3e 3e003f3f 3f004040 40004141 
-	Data:	41004242 42004343 43004444 44004545 
-	Data:	45004646 46004747 47004848 48004949 
-	Data:	49004a4a 4a004b4b 4b004c4c 4c004d4d 
-	Data:	4d004e4e 4e004f4f 4f005050 50005151 
-	Data:	51005252 52005353 53005454 54005555 
-	Data:	55005656 56005757 57005858 58005959 
-	Data:	59005a5a 5a005b5b 5b005c5c 5c005d5d 
-	Data:	5d005e5e 5e005f5f 5f006060 60006161 
-	Data:	61006262 62006363 63006464 64006565 
-	Data:	65006666 66006767 67006868 68006969 
-	Data:	69006a6a 6a006b6b 6b006c6c 6c006d6d 
-	Data:	6d006e6e 6e006f6f 6f007070 70007171 
-	Data:	71007272 72007373 73007474 74007575 
-	Data:	75007676 76007777 77007878 78007979 
-	Data:	79007a7a 7a007b7b 7b007c7c 7c007d7d 
-	Data:	7d007e7e 7e007f7f 7f008080 80008181 
-	Data:	81008282 82008383 83008484 84008585 
-	Data:	85008686 86008787 87008888 88008989 
-	Data:	89008a8a 8a008b8b 8b008c8c 8c008d8d 
-	Data:	8d008e8e 8e008f8f 8f009090 90009191 
-	Data:	91009292 92009393 93009494 94009595 
-	Data:	95009696 96009797 97009898 98009999 
-	Data:	99009a9a 9a009b9b 9b009c9c 9c009d9d 
-	Data:	9d009e9e 9e009f9f 9f00a0a0 a000a1a1 
-	Data:	a100a2a2 a200a3a3 a300a4a4 a400a5a5 
-	Data:	a500a6a6 a600a7a7 a700a8a8 a800a9a9 
-	Data:	a900aaaa aa00abab ab00acac ac00adad 
-	Data:	ad00aeae ae00afaf af00b0b0 b000b1b1 
-	Data:	b100b2b2 b200b3b3 b300b4b4 b400b5b5 
-	Data:	b500b6b6 b600b7b7 b700b8b8 b800b9b9 
-	Data:	b900baba ba00bbbb bb00bcbc bc00bdbd 
-	Data:	bd00bebe be00bfbf bf00c0c0 c000c1c1 
-	Data:	c100c2c2 c200c3c3 c300c4c4 c400c5c5 
-	Data:	c500c6c6 c600c7c7 c700c8c8 c800c9c9 
-	Data:	c900caca ca00cbcb cb00cccc cc00cdcd 
-	Data:	cd00cece ce00cfcf cf00d0d0 d000d1d1 
-	Data:	d100d2d2 d200d3d3 d300d4d4 d400d5d5 
-	Data:	d500d6d6 d600d7d7 d700d8d8 d800d9d9 
-	Data:	d900dada da00dbdb db00dcdc dc00dddd 
-	Data:	dd00dede de00dfdf df00e0e0 e000e1e1 
-	Data:	e100e2e2 e200e3e3 e300e4e4 e400e5e5 
-	Data:	e500e6e6 e600e7e7 e700e8e8 e800e9e9 
-	Data:	e900eaea ea00ebeb eb00ecec ec00eded 
-	Data:	ed00eeee ee00efef ef00f0f0 f000f1f1 
-	Data:	f100f2f2 f200f3f3 f300f4f4 f400f5f5 
-	Data:	f500f6f6 f600f7f7 f700f8f8 f800f9f9 
-	Data:	f900fafa fa00fbfb fb00fcfc fc00fdfd 
-	Data:	fd00fefe fe00ffff ff000002 00080007 
-	Data:	00200001 00020000 00000000 0000
-)
-
-(RectD.79
-	Left:	5.00000000000000
-	Top:	30.00000000000000
-	Right:	29.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.80
-	Left:	32.00000000000000
-	Top:	30.00000000000000
-	Right:	56.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.81
-	Left:	59.00000000000000
-	Top:	30.00000000000000
-	Right:	83.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(CPanel.82
-	InternalName:	"ModifyFeatures"
+	Child:	79
+	Child:	81
 	Child:	83
 	Child:	85
 	Child:	87
 	Child:	89
 	Child:	91
 	Child:	93
+	Child:	95
+	Child:	97
+	Child:	99
+	Child:	101
+	Child:	103
+	Child:	105
+	Child:	107
+	Child:	109
+	Child:	111
+	Child:	113
+	Child:	115
+	Child:	117
 	Constraints:	0x55
-	ResBox:	95
-	ResBox:	96
-	ResBox:	97
-	ResBox:	98
-	ResBox:	99
-	ResBox:	100
+	ResBox:	119
+	ResBox:	120
+	ResBox:	121
+	ResBox:	122
+	ResBox:	123
+	ResBox:	124
+	ResBox:	125
+	ResBox:	126
+	ResBox:	127
+	ResBox:	128
+	ResBox:	129
+	ResBox:	130
+	ResBox:	131
+	ResBox:	132
+	ResBox:	133
+	ResBox:	134
+	ResBox:	135
+	ResBox:	136
+	ResBox:	137
+	ResBox:	138
+	ResBox:	139
+	ResBox:	140
+	ResBox:	141
+	ResBox:	142
+	ResBox:	143
+	ResBox:	144
+	ResBox:	145
+	ResBox:	146
 	VisibleBorder:	1
 	Listening:	1
 )
 
-(Butn.83
+(Butn.64
+	InternalName:	"SaveEdits"
+	Help:	"Save edits//"
+	Icon:	65
+	Click:	"Editor.SaveEdits"
+)
+
+(AVIcon.65
+	Name:	"save_edits.bmp"
+	Data:	4e442049 6d616765 0001000f 000f0000 
+	Data:	00f0f2e7 bc556db7 bbb9b9b9 b9b9b9bb 
+	Data:	f200e7a1 30477c9b 4e231f1d 1c1a1921 
+	Data:	f300a23b 5c17cddb 854f3731 0c57541a 
+	Data:	f4003764 8c13c3da c86b5346 11775a1c 
+	Data:	f500328a ab17e5e9 ddca7356 197c601f 
+	Data:	f5003591 9e1ceaf0 cbe2ca6b 477f6621 
+	Data:	f6003797 9b174041 2ac1decb 745e6424 
+	Data:	f600399d a29da1a5 a3a8dddc cb633d26 
+	Data:	f7003da4 a09b9da1 a4a2a2d5 c3af582c 
+	Data:	e9003fab 9d847e7a 76726e6b 8bb5af6a 
+	Data:	6b0043b1 9a81fbaa aaaaaaf6 6896bfbf 
+	Data:	830045b7 9785fcfb faf9f9f7 699da5bf 
+	Data:	dc0048be 9489fdaa aaaaaaf8 6daa9633 
+	Data:	f9004ac4 c08dfefd fcfbfaf9 71a09c36 
+	Data:	f900544b 49477573 716f6e6e 3c3b3944 
+	Data:	fa000000 04000000 00000101 01000202 
+	Data:	02000303 03000404 04000505 05000606 
+	Data:	06000707 07000808 08000909 09000a0a 
+	Data:	0a000b0b 0b000c0c 0c000d0d 0d000e0e 
+	Data:	0e000f0f 0f001010 10001111 11001212 
+	Data:	12001313 13001414 14001515 15001616 
+	Data:	16001717 17001818 18001919 19001a1a 
+	Data:	1a001b1b 1b001c1c 1c001d1d 1d001e1e 
+	Data:	1e001f1f 1f002020 20002121 21002222 
+	Data:	22002323 23002424 24002525 25002626 
+	Data:	26002727 27002828 28002929 29002a2a 
+	Data:	2a002b2b 2b002c2c 2c002d2d 2d002e2e 
+	Data:	2e002f2f 2f003030 30003131 31003232 
+	Data:	32003333 33003434 34003535 35003636 
+	Data:	36003737 37003838 38003939 39003a3a 
+	Data:	3a003b3b 3b003c3c 3c003d3d 3d003e3e 
+	Data:	3e003f3f 3f004040 40004141 41004242 
+	Data:	42004343 43004444 44004545 45004646 
+	Data:	46004747 47004848 48004949 49004a4a 
+	Data:	4a004b4b 4b004c4c 4c004d4d 4d004e4e 
+	Data:	4e004f4f 4f005050 50005151 51005252 
+	Data:	52005353 53005454 54005555 55005656 
+	Data:	56005757 57005858 58005959 59005a5a 
+	Data:	5a005b5b 5b005c5c 5c005d5d 5d005e5e 
+	Data:	5e005f5f 5f006060 60006161 61006262 
+	Data:	62006363 63006464 64006565 65006666 
+	Data:	66006767 67006868 68006969 69006a6a 
+	Data:	6a006b6b 6b006c6c 6c006d6d 6d006e6e 
+	Data:	6e006f6f 6f007070 70007171 71007272 
+	Data:	72007373 73007474 74007575 75007676 
+	Data:	76007777 77007878 78007979 79007a7a 
+	Data:	7a007b7b 7b007c7c 7c007d7d 7d007e7e 
+	Data:	7e007f7f 7f008080 80008181 81008282 
+	Data:	82008383 83008484 84008585 85008686 
+	Data:	86008787 87008888 88008989 89008a8a 
+	Data:	8a008b8b 8b008c8c 8c008d8d 8d008e8e 
+	Data:	8e008f8f 8f009090 90009191 91009292 
+	Data:	92009393 93009494 94009595 95009696 
+	Data:	96009797 97009898 98009999 99009a9a 
+	Data:	9a009b9b 9b009c9c 9c009d9d 9d009e9e 
+	Data:	9e009f9f 9f00a0a0 a000a1a1 a100a2a2 
+	Data:	a200a3a3 a300a4a4 a400a5a5 a500a6a6 
+	Data:	a600a7a7 a700a8a8 a800a9a9 a900aaaa 
+	Data:	aa00abab ab00acac ac00adad ad00aeae 
+	Data:	ae00afaf af00b0b0 b000b1b1 b100b2b2 
+	Data:	b200b3b3 b300b4b4 b400b5b5 b500b6b6 
+	Data:	b600b7b7 b700b8b8 b800b9b9 b900baba 
+	Data:	ba00bbbb bb00bcbc bc00bdbd bd00bebe 
+	Data:	be00bfbf bf00c0c0 c000c1c1 c100c2c2 
+	Data:	c200c3c3 c300c4c4 c400c5c5 c500c6c6 
+	Data:	c600c7c7 c700c8c8 c800c9c9 c900caca 
+	Data:	ca00cbcb cb00cccc cc00cdcd cd00cece 
+	Data:	ce00cfcf cf00d0d0 d000d1d1 d100d2d2 
+	Data:	d200d3d3 d300d4d4 d400d5d5 d500d6d6 
+	Data:	d600d7d7 d700d8d8 d800d9d9 d900dada 
+	Data:	da00dbdb db00dcdc dc00dddd dd00dede 
+	Data:	de00dfdf df00e0e0 e000e1e1 e100e2e2 
+	Data:	e200e3e3 e300e4e4 e400e5e5 e500e6e6 
+	Data:	e600e7e7 e700e8e8 e800e9e9 e900eaea 
+	Data:	ea00ebeb eb00ecec ec00eded ed00eeee 
+	Data:	ee00efef ef00f0f0 f000f1f1 f100f2f2 
+	Data:	f200f3f3 f300f4f4 f400f5f5 f500f6f6 
+	Data:	f600f7f7 f700f8f8 f800f9f9 f900fafa 
+	Data:	fa00fbfb fb00fcfc fc00fdfd fd00fefe 
+	Data:	fe00ffff ff000002 00080007 00200001 
+	Data:	00020000 00000000 0000
+)
+
+(Butn.66
+	InternalName:	"Unselect"
+	Help:	"Clear selected features//"
+	HelpTopic:	" "
+	Icon:	67
+	Click:	"Editor.Unselect"
+)
+
+(AVIcon.67
+	Name:	"SelectNone"
+	Res:	"Icons.SelectNone"
+
+)
+
+(Butn.68
 	InternalName:	"Merge"
 	Help:	"Merge selected features//"
 	Update:	"Editor.MergeUpdate"
-	Icon:	84
+	Icon:	69
 	Click:	"Editor.Merge"
 )
 
-(AVIcon.84
+(AVIcon.69
 	Name:	"merge2.bmp"
 	Data:	4e442049 6d616765 00010013 00120000 
 	Data:	0168d4d4 d4d4d4d4 d4d4d4d4 d4d4d4d4 
@@ -859,28 +763,84 @@
 	Data:	0000
 )
 
-(Butn.85
+(Butn.70
 	InternalName:	"Subtract"
 	Help:	"Subtracts one selected polygon from the other selected polygon//"
 	Update:	"Editor.SubtractUpdate"
-	Icon:	86
+	Icon:	71
 	Click:	"Editor.Subtract"
 )
 
-(AVIcon.86
+(AVIcon.71
 	Name:	"Reduce"
 	Res:	"Icons.Reduce"
 
 )
 
-(Butn.87
+(LButn.72
+	InternalName:	"Close"
+	Help:	"Close Editor Toolbar//"
+	Label:	"Close"
+	Click:	"Editor.close"
+)
+
+(Tool.73
+	InternalName:	"Select"
+	Help:	"Select Tool//"
+	HelpTopic:	"Pointer_tool"
+	Update:	"Editor.HasDataUpdate"
+	Icon:	74
+	Cursor:	"Cursors.Select"
+	Apply:	"Editor.Select"
+	Click:	"Editor.SelectTool"
+)
+
+(AVIcon.74
+	Name:	"Select"
+	Res:	"Icons.Select"
+
+)
+
+(Tool.75
+	InternalName:	"SelectToEdit"
+	Help:	"Vertex Edit//"
+	HelpTopic:	"Vertex_Edit_tool"
+	Update:	"Editor.SelectToEditUpdate"
+	Icon:	76
+	Cursor:	"Cursors.SelectEdit"
+	Apply:	"Editor.SelectToEdit"
+	Click:	"Editor.SelectToEditTool"
+)
+
+(AVIcon.76
+	Name:	"SelectEdit"
+	Res:	"Icons.SelectEdit"
+
+)
+
+(Tool.77
+	InternalName:	"EditAttributes"
+	Help:	"Edit attributes//"
+	Icon:	78
+	Cursor:	"Cursors.Default"
+	Apply:	"Editor.EditAttributes"
+	Click:	"Editor.EditAttributes"
+)
+
+(AVIcon.78
+	Name:	"FrameText2"
+	Res:	"Icons.FrameText2"
+
+)
+
+(Butn.79
 	InternalName:	"Combine"
 	Help:	"Create hole from two overlapping selected polygons//"
-	Icon:	88
+	Icon:	80
 	Click:	"Editor.CutHole"
 )
 
-(AVIcon.88
+(AVIcon.80
 	Name:	"create_hole.bmp"
 	Data:	4e442049 6d616765 00010016 00160000 
 	Data:	0210d1d1 d1d1d1d1 d1d1d1d1 d1d1d1d1 
@@ -984,446 +944,96 @@
 	Data:	00020000 00000000 0000
 )
 
-(Tool.89
-	InternalName:	"DeleteVertex"
-	Help:	"Delete one or more vertices by drawing a box around it//"
-	Icon:	90
-	Cursor:	"Cursors.CrossHair"
-	Apply:	"Editor.DeleteVertex"
-	Click:	"Editor.DeleteVertex"
-)
-
-(AVIcon.90
-	Name:	"delete_vertex.bmp"
-	Data:	4e442049 6d616765 00010012 00100000 
-	Data:	0140d0c0 c0c0c0c0 c0c0c0c0 c0c0c0c0 
-	Data:	c0c0c0d0 0000d0c0 c0c0c0c0 c0c0c0c0 
-	Data:	c0c0c0c0 c0c0c0d0 0000d0c0 c0c0c0c0 
-	Data:	c0c0c0c0 c0c0c0c0 36c0c0d0 0000d0c0 
-	Data:	c0c036c0 c0c0c0c0 c0c0c0c0 c0c0c0d0 
-	Data:	0000d0c0 c0363636 c0c0c0c0 c0c0c036 
-	Data:	c0c0c0d0 0000d0c0 c0363636 c0c0c0c0 
-	Data:	c0c036c0 c0c0c0d0 0000d0c0 c0c03636 
-	Data:	36c0c0c0 c03636c0 c0c0c0d0 0000d0c0 
-	Data:	c0c0c036 3636c0c0 3636c0c0 c0c0c0d0 
-	Data:	0000d0c0 c0c0c0c0 36000000 36c0c0c0 
-	Data:	c0c0c0d0 0000d0c0 c0c0c0c0 c000ff00 
-	Data:	c0c0c0c0 c0c0c0d0 0000d0c0 c0c0c0c0 
-	Data:	36000000 36c0c0c0 c0c0c0d0 0000d0c0 
-	Data:	c0c0c036 3636c0c0 36c0c0c0 c0c0c0d0 
-	Data:	0000d0c0 c0363636 36c0c0c0 c03636c0 
-	Data:	c0c0c0d0 0000d0c0 36363636 c0c0c0c0 
-	Data:	c0c03636 c0c0c0d0 0000d0c0 3636c0c0 
-	Data:	c0c0c0c0 c0c0c036 36c0c0d0 0000d0c0 
-	Data:	c0c0c0c0 c0c0c0c0 c0c0c0c0 c0c0c0d0 
-	Data:	00000000 04000000 00000101 01000202 
-	Data:	02000303 03000404 04000505 05000606 
-	Data:	06000707 07000808 08000909 09000a0a 
-	Data:	0a000b0b 0b000c0c 0c000d0d 0d000e0e 
-	Data:	0e000f0f 0f001010 10001111 11001212 
-	Data:	12001313 13001414 14001515 15001616 
-	Data:	16001717 17001818 18001919 19001a1a 
-	Data:	1a001b1b 1b001c1c 1c001d1d 1d001e1e 
-	Data:	1e001f1f 1f002020 20002121 21002222 
-	Data:	22002323 23002424 24002525 25002626 
-	Data:	26002727 27002828 28002929 29002a2a 
-	Data:	2a002b2b 2b002c2c 2c002d2d 2d002e2e 
-	Data:	2e002f2f 2f003030 30003131 31003232 
-	Data:	32003333 33003434 34003535 35003636 
-	Data:	36003737 37003838 38003939 39003a3a 
-	Data:	3a003b3b 3b003c3c 3c003d3d 3d003e3e 
-	Data:	3e003f3f 3f004040 40004141 41004242 
-	Data:	42004343 43004444 44004545 45004646 
-	Data:	46004747 47004848 48004949 49004a4a 
-	Data:	4a004b4b 4b004c4c 4c004d4d 4d004e4e 
-	Data:	4e004f4f 4f005050 50005151 51005252 
-	Data:	52005353 53005454 54005555 55005656 
-	Data:	56005757 57005858 58005959 59005a5a 
-	Data:	5a005b5b 5b005c5c 5c005d5d 5d005e5e 
-	Data:	5e005f5f 5f006060 60006161 61006262 
-	Data:	62006363 63006464 64006565 65006666 
-	Data:	66006767 67006868 68006969 69006a6a 
-	Data:	6a006b6b 6b006c6c 6c006d6d 6d006e6e 
-	Data:	6e006f6f 6f007070 70007171 71007272 
-	Data:	72007373 73007474 74007575 75007676 
-	Data:	76007777 77007878 78007979 79007a7a 
-	Data:	7a007b7b 7b007c7c 7c007d7d 7d007e7e 
-	Data:	7e007f7f 7f008080 80008181 81008282 
-	Data:	82008383 83008484 84008585 85008686 
-	Data:	86008787 87008888 88008989 89008a8a 
-	Data:	8a008b8b 8b008c8c 8c008d8d 8d008e8e 
-	Data:	8e008f8f 8f009090 90009191 91009292 
-	Data:	92009393 93009494 94009595 95009696 
-	Data:	96009797 97009898 98009999 99009a9a 
-	Data:	9a009b9b 9b009c9c 9c009d9d 9d009e9e 
-	Data:	9e009f9f 9f00a0a0 a000a1a1 a100a2a2 
-	Data:	a200a3a3 a300a4a4 a400a5a5 a500a6a6 
-	Data:	a600a7a7 a700a8a8 a800a9a9 a900aaaa 
-	Data:	aa00abab ab00acac ac00adad ad00aeae 
-	Data:	ae00afaf af00b0b0 b000b1b1 b100b2b2 
-	Data:	b200b3b3 b300b4b4 b400b5b5 b500b6b6 
-	Data:	b600b7b7 b700b8b8 b800b9b9 b900baba 
-	Data:	ba00bbbb bb00bcbc bc00bdbd bd00bebe 
-	Data:	be00bfbf bf00c0c0 c000c1c1 c100c2c2 
-	Data:	c200c3c3 c300c4c4 c400c5c5 c500c6c6 
-	Data:	c600c7c7 c700c8c8 c800c9c9 c900caca 
-	Data:	ca00cbcb cb00cccc cc00cdcd cd00cece 
-	Data:	ce00cfcf cf00d0d0 d000d1d1 d100d2d2 
-	Data:	d200d3d3 d300d4d4 d400d5d5 d500d6d6 
-	Data:	d600d7d7 d700d8d8 d800d9d9 d900dada 
-	Data:	da00dbdb db00dcdc dc00dddd dd00dede 
-	Data:	de00dfdf df00e0e0 e000e1e1 e100e2e2 
-	Data:	e200e3e3 e300e4e4 e400e5e5 e500e6e6 
-	Data:	e600e7e7 e700e8e8 e800e9e9 e900eaea 
-	Data:	ea00ebeb eb00ecec ec00eded ed00eeee 
-	Data:	ee00efef ef00f0f0 f000f1f1 f100f2f2 
-	Data:	f200f3f3 f300f4f4 f400f5f5 f500f6f6 
-	Data:	f600f7f7 f700f8f8 f800f9f9 f900fafa 
-	Data:	fa00fbfb fb00fcfc fc00fdfd fd00fefe 
-	Data:	fe00ffff ff000002 00080007 00200001 
-	Data:	00020000 00000000 0000
-)
-
-(Tool.91
-	InternalName:	"Reshape"
-	Help:	"Reshape selected feature//"
-	Update:	"Editor.ReshapeUpdate"
-	Icon:	92
-	Cursor:	"Cursors.CrossHair"
-	Apply:	"Editor.Reshape"
-	Click:	"Editor.ReshapeTool"
-)
-
-(AVIcon.92
-	Name:	"reshape.bmp"
-	Data:	4e442049 6d616765 00010012 00110000 
-	Data:	0154f5f5 f5f5f5f5 f5f5f5f5 f5f5f5f5 
-	Data:	f5f5f5f5 0000f540 40404040 40404040 
-	Data:	f5f5f5f5 f5f5f5f5 0000f540 eaeaeaea 
-	Data:	eaeaea40 f5f5f5f5 f5f5f5f5 0000f540 
-	Data:	eaea5c5c 5ceaeaf5 f5f55c5c 5cf5f5f5 
-	Data:	0000f540 eaea5c00 5c5c5c5c 5c5c5c00 
-	Data:	5cf5f5f5 0000f540 eaea5c5c 5cf5eaf5 
-	Data:	f5f55c5c 5cf5f5f5 0000f540 eaeaea5c 
-	Data:	f5eaf540 f5f5f5f5 f5f5f5f5 0000f540 
-	Data:	eaeaea5c eaf5ea40 f5f5f5f5 f5f5f5f5 
-	Data:	0000f540 eaeaea5c f5eaf5f5 f5f5f5f5 
-	Data:	f5f5f5f5 0000f540 eaeaea5c eaf5ea40 
-	Data:	f5f5f500 f5f5f5f5 0000f540 eaeaea5c 
-	Data:	f5eaf540 f5f5ff00 fff5f5f5 0000f540 
-	Data:	eaea3636 36f5eaf5 f5ffc9c9 c9fff5f5 
-	Data:	0000f540 eaea361b 365c5c5c 0000c900 
-	Data:	c90000f5 0000f540 eaea3636 36eaeaf5 
-	Data:	f5ffc9c9 c9fff5f5 0000f540 eaeaeaea 
-	Data:	eaeaea40 f5f5ff00 fff5f5f5 0000f540 
-	Data:	40404040 40404040 f5f5f500 f5f5f5f5 
-	Data:	0000f5f5 f5f5f5f5 f5f5f5f5 f5f5f5f5 
-	Data:	f5f5f5f5 00000000 04000000 00000101 
-	Data:	01000202 02000303 03000404 04000505 
-	Data:	05000606 06000707 07000808 08000909 
-	Data:	09000a0a 0a000b0b 0b000c0c 0c000d0d 
-	Data:	0d000e0e 0e000f0f 0f001010 10001111 
-	Data:	11001212 12001313 13001414 14001515 
-	Data:	15001616 16001717 17001818 18001919 
-	Data:	19001a1a 1a001b1b 1b001c1c 1c001d1d 
-	Data:	1d001e1e 1e001f1f 1f002020 20002121 
-	Data:	21002222 22002323 23002424 24002525 
-	Data:	25002626 26002727 27002828 28002929 
-	Data:	29002a2a 2a002b2b 2b002c2c 2c002d2d 
-	Data:	2d002e2e 2e002f2f 2f003030 30003131 
-	Data:	31003232 32003333 33003434 34003535 
-	Data:	35003636 36003737 37003838 38003939 
-	Data:	39003a3a 3a003b3b 3b003c3c 3c003d3d 
-	Data:	3d003e3e 3e003f3f 3f004040 40004141 
-	Data:	41004242 42004343 43004444 44004545 
-	Data:	45004646 46004747 47004848 48004949 
-	Data:	49004a4a 4a004b4b 4b004c4c 4c004d4d 
-	Data:	4d004e4e 4e004f4f 4f005050 50005151 
-	Data:	51005252 52005353 53005454 54005555 
-	Data:	55005656 56005757 57005858 58005959 
-	Data:	59005a5a 5a005b5b 5b005c5c 5c005d5d 
-	Data:	5d005e5e 5e005f5f 5f006060 60006161 
-	Data:	61006262 62006363 63006464 64006565 
-	Data:	65006666 66006767 67006868 68006969 
-	Data:	69006a6a 6a006b6b 6b006c6c 6c006d6d 
-	Data:	6d006e6e 6e006f6f 6f007070 70007171 
-	Data:	71007272 72007373 73007474 74007575 
-	Data:	75007676 76007777 77007878 78007979 
-	Data:	79007a7a 7a007b7b 7b007c7c 7c007d7d 
-	Data:	7d007e7e 7e007f7f 7f008080 80008181 
-	Data:	81008282 82008383 83008484 84008585 
-	Data:	85008686 86008787 87008888 88008989 
-	Data:	89008a8a 8a008b8b 8b008c8c 8c008d8d 
-	Data:	8d008e8e 8e008f8f 8f009090 90009191 
-	Data:	91009292 92009393 93009494 94009595 
-	Data:	95009696 96009797 97009898 98009999 
-	Data:	99009a9a 9a009b9b 9b009c9c 9c009d9d 
-	Data:	9d009e9e 9e009f9f 9f00a0a0 a000a1a1 
-	Data:	a100a2a2 a200a3a3 a300a4a4 a400a5a5 
-	Data:	a500a6a6 a600a7a7 a700a8a8 a800a9a9 
-	Data:	a900aaaa aa00abab ab00acac ac00adad 
-	Data:	ad00aeae ae00afaf af00b0b0 b000b1b1 
-	Data:	b100b2b2 b200b3b3 b300b4b4 b400b5b5 
-	Data:	b500b6b6 b600b7b7 b700b8b8 b800b9b9 
-	Data:	b900baba ba00bbbb bb00bcbc bc00bdbd 
-	Data:	bd00bebe be00bfbf bf00c0c0 c000c1c1 
-	Data:	c100c2c2 c200c3c3 c300c4c4 c400c5c5 
-	Data:	c500c6c6 c600c7c7 c700c8c8 c800c9c9 
-	Data:	c900caca ca00cbcb cb00cccc cc00cdcd 
-	Data:	cd00cece ce00cfcf cf00d0d0 d000d1d1 
-	Data:	d100d2d2 d200d3d3 d300d4d4 d400d5d5 
-	Data:	d500d6d6 d600d7d7 d700d8d8 d800d9d9 
-	Data:	d900dada da00dbdb db00dcdc dc00dddd 
-	Data:	dd00dede de00dfdf df00e0e0 e000e1e1 
-	Data:	e100e2e2 e200e3e3 e300e4e4 e400e5e5 
-	Data:	e500e6e6 e600e7e7 e700e8e8 e800e9e9 
-	Data:	e900eaea ea00ebeb eb00ecec ec00eded 
-	Data:	ed00eeee ee00efef ef00f0f0 f000f1f1 
-	Data:	f100f2f2 f200f3f3 f300f4f4 f400f5f5 
-	Data:	f500f6f6 f600f7f7 f700f8f8 f800f9f9 
-	Data:	f900fafa fa00fbfb fb00fcfc fc00fdfd 
-	Data:	fd00fefe fe00ffff ff000002 00080007 
-	Data:	00200001 00020000 00000000 0000
-)
-
-(Butn.93
-	InternalName:	"Rotate"
-	Help:	"Rotate selected feature//"
-	Update:	"Editor.RotateUpdate"
-	Icon:	94
-	Click:	"Editor.Rotate"
-)
-
-(AVIcon.94
-	Name:	"rotate.bmp"
-	Data:	4e442049 6d616765 00010014 00110000 
-	Data:	03fcc8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
-	Data:	d4c8d0d4 c8d0d4c8 d0d40000 00000000 
-	Data:	00000000 00000000 00c8d0d4 c8d0d4c8 
-	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
-	Data:	d4c8d0d4 c8d0d4c8 d0d4c8d0 d4c8d0d4 
-	Data:	00000000 0000ffff ffffffff ffffffff 
-	Data:	ffffffff ff000000 000000c8 d0d4c8d0 
-	Data:	d4c8d0d4 000000c8 d0d4c8d0 d4c8d0d4 
-	Data:	c8d0d4c8 d0d4c8d0 d4000000 ffffffff 
-	Data:	ffffffff ff000000 00000000 0000ffff 
-	Data:	ffffffff ffffff00 0000c8d0 d4000000 
-	Data:	000000c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
-	Data:	d0d40000 00ffffff ffffff00 00000000 
-	Data:	00c8d0d4 c8d0d4c8 d0d40000 00000000 
-	Data:	ffffffff ffff0000 00ffffff 000000c8 
-	Data:	d0d4c8d0 d4c8d0d4 c8d0d400 0000ffff 
-	Data:	ffffffff 000000c8 d0d4c8d0 d4c8d0d4 
-	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 000000ff 
-	Data:	ffffffff ffffffff 000000c8 d0d4c8d0 
-	Data:	d4c8d0d4 c8d0d400 0000ffff ff000000 
-	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
-	Data:	d0d4c8d0 d4c8d0d4 000000ff ffffffff 
-	Data:	ffffffff 000000c8 d0d4c8d0 d4c8d0d4 
-	Data:	000000ff ffffffff ff000000 c8d0d4c8 
-	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
-	Data:	d4000000 ffffffff ffffffff ffffffff 
-	Data:	000000c8 d0d4c8d0 d4c8d0d4 000000ff 
-	Data:	ffff0000 00c8d0d4 c8d0d4c8 d0d4c8d0 
-	Data:	d4c8d0d4 c8d0d4c8 d0d40000 00000000 
-	Data:	00000000 00000000 00000000 000000c8 
-	Data:	d0d4c8d0 d4c8d0d4 000000ff ffff0000 
-	Data:	00c8d0d4 c8d0d4c8 d0d4c8d0 d4c8d0d4 
-	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
-	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
-	Data:	d4c8d0d4 000000ff ffff0000 00c8d0d4 
-	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
-	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d40000 
-	Data:	00000000 000000c8 d0d4c8d0 d4c8d0d4 
-	Data:	000000ff ffffffff ff000000 c8d0d4c8 
-	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
-	Data:	d4c8d0d4 c8d0d400 0000ffff ffffffff 
-	Data:	000000c8 d0d4c8d0 d4c8d0d4 c8d0d400 
-	Data:	0000ffff ff000000 c8d0d4c8 d0d4c8d0 
-	Data:	d4c8d0d4 c8d0d4c8 d0d4c8d0 d4c8d0d4 
-	Data:	c8d0d400 0000ffff ff000000 c8d0d4c8 
-	Data:	d0d4c8d0 d4c8d0d4 c8d0d400 0000ffff 
-	Data:	ffffffff 000000c8 d0d4c8d0 d4c8d0d4 
-	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 000000ff 
-	Data:	ffffffff ff000000 c8d0d4c8 d0d4c8d0 
-	Data:	d4c8d0d4 c8d0d4c8 d0d40000 00ffffff 
-	Data:	ffffff00 00000000 00c8d0d4 c8d0d4c8 
-	Data:	d0d40000 00000000 ffffffff ffff0000 
-	Data:	00c8d0d4 c8d0d4c8 d0d4c8d0 d4c8d0d4 
-	Data:	c8d0d4c8 d0d4c8d0 d4000000 ffffffff 
-	Data:	ffffffff ff000000 00000000 0000ffff 
-	Data:	ffffffff ffffff00 0000c8d0 d4c8d0d4 
-	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
-	Data:	d0d4c8d0 d4c8d0d4 00000000 0000ffff 
-	Data:	ffffffff ffffffff ffffffff ff000000 
-	Data:	000000c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
-	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
-	Data:	d4c8d0d4 c8d0d4c8 d0d40000 00000000 
-	Data:	00000000 00000000 00c8d0d4 c8d0d4c8 
-	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d40000 
-	Data:	00000001 00180007 00200001 00020000 
-	Data:	00000000 0000
-)
-
-(RectD.95
-	Left:	84.00000000000000
-	Top:	30.00000000000000
-	Right:	108.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.96
-	Left:	4.00000000000000
-	Top:	30.00000000000000
-	Right:	28.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.97
-	Left:	30.00000000000000
-	Top:	30.00000000000000
-	Right:	54.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.98
-	Left:	139.00000000000000
-	Top:	30.00000000000000
-	Right:	163.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.99
-	Left:	57.00000000000000
-	Top:	30.00000000000000
-	Right:	81.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.100
-	Left:	112.00000000000000
-	Top:	30.00000000000000
-	Right:	136.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(CPanel.101
-	InternalName:	"CreateFeatures"
-	Child:	102
-	Child:	104
-	Child:	106
-	Child:	108
-	Child:	110
-	Child:	112
-	Child:	114
-	Child:	116
-	Child:	118
-	Child:	120
-	Constraints:	0x55
-	ResBox:	122
-	ResBox:	123
-	ResBox:	124
-	ResBox:	125
-	ResBox:	126
-	ResBox:	127
-	ResBox:	128
-	ResBox:	129
-	ResBox:	130
-	ResBox:	131
-	VisibleBorder:	1
-	Listening:	1
-)
-
-(Tool.102
+(Tool.81
 	InternalName:	"DrawPoint"
 	Help:	"Create point//"
-	Icon:	103
+	Icon:	82
 	Cursor:	"Cursors.CrossHair"
 	Apply:	"Editor.Point"
 	Click:	"Editor.DisplayMarkerPanel"
 )
 
-(AVIcon.103
+(AVIcon.82
 	Name:	"Point"
 	Res:	"Icons.Point"
 
 )
 
-(Tool.104
+(Tool.83
 	InternalName:	"DrawLine"
 	Help:	"Create polyline//"
 	Update:	"Editor.PolyLineUpdate"
-	Icon:	105
+	Icon:	84
 	Cursor:	"Cursors.CrossHair"
 	Apply:	"Editor.PolyLine"
 	Click:	"Editor.DisplayMarkerPanel"
 )
 
-(AVIcon.105
+(AVIcon.84
 	Name:	"Lines"
 	Res:	"Icons.Lines"
 
 )
 
-(Tool.106
+(Tool.85
 	InternalName:	"DrawPolygon"
 	Help:	"Create polygon//"
 	Update:	"Editor.PolyToolUpdate"
-	Icon:	107
+	Icon:	86
 	Cursor:	"Cursors.CrossHair"
 	Apply:	"Editor.Polygon"
 	Click:	"Editor.DisplayMarkerPanel"
 )
 
-(AVIcon.107
+(AVIcon.86
 	Name:	"Poly"
 	Res:	"Icons.Poly"
 
 )
 
-(Tool.108
+(Tool.87
 	InternalName:	"SplitLine"
 	Help:	"Create line to split feature (keep line)//"
 	Update:	"Editor.SplitLineToolUpdate"
-	Icon:	109
+	Icon:	88
 	Cursor:	"Cursors.CrossHair"
 	Apply:	"Editor.SplitLine"
 	Click:	"Editor.DisplayMarkerPanel"
 )
 
-(AVIcon.109
+(AVIcon.88
 	Name:	"SplitLine"
 	Res:	"Icons.SplitLine"
 
 )
 
-(Tool.110
+(Tool.89
 	InternalName:	"CircleTool"
 	Help:	"Create circle//"
 	Update:	"Editor.PolyToolUpdate"
-	Icon:	111
+	Icon:	90
 	Cursor:	"Cursors.CrossHair"
 	Apply:	"Editor.CircleTool"
 	Click:	"Editor.DisplayMarkerPanel"
 )
 
-(AVIcon.111
+(AVIcon.90
 	Name:	"Disk"
 	Res:	"Icons.Disk"
 
 )
 
-(Tool.112
+(Tool.91
 	InternalName:	"SplitLineWithoutTrace"
 	Help:	"Create line to split feature//"
 	Update:	"Editor.SplitLineToolUpdate"
-	Icon:	113
+	Icon:	92
 	Cursor:	"Cursors.CrossHair"
 	Apply:	"Editor.SplitLineWithoutTrace"
 	Click:	"Editor.SplitLineWithoutTraceInfo"
 )
 
-(AVIcon.113
+(AVIcon.92
 	Name:	"line_b3.gif"
 	Data:	4e442049 6d616765 00010010 00100000 
 	Data:	0100d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
@@ -1510,16 +1120,16 @@
 	Data:	00000000 00000000 0000
 )
 
-(Tool.114
+(Tool.93
 	InternalName:	"DrawPointByCoordinate"
 	Help:	"Create point from coordinate//"
-	Icon:	115
+	Icon:	94
 	Cursor:	"Cursors.CrossHair"
-	Apply:	"Editor.PointByCoord"
+	Apply:	"Editor.MakePointByCoord"
 	Click:	"Editor.DisplayMarkerPanel"
 )
 
-(AVIcon.115
+(AVIcon.94
 	Name:	"mr_dotboxpnt2.gif"
 	Data:	4e442049 6d616765 00010010 00100000 
 	Data:	0100d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
@@ -1606,307 +1216,28 @@
 	Data:	00000000 00000000 0000
 )
 
-(Tool.116
-	InternalName:	"AutoComplete"
-	Help:	"Autocomplete polygon//"
-	Update:	"Editor.AutoCompleteUpdate"
-	Icon:	117
-	Cursor:	"Cursors.CrossHair"
-	Apply:	"Editor.AutoComplete"
-	Click:	"Editor.DisplayMarkerPanel"
-)
-
-(AVIcon.117
-	Name:	"AutoComplete"
-	Res:	"Icons.AutoComplete"
-
-)
-
-(Tool.118
-	InternalName:	"CutPoly"
-	Help:	"Cut selected polygon//"
-	Update:	"Editor.CutPolyUpdate"
-	Icon:	119
-	Cursor:	"Cursors.CrossHair"
-	Apply:	"Editor.CutPoly"
-)
-
-(AVIcon.119
-	Name:	"SplitPoly"
-	Res:	"Icons.SplitPoly"
-
-)
-
-(Tool.120
-	InternalName:	"Rectangle Tool"
-	Help:	"Create rectangle//"
-	Update:	"Editor.PolyToolUpdate"
-	Icon:	121
-	Cursor:	"Cursors.CrossHair"
-	Apply:	"Editor.RectTool"
-	Click:	"Editor.DisplayFillPanel"
-)
-
-(AVIcon.121
-	Name:	"Rect"
-	Res:	"Icons.Rect"
-
-)
-
-(RectD.122
-	Left:	6.00000000000000
-	Top:	30.00000000000000
-	Right:	30.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.123
-	Left:	71.00000000000000
-	Top:	30.00000000000000
-	Right:	95.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.124
-	Left:	216.00000000000000
-	Top:	30.00000000000000
-	Right:	240.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.125
-	Left:	97.00000000000000
-	Top:	30.00000000000000
-	Right:	121.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.126
-	Left:	162.00000000000000
-	Top:	30.00000000000000
-	Right:	186.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.127
-	Left:	124.00000000000000
-	Top:	30.00000000000000
-	Right:	148.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.128
-	Left:	34.00000000000000
-	Top:	30.00000000000000
-	Right:	58.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.129
-	Left:	243.00000000000000
-	Top:	30.00000000000000
-	Right:	267.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.130
-	Left:	270.00000000000000
-	Top:	30.00000000000000
-	Right:	294.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(RectD.131
-	Left:	189.00000000000000
-	Top:	30.00000000000000
-	Right:	213.00000000000000
-	Bottom:	6.00000000000000
-)
-
-(CPanel.132
-	InternalName:	"GeneralEditing"
-	Child:	133
-	Child:	135
-	Child:	137
-	Child:	139
-	Child:	141
-	Child:	143
-	Constraints:	0x55
-	ResBox:	145
-	ResBox:	146
-	ResBox:	147
-	ResBox:	148
-	ResBox:	149
-	ResBox:	150
-	VisibleBorder:	1
-	Listening:	1
-)
-
-(Butn.133
-	InternalName:	"SaveEdits"
-	Help:	"Save edits//"
-	Icon:	134
-	Click:	"Editor.SaveEdits"
-)
-
-(AVIcon.134
-	Name:	"save_edits.bmp"
-	Data:	4e442049 6d616765 0001000f 000f0000 
-	Data:	00f0f2e7 bc556db7 bbb9b9b9 b9b9b9bb 
-	Data:	f200e7a1 30477c9b 4e231f1d 1c1a1921 
-	Data:	f300a23b 5c17cddb 854f3731 0c57541a 
-	Data:	f4003764 8c13c3da c86b5346 11775a1c 
-	Data:	f500328a ab17e5e9 ddca7356 197c601f 
-	Data:	f5003591 9e1ceaf0 cbe2ca6b 477f6621 
-	Data:	f6003797 9b174041 2ac1decb 745e6424 
-	Data:	f600399d a29da1a5 a3a8dddc cb633d26 
-	Data:	f7003da4 a09b9da1 a4a2a2d5 c3af582c 
-	Data:	e9003fab 9d847e7a 76726e6b 8bb5af6a 
-	Data:	6b0043b1 9a81fbaa aaaaaaf6 6896bfbf 
-	Data:	830045b7 9785fcfb faf9f9f7 699da5bf 
-	Data:	dc0048be 9489fdaa aaaaaaf8 6daa9633 
-	Data:	f9004ac4 c08dfefd fcfbfaf9 71a09c36 
-	Data:	f900544b 49477573 716f6e6e 3c3b3944 
-	Data:	fa000000 04000000 00000101 01000202 
-	Data:	02000303 03000404 04000505 05000606 
-	Data:	06000707 07000808 08000909 09000a0a 
-	Data:	0a000b0b 0b000c0c 0c000d0d 0d000e0e 
-	Data:	0e000f0f 0f001010 10001111 11001212 
-	Data:	12001313 13001414 14001515 15001616 
-	Data:	16001717 17001818 18001919 19001a1a 
-	Data:	1a001b1b 1b001c1c 1c001d1d 1d001e1e 
-	Data:	1e001f1f 1f002020 20002121 21002222 
-	Data:	22002323 23002424 24002525 25002626 
-	Data:	26002727 27002828 28002929 29002a2a 
-	Data:	2a002b2b 2b002c2c 2c002d2d 2d002e2e 
-	Data:	2e002f2f 2f003030 30003131 31003232 
-	Data:	32003333 33003434 34003535 35003636 
-	Data:	36003737 37003838 38003939 39003a3a 
-	Data:	3a003b3b 3b003c3c 3c003d3d 3d003e3e 
-	Data:	3e003f3f 3f004040 40004141 41004242 
-	Data:	42004343 43004444 44004545 45004646 
-	Data:	46004747 47004848 48004949 49004a4a 
-	Data:	4a004b4b 4b004c4c 4c004d4d 4d004e4e 
-	Data:	4e004f4f 4f005050 50005151 51005252 
-	Data:	52005353 53005454 54005555 55005656 
-	Data:	56005757 57005858 58005959 59005a5a 
-	Data:	5a005b5b 5b005c5c 5c005d5d 5d005e5e 
-	Data:	5e005f5f 5f006060 60006161 61006262 
-	Data:	62006363 63006464 64006565 65006666 
-	Data:	66006767 67006868 68006969 69006a6a 
-	Data:	6a006b6b 6b006c6c 6c006d6d 6d006e6e 
-	Data:	6e006f6f 6f007070 70007171 71007272 
-	Data:	72007373 73007474 74007575 75007676 
-	Data:	76007777 77007878 78007979 79007a7a 
-	Data:	7a007b7b 7b007c7c 7c007d7d 7d007e7e 
-	Data:	7e007f7f 7f008080 80008181 81008282 
-	Data:	82008383 83008484 84008585 85008686 
-	Data:	86008787 87008888 88008989 89008a8a 
-	Data:	8a008b8b 8b008c8c 8c008d8d 8d008e8e 
-	Data:	8e008f8f 8f009090 90009191 91009292 
-	Data:	92009393 93009494 94009595 95009696 
-	Data:	96009797 97009898 98009999 99009a9a 
-	Data:	9a009b9b 9b009c9c 9c009d9d 9d009e9e 
-	Data:	9e009f9f 9f00a0a0 a000a1a1 a100a2a2 
-	Data:	a200a3a3 a300a4a4 a400a5a5 a500a6a6 
-	Data:	a600a7a7 a700a8a8 a800a9a9 a900aaaa 
-	Data:	aa00abab ab00acac ac00adad ad00aeae 
-	Data:	ae00afaf af00b0b0 b000b1b1 b100b2b2 
-	Data:	b200b3b3 b300b4b4 b400b5b5 b500b6b6 
-	Data:	b600b7b7 b700b8b8 b800b9b9 b900baba 
-	Data:	ba00bbbb bb00bcbc bc00bdbd bd00bebe 
-	Data:	be00bfbf bf00c0c0 c000c1c1 c100c2c2 
-	Data:	c200c3c3 c300c4c4 c400c5c5 c500c6c6 
-	Data:	c600c7c7 c700c8c8 c800c9c9 c900caca 
-	Data:	ca00cbcb cb00cccc cc00cdcd cd00cece 
-	Data:	ce00cfcf cf00d0d0 d000d1d1 d100d2d2 
-	Data:	d200d3d3 d300d4d4 d400d5d5 d500d6d6 
-	Data:	d600d7d7 d700d8d8 d800d9d9 d900dada 
-	Data:	da00dbdb db00dcdc dc00dddd dd00dede 
-	Data:	de00dfdf df00e0e0 e000e1e1 e100e2e2 
-	Data:	e200e3e3 e300e4e4 e400e5e5 e500e6e6 
-	Data:	e600e7e7 e700e8e8 e800e9e9 e900eaea 
-	Data:	ea00ebeb eb00ecec ec00eded ed00eeee 
-	Data:	ee00efef ef00f0f0 f000f1f1 f100f2f2 
-	Data:	f200f3f3 f300f4f4 f400f5f5 f500f6f6 
-	Data:	f600f7f7 f700f8f8 f800f9f9 f900fafa 
-	Data:	fa00fbfb fb00fcfc fc00fdfd fd00fefe 
-	Data:	fe00ffff ff000002 00080007 00200001 
-	Data:	00020000 00000000 0000
-)
-
-(Butn.135
-	InternalName:	"Unselect"
-	Help:	"Clear selected features//"
+(Butn.95
+	InternalName:	"RefreshView"
+	Help:	"Refresh the view//"
 	HelpTopic:	" "
-	Icon:	136
-	Click:	"Editor.Unselect"
+	Icon:	96
+	Click:	"Editor.RefreshView"
 )
 
-(AVIcon.136
-	Name:	"SelectNone"
-	Res:	"Icons.SelectNone"
-
-)
-
-(Tool.137
-	InternalName:	"Select"
-	Help:	"Select Tool//"
-	HelpTopic:	"Pointer_tool"
-	Update:	"Editor.HasDataUpdate"
-	Icon:	138
-	Cursor:	"Cursors.Select"
-	Apply:	"Editor.Select"
-	Click:	"Editor.SelectTool"
-)
-
-(AVIcon.138
-	Name:	"Select"
-	Res:	"Icons.Select"
+(AVIcon.96
+	Name:	"R"
+	Res:	"Icons.R"
 
 )
 
-(Tool.139
-	InternalName:	"SelectToEdit"
-	Help:	"Vertex Edit//"
-	HelpTopic:	"Vertex_Edit_tool"
-	Update:	"Editor.SelectToEditUpdate"
-	Icon:	140
-	Cursor:	"Cursors.SelectEdit"
-	Apply:	"Editor.SelectToEdit"
-	Click:	"Editor.SelectToEditTool"
-)
-
-(AVIcon.140
-	Name:	"SelectEdit"
-	Res:	"Icons.SelectEdit"
-
-)
-
-(Tool.141
-	InternalName:	"EditAttributes"
-	Help:	"Edit attributes//"
-	Update:	"Editor.EditAttributesUpdate"
-	Icon:	142
-	Cursor:	"Cursors.Default"
-	Apply:	"Editor.EditAttributes"
-	Click:	"Editor.EditAttributes"
-)
-
-(AVIcon.142
-	Name:	"FrameText2"
-	Res:	"Icons.FrameText2"
-
-)
-
-(Butn.143
+(Butn.97
 	InternalName:	"StartEditing"
 	Help:	"Start or stop editing//"
-	Icon:	144
+	Icon:	98
 	Click:	"Editor.ToggleEdit"
 )
 
-(AVIcon.144
+(AVIcon.98
 	Name:	"start_editing2.bmp"
 	Data:	4e442049 6d616765 00010016 00170000 
 	Data:	0228d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
@@ -2012,87 +1343,688 @@
 	Data:	0000
 )
 
-(RectD.145
+(Tool.99
+	InternalName:	"DeleteVertex"
+	Help:	"Delete one or more vertices by drawing a box around it//"
+	Icon:	100
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.DeleteVertex"
+	Click:	"Editor.DeleteVertex"
+)
+
+(AVIcon.100
+	Name:	"delete_vertex.bmp"
+	Data:	4e442049 6d616765 00010012 00100000 
+	Data:	0140d0c0 c0c0c0c0 c0c0c0c0 c0c0c0c0 
+	Data:	c0c0c0d0 0000d0c0 c0c0c0c0 c0c0c0c0 
+	Data:	c0c0c0c0 c0c0c0d0 0000d0c0 c0c0c0c0 
+	Data:	c0c0c0c0 c0c0c0c0 36c0c0d0 0000d0c0 
+	Data:	c0c036c0 c0c0c0c0 c0c0c0c0 c0c0c0d0 
+	Data:	0000d0c0 c0363636 c0c0c0c0 c0c0c036 
+	Data:	c0c0c0d0 0000d0c0 c0363636 c0c0c0c0 
+	Data:	c0c036c0 c0c0c0d0 0000d0c0 c0c03636 
+	Data:	36c0c0c0 c03636c0 c0c0c0d0 0000d0c0 
+	Data:	c0c0c036 3636c0c0 3636c0c0 c0c0c0d0 
+	Data:	0000d0c0 c0c0c0c0 36000000 36c0c0c0 
+	Data:	c0c0c0d0 0000d0c0 c0c0c0c0 c000ff00 
+	Data:	c0c0c0c0 c0c0c0d0 0000d0c0 c0c0c0c0 
+	Data:	36000000 36c0c0c0 c0c0c0d0 0000d0c0 
+	Data:	c0c0c036 3636c0c0 36c0c0c0 c0c0c0d0 
+	Data:	0000d0c0 c0363636 36c0c0c0 c03636c0 
+	Data:	c0c0c0d0 0000d0c0 36363636 c0c0c0c0 
+	Data:	c0c03636 c0c0c0d0 0000d0c0 3636c0c0 
+	Data:	c0c0c0c0 c0c0c036 36c0c0d0 0000d0c0 
+	Data:	c0c0c0c0 c0c0c0c0 c0c0c0c0 c0c0c0d0 
+	Data:	00000000 04000000 00000101 01000202 
+	Data:	02000303 03000404 04000505 05000606 
+	Data:	06000707 07000808 08000909 09000a0a 
+	Data:	0a000b0b 0b000c0c 0c000d0d 0d000e0e 
+	Data:	0e000f0f 0f001010 10001111 11001212 
+	Data:	12001313 13001414 14001515 15001616 
+	Data:	16001717 17001818 18001919 19001a1a 
+	Data:	1a001b1b 1b001c1c 1c001d1d 1d001e1e 
+	Data:	1e001f1f 1f002020 20002121 21002222 
+	Data:	22002323 23002424 24002525 25002626 
+	Data:	26002727 27002828 28002929 29002a2a 
+	Data:	2a002b2b 2b002c2c 2c002d2d 2d002e2e 
+	Data:	2e002f2f 2f003030 30003131 31003232 
+	Data:	32003333 33003434 34003535 35003636 
+	Data:	36003737 37003838 38003939 39003a3a 
+	Data:	3a003b3b 3b003c3c 3c003d3d 3d003e3e 
+	Data:	3e003f3f 3f004040 40004141 41004242 
+	Data:	42004343 43004444 44004545 45004646 
+	Data:	46004747 47004848 48004949 49004a4a 
+	Data:	4a004b4b 4b004c4c 4c004d4d 4d004e4e 
+	Data:	4e004f4f 4f005050 50005151 51005252 
+	Data:	52005353 53005454 54005555 55005656 
+	Data:	56005757 57005858 58005959 59005a5a 
+	Data:	5a005b5b 5b005c5c 5c005d5d 5d005e5e 
+	Data:	5e005f5f 5f006060 60006161 61006262 
+	Data:	62006363 63006464 64006565 65006666 
+	Data:	66006767 67006868 68006969 69006a6a 
+	Data:	6a006b6b 6b006c6c 6c006d6d 6d006e6e 
+	Data:	6e006f6f 6f007070 70007171 71007272 
+	Data:	72007373 73007474 74007575 75007676 
+	Data:	76007777 77007878 78007979 79007a7a 
+	Data:	7a007b7b 7b007c7c 7c007d7d 7d007e7e 
+	Data:	7e007f7f 7f008080 80008181 81008282 
+	Data:	82008383 83008484 84008585 85008686 
+	Data:	86008787 87008888 88008989 89008a8a 
+	Data:	8a008b8b 8b008c8c 8c008d8d 8d008e8e 
+	Data:	8e008f8f 8f009090 90009191 91009292 
+	Data:	92009393 93009494 94009595 95009696 
+	Data:	96009797 97009898 98009999 99009a9a 
+	Data:	9a009b9b 9b009c9c 9c009d9d 9d009e9e 
+	Data:	9e009f9f 9f00a0a0 a000a1a1 a100a2a2 
+	Data:	a200a3a3 a300a4a4 a400a5a5 a500a6a6 
+	Data:	a600a7a7 a700a8a8 a800a9a9 a900aaaa 
+	Data:	aa00abab ab00acac ac00adad ad00aeae 
+	Data:	ae00afaf af00b0b0 b000b1b1 b100b2b2 
+	Data:	b200b3b3 b300b4b4 b400b5b5 b500b6b6 
+	Data:	b600b7b7 b700b8b8 b800b9b9 b900baba 
+	Data:	ba00bbbb bb00bcbc bc00bdbd bd00bebe 
+	Data:	be00bfbf bf00c0c0 c000c1c1 c100c2c2 
+	Data:	c200c3c3 c300c4c4 c400c5c5 c500c6c6 
+	Data:	c600c7c7 c700c8c8 c800c9c9 c900caca 
+	Data:	ca00cbcb cb00cccc cc00cdcd cd00cece 
+	Data:	ce00cfcf cf00d0d0 d000d1d1 d100d2d2 
+	Data:	d200d3d3 d300d4d4 d400d5d5 d500d6d6 
+	Data:	d600d7d7 d700d8d8 d800d9d9 d900dada 
+	Data:	da00dbdb db00dcdc dc00dddd dd00dede 
+	Data:	de00dfdf df00e0e0 e000e1e1 e100e2e2 
+	Data:	e200e3e3 e300e4e4 e400e5e5 e500e6e6 
+	Data:	e600e7e7 e700e8e8 e800e9e9 e900eaea 
+	Data:	ea00ebeb eb00ecec ec00eded ed00eeee 
+	Data:	ee00efef ef00f0f0 f000f1f1 f100f2f2 
+	Data:	f200f3f3 f300f4f4 f400f5f5 f500f6f6 
+	Data:	f600f7f7 f700f8f8 f800f9f9 f900fafa 
+	Data:	fa00fbfb fb00fcfc fc00fdfd fd00fefe 
+	Data:	fe00ffff ff000002 00080007 00200001 
+	Data:	00020000 00000000 0000
+)
+
+(Tool.101
+	InternalName:	"Reshape"
+	Help:	"Reshape selected feature//"
+	Update:	"Editor.ReshapeUpdate"
+	Icon:	102
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.Reshape"
+	Click:	"Editor.ReshapeTool"
+)
+
+(AVIcon.102
+	Name:	"reshape.bmp"
+	Data:	4e442049 6d616765 00010012 00110000 
+	Data:	0154f5f5 f5f5f5f5 f5f5f5f5 f5f5f5f5 
+	Data:	f5f5f5f5 0000f540 40404040 40404040 
+	Data:	f5f5f5f5 f5f5f5f5 0000f540 eaeaeaea 
+	Data:	eaeaea40 f5f5f5f5 f5f5f5f5 0000f540 
+	Data:	eaea5c5c 5ceaeaf5 f5f55c5c 5cf5f5f5 
+	Data:	0000f540 eaea5c00 5c5c5c5c 5c5c5c00 
+	Data:	5cf5f5f5 0000f540 eaea5c5c 5cf5eaf5 
+	Data:	f5f55c5c 5cf5f5f5 0000f540 eaeaea5c 
+	Data:	f5eaf540 f5f5f5f5 f5f5f5f5 0000f540 
+	Data:	eaeaea5c eaf5ea40 f5f5f5f5 f5f5f5f5 
+	Data:	0000f540 eaeaea5c f5eaf5f5 f5f5f5f5 
+	Data:	f5f5f5f5 0000f540 eaeaea5c eaf5ea40 
+	Data:	f5f5f500 f5f5f5f5 0000f540 eaeaea5c 
+	Data:	f5eaf540 f5f5ff00 fff5f5f5 0000f540 
+	Data:	eaea3636 36f5eaf5 f5ffc9c9 c9fff5f5 
+	Data:	0000f540 eaea361b 365c5c5c 0000c900 
+	Data:	c90000f5 0000f540 eaea3636 36eaeaf5 
+	Data:	f5ffc9c9 c9fff5f5 0000f540 eaeaeaea 
+	Data:	eaeaea40 f5f5ff00 fff5f5f5 0000f540 
+	Data:	40404040 40404040 f5f5f500 f5f5f5f5 
+	Data:	0000f5f5 f5f5f5f5 f5f5f5f5 f5f5f5f5 
+	Data:	f5f5f5f5 00000000 04000000 00000101 
+	Data:	01000202 02000303 03000404 04000505 
+	Data:	05000606 06000707 07000808 08000909 
+	Data:	09000a0a 0a000b0b 0b000c0c 0c000d0d 
+	Data:	0d000e0e 0e000f0f 0f001010 10001111 
+	Data:	11001212 12001313 13001414 14001515 
+	Data:	15001616 16001717 17001818 18001919 
+	Data:	19001a1a 1a001b1b 1b001c1c 1c001d1d 
+	Data:	1d001e1e 1e001f1f 1f002020 20002121 
+	Data:	21002222 22002323 23002424 24002525 
+	Data:	25002626 26002727 27002828 28002929 
+	Data:	29002a2a 2a002b2b 2b002c2c 2c002d2d 
+	Data:	2d002e2e 2e002f2f 2f003030 30003131 
+	Data:	31003232 32003333 33003434 34003535 
+	Data:	35003636 36003737 37003838 38003939 
+	Data:	39003a3a 3a003b3b 3b003c3c 3c003d3d 
+	Data:	3d003e3e 3e003f3f 3f004040 40004141 
+	Data:	41004242 42004343 43004444 44004545 
+	Data:	45004646 46004747 47004848 48004949 
+	Data:	49004a4a 4a004b4b 4b004c4c 4c004d4d 
+	Data:	4d004e4e 4e004f4f 4f005050 50005151 
+	Data:	51005252 52005353 53005454 54005555 
+	Data:	55005656 56005757 57005858 58005959 
+	Data:	59005a5a 5a005b5b 5b005c5c 5c005d5d 
+	Data:	5d005e5e 5e005f5f 5f006060 60006161 
+	Data:	61006262 62006363 63006464 64006565 
+	Data:	65006666 66006767 67006868 68006969 
+	Data:	69006a6a 6a006b6b 6b006c6c 6c006d6d 
+	Data:	6d006e6e 6e006f6f 6f007070 70007171 
+	Data:	71007272 72007373 73007474 74007575 
+	Data:	75007676 76007777 77007878 78007979 
+	Data:	79007a7a 7a007b7b 7b007c7c 7c007d7d 
+	Data:	7d007e7e 7e007f7f 7f008080 80008181 
+	Data:	81008282 82008383 83008484 84008585 
+	Data:	85008686 86008787 87008888 88008989 
+	Data:	89008a8a 8a008b8b 8b008c8c 8c008d8d 
+	Data:	8d008e8e 8e008f8f 8f009090 90009191 
+	Data:	91009292 92009393 93009494 94009595 
+	Data:	95009696 96009797 97009898 98009999 
+	Data:	99009a9a 9a009b9b 9b009c9c 9c009d9d 
+	Data:	9d009e9e 9e009f9f 9f00a0a0 a000a1a1 
+	Data:	a100a2a2 a200a3a3 a300a4a4 a400a5a5 
+	Data:	a500a6a6 a600a7a7 a700a8a8 a800a9a9 
+	Data:	a900aaaa aa00abab ab00acac ac00adad 
+	Data:	ad00aeae ae00afaf af00b0b0 b000b1b1 
+	Data:	b100b2b2 b200b3b3 b300b4b4 b400b5b5 
+	Data:	b500b6b6 b600b7b7 b700b8b8 b800b9b9 
+	Data:	b900baba ba00bbbb bb00bcbc bc00bdbd 
+	Data:	bd00bebe be00bfbf bf00c0c0 c000c1c1 
+	Data:	c100c2c2 c200c3c3 c300c4c4 c400c5c5 
+	Data:	c500c6c6 c600c7c7 c700c8c8 c800c9c9 
+	Data:	c900caca ca00cbcb cb00cccc cc00cdcd 
+	Data:	cd00cece ce00cfcf cf00d0d0 d000d1d1 
+	Data:	d100d2d2 d200d3d3 d300d4d4 d400d5d5 
+	Data:	d500d6d6 d600d7d7 d700d8d8 d800d9d9 
+	Data:	d900dada da00dbdb db00dcdc dc00dddd 
+	Data:	dd00dede de00dfdf df00e0e0 e000e1e1 
+	Data:	e100e2e2 e200e3e3 e300e4e4 e400e5e5 
+	Data:	e500e6e6 e600e7e7 e700e8e8 e800e9e9 
+	Data:	e900eaea ea00ebeb eb00ecec ec00eded 
+	Data:	ed00eeee ee00efef ef00f0f0 f000f1f1 
+	Data:	f100f2f2 f200f3f3 f300f4f4 f400f5f5 
+	Data:	f500f6f6 f600f7f7 f700f8f8 f800f9f9 
+	Data:	f900fafa fa00fbfb fb00fcfc fc00fdfd 
+	Data:	fd00fefe fe00ffff ff000002 00080007 
+	Data:	00200001 00020000 00000000 0000
+)
+
+(Tool.103
+	InternalName:	"AutoComplete"
+	Help:	"Autocomplete polygon//"
+	Update:	"Editor.AutoCompleteUpdate"
+	Icon:	104
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.AutoComplete"
+	Click:	"Editor.DisplayMarkerPanel"
+)
+
+(AVIcon.104
+	Name:	"AutoComplete"
+	Res:	"Icons.AutoComplete"
+
+)
+
+(Tool.105
+	InternalName:	"CutPoly"
+	Help:	"Cut selected polygon//"
+	Update:	"Editor.CutPolyUpdate"
+	Icon:	106
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.CutPoly"
+)
+
+(AVIcon.106
+	Name:	"SplitPoly"
+	Res:	"Icons.SplitPoly"
+
+)
+
+(Tool.107
+	InternalName:	"Text"
+	Help:	"Add horizontal text//"
+	HelpTopic:	"Text_tool"
+	Update:	"Editor.TextToolUpdate"
+	Icon:	108
+	Cursor:	"Cursors.Text"
+	Apply:	"Editor.TextTool"
+	Click:	"Editor.DisplayFontPanel"
+)
+
+(AVIcon.108
+	Name:	"Text"
+	Res:	"Icons.Text"
+
+)
+
+(Tool.109
+	InternalName:	"SplineText"
+	Help:	"Add text that is aligned to a splined baseline//"
+	HelpTopic:	"Text_tool"
+	Update:	"Editor.TextToolUpdate"
+	Icon:	110
+	Cursor:	"Cursors.Bullseye"
+	Apply:	"Editor.TextToolSpline"
+)
+
+(AVIcon.110
+	Name:	"TextAligned"
+	Res:	"Icons.TextAligned"
+
+)
+
+(Butn.111
+	InternalName:	"SetDefaultValues"
+	Help:	"Set Default Values//"
+	HelpTopic:	" "
+	Icon:	112
+	Click:	"Editor.SetDefaultValues"
+)
+
+(AVIcon.112
+	Name:	"D"
+	Res:	"Icons.D"
+
+)
+
+(Butn.113
+	InternalName:	"HaloText"
+	Help:	"Draw halo around text//"
+	HelpTopic:	" "
+	Icon:	114
+	Click:	"Editor.TextHalo"
+)
+
+(AVIcon.114
+	Name:	"halotext.bmp"
+	Data:	4e442049 6d616765 00010014 00110000 
+	Data:	0154d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0ffff 
+	Data:	ffffd0d0 d0d0ffff ffffd0d0 d0d0d0d0 
+	Data:	d0d0ff00 00ffd0d0 d0d0ff00 00ffd0d0 
+	Data:	d0d0d0d0 d0d0ff00 00ffd0d0 d0d0ff00 
+	Data:	00ffd0d0 d0d0d0d0 d0d0ff00 00ffd0d0 
+	Data:	d0d0ff00 00ffd0d0 d0d0d0d0 d0d0ff00 
+	Data:	00ffd0d0 d0d0ff00 00ffd0d0 d0d0d0d0 
+	Data:	d0d0ff00 00ffffff ffffff00 00ffd0d0 
+	Data:	d0d0d0d0 d0d0ff00 00000000 00000000 
+	Data:	00ffd0d0 d0d0d0d0 d0d0ff00 00000000 
+	Data:	00000000 00ffd0d0 d0d0d0d0 d0d0ff00 
+	Data:	00ffffff ffffff00 00ffd0d0 d0d0d0d0 
+	Data:	d0d0ff00 00ffd0d0 d0d0ff00 00ffd0d0 
+	Data:	d0d0d0d0 d0d0ff00 00ffd0d0 d0d0ff00 
+	Data:	00ffd0d0 d0d0d0d0 d0d0ff00 00ffd0d0 
+	Data:	d0d0ff00 00ffd0d0 d0d0d0d0 d0d0ff00 
+	Data:	00ffd0d0 d0d0ff00 00ffd0d0 d0d0d0d0 
+	Data:	d0d0ffff ffffd0d0 d0d0ffff ffffd0d0 
+	Data:	d0d0d0d0 d0d0d0d0 d0d0d0d0 d0d0d0d0 
+	Data:	d0d0d0d0 d0d00000 04000000 00000101 
+	Data:	01000202 02000303 03000404 04000505 
+	Data:	05000606 06000707 07000808 08000909 
+	Data:	09000a0a 0a000b0b 0b000c0c 0c000d0d 
+	Data:	0d000e0e 0e000f0f 0f001010 10001111 
+	Data:	11001212 12001313 13001414 14001515 
+	Data:	15001616 16001717 17001818 18001919 
+	Data:	19001a1a 1a001b1b 1b001c1c 1c001d1d 
+	Data:	1d001e1e 1e001f1f 1f002020 20002121 
+	Data:	21002222 22002323 23002424 24002525 
+	Data:	25002626 26002727 27002828 28002929 
+	Data:	29002a2a 2a002b2b 2b002c2c 2c002d2d 
+	Data:	2d002e2e 2e002f2f 2f003030 30003131 
+	Data:	31003232 32003333 33003434 34003535 
+	Data:	35003636 36003737 37003838 38003939 
+	Data:	39003a3a 3a003b3b 3b003c3c 3c003d3d 
+	Data:	3d003e3e 3e003f3f 3f004040 40004141 
+	Data:	41004242 42004343 43004444 44004545 
+	Data:	45004646 46004747 47004848 48004949 
+	Data:	49004a4a 4a004b4b 4b004c4c 4c004d4d 
+	Data:	4d004e4e 4e004f4f 4f005050 50005151 
+	Data:	51005252 52005353 53005454 54005555 
+	Data:	55005656 56005757 57005858 58005959 
+	Data:	59005a5a 5a005b5b 5b005c5c 5c005d5d 
+	Data:	5d005e5e 5e005f5f 5f006060 60006161 
+	Data:	61006262 62006363 63006464 64006565 
+	Data:	65006666 66006767 67006868 68006969 
+	Data:	69006a6a 6a006b6b 6b006c6c 6c006d6d 
+	Data:	6d006e6e 6e006f6f 6f007070 70007171 
+	Data:	71007272 72007373 73007474 74007575 
+	Data:	75007676 76007777 77007878 78007979 
+	Data:	79007a7a 7a007b7b 7b007c7c 7c007d7d 
+	Data:	7d007e7e 7e007f7f 7f008080 80008181 
+	Data:	81008282 82008383 83008484 84008585 
+	Data:	85008686 86008787 87008888 88008989 
+	Data:	89008a8a 8a008b8b 8b008c8c 8c008d8d 
+	Data:	8d008e8e 8e008f8f 8f009090 90009191 
+	Data:	91009292 92009393 93009494 94009595 
+	Data:	95009696 96009797 97009898 98009999 
+	Data:	99009a9a 9a009b9b 9b009c9c 9c009d9d 
+	Data:	9d009e9e 9e009f9f 9f00a0a0 a000a1a1 
+	Data:	a100a2a2 a200a3a3 a300a4a4 a400a5a5 
+	Data:	a500a6a6 a600a7a7 a700a8a8 a800a9a9 
+	Data:	a900aaaa aa00abab ab00acac ac00adad 
+	Data:	ad00aeae ae00afaf af00b0b0 b000b1b1 
+	Data:	b100b2b2 b200b3b3 b300b4b4 b400b5b5 
+	Data:	b500b6b6 b600b7b7 b700b8b8 b800b9b9 
+	Data:	b900baba ba00bbbb bb00bcbc bc00bdbd 
+	Data:	bd00bebe be00bfbf bf00c0c0 c000c1c1 
+	Data:	c100c2c2 c200c3c3 c300c4c4 c400c5c5 
+	Data:	c500c6c6 c600c7c7 c700c8c8 c800c9c9 
+	Data:	c900caca ca00cbcb cb00cccc cc00cdcd 
+	Data:	cd00cece ce00cfcf cf00d0d0 d000d1d1 
+	Data:	d100d2d2 d200d3d3 d300d4d4 d400d5d5 
+	Data:	d500d6d6 d600d7d7 d700d8d8 d800d9d9 
+	Data:	d900dada da00dbdb db00dcdc dc00dddd 
+	Data:	dd00dede de00dfdf df00e0e0 e000e1e1 
+	Data:	e100e2e2 e200e3e3 e300e4e4 e400e5e5 
+	Data:	e500e6e6 e600e7e7 e700e8e8 e800e9e9 
+	Data:	e900eaea ea00ebeb eb00ecec ec00eded 
+	Data:	ed00eeee ee00efef ef00f0f0 f000f1f1 
+	Data:	f100f2f2 f200f3f3 f300f4f4 f400f5f5 
+	Data:	f500f6f6 f600f7f7 f700f8f8 f800f9f9 
+	Data:	f900fafa fa00fbfb fb00fcfc fc00fdfd 
+	Data:	fd00fefe fe00ffff ff000002 00080007 
+	Data:	00200001 00020000 00000000 0000
+)
+
+(Tool.115
+	InternalName:	"Rectangle Tool"
+	Help:	"Create rectangle//"
+	Update:	"Editor.PolyToolUpdate"
+	Icon:	116
+	Cursor:	"Cursors.CrossHair"
+	Apply:	"Editor.RectTool"
+	Click:	"Editor.DisplayFillPanel"
+)
+
+(AVIcon.116
+	Name:	"Rect"
+	Res:	"Icons.Rect"
+
+)
+
+(Butn.117
+	InternalName:	"Rotate"
+	Help:	"Rotate selected feature//"
+	Update:	"Editor.RotateUpdate"
+	Icon:	118
+	Click:	"Editor.Rotate"
+)
+
+(AVIcon.118
+	Name:	"rotate.bmp"
+	Data:	4e442049 6d616765 00010014 00110000 
+	Data:	03fcc8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d40000 00000000 
+	Data:	00000000 00000000 00c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d4c8d0 d4c8d0d4 
+	Data:	00000000 0000ffff ffffffff ffffffff 
+	Data:	ffffffff ff000000 000000c8 d0d4c8d0 
+	Data:	d4c8d0d4 000000c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4000000 ffffffff 
+	Data:	ffffffff ff000000 00000000 0000ffff 
+	Data:	ffffffff ffffff00 0000c8d0 d4000000 
+	Data:	000000c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d40000 00ffffff ffffff00 00000000 
+	Data:	00c8d0d4 c8d0d4c8 d0d40000 00000000 
+	Data:	ffffffff ffff0000 00ffffff 000000c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d400 0000ffff 
+	Data:	ffffffff 000000c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 000000ff 
+	Data:	ffffffff ffffffff 000000c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d400 0000ffff ff000000 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 000000ff ffffffff 
+	Data:	ffffffff 000000c8 d0d4c8d0 d4c8d0d4 
+	Data:	000000ff ffffffff ff000000 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4000000 ffffffff ffffffff ffffffff 
+	Data:	000000c8 d0d4c8d0 d4c8d0d4 000000ff 
+	Data:	ffff0000 00c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d40000 00000000 
+	Data:	00000000 00000000 00000000 000000c8 
+	Data:	d0d4c8d0 d4c8d0d4 000000ff ffff0000 
+	Data:	00c8d0d4 c8d0d4c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 000000ff ffff0000 00c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d40000 
+	Data:	00000000 000000c8 d0d4c8d0 d4c8d0d4 
+	Data:	000000ff ffffffff ff000000 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d400 0000ffff ffffffff 
+	Data:	000000c8 d0d4c8d0 d4c8d0d4 c8d0d400 
+	Data:	0000ffff ff000000 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d400 0000ffff ff000000 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d400 0000ffff 
+	Data:	ffffffff 000000c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 000000ff 
+	Data:	ffffffff ff000000 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d40000 00ffffff 
+	Data:	ffffff00 00000000 00c8d0d4 c8d0d4c8 
+	Data:	d0d40000 00000000 ffffffff ffff0000 
+	Data:	00c8d0d4 c8d0d4c8 d0d4c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4000000 ffffffff 
+	Data:	ffffffff ff000000 00000000 0000ffff 
+	Data:	ffffffff ffffff00 0000c8d0 d4c8d0d4 
+	Data:	c8d0d4c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 00000000 0000ffff 
+	Data:	ffffffff ffffffff ffffffff ff000000 
+	Data:	000000c8 d0d4c8d0 d4c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d4c8d0 
+	Data:	d4c8d0d4 c8d0d4c8 d0d40000 00000000 
+	Data:	00000000 00000000 00c8d0d4 c8d0d4c8 
+	Data:	d0d4c8d0 d4c8d0d4 c8d0d4c8 d0d40000 
+	Data:	00000001 00180007 00200001 00020000 
+	Data:	00000000 0000
+)
+
+(RectD.119
 	Left:	32.00000000000000
 	Top:	30.00000000000000
 	Right:	56.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.146
+(RectD.120
 	Left:	112.00000000000000
 	Top:	30.00000000000000
 	Right:	136.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.147
+(RectD.121
+	Left:	583.00000000000000
+	Top:	30.00000000000000
+	Right:	607.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.122
+	Left:	467.00000000000000
+	Top:	30.00000000000000
+	Right:	491.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.123
+	Left:	792.00000000000000
+	Top:	30.00000000000000
+	Right:	835.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.124
 	Left:	58.00000000000000
 	Top:	30.00000000000000
 	Right:	82.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.148
+(RectD.125
 	Left:	85.00000000000000
 	Top:	30.00000000000000
 	Right:	109.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.149
+(RectD.126
 	Left:	139.00000000000000
 	Top:	30.00000000000000
 	Right:	163.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.150
+(RectD.127
+	Left:	493.00000000000000
+	Top:	30.00000000000000
+	Right:	517.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.128
+	Left:	175.00000000000000
+	Top:	30.00000000000000
+	Right:	199.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.129
+	Left:	240.00000000000000
+	Top:	30.00000000000000
+	Right:	264.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.130
+	Left:	385.00000000000000
+	Top:	30.00000000000000
+	Right:	409.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.131
+	Left:	266.00000000000000
+	Top:	30.00000000000000
+	Right:	290.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.132
+	Left:	331.00000000000000
+	Top:	30.00000000000000
+	Right:	355.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.133
+	Left:	293.00000000000000
+	Top:	30.00000000000000
+	Right:	317.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.134
+	Left:	203.00000000000000
+	Top:	30.00000000000000
+	Right:	227.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.135
+	Left:	733.00000000000000
+	Top:	30.00000000000000
+	Right:	757.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.136
 	Left:	6.00000000000000
 	Top:	30.00000000000000
 	Right:	30.00000000000000
 	Bottom:	6.00000000000000
 )
 
-(RectD.151
-	Left:	732.00000000000000
-	Top:	39.00000000000000
-	Right:	844.00000000000000
-	Bottom:	3.00000000000000
+(RectD.137
+	Left:	529.00000000000000
+	Top:	30.00000000000000
+	Right:	553.00000000000000
+	Bottom:	6.00000000000000
 )
 
-(RectD.152
-	Left:	643.00000000000000
-	Top:	39.00000000000000
-	Right:	731.00000000000000
-	Bottom:	3.00000000000000
+(RectD.138
+	Left:	556.00000000000000
+	Top:	30.00000000000000
+	Right:	580.00000000000000
+	Bottom:	6.00000000000000
 )
 
-(RectD.153
-	Left:	474.00000000000000
-	Top:	39.00000000000000
-	Right:	642.00000000000000
-	Bottom:	3.00000000000000
+(RectD.139
+	Left:	412.00000000000000
+	Top:	30.00000000000000
+	Right:	436.00000000000000
+	Bottom:	6.00000000000000
 )
 
-(RectD.154
-	Left:	173.00000000000000
-	Top:	39.00000000000000
-	Right:	473.00000000000000
-	Bottom:	3.00000000000000
+(RectD.140
+	Left:	439.00000000000000
+	Top:	30.00000000000000
+	Right:	463.00000000000000
+	Bottom:	6.00000000000000
 )
 
-(RectD.155
+(RectD.141
+	Left:	644.00000000000000
+	Top:	30.00000000000000
+	Right:	668.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.142
+	Left:	671.00000000000000
+	Top:	30.00000000000000
+	Right:	695.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.143
+	Left:	761.00000000000000
+	Top:	30.00000000000000
+	Right:	785.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.144
+	Left:	698.00000000000000
+	Top:	30.00000000000000
+	Right:	722.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.145
+	Left:	358.00000000000000
+	Top:	30.00000000000000
+	Right:	382.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.146
+	Left:	609.00000000000000
+	Top:	30.00000000000000
+	Right:	633.00000000000000
+	Bottom:	6.00000000000000
+)
+
+(RectD.147
 	Left:	4.00000000000000
-	Top:	40.00000000000000
-	Right:	172.00000000000000
+	Top:	38.00000000000000
+	Right:	845.00000000000000
 	Bottom:	3.00000000000000
 )
 
-(Nil.156
+(Nil.148
 )
 
-(Script.157
+(Script.149
 	Name:	"__Editor.EditTableApply"
 	SourceCode:	"' NAME: mm_viewEditTableApply\n' HERKUNFT: Mathias Hofschen, veraendert\n' EINBINDUNG MTOOLS: Tool\n' HILFE: Attr-Tab des aktivierten Themas per Klick ins View bearbeiten//\n\n'***************************************************************\n\n'' CTRL-KLICK Info (erscheint, wenn das Skript bei gedrueckter Strg- bzw. Ctrl-Taste aufgerufen wird)\n' \n'if (System.IsControlKeyDown) then\n'\n'  message =\n'    \" \"+nl+\n'    \n'    \"SCRIPTNAME: mm_viewEditTableApply \"+nl+nl+\n'  \n'    \"ORIGIN: Matthias Hofschen, modified \"+nl+n
 l+\n'    \n'    \"Selects active theme's features by pointing or dragging and opens a box to edit the selected features in the feature table. \"+\n'    \"You have not to open the FTab or set the theme or the table into editing mode. \"+nl+nl+\n'    \n'    \"The table must not have more than 20 Fields (because of the limitation of AV's MultiInput box). \"+nl+nl+\n'    \n'    \"The changes will be assigned to all selected features \"+nl\n'  \n'  msgbox.report(message,\"INFO: Edit Table Apply\")\n'  \n'  return nil\n'end\n\n\n'-------
@@ -2108,59 +2040,55 @@ eFTab.BeginTransaction\nfor each fl in theFlist 'theFtab.getfields\n  f = theFta
 heFtab.findField(\"ID\"))\n'theView.Label(thePoint)\n\n\n\n"
 )
 
-(Script.158
+(Script.150
 	Name:	"__Editor.EditTableApplyInfo"
 	SourceCode:	"' CTRL-KLICK Info (erscheint, wenn das Skript bei gedrueckter Strg- bzw. Ctrl-Taste aufgerufen wird)\n \nif (System.IsControlKeyDown) then\n\n  message =\n    \" \"+nl+\n    \n    \"SCRIPTNAME: mm_viewEditTableApply\"+nl+nl+\n  \n    \"ORIGIN: Matthias Hofschen, modified \"+nl+nl+\n    \n    \"Selects active theme's features by pointing or dragging and opens a box to edit the selected features in the feature table. \"+\n    \"You have not to open the FTab or set the theme or the table into editing mode. \"+nl+nl+\n    \n    \"The t
 able must not have more than 20 Fields (because of the limitation of AV's MultiInput box). \"+nl+nl+\n    \n    \"The changes will be assigned to all selected features \"+nl\n  \n  msgbox.report(message,\"INFO: Edit Table Apply\")\n  \n  return nil\nend\n"
 )
 
-(Script.159
+(Script.151
 	Name:	"__Editor.TabularThemesUpdate"
 	SourceCode:	"' update script for Editor.EditTableApply\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\nfor each t in theView.GetActiveThemes\n  if (t.HasTable) then\n    SELF.SetEnabled(TRUE)\n    return nil\n  end\nend\nSELF.SetEnabled(FALSE)\n"
 )
 
-(Script.160
+(Script.152
 	Name:	"Editor.AutoComplete"
-	SourceCode:	"' uses the built-in function View.AutoCompleteTool\n\n' ################################\n' REV: 09.01.2026, A. Boehlen\n' - Check theme\n' - Set timestamp for new features\n' ################################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polygon\", \"false\", \"0\"}) = nil) then\n  return nil\nend\n\ntheFTab = theTheme.GetFTab\n\n'# create string field DateOfCr if it doesn't exist\nif (theFTab.FindField(\"DateOfCr\") = nil) then\n  av.Run(\"Editor.
-SubCreateField\", {theFTab, \"DateOfCr\", \"16\"})\nend\n\nl = theView.ReturnUserPolyLine\nif (l.IsNull) then\n  return nil\nelse\n  theFtab.BeginTransaction\n  theShpFld = theFTab.FindField(\"Shape\")\n  theDate = theTheme.GetFTab.FindField(\"DateOfCr\")\n\n  theTheme.AutoComplete(l)\n\n  '# set timestamp as string for the selected features\n  theBitmap = theFTab.getSelection \n\n  for each rec in theBitmap\n    theVal = theFTab.ReturnValue (theShpFld, rec)\n    if ((theVal.asString) = \"Polyline: Null\") then\n      theBitmap.set(rec)
-\n    else\n      timestampStr = av.Run(\"Editor.SubCreateDate\", {})\n      theFTab.SetValue(theDate,rec,timestampStr)\n\n      theBitmap.clear(rec)\n    end\n  end\n\n  theFtab.EndTransaction  \n  av.GetProject.SetModified(true)\nend\n\n'# refresh view\ntheTheme.Invalidate (TRUE)\ntheView.InvalidateTOC( nil )\ntheView.Invalidate\nSystem.RefreshWindows\n\n"
+	SourceCode:	"' uses the built-in function View.AutoCompleteTool\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polygon\", \"false\", \"0\"}) = nil) then\n  return nil\nend\n\nl = theView.ReturnUserPolyLine\nif (l.IsNull) then\n  return nil\nelse\n  theTheme.GetFtab.BeginTransaction\n  theTheme.AutoComplete(l)\n  theTheme.GetFtab.EndTransaction  \n  av.GetProject.SetModified(true)\nend\n\n"
 )
 
-(Script.161
+(Script.153
 	Name:	"Editor.AutoCompleteUpdate"
 	SourceCode:	"' update script for the built-in function View.AutoCompleteTool\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (theTheme = nil) then\n  SELF.SetEnabled(False) \nelse\n  theType = theTheme.GetFTab.FindField(\"Shape\").GetType\n  SELF.SetEnabled(theType = #FIELD_SHAPEPOLY)\nend  \n"
 )
 
-(Script.162
+(Script.154
 	Name:	"Editor.CircleTool"
-	SourceCode:	"' uses the built-in script View.CircleTool\n\n' ################################\n' REV: 09.01.2026, A. Boehlen\n' - Check theme\n' - Set timestamp for new features\n' ################################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polygon\", \"false\", \"0\"}) = nil) then\n  return nil\nend\n\ntheFTab = theTheme.GetFTab\n\n'# create string field DateOfCr if it doesn't exist\nif (theFTab.FindField(\"DateOfCr\") = nil) then\n  av.Run(\"Editor.SubCreat
-eField\", {theFTab, \"DateOfCr\", \"16\"})\nend\n\nc = theView.ReturnUserCircle\nif (c.IsNull) then\n  return nil\nelse\n  theTheme.GetFTab.BeginTransaction\n  p = c.AsPolygon\n  thePrj = theView.GetProjection\n  if (thePrj.IsNull.Not) then\n    p = p.ReturnUnprojected(thePrj)\n  end\n  theField = theFTab.FindField(\"Shape\")\n  theDate = theTheme.GetFTab.FindField(\"DateOfCr\")\n  rec = theFTab.AddRecord\n  theFTab.SetValue(theField, rec, p)\n  theFTab.GetSelection.ClearAll\n  theFTab.GetSelection.Set(rec)\n  theFTab.UpdateSelection\n
-  \n  '# set timestamp as string\n  timestampStr = av.Run(\"Editor.SubCreateDate\", {})\n  theFTab.SetValue(theDate,rec,timestampStr)\n\n  theFTab.EndTransaction\n  av.GetProject.SetModified(true)\nend\n"
+	SourceCode:	"' uses the built-in script View.CircleTool\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polygon\", \"false\", \"0\"}) = nil) then\n  return nil\nend\n\nc = theView.ReturnUserCircle\nif (c.IsNull) then\n  return nil\nelse\n  theTheme.GetFTab.BeginTransaction\n  p = c.AsPolygon\n  thePrj = theView.GetProjection\n  if (thePrj.IsNull.Not) then\n    p = p.ReturnUnprojected(thePrj)\n  end\n  theField = theThem
+e.GetFTab.FindField(\"Shape\")\n  rec = theTheme.GetFTab.AddRecord\n  theTheme.GetFTab.SetValue(theField, rec, p)\n  theTheme.GetFTab.GetSelection.ClearAll\n  theTheme.GetFTab.GetSelection.Set(rec)\n  theTheme.GetFTab.UpdateSelection\n  theTheme.GetFTab.EndTransaction\n  av.GetProject.SetModified(true)\nend\n"
 )
 
-(Script.163
+(Script.155
 	Name:	"Editor.close"
 	SourceCode:	"' closes the editor toolbar\n' 20.12.2021, A. Boehlen\n'###############################\n\nself.getdialog.close"
 )
 
-(Script.164
+(Script.156
 	Name:	"Editor.CutHole"
 	SourceCode:	"' uses the built-in function View.CombineGraphics\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Info(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polygon\", \"true\", \"2\"}) = nil) then\n  return nil\nend\n\ntheTheme.GetFtab.BeginTransaction\ntheTheme.MergeSelected\ntheTheme.GetFTab.EndTransaction\ntheTheme.Invalidate( true )\n \n"
 )
 
-(Script.165
+(Script.157
 	Name:	"Editor.CutPoly"
-	SourceCode:	"' uses the built-in function View.SplitTool\n\n' ##########################################\n' REV: 09.01.2026, A. Boehlen\n' - Set timestamp for new features\n' - clear selected features and refresh view\n' ##########################################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polygon\", \"true\", \"1\"}) = nil) then\n  return nil\nend\n\ntheFTab = theTheme.GetFTab\n\nl = theView.ReturnUserPolyLine\nif (l.IsNull) then\n  return nil\nelse\n  theT
-heme.GetFtab.BeginTransaction\n  theField = theTheme.GetFTab.FindField(\"Shape\")\n  theDate = theFTab.FindField(\"DateOfCr\")\n  theType = theField.GetType\n  if ((theType = #FIELD_SHAPEPOLY) or (theType = #FIELD_SHAPELINE)) then\n    theTheme.Split(l)\n  end\n  \n  '# set timestamp as string for the selected features\n  theBitmap = theFTab.getSelection \n\n  i = 0\n  for each rec in theBitmap\n    theVal = theFTab.ReturnValue (theField, rec)\n    if ((theVal.asString) = \"Polyline: Null\") then\n      theBitmap.set(rec)\n    e
-lse\n      timestampStr = av.Run(\"Editor.SubCreateDate\", {})\n      theFTab.SetValue(theDate,rec,timestampStr)\n\n      theBitmap.clear(rec)\n    end\n  end\n  \n  theTheme.GetFtab.EndTransaction \n  av.GetProject.SetModified(true)\nend\n\n'# clear selection and refresh view\ntheFTab.BeginTransaction\ntheTheme.ClearSelected\ntheFTab.EndTransaction\ntheTheme.Invalidate (TRUE)\ntheView.InvalidateTOC( nil )\ntheView.Invalidate\nSystem.RefreshWindows\n\n"
+	SourceCode:	"' uses the built-in function View.SplitTool\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polygon\", \"true\", \"1\"}) = nil) then\n  return nil\nend\n\nl = theView.ReturnUserPolyLine\nif (l.IsNull) then\n  return nil\nelse\n  theTheme.GetFtab.BeginTransaction\n  theField = theTheme.GetFTab.FindField(\"Shape\")\n  theType = theField.GetType\n  if ((theType = #FIELD_SHAPEPOLY) or (theType = #FIELD_SHAPELI
+NE)) then\n    theTheme.Split(l)\n  end\n  theTheme.GetFtab.EndTransaction \n  av.GetProject.SetModified(true)\nend\n\n"
 )
 
-(Script.166
+(Script.158
 	Name:	"Editor.CutPolyUpdate"
 	SourceCode:	"' update script for the built-in function View.SplitTool\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (theTheme = nil) then\n  SELF.SetEnabled(False) \nelse\n  theType = theTheme.GetFTab.FindField(\"Shape\").GetType\n  SELF.SetEnabled(theType = #FIELD_SHAPEPOLY)\nend  "
 )
 
-(Script.167
+(Script.159
 	Name:	"Editor.DeleteVertex"
 	SourceCode:	"' hacked from http://webapp1.dlib.indiana.edu/virtual_disk_library/index.cgi/4288321/FID3756/PROGRAM/ETC/AVEDIT.APR\n' 18.11.2015 A. Boehlen\n' REV: 20.12.2021\n'###############################\n\ntheView  = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Info(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polyline-or-polygon\", \"true\", \"1\"}) = nil) then\n  return nil\nend\n\nrectUser  = theView.GetDisplay.Retur
 nUserRect\nif (rectUser = NIL) then\n  av.ShowMsg(\"NIL rectangle returned.\") \n  exit \nend\n\nfldShape = theTheme.GetFTab.FindField(\"shape\")\nr = theTheme.GetFTab.GetSelection.GetNextSet(-1)\nshpSelected = theTheme.GetFTab.ReturnValue(fldShape, r)\n\n' Currently multi-part features are not supported, only the first \n' list of points in the list of lists of points for MultiPoint \n' objects is considered...\n'\nif (shpSelected.AsList.Count > 1) then\n  MsgBox.Error(\n    \"Unable to delete vertex of multi-part shape at rec
@@ -2170,145 +2098,134 @@ ord\"++(r+1).AsString,\n    \"Editor.DeleteVertex\")\n  exit\nend\nlstVertex = s
 d}},\n    {\"Editor.RedoVertex\",{r,shpNew}}})\n\n  av.SetStatus(100)\n  av.ClearMsg\n  theTheme.GetFTab.SetValue(fldShape, r, shpNew)\n  theTheme.GetFTab.flush\n  theTheme.Invalidate(TRUE)\nelse\n  av.ClearStatus\n  av.ClearMsg\nend\n\n\n"
 )
 
-(Script.168
+(Script.160
 	Name:	"Editor.DisplayFillPanel"
 	SourceCode:	"if ((av.GetSymbolWin.GetPanel = #SYMBOLWIN_PANEL_COLOR).not) then\n  av.GetSymbolWin.SetPanel(#SYMBOLWIN_PANEL_FILL)\nend"
 )
 
-(Script.169
+(Script.161
 	Name:	"Editor.DisplayFontPanel"
 	SourceCode:	"' uses the built-in function SymWin.DisplayFontPanel\n' 22.01.2023, A. Boehlen\n'###############################\n\nif ((av.GetSymbolWin.GetPanel = #SYMBOLWIN_PANEL_COLOR).not) then\n  av.GetSymbolWin.SetPanel(#SYMBOLWIN_PANEL_FONT)\nend"
 )
 
-(Script.170
+(Script.162
 	Name:	"Editor.DisplayMarkerPanel"
 	SourceCode:	"' uses the built-in function SymWin.DisplayMarkerPanel\n' 15.10.2022, A. Boehlen\n'###############################\n\nif ((av.GetSymbolWin.GetPanel = #SYMBOLWIN_PANEL_COLOR).not) then\n  av.GetSymbolWin.SetPanel(#SYMBOLWIN_PANEL_MARKER)\nend"
 )
 
-(Script.171
+(Script.163
 	Name:	"Editor.EditAttributes"
 	SourceCode:	"'Author  : Georg A.Zelenin, Odessa(UKRAINE)\n'          Position:GIS programmer.  \n'          Municipality Dpt.on Land Resources and Parcels Control\n'          (tel/fax.(0482) 373 076 )\n'    \n'Script Class: Simple User Edit Interface - \"One Click Editors\". \n'Script Name:  View_CorrFeatureAttr\n'\n'Title:   Single-Click Themes Attributes Edits directly from the View.\n'    .                    \n'Topics:  Pick Up (Click) on the Feature ( Polygon,PolyLine,Point) \n'         wich Atributes row you wish to edit. Scri
 pt Tool unfolds-Open \n'         the MultiInput Box, where each attribute Field looks like \n'         editable text line.\n'         Each Input Box contains up to 20 lines (total Screen)\n'         and automatically gives new portion of the data if number of \n'         the DB fields are more then 20 (Cadastre DB e.c.t.),  \n'  \n'      For a Numeric/String Fiels only.\n'       \n'Usage: \n'      Preparation step \n'          a) Attach the compiled Script on Tool/Apply button in a View environment.\n'      Usage steps
-: \n'          1) Click on the feature, Attributes you wish to edit by this Tool.\n'          2) Makes your Edits in the Open MultiInput Box, press OK (Save Edits)or\n'             Cancel (Discard Edits.)\n\n' ###############################\n' REV: 09.01.2026, A. Boehlen\n' - The shape field will not be displayed\n' - Refresh view after closing the attribute editor\n' - Use this tool as an alternate identify tool by clicking on a non editable feature.\n'   It will then be possible to copy attribute values (not possi
-ble by the identify tool)\n'   In this case you will be informed that the theme is read-only.\n' ###############################\n\n\ntheView     = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Info(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\ntheDisplay  = theView.getDisplay\npt =          theDisplay.ReturnUserPoint\ntheThemes =   theView.getActiveThemes      \nfor each t in theThemes\n  if (t.CanSelect) then\n    t.SelectByPoint(pt,#VTAB_SELTYPE_NEW )\n  end\nend\n\ntheTheme = theView.GetActi
-veThemes.Get(0)\ntheEditTheme = theView.GetEditableTheme\n\n'numThemes=theThemes.Count \n'if (numThemes=1) then        \n'  theTheme = theThemes.get(0)\n'elseif (numThemes>1) then\n'  MsgBox.Error(\"Too many (\"+numThemes.AsString+\") Active Themes...\",\"Make Active single Editable Theme !\")\n'else\n'  exit\n'end\n\ntheScale    = theView.ReturnScale\n\ntheName     = theTheme.getName\ntheFTab     = theTheme.getFtab\ntotFields   = theFTab.getFields\n\nnf =          (totFields.count-1)\nc =           20\n\nres = nf mod c\nn = (nf - res
-) / c\nb = (n*c) + res\n         \nfor each i in 0..n \n  from = i*c\n  to   = ((i+1)*c-1)\n  if (to > nf) then\n    to = from + res\n  end\n\n  nmFields    = {}\n  valFields   = {}\n  lstFields   = {}\n\n  ' read fields and ignore Shape field\n  for each j in from..to\n    f = totFields.Get(j)\n    if (f.getName=\"Shape\") then\n      continue\n    end\n    lstFields.Add(f)\n  end\n\n  '...try aligned left fields by spaces             \n\n  maxl = 1      \n  for each f in lstFields \n    nmf =  f.getName\n    lnf =  nmf.count\n    maxl 
-= (maxl max lnf)\n  end\n\n  for each f in lstFields\n    fnm  = f.getName\n    fout = fnm\n    dspace = (maxl - fnm.count)\n    if (dspace>0 ) then\n      buff=\"\"\n      for each i in 0..dspace\n        buff = buff + 160.AsChar\n      end\n      fout = fnm + buff\n    end\n    nmFields.Add(fout)  \n  end\n\n  numSel = theFTab.getNumSelRecords \n\n  if (numSel = 0) then exit end\n  if (numSel > 1) then exit end\n\n  for each sel in theFTab.getSelection\n    for each f in lstFields\n      val = theFtab.ReturnValueString(f,sel)\n    
-  if (val=\"\") then\n        val = \" \"\n      end\n      valFields.Add(val)\n    end   \n  end\n\n  if (theEditTheme = nil) then\n    theTitle = \"READ ONLY - do not edit.\"\n  else\n    theTitle = \"\"\n  end\n  \n  valUserSettings = MsgBox.MultiInput(theTitle, \"Edit Attributes\", nmFields, valFields)\n\n  if (valUserSettings.count = 0) then\n    theTheme.ClearSelection\n    exit\n  end  \n\n  for each i in 0..(lstFields.count-1)\n    f = lstFields.get(i)\n    v = valUserSettings.get(i)\n\n    if (f.getName=\"Shape\") then\n      continue
-\n    end\n    fType = f.getType\n    aType = fType.AsString.AsTokens(\"_\").get(1)\n\n    if ((aType = \"LONG\") or (aType = \"DOUBLE\") or (aType = \"DECIMAL\") or (aType=  \"FLOAT\")) then    \n      if (v.IsNumber) then\n        val = v.AsNumber\n      end               \n    elseif (aType=\"DATE\") then\n      val = v.AsDate\n    elseif (aType=\"CHAR\") then\n      val = v\n    end\n\n    ' set values if theme is editable\n    for each sel in theFTab.getSelection\n      if (theEditTheme = nil) then\n        theTheme.ClearSelection\n  
-      exit\n      else\n        theFTab.SetValue(f,sel,val)\n      end\n    end    \n  end\nend'...if>20\n\n'# clear selection and refresh view\ntheTheme.ClearSelection\n\nfor each thm in theView.GetThemes\n  thm.Invalidate (TRUE)\nend\n\ntheView.InvalidateTOC( nil )\ntheView.Invalidate\n\nSystem.RefreshWindows\n\n"
+: \n'          1) Click on the feature, Attributes you wish to edit by this Tool.\n'          2) Makes your Edits in the Open MultiInput Box, press OK (Save Edits)or\n'             Cancel (Discard Edits.)\n\n' ###############################\n' REV: 02.01.2026, A. Boehlen\n' - The shape field will not be displayed\n' - Use this tool as an alternate identify tool by clicking on a non editable feature.\n'   It will then be possible to copy attribute values (not possible by the identify tool)\n'   In this case you will 
+be informed that the theme is read-only.\n' ###############################\n\n\ntheView     = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Info(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\ntheDisplay  = theView.getDisplay\npt =          theDisplay.ReturnUserPoint\ntheThemes =   theView.getActiveThemes      \nfor each t in theThemes\n  if (t.CanSelect) then\n    t.SelectByPoint(pt,#VTAB_SELTYPE_NEW )\n  end\nend\n\ntheTheme = theView.GetActiveThemes.Get(0)\ntheEditTheme = theView.GetEditableTh
+eme\n\n'numThemes=theThemes.Count \n'if (numThemes=1) then        \n'  theTheme = theThemes.get(0)\n'elseif (numThemes>1) then\n'  MsgBox.Error(\"Too many (\"+numThemes.AsString+\") Active Themes...\",\"Make Active single Editable Theme !\")\n'else\n'  exit\n'end\n\ntheScale    = theView.ReturnScale\n\ntheName     = theTheme.getName\ntheFTab     = theTheme.getFtab\ntotFields   = theFTab.getFields\n\nnf =          (totFields.count-1)\nc =           20\n\nres = nf mod c\nn = (nf - res) / c\nb = (n*c) + res\n         \nfor each i in 0..n \n
+  from = i*c\n  to   = ((i+1)*c-1)\n  if (to > nf) then\n    to = from + res\n  end\n\n  nmFields    = {}\n  valFields   = {}\n  lstFields   = {}\n\n  ' read fields and ignore Shape field\n  for each j in from..to\n    f = totFields.Get(j)\n    if (f.getName=\"Shape\") then\n      continue\n    end\n    lstFields.Add(f)\n  end\n\n  '...try aligned left fields by spaces             \n\n  maxl = 1      \n  for each f in lstFields \n    nmf =  f.getName\n    lnf =  nmf.count\n    maxl = (maxl max lnf)\n  end\n\n  for each f in lstFields\n  
+  fnm  = f.getName\n    fout = fnm\n    dspace = (maxl - fnm.count)\n    if (dspace>0 ) then\n      buff=\"\"\n      for each i in 0..dspace\n        buff = buff + 160.AsChar\n      end\n      fout = fnm + buff\n    end\n    nmFields.Add(fout)  \n  end\n\n  numSel = theFTab.getNumSelRecords \n\n  if (numSel = 0) then exit end\n  if (numSel > 1) then exit end\n\n  for each sel in theFTab.getSelection\n    for each f in lstFields\n      val = theFtab.ReturnValueString(f,sel)\n      if (val=\"\") then\n        val = \" \"\n      end\n     
+ valFields.Add(val)\n    end   \n  end\n\n  if (theEditTheme = nil) then\n    theTitle = \"READ ONLY - do not edit.\"\n  else\n    theTitle = \"\"\n  end\n  \n  valUserSettings = MsgBox.MultiInput(theTitle, \"Edit Attributes\", nmFields, valFields)\n\n  if (valUserSettings.count = 0) then\n    theTheme.ClearSelection\n    exit\n  end  \n\n  for each i in 0..(lstFields.count-1)\n    f = lstFields.get(i)\n    v = valUserSettings.get(i)\n\n    if (f.getName=\"Shape\") then\n      continue\n    end\n    fType = f.getType\n    aType = fType.AsS
+tring.AsTokens(\"_\").get(1)\n\n    if ((aType = \"LONG\") or (aType = \"DOUBLE\") or (aType = \"DECIMAL\") or (aType=  \"FLOAT\")) then    \n      if (v.IsNumber) then\n        val = v.AsNumber\n      end               \n    elseif (aType=\"DATE\") then\n      val = v.AsDate\n    elseif (aType=\"CHAR\") then\n      val = v\n    end\n\n    ' set values if theme is editable\n    for each sel in theFTab.getSelection\n      if (theEditTheme = nil) then\n        theTheme.ClearSelection\n        exit\n      else\n        theFTab.SetValue(f,sel
+,val)\n      end\n    end    \n  end\nend'...if>20\n\ntheTheme.ClearSelection\n"
 )
 
-(Script.172
-	Name:	"Editor.EditAttributesUpdate"
-	SourceCode:	"theView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif((theTheme <> NIL) AND\n  (theTheme.GetFTab.GetSelection.Count > 0) AND\n  ((theTheme.GetFTab.FindField(\"shape\").GetType = #FIELD_SHAPEPOLY) OR\n  (theTheme.GetFTab.FindField(\"shape\").GetType = #FIELD_SHAPELINE) OR\n  (theTheme.GetFTab.FindField(\"shape\").GetType = #FIELD_SHAPEPOINT))) then\n  SELF.SetEnabled(TRUE)\nelse\n  SELF.SetEnabled(FALSE)\nend\n\n'# clear selection and refresh view\ntheTheme.ClearSelection\n\nfor each thm in theView.GetThemes\n  thm.
-Invalidate (TRUE)\nend\n\ntheView.InvalidateTOC( nil )\ntheView.Invalidate\n\nSystem.RefreshWindows\n\n"
-)
-
-(Script.173
+(Script.164
 	Name:	"Editor.EmptyTransaction"
 	SourceCode:	"av.Run(\"Editor.SubPushTransaction\",NIL)\n"
 )
 
-(Script.174
+(Script.165
 	Name:	"Editor.HasDataUpdate"
 	SourceCode:	"' update script for the built-in function View.Select\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\nSELF.SetEnabled((theView.GetGraphics.Count > 0) or (theView.GetThemes.Count > 0))\n"
 )
 
-(Script.175
+(Script.166
+	Name:	"Editor.MakePointByCoord"
+	SourceCode:	"' NAME: makeRectByCenter\n' HERKUNFT: Harald 11 / 04 / 03,  zur Erstellung von Rastergebieten fuer Windgutachten\n' EINBINDUNG: View-Tool\n' HILFE: Creates Circle from Click Point as Center//Creates a Circle of user defined Radius with User Point as Center (Coordinates can be adjusted)\n\n'*******************************************\n\n' -------------------------------------------------------------------------------------------------\n' SET NUMBER-FORMAT\n\n Script.The.SetNumberFormat( \"d.dddd\" )\n \n' ----------------
+---------------------------------------------------------------------------------\n' TAKE THE VIEW; THE PROJECTION AND THE MAP-UNITS\n\ntheView = av.GetActiveDoc\ntheProjection = theView.GetProjection\n\nViewUnit = theView.GetUnits\nMapU = units.GetUnitString(ViewUnit)\n\nif (MapU = \" \") then\n  MapU = \"Map Units\"\nend\n\n' -------------------------------------------------------------------------------------------------\n' RETURN THE POINT; THE USER CLICKS AT - GIVE HER THE CHANCE TO TAKE THE LAST DEFINED POINT \n' TO CRE
+ATE CONCENTRIC CIRCLES\n\ntheVari = \"theUPX\"\n\ntheTestScript = Script.Make(\"return _\"+theVari)\nif (theTestScript.HasError) then\n  _theUPX = NIL\nend\n\ntheVari = \"theUPY\"\n\ntheTestScript = Script.Make(\"return _\"+theVari)\nif (theTestScript.HasError) then\n  _theUPY = NIL\nend\n\nif ((_theUPX <> NIL) and (_theUPY <> NIL)) then\n  theChoice = MsgBox.YesNoCancel(\"Take the last defined Point  (YES)\"+nl+\n  \"Take the new Click Point  (NO)\",\" Coordinate Takeover\",TRUE)\nelse\n  theChoice = FALSE\nend\n\nif (theChoice = FALSE) then\n
+  theUP = theView.GetDisplay.ReturnUserPoint\n  theUPXString = theUP.getX.AsString\n  theUPYString = theUP.getY.AsString\nelseif (theChoice = TRUE) then\n  theUPXString = _theUPX.AsString\n  theUPYString = _theUPY.AsString\nelse\n  return NIL\nend\n\n' -------------------------------------------------------------------------------------------------\n' GET THE EXTEND AND LET THE USER MODIFY THE CENTER-COORDINATE\n\nlabels = {\"X Coordinate\",\"Y Coordinate\"}  \ndefaults = {theUPXString, theUPYString }\n\ntheExt = MsgBox.MultiI
+nput(\"Point Coordinates (adjust if necessary):\", \" Point Coordinates\", labels, defaults)\n\nif ((theExt = NIL) or (theExt.count = 0)) then\n  av.ShowMsg(\"llll llll llll llll llll   llll llll llll    DROPOUT: Make Point...\")\n  return nil\nend\n\n_theUPX = theExt.get(0).AsNumber\n_theUPY = theExt.get(1).AsNumber\n\n' -------------------------------------------------------------------------------------------------\n' CREATE A GRAPHIC WITH POINT AS CENTER\n\nthePoint = Point.Make(_theUPX,_theUPY)\n\nthePointGR = GraphicShape
+.Make(thePoint)\ntheView.GetGraphics.UnselectAll\nthePointGR.SetSelected(TRUE)\ntheView.GetGraphics.Add(thePointGR)\n\nthePointSH = thePointGR.GetShape\n\ntheCentroid = thePoint.ReturnCenter\ntheCentX = theCentroid.GetX\ntheCentY = theCentroid.GetY\n\nav.GetProject.SetModified(true)\n\n' -------------------------------------------------------------------------------------------------\n' ASK THE USER IF SHE WANTS TO CREATE A POLYGON SHAPE OR JUST KEEP THE GRAPHIC. IF FORMER, THAN ASK HER \n' IF SHE WANTS TO INSERT THE POIN
+T IN AN AVAILABLE THEME OR IF SHE WANTS TO CREATE A NEW ONE\n\n\n' FIRST CREATE A LIST OF VIABLE THEMES\n\nthePointThms = List.Make\n\nfor each t in theView.GetThemes\n  if (t.Is(Ftheme)) then\n      theFTab = t.GetFTab\n      theCN = theFTab.GetShapeClass.GetClassName\n      if ((theCN = \"Point\") or (theCN = \"PointZ\")) then\n      thePointThms.Add(t)\n    end\n  end\nend\n\n' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n' NOW ASK FOR SHAPE - AVAILABLE OR NEW\n\nif (thePoi
+ntThms.Count > 0) then\n  theChoice = MsgBox.YesNoCancel(\"Convert Point to new Theme  (YES) \"+nl+\n                   \"Insert Point into existing Theme  (NO)\"+nl+\n                   \"Create Point as Graphic  (CANCEL)\",\" Convert to Shapefile?\",TRUE)\n  anAvail = TRUE\nelse\n  theChoice = MsgBox.YesNo(\"Convert Point to new Theme  (YES) \"+nl+\n                   \"Create Point as Graphic  (NO)\",\" Convert to Shapefile?\",TRUE)  \n  anAvail = FALSE\nend\n   \n' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ - - - - - - - - - - - - - - - - - \n' IF THERE ARE MORE THAN ONE VIABLE THEMES, ASK FURTHER IF SHE WANTS TO INSERT THE RECTANGLE THERE\n  \nif (anAvail = TRUE) then\n  \n  if (theChoice = FALSE) then    \n\n    nuTheme = FALSE\n\n'     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n'     FIND THE RIGHT THEME IF THERE ARE MORE THAN ONE\n\n    if (thePointThms.Count < 1) then\n      theAvail = NIL\n    elseif (thePointThms.Count = 1) then\n      theAvail = thePointThms.Get(0)
+\n      theOnlyFit = MsgBox.YesNo(\"Insert the Point into  '\"+theAvail.getName+\"'?\",\" Take that?\",TRUE)\n      if (theOnlyFit = FALSE) then\n        av.ShowMsg(\"llll llll llll llll llll   llll llll llll    Point created as a GRAPHIC  (X = \"+_theUPX.AsString+\";  Y = \"+_theUPY.AsString+\") ...\")\n        return NIL\n      end\n\n    else\n      theAvail = Msgbox.List(thePointThms,\"Select a Theme to insert the Point.\",\" Select Theme\")\n    end\n    \n    if (theAvail = NIL) then\n      av.ShowMsg(\"llll llll llll llll llll  
+ llll llll llll    Point created as a GRAPHIC  (X = \"+_theUPX.AsString+\";  Y = \"+_theUPY.AsString+\") ...\")\n      return NIL\n    end\n    \n    theFTab = theAvail.getFTab\n    editState = theFTab.isEditable\n    \n'     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n'     LOOK FOR OUR FIELDS; CREATE THEM IF THEY AREN'T YET\n'\n'    theFldList = List.Make\n'    \n'    if ((theFTab.findField(\"IDN\") = NIL)) then\n'      theIDfld = Field.Make(\"IDN\",#FIELD_LONG,9, 0)\n'     the
+FldList.Add(theIDfld)\n'    else\n'      theIDfld = theFTab.findField(\"IDN\")\n'    end\n'    \n'    if ((theFTab.findField(\"X_Centr\") = NIL)) then\n'      theCoordXZentFld = Field.Make(\"X_Centr\",#FIELD_DECIMAL,21,4)\n'      theFldList.Add(theCoordXZentFld)\n'    else\n'      theCoordXZentFld = theFTab.findField(\"X_Centr\")\n'    end\n'\n'    if ((theFTab.findField(\"Y_Centr\") = NIL)) then\n'      theCoordYZentFld = Field.Make(\"Y_Centr\",#FIELD_DECIMAL,21,4)\n'      theFldList.Add(theCoordYZentFld)\n'    else\n'      theCoordY
+ZentFld = theFTab.findField(\"Y_Centr\")\n'    end\n'    \n    theShapeFld=theFtab.FindField(\"Shape\")\n\n'   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n'    MAKE SURE TABLE IS EDITABLE AND THAT FIELDS CAN BE ADDED\n    \n    if (theFtab.CanEdit) then\n      theFTab.SetEditable(true)\n      if ((theFTab.CanAddFields).Not) then\n        MsgBox.Info(\"Can not add Fields to the FTab. Please check Writing Permission.\"+nl+\n        \"Point will be created as a Graphic...\",\" Not able to edit\")\n     
+   av.ShowMsg(\"llll llll llll llll llll   llll llll llll    Point created as a GRAPHIC  (X = \"+_theUPX.AsString+\";  Y = \"+_theUPY.AsString+\") ...\")\n        theFTab.setEditable(editstate)\n        return NIL\n      end\n    else\n      MsgBox.Info(\"Can not edit the Table. Please check Writing Permission.\",\n      \"Point will be created as a Graphic...\",\" Not able to edit\")\n      av.ShowMsg(\"llll llll llll llll llll   llll llll llll    Point created as a GRAPHIC  (X = \"+_theUPX.AsString+\";  Y = \"+_theUPY.AsString+
+\") ...\")\n      return NIL\n    end\n\n'   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n'   ADD OUR FIELDS AND SET THE VALUES\n'\n'    theFTab.AddFields(theFldList)\n'    \n    theRecNo = theFtab.AddRecord\n'    theFtab.SetValue(theIDfld, theRecNo, theRecNo)\n    if (theProjection.IsNull) then\n      thePointSH2 = thePointSH.Clone\n    else\n      thePointSH2 = thePointSH.ReturnUnProjected(theProjection)\n    end\n    myShape = thePointSH2\n    theFtab.SetValue(theShapeFld,theRecNo,myShape)\n'   
+ \n'    theFtab.SetValue(theCoordXZentFld, theRecNo, theCentX)\n'    theFtab.SetValue(theCoordYZentFld, theRecNo, theCentY)\n'    \n'    theFTab.SetEditable(editState)\n'    theAvail.SetVisible(TRUE)\n'\n    theView.GetGraphics.CutSelected\n    av.GetProject.SetModified(true)\n    \n    av.ShowMsg(\"llll llll llll llll llll   llll llll llll    Inserted the Point in  \"+theAvail.GetName+\"...\")\n\n  elseif (theChoice = TRUE) then  ' USER WANTS TO CREATE A NEW THEME\n    nuTheme = TRUE\n  else                       ' theChoic
+e is NIL: USER DON'T WANT A SHAPEFILE BUT THE GRAPHIC\n    nuTheme = FALSE\n    av.ShowMsg(\"llll llll llll llll llll   llll llll llll    Point created as a GRAPHIC  (X = \"+_theUPX.AsString+\";  Y = \"+_theUPY.AsString+\") ...\")\n    return NIL\n  end\nend\n\n' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n' NOW WE HAVE THE CASES IN WHICH WE SHOULD CREATE A NEW SHAPE\n\nif ((anAvail = FALSE) or (nuTheme = TRUE)) then\n\n  if (theChoice = TRUE) then\n\n    theCWD = FileNam
+e.GetCWD\n    defname = theCWD.MakeTMP(\"mr_pnt\", \"shp\")\n    theOutput = FileDialog.Put(defname,\"*.shp\",\"NAME OF THE NEW THEME\")\n    if (theOutput = nil) then\n      return NIL\n    end\n    \n    theFtab=Ftab.MakeNew(theOutput, Point)\n    theIDfld=Field.Make(\"IDN\", #FIELD_LONG, 6, 0)\n    theCoordXZentFld = Field.Make(\"X_Centr\",#FIELD_DECIMAL,18,4)\n    theCoordYZentFld = Field.Make(\"Y_Centr\",#FIELD_DECIMAL,18,4)\n    theShapeFld=theFtab.FindField(\"Shape\")\n    theFldList = {theIDfld,theCoordXZentFld,theCoordYZentFl
+d}\n    theFtab.AddFields(theFldList)\n    \n    theRecNo=theFtab.AddRecord\n    theFtab.SetValue(theIDfld, theRecNo, theRecNo)\n    if (theProjection.IsNull) then\n      thePointSH2 = thePointSH.Clone\n    else\n      thePointSH2 = thePointSH.ReturnUnProjected(theProjection)\n    end\n    myShape=thePointSH2\n    theFtab.SetValue(theShapeFld, theRecNo, myShape)\n    \n    theFtab.SetValue(theCoordXZentFld, theRecNo, theCentX)\n    theFtab.SetValue(theCoordYZentFld, theRecNo, theCentY)\n  \n    theFTheme=Ftheme.Make(theFTa
+b)\n    theView.AddTheme(theFTheme)\n    \n    theFTab.SetEditable(FALSE)\n    \n  ' -------------------------------------------------------------------------------------------------\n  ' DELETE THE GRAPHIC; SET THE THEME TRANSPARENT AND OUTLINE RED\n  \n    theView.GetGraphics.CutSelected\n    av.GetProject.SetModified(true)\n    \n    theLegend = theFTheme.GetLegend\n    theShapeColor = Color.GetRed\n    theSymList = theLegend.GetSymbols\n    theLegSym = theSymList.Get(0).getColor\n'    theLegSym.SetTransparent (TRUE)\n 
+   theSym = av.GetSymbolWin.GetPalette.GetList(#PALETTE_LIST_Marker).Get(0).Clone\n    theSym.SetColor(theShapeColor)\n    theSym.setSize(8)\n    theSymList.Set(0,theSym)\n  \n    theFTheme.UpdateLegend\n    theFTheme.SetVisible(TRUE)\n    theView.InvalidateTOC(theFTheme)\n    av.ShowMsg(\"llll llll llll llll llll   llll llll llll    Created Point as  \"+theFTheme.GetName+\"...\")\n  else\n    av.ShowMsg(\"llll llll llll llll llll   llll llll llll    Point created as a GRAPHIC  (X = \"+_theUPX.AsString+\";  Y = \"+_theUPY.As
+String+\") ...\")\n  end\nend\n\ntheView.Invalidate\n\n' -------------------------------------------------------------------------------------------------\n' END OF FILE\n"
+)
+
+(Script.167
 	Name:	"Editor.Merge"
 	SourceCode:	"' uses the built-in function View.UnionGraphics\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Info(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polyline-or-polygon\", \"true\", \"2+\"}) = nil) then\n  return nil\nend\n\ntheTheme.GetFTab.BeginTransaction\ntheTheme.UnionSelected \ntheTheme.GetFTab.EndTransaction \ntheTheme.Invalidate(TRUE)\n"
 )
 
-(Script.176
+(Script.168
 	Name:	"Editor.MergeUpdate"
 	SourceCode:	"' update script for the built-in function View.UnionGraphics\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\nenabled = FALSE\nSELF.SetLabel(\"U&nion Features\")\nSELF.SetHelpTopic(\"Union_Features\")\nSELF.SetHelp(\"Unions the selected features to create a new feature\")\nfCount = theTheme.GetFTab.GetSelection.Count\ntheType = theTheme.GetFTab.FindField(\"Shape\").GetType\nenabled =  ((fcount > 1) and ((theType = #FIELD_SHAPEPOLY) or\n               
   (theType = #FIELD_SHAPELINE))) \nSELF.SetEnabled(enabled)\n"
 )
 
-(Script.177
+(Script.169
 	Name:	"Editor.Point"
-	SourceCode:	"' uses the built-in function View.PointTool\n\n' ################################\n' REV: 07.01.2026, A. Boehlen\n' - Check theme\n' - Set timestamp for new features\n' ################################\n\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"point\", \"false\", \"0\"}) = nil) then\n  return nil\nend\n\ntheFTab = theTheme.GetFTab\n\n'# create string field DateOfCr if it doesn't exist\nif (theFTab.FindField(\"DateOfCr\") = nil) then\n  av.Run(\"Editor.SubCreat
-eField\", {theFTab, \"DateOfCr\", \"16\"})\nend\n\npt = theView.GetDisplay.ReturnUserPoint\nthePrj = theView.GetProjection\nif (thePrj.IsNull.Not) then\n  pt = pt.ReturnUnprojected(thePrj)\nend\n\ntheField = theTheme.GetFTab.FindField(\"Shape\")\ntheDate = theTheme.GetFTab.FindField(\"DateOfCr\")\ntheTheme.GetFTab.BeginTransaction\nrec = theTheme.GetFTab.AddRecord\ntheFTab.SetValue(theField, rec, pt)\ntheFTab.EndTransaction\ntheFTab.GetSelection.ClearAll\ntheFTab.GetSelection.Set(rec)\ntheFTab.UpdateSelection\n\n'# set timestamp as st
-ring\ntimestampStr = av.Run(\"Editor.SubCreateDate\", {})\ntheFTab.SetValue(theDate,rec,timestampStr)\n\nav.GetProject.SetModified(true)\n"
+	SourceCode:	"' uses the built-in function View.PointTool\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"point\", \"false\", \"0\"}) = nil) then\n  return nil\nend\n\npt = theView.GetDisplay.ReturnUserPoint\nthePrj = theView.GetProjection\nif (thePrj.IsNull.Not) then\n  pt = pt.ReturnUnprojected(thePrj)\nend\ntheField = theTheme.GetFTab.FindField(\"Shape\")\ntheTheme.GetFTab.BeginTransaction\nrec = theTheme.GetFTab.Add
+Record\ntheTheme.GetFTab.SetValue(theField, rec, pt)\ntheTheme.GetFTab.EndTransaction\ntheTheme.GetFTab.GetSelection.ClearAll\ntheTheme.GetFTab.GetSelection.Set(rec)\ntheTheme.GetFTab.UpdateSelection\nav.GetProject.SetModified(true)\n"
 )
 
-(Script.178
-	Name:	"Editor.PointByCoord"
-	SourceCode:	"' NAME: makeRectByCenter\n' HERKUNFT: Harald 11 / 04 / 03,  zur Erstellung von Rastergebieten fuer Windgutachten\n' EINBINDUNG: View-Tool\n' HILFE: Creates Circle from Click Point as Center//Creates a Circle of user defined Radius with User Point as Center (Coordinates can be adjusted)\n\n' ################################\n' REV: 07.01.2026, A. Boehlen\n' - Set timestamp for new features\n' ################################\n\n\n'*******************************************\n\n' ------------------------------------------
--------------------------------------------------------\n' SET NUMBER-FORMAT\n\n Script.The.SetNumberFormat( \"d.dddd\" )\n \n' -------------------------------------------------------------------------------------------------\n' TAKE THE VIEW; THE PROJECTION AND THE MAP-UNITS\n\ntheView = av.GetActiveDoc\ntheProjection = theView.GetProjection\n\nViewUnit = theView.GetUnits\nMapU = units.GetUnitString(ViewUnit)\n\nif (MapU = \" \") then\n  MapU = \"Map Units\"\nend\n\n' --------------------------------------------------------------
------------------------------------\n' RETURN THE POINT; THE USER CLICKS AT - GIVE HER THE CHANCE TO TAKE THE LAST DEFINED POINT \n' TO CREATE CONCENTRIC CIRCLES\n\ntheVari = \"theUPX\"\n\ntheTestScript = Script.Make(\"return _\"+theVari)\nif (theTestScript.HasError) then\n  _theUPX = NIL\nend\n\ntheVari = \"theUPY\"\n\ntheTestScript = Script.Make(\"return _\"+theVari)\nif (theTestScript.HasError) then\n  _theUPY = NIL\nend\n\nif ((_theUPX <> NIL) and (_theUPY <> NIL)) then\n  theChoice = MsgBox.YesNoCancel(\"Take the last defined Poi
-nt  (YES)\"+nl+\n  \"Take the new Click Point  (NO)\",\" Coordinate Takeover\",TRUE)\nelse\n  theChoice = FALSE\nend\n\nif (theChoice = FALSE) then\n  theUP = theView.GetDisplay.ReturnUserPoint\n  theUPXString = theUP.getX.AsString\n  theUPYString = theUP.getY.AsString\nelseif (theChoice = TRUE) then\n  theUPXString = _theUPX.AsString\n  theUPYString = _theUPY.AsString\nelse\n  return NIL\nend\n\n' -------------------------------------------------------------------------------------------------\n' GET THE EXTEND AND LET THE USER 
-MODIFY THE CENTER-COORDINATE\n\nlabels = {\"X Coordinate\",\"Y Coordinate\"}  \ndefaults = {theUPXString, theUPYString }\n\ntheExt = MsgBox.MultiInput(\"Point Coordinates (adjust if necessary):\", \" Point Coordinates\", labels, defaults)\n\nif ((theExt = NIL) or (theExt.count = 0)) then\n  av.ShowMsg(\"llll llll llll llll llll   llll llll llll    DROPOUT: Make Point...\")\n  return nil\nend\n\n_theUPX = theExt.get(0).AsNumber\n_theUPY = theExt.get(1).AsNumber\n\n' -------------------------------------------------------------------
-------------------------------\n' CREATE A GRAPHIC WITH POINT AS CENTER\n\nthePoint = Point.Make(_theUPX,_theUPY)\n\nthePointGR = GraphicShape.Make(thePoint)\ntheView.GetGraphics.UnselectAll\nthePointGR.SetSelected(TRUE)\ntheView.GetGraphics.Add(thePointGR)\n\nthePointSH = thePointGR.GetShape\n\ntheCentroid = thePoint.ReturnCenter\ntheCentX = theCentroid.GetX\ntheCentY = theCentroid.GetY\n\nav.GetProject.SetModified(true)\n\n' -------------------------------------------------------------------------------------------------\n'
- ASK THE USER IF SHE WANTS TO CREATE A POLYGON SHAPE OR JUST KEEP THE GRAPHIC. IF FORMER, THAN ASK HER \n' IF SHE WANTS TO INSERT THE POINT IN AN AVAILABLE THEME OR IF SHE WANTS TO CREATE A NEW ONE\n\n\n' FIRST CREATE A LIST OF VIABLE THEMES\n\nthePointThms = List.Make\n\nfor each t in theView.GetThemes\n  if (t.Is(Ftheme)) then\n      theFTab = t.GetFTab\n      theCN = theFTab.GetShapeClass.GetClassName\n      if ((theCN = \"Point\") or (theCN = \"PointZ\")) then\n      thePointThms.Add(t)\n    end\n  end\nend\n\n' - - - - - - 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n' NOW ASK FOR SHAPE - AVAILABLE OR NEW\n\nif (thePointThms.Count > 0) then\n  theChoice = MsgBox.YesNoCancel(\"Convert Point to new Theme  (YES) \"+nl+\n                   \"Insert Point into existing Theme  (NO)\"+nl+\n                   \"Create Point as Graphic  (CANCEL)\",\" Convert to Shapefile?\",TRUE)\n  anAvail = TRUE\nelse\n  theChoice = MsgBox.YesNo(\"Convert Point to new Theme  (YES) \"+nl+\n                   \"Create Point as Gr
-aphic  (NO)\",\" Convert to Shapefile?\",TRUE)  \n  anAvail = FALSE\nend\n   \n' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n' IF THERE ARE MORE THAN ONE VIABLE THEMES, ASK FURTHER IF SHE WANTS TO INSERT THE RECTANGLE THERE\n  \nif (anAvail = TRUE) then\n  \n  if (theChoice = FALSE) then    \n\n    nuTheme = FALSE\n\n'     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n'     FIND THE RIGHT THEME IF THERE ARE MORE THAN ONE
-\n\n    if (thePointThms.Count < 1) then\n      theAvail = NIL\n    elseif (thePointThms.Count = 1) then\n      theAvail = thePointThms.Get(0)\n      theOnlyFit = MsgBox.YesNo(\"Insert the Point into  '\"+theAvail.getName+\"'?\",\" Take that?\",TRUE)\n      if (theOnlyFit = FALSE) then\n        av.ShowMsg(\"llll llll llll llll llll   llll llll llll    Point created as a GRAPHIC  (X = \"+_theUPX.AsString+\";  Y = \"+_theUPY.AsString+\") ...\")\n        return NIL\n      end\n\n    else\n      theAvail = Msgbox.List(thePointThms,\"Sel
-ect a Theme to insert the Point.\",\" Select Theme\")\n    end\n    \n    if (theAvail = NIL) then\n      av.ShowMsg(\"llll llll llll llll llll   llll llll llll    Point created as a GRAPHIC  (X = \"+_theUPX.AsString+\";  Y = \"+_theUPY.AsString+\") ...\")\n      return NIL\n    end\n    \n    theFTab = theAvail.getFTab\n    editState = theFTab.isEditable\n    \n'     - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n'     LOOK FOR OUR FIELDS; CREATE THEM IF THEY AREN'T YET\n'\n'    th
-eFldList = List.Make\n'    \n'    if ((theFTab.findField(\"IDN\") = NIL)) then\n'      theIDfld = Field.Make(\"IDN\",#FIELD_LONG,9, 0)\n'     theFldList.Add(theIDfld)\n'    else\n'      theIDfld = theFTab.findField(\"IDN\")\n'    end\n'    \n'    if ((theFTab.findField(\"X_Centr\") = NIL)) then\n'      theCoordXZentFld = Field.Make(\"X_Centr\",#FIELD_DECIMAL,21,4)\n'      theFldList.Add(theCoordXZentFld)\n'    else\n'      theCoordXZentFld = theFTab.findField(\"X_Centr\")\n'    end\n'\n'    if ((theFTab.findField(\"Y_Centr\") = NIL)) th
-en\n'      theCoordYZentFld = Field.Make(\"Y_Centr\",#FIELD_DECIMAL,21,4)\n'      theFldList.Add(theCoordYZentFld)\n'    else\n'      theCoordYZentFld = theFTab.findField(\"Y_Centr\")\n'    end\n'    \n    theShapeFld=theFtab.FindField(\"Shape\")\n\n'   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n'    MAKE SURE TABLE IS EDITABLE AND THAT FIELDS CAN BE ADDED\n    \n    if (theFtab.CanEdit) then\n      theFTab.SetEditable(true)\n      if ((theFTab.CanAddFields).Not) then\n        MsgBox.Info(\"Can not
- add Fields to the FTab. Please check Writing Permission.\"+nl+\n        \"Point will be created as a Graphic...\",\" Not able to edit\")\n        av.ShowMsg(\"llll llll llll llll llll   llll llll llll    Point created as a GRAPHIC  (X = \"+_theUPX.AsString+\";  Y = \"+_theUPY.AsString+\") ...\")\n        theFTab.setEditable(editstate)\n        return NIL\n      end\n    else\n      MsgBox.Info(\"Can not edit the Table. Please check Writing Permission.\",\n      \"Point will be created as a Graphic...\",\" Not able to edit\")\n     
- av.ShowMsg(\"llll llll llll llll llll   llll llll llll    Point created as a GRAPHIC  (X = \"+_theUPX.AsString+\";  Y = \"+_theUPY.AsString+\") ...\")\n      return NIL\n    end\n\n'   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n'   ADD OUR FIELDS AND SET THE VALUES\n'\n'    theFTab.AddFields(theFldList)\n'    \n    theRecNo = theFtab.AddRecord\n'    theFtab.SetValue(theIDfld, theRecNo, theRecNo)\n    if (theProjection.IsNull) then\n      thePointSH2 = thePointSH.Clone\n    else\n      thePointSH
-2 = thePointSH.ReturnUnProjected(theProjection)\n    end\n    myShape = thePointSH2\n    theFtab.SetValue(theShapeFld,theRecNo,myShape)\n'    \n'    theFtab.SetValue(theCoordXZentFld, theRecNo, theCentX)\n'    theFtab.SetValue(theCoordYZentFld, theRecNo, theCentY)\n'    \n'    theFTab.SetEditable(editState)\n'    theAvail.SetVisible(TRUE)\n'\n    '# create string field DateOfCr if it doesn't exist\n    if (theFTab.FindField(\"DateOfCr\") = nil) then\n      av.Run(\"Editor.SubCreateField\", {theFTab, \"DateOfCr\", \"16\"})\n    e
-nd\n\n    '# set timestamp as string\n    theDateFld = theFTab.FindField(\"DateOfCr\")\n    timestampStr = av.Run(\"Editor.SubCreateDate\", {})\n    theFTab.SetValue(theDateFld,theRecNo,timestampStr)\n\n\n    theView.GetGraphics.CutSelected\n    av.GetProject.SetModified(true)\n    \n    av.ShowMsg(\"llll llll llll llll llll   llll llll llll    Inserted the Point in  \"+theAvail.GetName+\"...\")\n\n  elseif (theChoice = TRUE) then  ' USER WANTS TO CREATE A NEW THEME\n    nuTheme = TRUE\n  else                       ' theChoice is
- NIL: USER DON'T WANT A SHAPEFILE BUT THE GRAPHIC\n    nuTheme = FALSE\n    av.ShowMsg(\"llll llll llll llll llll   llll llll llll    Point created as a GRAPHIC  (X = \"+_theUPX.AsString+\";  Y = \"+_theUPY.AsString+\") ...\")\n    return NIL\n  end\nend\n\n' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n' NOW WE HAVE THE CASES IN WHICH WE SHOULD CREATE A NEW SHAPE\n\nif ((anAvail = FALSE) or (nuTheme = TRUE)) then\n\n  if (theChoice = TRUE) then\n\n    theCWD = FileName.Ge
-tCWD\n    defname = theCWD.MakeTMP(\"mr_pnt\", \"shp\")\n    theOutput = FileDialog.Put(defname,\"*.shp\",\"NAME OF THE NEW THEME\")\n    if (theOutput = nil) then\n      return NIL\n    end\n    \n    theFtab=Ftab.MakeNew(theOutput, Point)\n    theIDfld=Field.Make(\"IDN\", #FIELD_LONG, 6, 0)\n    theCoordXZentFld = Field.Make(\"X_Centr\",#FIELD_DECIMAL,18,4)\n    theCoordYZentFld = Field.Make(\"Y_Centr\",#FIELD_DECIMAL,18,4)\n    theDateFld = Field.Make(\"DateOfCr\",#FIELD_CHAR,16,0)\n    theShapeFld=theFtab.FindField(\"Shape\")\n    th
-eFldList = {theIDfld,theCoordXZentFld,theCoordYZentFld,theDateFld}\n    theFtab.AddFields(theFldList)\n    \n    theRecNo=theFtab.AddRecord\n    theFtab.SetValue(theIDfld, theRecNo, theRecNo)\n    if (theProjection.IsNull) then\n      thePointSH2 = thePointSH.Clone\n    else\n      thePointSH2 = thePointSH.ReturnUnProjected(theProjection)\n    end\n    myShape=thePointSH2\n    theFtab.SetValue(theShapeFld, theRecNo, myShape)\n    \n    theFtab.SetValue(theCoordXZentFld, theRecNo, theCentX)\n    theFtab.SetValue(theCoordY
-ZentFld, theRecNo, theCentY)\n    \n    '# set timestamp as string\n    timestampStr = av.Run(\"Editor.SubCreateDate\", {})\n    theFTab.SetValue(theDateFld,theRecNo,timestampStr)\n\n  \n    theFTheme=Ftheme.Make(theFTab)\n    theView.AddTheme(theFTheme)\n    \n    theFTab.SetEditable(FALSE)\n    \n  ' -------------------------------------------------------------------------------------------------\n  ' DELETE THE GRAPHIC; SET THE THEME TRANSPARENT AND OUTLINE RED\n  \n    theView.GetGraphics.CutSelected\n    av.GetProject.S
-etModified(true)\n    \n    theLegend = theFTheme.GetLegend\n    theShapeColor = Color.GetRed\n    theSymList = theLegend.GetSymbols\n    theLegSym = theSymList.Get(0).getColor\n'    theLegSym.SetTransparent (TRUE)\n    theSym = av.GetSymbolWin.GetPalette.GetList(#PALETTE_LIST_Marker).Get(0).Clone\n    theSym.SetColor(theShapeColor)\n    theSym.setSize(8)\n    theSymList.Set(0,theSym)\n  \n    theFTheme.UpdateLegend\n    theFTheme.SetVisible(TRUE)\n    theView.InvalidateTOC(theFTheme)\n    av.ShowMsg(\"llll llll llll llll 
-llll   llll llll llll    Created Point as  \"+theFTheme.GetName+\"...\")\n  else\n    av.ShowMsg(\"llll llll llll llll llll   llll llll llll    Point created as a GRAPHIC  (X = \"+_theUPX.AsString+\";  Y = \"+_theUPY.AsString+\") ...\")\n  end\nend\n\ntheView.Invalidate\n\n' -------------------------------------------------------------------------------------------------\n' END OF FILE\n"
-)
-
-(Script.179
+(Script.170
 	Name:	"Editor.Polygon"
-	SourceCode:	"' uses the built-in function View.PolyTool\n\n' ################################\n' REV: 09.01.2026, A. Boehlen\n' - Check theme\n' - Set timestamp for new features\n' ################################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polygon\", \"false\", \"0\"}) = nil) then\n  return nil\nend\n\ntheFTab = theTheme.GetFTab\n\n'# create string field DateOfCr if it doesn't exist\nif (theFTab.FindField(\"DateOfCr\") = nil) then\n  av.Run(\"Editor.SubCreat
-eField\", {theFTab, \"DateOfCr\", \"16\"})\nend\n\np = theView.ReturnUserPolygon\nif (p.IsNull) then\n  return nil\nelse\n  theFTab.BeginTransaction\n  thePrj = theView.GetProjection\n  if (thePrj.IsNull.Not) then\n    p = p.ReturnUnprojected(thePrj)\n  end\n  theField = theTheme.GetFTab.FindField(\"Shape\")\n  theDate = theTheme.GetFTab.FindField(\"DateOfCr\")\n  rec = theTheme.GetFTab.AddRecord\n  theFTab.SetValue(theField, rec, p)\n  theFTab.GetSelection.ClearAll\n  theFTab.GetSelection.Set(rec)\n  theFTab.UpdateSelection\n  \n  '# 
-set timestamp as string\n  timestampStr = av.Run(\"Editor.SubCreateDate\", {})\n  theFTab.SetValue(theDate,rec,timestampStr)\n  \n  theFTab.EndTransaction\n  av.GetProject.SetModified(true)\nend\n"
+	SourceCode:	"' uses the built-in function View.PolyTool\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polygon\", \"false\", \"0\"}) = nil) then\n  return nil\nend\n\np = theView.ReturnUserPolygon\nif (p.IsNull) then\n  return nil\nelse\n  theTheme.GetFTab.BeginTransaction\n  thePrj = theView.GetProjection\n  if (thePrj.IsNull.Not) then\n    p = p.ReturnUnprojected(thePrj)\n  end\n  theField = theTheme.GetFTab.FindFie
+ld(\"Shape\")\n  rec = theTheme.GetFTab.AddRecord\n  theTheme.GetFTab.SetValue(theField, rec, p)\n  theTheme.GetFTab.GetSelection.ClearAll\n  theTheme.GetFTab.GetSelection.Set(rec)\n  theTheme.GetFTab.UpdateSelection\n  theTheme.GetFTab.EndTransaction\n  av.GetProject.SetModified(true)\nend\n"
 )
 
-(Script.180
+(Script.171
 	Name:	"Editor.PolyLine"
-	SourceCode:	"' uses the built-in function View.LineTool\n\n' ################################\n' REV: 07.01.2026, A. Boehlen\n' - Check theme\n' - Set timestamp for new features\n' ################################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polyline\", \"false\", \"0\"}) = nil) then\n  return nil\nend\n\ntheFTab = theTheme.GetFTab\n\n'# create string field DateOfCr if it doesn't exist\nif (theFTab.FindField(\"DateOfCr\") = nil) then\n  av.Run(\"Editor.SubCrea
-teField\", {theFTab, \"DateOfCr\", \"16\"})\nend\n\nl = theView.ReturnUserPolyLine\nif (l.IsNull) then\n  return nil\nelse\n  theTheme.GetFtab.BeginTransaction\n  thePrj = theView.GetProjection\n  if (thePrj.IsNull.Not) then\n    l = l.ReturnUnprojected(thePrj)\n  end\n  theField = theFTab.FindField(\"Shape\")\n  theDate = theFTab.FindField(\"DateOfCr\")\n  rec = theFTab.AddRecord\n  theFTab.SetValue(theField, rec, l)\n  theFTab.GetSelection.ClearAll\n  theFTab.GetSelection.Set(rec)\n  theFTab.UpdateSelection\n  theFtab.EndTransaction
-\n  \n  '# set timestamp as string\n  timestampStr = av.Run(\"Editor.SubCreateDate\", {})\n  theFTab.SetValue(theDate,rec,timestampStr)\n  \n  av.GetProject.SetModified(true)\nend"
+	SourceCode:	"' uses the built-in function View.LineTool\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polyline\", \"false\", \"0\"}) = nil) then\n  return nil\nend\n\nl = theView.ReturnUserPolyLine\nif (l.IsNull) then\n  return nil\nelse\n  theTheme.GetFtab.BeginTransaction\n  thePrj = theView.GetProjection\n  if (thePrj.IsNull.Not) then\n    l = l.ReturnUnprojected(thePrj)\n  end\n  theField = theTheme.GetFTab.FindF
+ield(\"Shape\")\n  rec = theTheme.GetFTab.AddRecord\n  theTheme.GetFTab.SetValue(theField, rec, l)\n  theTheme.GetFTab.GetSelection.ClearAll\n  theTheme.GetFTab.GetSelection.Set(rec)\n  theTheme.GetFTab.UpdateSelection\n  theTheme.GetFtab.EndTransaction\n  av.GetProject.SetModified(true)\nend"
 )
 
-(Script.181
+(Script.172
 	Name:	"Editor.PolyLineUpdate"
 	SourceCode:	"' update script for the built-in function View.LineTool\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (theTheme = nil) then\n  SELF.SetEnabled(True) \nelse\n  theType = theTheme.GetFTab.FindField(\"Shape\").GetType\n  SELF.SetEnabled(theType = #FIELD_SHAPELINE)\nend"
 )
 
-(Script.182
+(Script.173
 	Name:	"Editor.PolyToolUpdate"
 	SourceCode:	"' update script for the built-in function View.PolyTool\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (theTheme = nil) then\n  SELF.SetEnabled(TRUE) \nelse\n  SELF.SetEnabled(theTheme.GetFTab.FindField(\"Shape\").GetType = #FIELD_SHAPEPOLY)\nend\n \n"
 )
 
-(Script.183
+(Script.174
 	Name:	"Editor.RectTool"
-	SourceCode:	"' uses the built-in script View.RectTool\n\n' ################################\n' REV: 09.01.2026, A. Boehlen\n' - Check theme\n' - Set timestamp for new features\n' ################################\n\ntheView = av.GetActiveDoc\n\nr = theView.ReturnUserRect\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polygon\", \"false\", \"0\"}) = nil) then\n  return nil\nend\n\ntheFTab = theTheme.GetFTab\n\n'# create string field DateOfCr if it doesn't exist\nif (theFTab.FindField(\"DateOfCr\") = nil) then
-\n  av.Run(\"Editor.SubCreateField\", {theFTab, \"DateOfCr\", \"16\"})\nend\n\nif (r.IsNull) then\n  return nil\nelse\n  if (theTheme <> nil) then\n    p = r.AsPolygon\n    thePrj = theView.GetProjection\n    if (thePrj.IsNull.Not) then\n      p = p.ReturnUnprojected(thePrj)\n    end\n    theFTab.BeginTransaction\n    theField = theFTab.FindField(\"Shape\")\n    theDate = theTheme.GetFTab.FindField(\"DateOfCr\")\n    rec = theFTab.AddRecord\n    theFTab.SetValue(theField, rec, p)\n    theFTab.EndTransaction\n    theFTab.GetSelection.Cl
-earAll\n    theFTab.GetSelection.Set(rec)\n    theFTab.UpdateSelection\n    \n    '# set timestamp as string\n    timestampStr = av.Run(\"Editor.SubCreateDate\", {})\n    theFTab.SetValue(theDate,rec,timestampStr)\n    \n  else\n    gr = GraphicShape.Make(r)\n    theView.GetGraphics.UnselectAll\n    gr.SetSelected(TRUE)\n    theView.GetGraphics.Add(gr)\n  end\n  av.GetProject.SetModified(true)\nend"
+	SourceCode:	"theView = av.GetActiveDoc\n\nr = theView.ReturnUserRect\ntheTheme = theView.GetEditableTheme\n\nif (r.IsNull) then\n  return nil\nelse\n  if (theTheme <> nil) then\n    p = r.AsPolygon\n    thePrj = theView.GetProjection\n    if (thePrj.IsNull.Not) then\n      p = p.ReturnUnprojected(thePrj)\n    end\n    theTheme.getFTab.BeginTransaction\n    theField = theTheme.GetFTab.FindField(\"Shape\")\n    rec = theTheme.GetFTab.AddRecord\n    theTheme.GetFTab.SetValue(theField, rec, p)\n    theTheme.GetFTab.EndTransaction\n    theTheme.
+GetFTab.GetSelection.ClearAll\n    theTheme.GetFTab.GetSelection.Set(rec)\n    theTheme.GetFTab.UpdateSelection\n  else\n    gr = GraphicShape.Make(r)\n    theView.GetGraphics.UnselectAll\n    gr.SetSelected(TRUE)\n    theView.GetGraphics.Add(gr)\n  end\n  av.GetProject.SetModified(true)\nend"
 )
 
-(Script.184
+(Script.175
 	Name:	"Editor.RedoTransaction"
 	SourceCode:	"AVEDIT = av.GetActiveDoc.GetObjectTag\nlstTransObj = AVEDIT.Get(1)\nif (lstTransObj <> NIL) then\n  lstTransRedo = lstTransObj.Get(1)\n  av.Run(lstTransRedo.Get(0), lstTransRedo.Get(1))\n  AVEDIT.Set(1, NIL)\n  av.GetActiveDoc.SetObjectTag(AVEDIT)\nend\n"
 )
 
-(Script.185
+(Script.176
 	Name:	"Editor.RedoVertex"
 	SourceCode:	"if (SELF = NIL) then\n  MsgBox.Warning(\"Error in redoing transaction.\"+NL+\n    \"Nothing to Redo.\", \"Editor.RedoVertex\")\n  exit\nend\n\ntheView  = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\nfldShape = theTheme.GetFTab.FindField(\"Shape\")\nr = SELF.Get(0)\n\n' undoLast = MsgBox.YesNo\n'   (\"Do you really want to undo previous edit?\",\"Redo Edit\",TRUE)\nundoLast = TRUE\n\nif (undoLast) then\n  shpNew = SELF.Get(1)\n  if ((fldShape.GetType = #FIELD_SHAPEPOLY) AND (shpNew.Is(POLYGON).Not)) then\n    MsgBox.Info(\"Previo
 us shape edited was a POLYLINE - Nothing to Undo.\",\"Undo Edit\")\n    exit\n  elseif ((fldShape.GetType = #FIELD_SHAPELINE) AND (shpNew.Is(POLYGON))) then\n    MsgBox.Info(\"Previous shape edited was a POLYGON - Nothing to Undo.\",\"Undo Edit\")\n    exit\n  end\n\n  shpOld = theTheme.GetFTab.ReturnValue(fldShape, r)\n  theTheme.GetFTab.SetValue(fldShape, r, shpNew)\n  theTheme.GetFTab.Flush\n  theTheme.Invalidate(TRUE)\n    \n  'Push transaction...\n  av.Run(\"Editor.PushTransaction\",\n    {{\"Editor.UndoVertex\",{r,shpOld}},\n 
    {\"Editor.RedoVertex\",{r,shpNew}}})\nend\n\n"
 )
 
-(Script.186
+(Script.177
 	Name:	"Editor.RefreshView"
 	SourceCode:	"' refreshes the view window\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Info(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\nfor each thm in theView.GetThemes\n  thm.Invalidate (TRUE)\nend\n\ntheView.InvalidateTOC( nil )\ntheView.Invalidate\n\nSystem.RefreshWindows"
 )
 
-(Script.187
+(Script.178
 	Name:	"Editor.Reshape"
 	SourceCode:	"' hacked from http://webapp1.dlib.indiana.edu/virtual_disk_library/index.cgi/4288321/FID3756/PROGRAM/ETC/AVEDIT.APR\n' 18.11.2015 A. Boehlen\n' REV: 15.10.2022\n'###############################\ntheView  = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polyline-or-polygon\", \"true\", \"1\"}) = nil) then\n  return nil\nend\n\nfldShape = theTheme.GetFTab.FindField(\"shape\")\n\nplinUser  = theView.GetDisplay.ReturnUserPolyLine\nif (plinUser = NIL) then\n  exit\nend\n \nav.UseWa
 itCursor  \n  \nfor each r in theTheme.GetFTab.GetSelection\n  shpSelected = theTheme.GetFTab.ReturnValue(fldShape, r)\n  if (shpSelected.AsList.Count > 1) then\n  ' Currently multi-part shapes are not supported, only the first \n  ' list of points in the list of lists of points for MultiPoint \n  ' objects is considered...\n    MsgBox.Error(\n    \"Unable to reshape multi-part shape at record\"++(r+1).AsString,\n    \"Editor.Reshape\")\n    continue\n  end\n  lstShapePoints = shpSelected.AsList.Get(0)\n  numShapePoints = ls
@@ -2328,17 +2245,17 @@ rtexFwd)) > \n     (lstShapePoints.Get(ptrShapeFwd).Distance(ptVertexRev))) then
 ew)\nend\n\ntheTheme.GetFTab.Flush\n\ntheTheme.Invalidate (TRUE)\ntheView.Invalidate\nSystem.RefreshWindows\n"
 )
 
-(Script.188
+(Script.179
 	Name:	"Editor.ReshapeTool"
 	SourceCode:	"' the same as View.PolyLineTool\nif ((av.GetSymbolWin.GetPanel = #SYMBOLWIN_PANEL_COLOR).not) then\n  av.GetSymbolWin.SetPanel(#SYMBOLWIN_PANEL_PEN)\nend"
 )
 
-(Script.189
+(Script.180
 	Name:	"Editor.ReshapeUpdate"
 	SourceCode:	"theView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif((theTheme <> NIL) AND\n  (theTheme.GetFTab.GetSelection.Count > 0) AND\n  ((theTheme.GetFTab.FindField(\"shape\").GetType = #FIELD_SHAPEPOLY) OR\n  (theTheme.GetFTab.FindField(\"shape\").GetType = #FIELD_SHAPELINE))) then\n  SELF.SetEnabled(TRUE)\nelse\n  SELF.SetEnabled(FALSE)\nend\n"
 )
 
-(Script.190
+(Script.181
 	Name:	"Editor.Rotate"
 	SourceCode:	"''\n'' Rotate\n'' http://www.pinteric.com/arcview.html#rotate\n'' Rotates selected PolyLines or Polygons around individual object's centre\n'' Marko Pinteric 2006\n''\n'' Rotate.ave, rotate.avx\n'' version 1.1, build 120606\n''\n\n' ###############################\n' REV: 04.01.2026, A. Boehlen\n' - Check view and theme\n' ###############################\n\nsrcvie = av.GetActiveDoc\n \nif (srcvie.Is(view).Not) then\n  MsgBox.Info(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\nsrcthe = srcvie.GetActiveThemes.Get
 (0)\n\nif (av.Run(\"Editor.SubCheckTheme\", {srcthe, \"polyline-or-polygon\", \"true\", \"1\"}) = nil) then\n  return nil\nend\n\nsrctab = srcthe.GetFTab\nsrcshf = srctab.FindField(\"Shape\")\nsrcfld = srctab.GetFields\nrcvfld = srcfld.DeepClone\nrcvfld.Remove(0)\n\nMsgOut = MsgBox.Input(\"CCW rotation angle:\", \"Rotate\", \"90\")  \nrotang = MsgOut.AsNumber\nsrcdel = MsgBox.YesNo(\"Delete original object(s)?\", \"Rotate\", True) \n\nsrcedt = True\nif (srctab.IsEditable = False) then\n  srctab.SetEditable (True)\n  srcedt = False\nend\n\nif (srcta
@@ -2346,88 +2263,85 @@ b.GetSelection.Count = 0) then\n  srcrec = srctab\nelse\n  srcrec = srctab.GetSe
 srcnum, srcobj.Transform(trn))\n    for each srcref in rcvfld  \n      srcref = srctab.FindField(srcref.AsString)\n      srctab.SetValue(srcref, srcnum, srctab.ReturnValue(srcref, srcele))\n    end\n  end\nend\n\nif (srcedt = False) then\n  srctab.SetEditable (False)\nend\n \nif (srcdel) then\n  srcvie.Invalidate\nend\n "
 )
 
-(Script.191
+(Script.182
 	Name:	"Editor.RotateUpdate"
 	SourceCode:	"''\n'' Rotate\n'' Rotates selected PolyLines or Polygons around individual object's centre\n'' Marko Pinteric 2006\n''\n'' Rotate.ave, rotate.avx\n''\n\nThemeCountCorrect = (av.GetActiveDoc.GetActiveThemes.Count = 1)\nThemeIs2DPoly = False\n\nif (ThemeCountCorrect) then\n  theTheme = av.GetActiveDoc.GetActiveThemes.Get(0)\n  if (theTheme.Is(FTheme)) then  \n    theThemeType = theTheme.GetFTab.GetShapeClass.GetClassName\n    ThemeIs2DPoly = ((theThemeType = \"PolyLine\") or (theThemeType = \"Polygon\"))\n  end\nend\n\nself.SetEnab
 led(ThemeCountCorrect and ThemeIs2DPoly)\n"
 )
 
-(Script.192
+(Script.183
 	Name:	"Editor.SaveEdits"
 	SourceCode:	"' uses the built-in function View.SaveEdits\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Info(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\neditThm = theView.GetEditableTheme\nif (editThm <> nil) then\n  doSave = MsgBox.YesNoCancel(\"Save edits to \"+editThm.GetName+\n  \"?\",\"Save Edits\",true)\n  if (doSave = nil) then\n    return nil\n  end\n  if (doSave.not) then\n    ' user changed her mind\n    return nil\n  else\n    ' sa
 ve edits and stop editing\n    if (editThm.StopEditing(TRUE).Not) then\n      ' save failed, remain editing\n     MsgBox.Info(\"Unable to Save Edits, please use the Save Edits As option\", \"\")\n     return nil\n    end   \n    ' restart editing\n    theView.SetEditableTheme(editThm)\n  end\nend  \n\n\n"
 )
 
-(Script.193
+(Script.184
 	Name:	"Editor.Select"
 	SourceCode:	"' combines pointer and select tool\n' 22.01.2023, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\n\neditThm = theView.GetEditableTheme\n\nif (editThm = nil) then\n  \n  theView.Select\n\n  r = theView.ReturnUserRect\n  theThemes = theView.GetActiveThemes \n  if (r.IsNull) then \n    p = theView.GetDisplay.ReturnUserPoint\n    if (System.IsShiftKeyDown) then\n      op = #VTAB_SELTYPE_XOR\n    else\n      op = #VTAB_SELTYPE_NEW\n    end\n    for each t in theThemes\n      if (t.CanSelect) then\n        t.
 SelectByPoint(p, op)\n      end\n    end\n  else\n    if (System.IsShiftKeyDown) then\n      op = #VTAB_SELTYPE_OR\n    else\n     op = #VTAB_SELTYPE_NEW\n    end\n    for each t in theThemes\n      if (t.CanSelect) then\n        t.SelectByRect(r, op)\n      end\n    end\n  end\n  \n\nelse\n  editThm.GetFTab.BeginTransaction\n  editThm.Select\n  editThm.GetFTab.EndTransaction\nend\n\nav.GetProject.SetModified(true)\n"
 )
 
-(Script.194
+(Script.185
 	Name:	"Editor.SelectToEdit"
 	SourceCode:	"' uses the built-in function View.SelectToEdit\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (theTheme = nil) then\n  MsgBox.Info(\"Start an Edit Session.\",\"No Theme in Edit Mode\")\n  return nil\nend\n\ntheTheme.GetFTab.BeginTransaction\ntheTheme.SelectToEdit\ntheTheme.GetFTab.EndTransaction\nav.GetProject.SetModified(true)\n"
 )
 
-(Script.195
+(Script.186
 	Name:	"Editor.SelectToEditTool"
 	SourceCode:	"' uses the built-in function View.SelectToEditTool\n' 22.01.2023, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Warning(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\ntheView.SetSelectMode(#GRAPHICS_SELECT_VERTEX)"
 )
 
-(Script.196
+(Script.187
 	Name:	"Editor.SelectToEditUpdate"
 	SourceCode:	"' update script for the built-in function View.SelectToEdit\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (theTheme <> nil) then\n  theField = theTheme.GetFTab.FindField(\"Shape\")\n  theType = theField.GetType\n  if (theType <> #FIELD_SHAPEPOINT) then\n    SELF.SetEnabled(true)\n    return nil\n  end\nend\n           \ntheGraphics = theView.GetGraphics\nif (theGraphics.Count > 0) then\n  SELF.SetEnabled(true)\n  return nil\nend\n              \n
 SELF.SetEnabled(false)"
 )
 
-(Script.197
+(Script.188
 	Name:	"Editor.SelectTool"
 	SourceCode:	"' uses the built-in function View.SelectTool\n' 22.01.2023, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Warning(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\ntheView.SetSelectMode(#GRAPHICS_SELECT_NORMAL)"
 )
 
-(Script.198
+(Script.189
 	Name:	"Editor.SetDefaultValues"
 	SourceCode:	"'##############################################################################\n'#\n'# Filename:     Editor_SetDefaultValues.ave\n'# Author:       Adrian Boehlen\n'# Date:         31.01.2023\n'# Version:      1.2\n'#\n'# Purpose:      liest Defaultwerte aus default_values.dbf ein und speichert\n'#               sie im globalen Dictionary _defaultValues\n'#\n'#               wird auch in den LayoutTool verwendet\n'#\n'##############################################################################\n\nif (_defaultValues = n
 il) then\n  theVTab = av.Run(\"Editor.SubReadTable\", {\"Select Default Values Table\"})\nelse\n  return nil\nend\n\nif (theVTab = nil) then\n  MsgBox.Warning(\"No default values defined. Use the button 'D' to define them later.\", \"No default values\")\n  return nil\nend\n\ntheFields = theVTab.GetFields\n\n_defaultValues = Dictionary.Make(2)\n\nfor each rec in theVTab\n  for each feld in theFields\n    if (feld.AsString = \"Key\") then\n      theKey = theVTab.ReturnValue(feld, rec)\n    elseif (feld.AsString = \"Value\") then\n      the
 Value = theVTab.ReturnValue(feld, rec)\n      if (theValue.IsNumber) then\n        theValue = theValue.AsNumber\n      end\n    else\n      MsgBox.Error(\"Wrong table structure. Please select the default values table.\", \"\")\n      return nil\n    end\n  end\n  _defaultValues.Add(theKey, theValue)\nend\n"
 )
 
-(Script.199
+(Script.190
 	Name:	"Editor.SplitLine"
-	SourceCode:	"' uses the built-in function View.SplitTool\n\n' ##########################################\n' REV: 08.01.2026, A. Boehlen\n' - Set timestamp for new features\n' - clear selected features and refresh view\n' ##########################################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polyline\", \"false\", \"0\"}) = nil) then\n  return nil\nend\n\ntheFTab = theTheme.GetFTab\n\n'# create string field DateOfCr if it doesn't exist\nif (theFTab.FindFiel
-d(\"DateOfCr\") = nil) then\n  av.Run(\"Editor.SubCreateField\", {theFTab, \"DateOfCr\", \"16\"})\nend\n\nl = theView.ReturnUserPolyLine\nif (l.IsNull) then\n  return nil\nelse\n  theFtab.BeginTransaction\n  theShpFld = theFTab.FindField(\"Shape\")\n  theDate = theFTab.FindField(\"DateOfCr\")\n  theType = theShpFld.GetType\n  if ((theType = #FIELD_SHAPEPOLY) or (theType = #FIELD_SHAPELINE)) then\n    theTheme.Split(l)\n  end\n\n  '# set timestamp as string for the selected features\n  theBitmap = theFTab.getSelection \n\n  for each rec i
-n theBitmap\n    theVal = theFTab.ReturnValue (theShpFld, rec)\n    if ((theVal.asString) = \"Polyline: Null\") then\n      theBitmap.set(rec)\n    else\n      timestampStr = av.Run(\"Editor.SubCreateDate\", {})\n      theFTab.SetValue(theDate,rec,timestampStr)\n\n      theBitmap.clear(rec)\n    end\n  end\n\n  theFtab.EndTransaction  \n\n  av.GetProject.SetModified(true)\nend\n\n'# clear selection and refresh view\ntheFTab.BeginTransaction\ntheTheme.ClearSelected\ntheFTab.EndTransaction\ntheTheme.Invalidate (TRUE)\ntheView.Invalida
-teTOC( nil )\ntheView.Invalidate\nSystem.RefreshWindows\n"
+	SourceCode:	"' uses the built-in function View.SplitTool\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polyline\", \"false\", \"0\"}) = nil) then\n  return nil\nend\n\nl = theView.ReturnUserPolyLine\nif (l.IsNull) then\n  return nil\nelse\n  theTheme.GetFtab.BeginTransaction\n  theField = theTheme.GetFTab.FindField(\"Shape\")\n  theType = theField.GetType\n  if ((theType = #FIELD_SHAPEPOLY) or (theType = #FIELD_SHAPE
+LINE)) then\n    theTheme.Split(l)\n  end\n  theTheme.GetFtab.EndTransaction  \n  av.GetProject.SetModified(true)\nend\n\n"
 )
 
-(Script.200
+(Script.191
 	Name:	"Editor.SplitLineToolUpdate"
 	SourceCode:	"' uses the built-in function View.SplitLineToolUpdate\n' 15.10.2022, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\n\nif (theTheme = nil) then\n  SELF.SetEnabled(False) \nelse\n  theType = theTheme.GetFTab.FindField(\"Shape\").GetType\n  SELF.SetEnabled(theType = #FIELD_SHAPELINE)\nend"
 )
 
-(Script.201
+(Script.192
 	Name:	"Editor.SplitLineWithoutTrace"
-	SourceCode:	"' NAME: mm_ViewSplitLineWithoutTrace\n' ORIGIN: Harald, 08.02.03\n' INTEGRATION: View Tool, Apply Script\n'              Help: Draw Line to Split Feature//Creates a line to split line features, clears the Cutting Line\n'              Update: View.SplitLineToolUpdate\n'              Cursor: Cursor.CrossHair\n'\n' HELP: Draws a Line to Split Line Feature, clears the Cutting Line (the Standard SplitTool \n'       makes Features out of the Splitting Lines)\n'\n' NEEDS: Editable polyline theme\n\n' #########################
-#################\n' REV: 08.01.2026, A. Boehlen\n' - Set timestamp for new features\n' - clear selected features and refresh view\n' ##########################################\n'\n'*******************************************\n'\n' CTRL-KLICK Info (erscheint, wenn das Skript bei gedrueckter Strg- bzw. Ctrl-Taste aufgerufen wird)\n' \n'if (System.IsControlKeyDown) then\n'\n'  message =\n'    \" \"+nl+\n'    \n'    \"SCRIPT NAME:  mm_ViewSplitLineWithoutTrace \"+nl+nl+\n'    \n'    \"ORIGIN:  Harald, February 8, 2003 \"+nl+nl+\n'   
- \n'    \"Draws a line to split line feature, clears the cutting line (the standard split tool \"+\n'    \"converts the splitting lines to features).\" +nl\n'    \n'  msgbox.report(message,\"INFO: Cut Line Without Trace...\")\n'  \n'  return nil\n'end\n'\n'--------------------------------------------------------------------\ntheView = av.GetActiveDoc\n\nif (theView.is(View).not) then\n  msgBox.Info(\"This is an Apply Script. Use it with a view tool.\",\"\")\n  return NIL\nend\n\nif (System.IsControlKeyDown) then\n  av.GetProject.SetMo
-dified(true)\n  theView.GetDisplay.Pan\n  return NIL\nend\n\ntheSelMode = theView.GetSelectMode\n\ntheEdtLinThm = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theEdtLinThm, \"polyline\", \"false\", \"0\"}) = nil) then\n  return nil\nend\n\ntheVTab = theEdtLinThm.GetFTab\n\n'# create string field DateOfCr if it doesn't exist\nif (theVTab.FindField(\"DateOfCr\") = nil) then\n  av.Run(\"Editor.SubCreateField\", {theVTab, \"DateOfCr\", \"16\"})\nend\n\n\n'--------------------------------------------------------------------\n\nif
- (theEdtLinThm = NIL) then\n  MsgBox.Info(\"Start editing a polyline theme.\",\" No Theme in Edit Mode\")\n  return NIL\nelse\n  theType = theEdtLinThm.GetFTab.FindField(\"Shape\").GetType\n  if (theType <> #FIELD_SHAPELINE) then\n    MsgBox.Info(\"Start editing a line theme.\",\" No Line Theme in Edit Mode\")\n    return NIL\n  end\nend\n'--------------------------------------------------------------------\n\ntheUserPL = theView.ReturnUserPolyLine\n\nif (theUserPL.IsNull) then\n  return nil\nelse\n  if (theEdtLinThm <> nil) then\n   
- thePLGraph = GraphicShape.Make(theUserPL)\n    thePLShape = thePLGraph.getShape\n    theEdtLinThm.GetFtab.BeginTransaction\n    theField = theEdtLinThm.GetFTab.FindField(\"Shape\")\n    theType = theField.GetType\n    if (theType = #FIELD_SHAPELINE) then\n      theEdtLinThm.Split(thePLShape)\n    end\n    theEdtLinThm.GetFtab.EndTransaction\n  end\n  av.GetProject.SetModified(true)\nend\n\n'theVTab = theEdtLinThm.getFTab\ntheVTab.rememberSelection\n\n\n\ntheEdtLinThm.SubtractShape (thePLShape)\n\ntheVTab.UpdateSelection\ntheVTab
-.Flush\ntheBitmap = theVTab.getSelection \n\ntheShpFld = theVTab.FindField(\"Shape\")\ntheDate = theVTab.FindField(\"DateOfCr\")\n\nfor each rec in theBitmap\n  theVal = theVTab.ReturnValue (theShpFld, rec)\n'  msgbox.info(theVal.asstring,\"\")\n  if ((theVal.asstring) = \"Polyline: Null\") then\n    theBitmap.set(rec)\n  else\n    '# set timestamp as string\n    timestampStr = av.Run(\"Editor.SubCreateDate\", {})\n    theVTab.SetValue(theDate,rec,timestampStr)\n\n    theBitmap.clear(rec)\n  end\nend\n\ntheView.SetSelectMode(#GRAPHICS_S
-ELECT_NORMAL)\n\ntheVTab.BeginTransaction\ntheEdtLinThm.ClearSelected\ntheVTab.EndTransaction\n\n'# restore the last selection. Currently not in use\n'theView.SetSelectMode(theSelMode)\n'theLastSel = theVTab.GetLastSelection\n'theVTab.SetSelection(theLastSel.clone)\n'theVTab.UpdateSelection\n\n'# refresh view\ntheEdtLinThm.Invalidate (TRUE)\ntheView.InvalidateTOC( nil )\ntheView.Invalidate\nSystem.RefreshWindows\n\n"
+	SourceCode:	"' NAME: mm_ViewSplitLineWithoutTrace\n' ORIGIN: Harald, 08.02.03\n' INTEGRATION: View Tool, Apply Script\n'              Help: Draw Line to Split Feature//Creates a line to split line features, clears the Cutting Line\n'              Update: View.SplitLineToolUpdate\n'              Cursor: Cursor.CrossHair\n'\n' HELP: Draws a Line to Split Line Feature, clears the Cutting Line (the Standard SplitTool \n'       makes Features out of the Splitting Lines)\n'\n' NEEDS: Editable polyline theme\n'\n'*************************
+******************\n'\n' CTRL-KLICK Info (erscheint, wenn das Skript bei gedrueckter Strg- bzw. Ctrl-Taste aufgerufen wird)\n' \n'if (System.IsControlKeyDown) then\n'\n'  message =\n'    \" \"+nl+\n'    \n'    \"SCRIPT NAME:  mm_ViewSplitLineWithoutTrace \"+nl+nl+\n'    \n'    \"ORIGIN:  Harald, February 8, 2003 \"+nl+nl+\n'    \n'    \"Draws a line to split line feature, clears the cutting line (the standard split tool \"+\n'    \"converts the splitting lines to features).\" +nl\n'    \n'  msgbox.report(message,\"INFO: Cut Line With
+out Trace...\")\n'  \n'  return nil\n'end\n'\n'--------------------------------------------------------------------\ntheView = av.GetActiveDoc\n\nif (theView.is(View).not) then\n  msgBox.Info(\"This is an Apply Script. Use it with a view tool.\",\"\")\n  return NIL\nend\n\nif (System.IsControlKeyDown) then\n  av.GetProject.SetModified(true)\n  theView.GetDisplay.Pan\n  return NIL\nend\n\ntheSelMode = theView.GetSelectMode\n\ntheEdtLinThm = theView.GetEditableTheme\n\n'-------------------------------------------------------------------
+-\n\nif (theEdtLinThm = NIL) then\n  MsgBox.Info(\"Start editing a polyline theme.\",\" No Theme in Edit Mode\")\n  return NIL\nelse\n  theType = theEdtLinThm.GetFTab.FindField(\"Shape\").GetType\n  if (theType <> #FIELD_SHAPELINE) then\n    MsgBox.Info(\"Start editing a line theme.\",\" No Line Theme in Edit Mode\")\n    return NIL\n  end\nend\n'--------------------------------------------------------------------\n\ntheUserPL = theView.ReturnUserPolyLine\n\nif (theUserPL.IsNull) then\n  return nil\nelse\n  if (theEdtLinThm <> nil) the
+n\n    thePLGraph = GraphicShape.Make(theUserPL)\n    thePLShape = thePLGraph.getShape\n    theEdtLinThm.GetFtab.BeginTransaction\n    theField = theEdtLinThm.GetFTab.FindField(\"Shape\")\n    theType = theField.GetType\n    if (theType = #FIELD_SHAPELINE) then\n      theEdtLinThm.Split(thePLShape)\n    end\n    theEdtLinThm.GetFtab.EndTransaction\n  end\n  av.GetProject.SetModified(true)\nend\n\ntheVTab = theEdtLinThm.getFTab\ntheVTab.rememberSelection\n\ntheEdtLinThm.SubtractShape (thePLShape)\n\ntheVTab.UpdateSelection\ntheVT
+ab.Flush\ntheBitmap = theVTab.getSelection \n\ntheShpFld = theVTab.FindField(\"Shape\")\n\nfor each rec in theBitmap\n  theVal = theVTab.ReturnValue (theShpFld, rec)\n'  msgbox.info(theVal.asstring,\"\")\n  if ((theVal.asstring) = \"Polyline: Null\") then\n    theBitmap.set(rec)\n  else\n    theBitmap.clear(rec)\n  end\nend\n\ntheView.SetSelectMode(#GRAPHICS_SELECT_NORMAL)\n\ntheVTab.BeginTransaction\ntheEdtLinThm.ClearSelected\ntheVTab.EndTransaction\n\ntheView.SetSelectMode(theSelMode)\n\ntheLastSel = theVTab.GetLastSelection\ntheVTab
+.SetSelection(theLastSel.clone)\n\ntheVTab.UpdateSelection\n"
 )
 
-(Script.202
+(Script.193
 	Name:	"Editor.SplitLineWithoutTraceInfo"
 	SourceCode:	"' CTRL-KLICK Info (erscheint, wenn das Skript bei gedrueckter Strg- bzw. Ctrl-Taste aufgerufen wird)\n \nif (System.IsControlKeyDown) then\n\n  message =\n    \" \"+nl+\n    \n    \"SCRIPT NAME:  mm_ViewSplitLineWithoutTrace\"+nl+nl+\n    \n    \"ORIGIN:  Harald, February 8, 2003 \"+nl+nl+\n    \n    \"Draws a line to split line feature, clears the cutting line (the standard split tool \"+\n    \"converts the splitting lines to features).\" +nl\n    \n  msgbox.report(message,\"INFO: Cut Line Without Trace...\")\n  \n  return nil\nend"
 )
 
-(Script.203
+(Script.194
 	Name:	"Editor.start"
 	SourceCode:	"' opens the editor toolbar and reads default values\n' 22.01.2023, A. Boehlen\n'###############################\n\nav.getproject.finddialog(\"Editor\").open\nav.Run(\"Editor.SetDefaultValues\", {})\n"
 )
 
-(Script.204
+(Script.195
 	Name:	"Editor.SubCheckTheme"
 	SourceCode:	"' Subroutine checks if an edit session is running on the proper geometry type,\n' and if there is a selection, if necessary\n' 15.10.2022, A. Boehlen\n'###############################\n\n'# local variables\ntheTheme =  Self.Get(0) ' the editable theme\ngeometry =  Self.Get(1) ' \"point\", \"polyline\", \"polygon\", \"polyline-or-polygon\" or \"point-or-polyline-or-polygon\"\nselection = Self.Get(2) ' \"true\" (selection is necessary) or \"false\" (no selection required)\nselCount =  Self.Get(3) ' number of features that have to b
 e selected\n                        ' a \"number\" means, exactly this count, a \"number+\" means, at least this count\n                        \nmsgBoxGeom =  \"Please choose a \" + geometry + \" theme.\"\nmsgBoxGeomT = \"Wrong Geometry Type\"\nmsgBoxSelT =  \"Wrong Selection Count\"\n\n\n'# check if an edit session is running\nif (theTheme = nil) then\n  MsgBox.Info(\"Start Editing a \" + geometry + \" theme.\",\"No Theme in Edit Mode\")\n  return nil\nend\n\n\n'# check the geometry type\nfldShape = theTheme.GetFTab.FindField(\"shape\")\nif 
@@ -2436,60 +2350,50 @@ APEPOINT) then\n    MsgBox.Info(msgBoxGeom, msgBoxGeomT)\n    return nil\n  end\
 + selCount.AsString + \" features.\",msgBoxSelT)\n      return nil\n    end\n  end\nend\n\n\n'# return 1 if all checks are OK\nreturn 1\n\n"
 )
 
-(Script.205
-	Name:	"Editor.SubCreateDate"
-	SourceCode:	"' Subroutine creates a string from the current date/time\n' 07.01.2026, A. Boehlen\n'###############################\n\ntimestamp = Date.Now\ntimestamp.SetFormat(\"yyyyMMddhhhhms\")\ntimestampStr = timestamp.asString\nreturn timestampStr\n"
-)
-
-(Script.206
-	Name:	"Editor.SubCreateField"
-	SourceCode:	"' Subroutine creates a new string field\n' 07.01.2026, A. Boehlen\n'######################################\n\ntheFTab =  Self.Get(0)\nfldName =  Self.Get(1)\nfldWidth = Self.Get(2)\n\ntheNewField = Field.Make(fldName,#FIELD_CHAR,fldWidth.AsNumber,0)\ntheFTab.AddFields({theNewField})\n"
-)
-
-(Script.207
+(Script.196
 	Name:	"Editor.SubPopTransaction"
 	SourceCode:	"AVEDIT = av.GetActiveDoc.GetObjectTag\nstkTransaction = AVEDIT.Get(0)\nif (stkTransaction.IsEmpty.Not) then\n  lstTransObj  = stkTransaction.Pop\n  av.GetActiveDoc.SetObjectTag(AVEDIT)\n  lstTransUndo = lstTransObj.Get(0)\n  lstTransRedo = lstTransObj.Get(1)\n  if (lstTransRedo <> NIL) then\n    AVEDIT.Set(1, lstTransObj)\n  else\n    AVEDIT.Set(1, NIL)\n  end\n  av.Run(lstTransUndo.Get(0),lstTransUndo.Get(1))\nend\n\n"
 )
 
-(Script.208
+(Script.197
 	Name:	"Editor.SubPushTransaction"
 	SourceCode:	"' used by Editor.Reshape and Editor.DeleteVertex\n' 20.12.2021, A. Boehlen\n'###############################\n\n' SELF is the transaction object to push on the transaction stack.\n' If SELF is NIL, then the transaction stack is emptied. Otherwise\n' the transaction object is pushed onto the transaction stack. In\n' either case the Redo object is set to NIL. Redo objects are stored\n' only after an Undo... \n'\nAVEDIT = av.GetActiveDoc.GetObjectTag \nif (SELF = NIL) then\n  AVEDIT.Set(0, Stack.Make)\n  AVEDIT.Set(1, NIL)
 \n  av.GetActiveGUI.Update\n'else\n'  if (AVEDIT.Get(3)) then\n'    AVEDIT.Get(0).Push(SELF)\n'    AVEDIT.Set(1, NIL)\n\n'    if (AVEDIT.Get(2)) then \n'      System.Beep \n'    end\n'    if (AVEDIT.Get(0).Depth > 100) then\n'      MsgBox.Warning(\"Edit list has more than 100 transactions.\",\"\")\n'    end\n'  end\nend\nav.GetActiveDoc.SetObjectTag(AVEDIT)\n"
 )
 
-(Script.209
+(Script.198
 	Name:	"Editor.SubReadTable"
 	SourceCode:	"'######################################################################\n'#\n'# Filename:     Editor_SubReadTable.ave\n'# Author:       Adrian Boehlen\n'# Date:         02.12.2022\n'# Version:      1.0\n'#\n'# Purpose:      Erzeugt einen Dialog zum Auswaehlen einer Tabelle,\n'#               die anschliessend eingelesen wird.\n'#               Die Tabelle wird nicht zum GUI hinzugefuegt.\n'#               Script liefert das VTab Objekt zurueck.\n'#\n'#               wird auch in den LayoutTool verwendet\n'#\n'###########
 ###########################################################\n\nthePattern = \"*.dbf\"\ntheLabel = \"dBASE (*.dbf)\"\ntheTitle = Self.Get(0)\ntheFile = FileDialog.Show(thePattern, theLabel, theTitle)\n\nif (theFile = nil) then\n  return nil\nend\n\ntheVTab = VTab.Make(theFile, FALSE, FALSE)\n\nif (theVTab.HasError) then\n  if (theVTab.HasLockError) then\n    MsgBox.Error(\"Unable to acquire Read Lock for file \" + theFile.GetBaseName, \"\")\n  else\n    MsgBox.Error(\"The file '\" + theFile.GetBaseName + \"' is not valid.\", \"\")\n  end\ne
 lse\n  return theVTab\nend\n"
 )
 
-(Script.210
+(Script.199
 	Name:	"Editor.SubReturnIntersection"
 	SourceCode:	"line1 = SELF.Get(0)\nline2 = SELF.Get(1)\n\nptStartLine1 = line1.ReturnStart\nptEndLine1   = line1.ReturnEnd\n\nptStartLine2 = line2.ReturnStart\nptEndLine2   = line2.ReturnEnd\n\ndx2 = ptEndLine2.GetX - ptStartLine2.GetX\ndy2 = ptEndLine2.GetY - ptStartLine2.GetY\n\nareaLeft  = ( dy2 * (ptStartLine2.GetX - ptStartLine1.GetX)) -\n            ( dx2 * (ptStartLine2.GetY - ptStartLine1.GetY))          \nareaRight = ( dy2 * (ptEndLine1.GetX - ptStartLine2.GetX)) -\n            ( dx2 * (ptEndLine1.GetY - ptStartLine2.GetY))\n \n
            \nareaTotal = areaLeft + areaRight\n\nif (areaTotal <> 0) then\n  t = areaLeft / areaTotal\n  t1 = 1 - t  \n  x = (t1 * ptStartLine1.GetX) + (t * ptEndLine1.GetX)\n  y = (t1 * ptStartLine1.GetY) + (t * ptEndLine1.GetY)\n  return(x@y)\nelse\n  ' \n  ' not solvable!\n  '\n  return(-1)\nend\n"
 )
 
-(Script.211
+(Script.200
 	Name:	"Editor.SubTextShift"
 	SourceCode:	"'##############################################################\n'#\n'# Filename:     Editor.SubTextShift\n'# Author:       Adrian Boehlen\n'# Date:         27.01.2023\n'# Version:      1.0\n'#\n'# Purpose:      Subroutine zur Generierung von Text-Halos\n'#               \n'#               kopiert Text 4x und verschiebt Kopie je\n'#               oben rechts / unten rechts / \n'#               unten links / oben links \n'#            \n'##############################################################\n\n'# Variablen ueberne
 hmen\ng = Self.Get(0)\ntextSize = Self.Get(1)\ntextCopy = Self.Get(2)\ntheRefscale = Self.Get(3)\nquot = Self.Get(4)\nhaloColour = Self.Get(5)\n\n'# Textfeature kopieren, verschieben und weiss einfaerben\ngt = g.clone  \ntheOffX = textSize / (theRefscale / quot)\ntheOffY = textSize / (theRefscale / quot)\nif (textCopy = 1) then\n  gt.Offset(Point.Make(theOffX,theOffY))\nelseif (textCopy = 2) then\n  gt.Offset(Point.Make(theOffX,theOffY - (2 * theOffY)))\nelseif (textCopy = 3) then\n  gt.Offset(Point.Make(theOffX - (2 * theO
 ffX),theOffY - (2 * theOffY)))\nelse\n  gt.Offset(Point.Make(theOffX - (2 * theOffX),theOffY))\nend\ngt.GetSymbol.SetColor(haloColour) \nreturn gt"
 )
 
-(Script.212
+(Script.201
 	Name:	"Editor.Subtract"
 	SourceCode:	"' uses the built-in function View.SubtractGraphics\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Info(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\ntheTheme = theView.GetEditableTheme\n\nif (av.Run(\"Editor.SubCheckTheme\", {theTheme, \"polygon\", \"true\", \"2\"}) = nil) then\n  return nil\nend\n\ntheFTab = theTheme.GetFTab\ntheFTab.BeginTransaction\nfldShape = theFTab.FindField(\"shape\")\n\nr1 = theFTab.GetSelection.GetNextSet(-1)
 \nr2 = theFTab.GetSelection.GetNextSet(r1)\n\nif (r1 < r2) then\n  recBack = r1\n  recFront = r2\nelse\n  recBack = r2\n  recFront = r1\nend\n\nshpBack = theFTab.ReturnValue(fldShape,recBack)\nshpFront = theFTab.ReturnValue(fldShape,recFront)\n\nif (System.IsShiftKeyDown) then\n  shpDiff = shpFront.ReturnDifference(shpBack)   theFTab.SetValue(fldShape,recFront,shpDiff)\nelse\n  shpDiff = shpBack.ReturnDifference(shpFront)\n  theFTab.SetValue(fldShape,recBack,shpDiff)\nend\n\ntheFTab.UpdateSelection\ntheFtab.EndTransaction\ntheThe
 me.Invalidate(TRUE)\n"
 )
 
-(Script.213
+(Script.202
 	Name:	"Editor.SubtractUpdate"
 	SourceCode:	"' update script for Editor.Subtract\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\nenabled = FALSE\nSELF.SetLabel(\"&Subtract Features\")\nSELF.SetHelpTopic(\"Subtract_Features\")\nfCount = theTheme.GetFTab.GetSelection.Count\nshapeClass = theTheme.GetFTab.FindField(\"shape\").GetType\nenabled =  ((fcount = 2) and (shapeClass = #FIELD_SHAPEPOLY))\n\nSELF.SetEnabled(enabled)"
 )
 
-(Script.214
+(Script.203
 	Name:	"Editor.TextHalo"
 	SourceCode:	"'###################################################################\n'#\n'# Filename:     Editor.TextHalo\n'# Author:       Adrian Boehlen\n'# Date:         28.01.2023\n'# Version:      1.0\n'#\n'# Purpose:      erzeugt Textfreistellmaske (Halo)\n'#               \n'#               - Idee basiert auf HaloTexter von\n'#                 Michael Silberbauer 2002-03-22 \n'#               - funktioniert auch mit gesperrten, gedrehten\n'#                 oder Spline-Texten\n'#               - Groesse des Halos laesst sich ei
 ngeschraenkt\n'#                 definieren\n'#               - existierende Halos koennen geloescht werden\n'#               - benoetigt Editor.SubTextShift im gleichen Projekt\n'#            \n'###################################################################\n\ntheView = av.GetActiveDoc \n\nif (theView.Is(view).Not) then\n  MsgBox.Warning(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\n'# Abbruch, wenn keine Grafikfeatures vorhanden sind\ntheGraphics = theView.GetGraphics\nif (theGraphics.Count = 0) t
@@ -2501,7 +2405,7 @@ hicGroup.Add(gt) \n      end \n      theGraphicGroup.SetObjectTag(\"halo\") \n  
 \" vorhanden sind\n  if (theGraphicsList = nil) then\n    MsgBox.Warning(\"No halos found.\",\"No halos\")\n    return nil\n  end\n  for each g in theGraphicsList \n    g.SetSelected(true) \n  end \n  theGraphics.ClearSelected\nend"
 )
 
-(Script.215
+(Script.204
 	Name:	"Editor.TextTool"
 	SourceCode:	"' uses the built-in function View.TextTool\n' 27.01.2023, A. Boehlen\n'###############################\n\nCPC = av.FindDialog(\"Graphic.Label Defaults\")\nIconList = CPC.FindByName(\"CalloutIcons\")\nthePrefs = IconList.GetObjectTag.Get(\"Ttool1\")\n\n      '(0) Font Family    (String) \n      '(1) Font Style     (String)\n      '(2) Font Size      (Number)\n      '(3) Font Color     (String)\n      '(10) UseDefFont    (Boolean)\n      \nif (_defaultValues = nil) then\n  MsgBox.Warning(\"No default values defined.\" +NL+ \"Please 
 define them using the button 'D'\",\"No default values\")\n  return nil\nend\n      \nthePrefs.Set(0, _defaultValues.Get(\"schriftart\"))\nthePrefs.Set(1, _defaultValues.Get(\"schriftschnitt\"))\nthePrefs.Set(2, _defaultValues.Get(\"schriftgroesse_karte\"))\n\nCFont =      thePrefs.Get(0)\nCStyle =     thePrefs.Get(1)\nCSize =      thePrefs.Get(2)\nUseDef =     thePrefs.Get(10)\n\nif (thePrefs.Get(3) = \"Unnamed Color\") then\n  CColor = av.GetSymbolwin.ReturnCurrentSymbol(#SYMBOL_TEXT).Clone.GetColor\nelse \n  CColor = av.Run(\"View.
@@ -2509,19 +2413,19 @@ Return Color\",thePrefs.Get(3))\nend\n\ntheView = av.GetActiveDoc\nif (theView.G
 ue)\nend"
 )
 
-(Script.216
+(Script.205
 	Name:	"Editor.TextToolSpline"
 	SourceCode:	"' uses the built-in function View.SplineTextTool\n' 27.01.2023, A. Boehlen\n'###############################\n\n\nCPC = av.FindDialog(\"Graphic.Label Defaults\")\nIconList = CPC.FindByName(\"CalloutIcons\")\nthePrefs = IconList.GetObjectTag.Get(\"TTool6\")\n\nif (_defaultValues = nil) then\n  MsgBox.Warning(\"No default values defined.\" +NL+ \"Please define them using the button 'D'\",\"No default values\")\n  return nil\nend\n\nthePrefs.Set(0, _defaultValues.Get(\"schriftart\"))\nthePrefs.Set(1, _defaultValues.Get(\"schriftschnitt\"))\n
 thePrefs.Set(2, _defaultValues.Get(\"schriftgroesse_karte\"))\n\nCFont =      thePrefs.Get(0)\nCStyle =     thePrefs.Get(1)\nCSize =      thePrefs.Get(2)\nUseDef =     thePrefs.Get(10)\nif (thePrefs.Get(3) = \"Unnamed Color\") then\n  CColor = av.GetSymbolwin.ReturnCurrentSymbol(#SYMBOL_TEXT).Clone.GetColor\nelse \n  CColor = av.Run(\"View.Return Color\",thePrefs.Get(3))\nend\n\ntheDoc = av.GetActiveDoc\nif (theDoc.Is(View) )then\n  theTheme = theDoc.GetEditableTheme\n  if (theTheme <> nil) then return nil end\nend\nif (theDoc.Ge
 tGraphics.EditText.Not) then\n\n  l = theDoc.ReturnUserPolyLine\n  if (l.IsNull) then return nil end\n  st = SplineText.Make(\"\",l)\n  st.EditText\n  if (st.GetText <> \"\") then\n    theDoc.GetGraphics.UnselectAll\n    st.SetSelected(TRUE)\n    theDoc.GetGraphics.Add(st)\n  end\n  \n  av.GetProject.SetModified(true)\n  st.GetSymbol.SetFont(Font.Make(CFont,CStyle))\n  st.GetSymbol.SetSize(CSize)\n  st.GetSymbol.SetColor(CColor)\n  st.SetDisplay(theDoc.GetDisplay)\nend  \n"
 )
 
-(Script.217
+(Script.206
 	Name:	"Editor.TextToolUpdate"
 	SourceCode:	"' uses the built-in function View.TextToolUpdate\n' 22.01.2023, A. Boehlen\n'###############################\n\n\ntheView = av.GetActiveDoc\nif (Extension.GetExtensions.Get(\"Label & Text Tools\") = NIL) then\n  SELF.SetEnabled(FALSE)\n  return nil\nend  \ntheTheme = theView.GetEditableTheme\nif (theTheme = nil) then\n  SELF.SetEnabled(TRUE) \nelse\n  SELF.SetEnabled(FALSE)\nend\n \n"
 )
 
-(Script.218
+(Script.207
 	Name:	"Editor.ToggleEdit"
 	SourceCode:	"' Starts or stops the edit session\n' 20.12.2021, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Info(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\nif (theView.GetActiveThemes.Count = 0) then\n  MsgBox.Info(\"Start this tool from an active Theme.\",\"\")\n  return nil\nend\n\nactive = theView.GetActiveThemes.Get(0)\neditThm = theView.GetEditableTheme\n\nif (editThm <> nil) then\n' we need to stop editing this theme\n\n  doSave = MsgBox.YesNoCan
 cel(\"Save Edits to \"+editThm.GetName+\n  \"?\", \"Stop Editing\", true)\n  if (doSave = nil) then\n    return nil\n  end\n  if (editThm.StopEditing(doSave).Not) then\n  ' save failed, remain editing this theme\n    MsgBox.Info (\"Unable to Save Edits to \"\n                  + editThm.GetName  +\n                  \", please use the Save Edits As option\", \"\")\n    return nil\n  end\n  ' save succeeded  \n  theView.SetEditableTheme(NIL)\n  \n  if (editThm = active) then\n    ' user wanted to stop editing the active theme, were don
@@ -2529,31 +2433,31 @@ e\n     return nil \n  end \n   \nend\n  \nif (active.GetFTab.IsBeingEditedWithR
 s As option\", \"\")\n      return nil  'unable to save, remain editing\n  end\nend\n\n' start editing the active theme\ntheView.SetEditableTheme(active)\n"
 )
 
-(Script.219
+(Script.208
 	Name:	"Editor.UndoVertex"
 	SourceCode:	"if (SELF = NIL) then\n  MsgBox.Warning(\"Error in undoing transaction.\"+NL+\n    \"Nothing to Undo.\", \"Editor.UndoVertex\")\n  exit\nend\n\ntheView  = av.GetActiveDoc\ntheTheme = theView.GetEditableTheme\nfldShape = theTheme.GetFTab.FindField(\"Shape\")\nr = SELF.Get(0)\n\n' undoLast = MsgBox.YesNo\n'   (\"Do you really want to undo previous edit?\",\"Undo Edit\",TRUE)\nundoLast = TRUE\n\nif (undoLast) then\n  shpUndo = SELF.Get(1)\n  if ((fldShape.GetType = #FIELD_SHAPEPOLY) AND (shpUndo.Is(POLYGON).Not)) then\n    MsgBox.Info(\"Prev
 ious shape edited was a POLYLINE - Nothing to Undo.\",\"Undo Edit\")\n    exit\n  elseif ((fldShape.GetType = #FIELD_SHAPELINE) AND (shpUndo.Is(POLYGON))) then\n    MsgBox.Info(\"Previous shape edited was a POLYGON - Nothing to Undo.\",\"Undo Edit\")\n    exit\n  end\n\n  theTheme.GetFTab.SetValue(fldShape, r, shpUndo)\n  theTheme.GetFTab.Flush\n  theTheme.Invalidate(TRUE)\nend\n\n"
 )
 
-(Script.220
+(Script.209
 	Name:	"Editor.Unselect"
 	SourceCode:	"' uses the built-in function View.ClearSelect\n' 02.01.2026, A. Boehlen\n'###############################\n\ntheView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Info(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\n'# unselect features in all themes\nfor each t in theView.GetThemes\n  t.ClearSelection\nend\n\n'# unselect graphics (e.g. text elements)\ntheGraphicsList = theView.GetGraphics\ntheGraphicsList.UnselectAll\n"
 )
 
-(Script.221
-	Name:	"Ext.Unload"
+(Script.210
+	Name:	"Ext_unload"
 	SourceCode:	"Dialog.DetachFromExtension(self)\n"
 )
 
-(Script.222
-	Name:	"Ext.Inst"
-	SourceCode:	"'#########################################################################\n'#\n'# Filename:     ExtInst.ave\n'# Author:       Adrian Boehlen\n'# Date:         03.11.2022\n'# Version:      0.4\n'#\n'# Purpose:      installiert die Extension \n'#\n'#########################################################################\n\nif (av.GetProject = nil) then\n  return nil\nend\n\nSack = self '# Der 'Sack' vom makescript, wo alles Benoetigte drin ist\n\nSchaltflaeche = Sack.Get(0)\nviewGUI = av.GetProject.FindGUI( \"View\" )\nif (view
-GUI <> nil) then\n  '# prüfen, ob die Schaltflaeche schon existiert\n  if(viewGUI.GetButtonBar.findbyscript(Schaltflaeche.getclick) = nil) then\n    viewGUI.GetButtonBar.Add( Schaltflaeche, 2)\n  end\nend\n\nav.getproject.AddDialog( Sack.Get(1)) '# Dialog hinzufuegen\n\n\n\n\n"
+(Script.211
+	Name:	"Ext_Inst"
+	SourceCode:	"'#########################################################################\n'#\n'# Filename:     Ext_Inst.ave\n'# Author:       Adrian Boehlen\n'# Date:         03.11.2022\n'# Version:      0.4\n'#\n'# Purpose:      installiert die Extension \n'#\n'#########################################################################\n\nif (av.GetProject = nil) then\n  return nil\nend\n\nSack = self '# Der 'Sack' vom makescript, wo alles Benoetigte drin ist\n\nSchaltflaeche = Sack.Get(0)\nviewGUI = av.GetProject.FindGUI( \"View\" )\nif (vie
+wGUI <> nil) then\n  '# prüfen, ob die Schaltflaeche schon existiert\n  if(viewGUI.GetButtonBar.findbyscript(Schaltflaeche.getclick) = nil) then\n    viewGUI.GetButtonBar.Add( Schaltflaeche, 2)\n  end\nend\n\nav.getproject.AddDialog( Sack.Get(1)) '# Dialog hinzufuegen\n\n\n\n\n"
 )
 
-(Script.223
-	Name:	"Ext.Unin"
-	SourceCode:	"'#########################################################################\n'#\n'# Filename:     Ext.Unin.ave\n'# Author:       Adrian Boehlen\n'# Date:         03.11.2022\n'# Version:      0.4\n'#\n'# Purpose:      entfernt die Komponenten beim Deaktivieren der Extension \n'#\n'#########################################################################\n\nif (av.GetProject = nil) then\n  return nil\nend\n\nif (av.GetProject.IsClosing) then\n  return nil\nend\n\nviewGUI = av.GetProject.FindGUI( \"View\" )\n\n'# Schaltflaeche und Di
+(Script.212
+	Name:	"Ext_unin"
+	SourceCode:	"'#########################################################################\n'#\n'# Filename:     Ext_Unin.ave\n'# Author:       Adrian Boehlen\n'# Date:         03.11.2022\n'# Version:      0.4\n'#\n'# Purpose:      entfernt die Komponenten beim Deaktivieren der Extension \n'#\n'#########################################################################\n\nif (av.GetProject = nil) then\n  return nil\nend\n\nif (av.GetProject.IsClosing) then\n  return nil\nend\n\nviewGUI = av.GetProject.FindGUI( \"View\" )\n\n'# Schaltflaeche und Di
 alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \"Editor.start\"))\nav.GetProject.removedialog(\"Editor\")\n"
 )
 

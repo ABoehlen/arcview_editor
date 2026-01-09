@@ -1,6 +1,10 @@
 ' uses the built-in function View.AutoCompleteTool
-' 20.12.2021, A. Boehlen
-'###############################
+
+' ################################
+' REV: 09.01.2026, A. Boehlen
+' - Check theme
+' - Set timestamp for new features
+' ################################
 
 theView = av.GetActiveDoc
 theTheme = theView.GetEditableTheme
@@ -9,14 +13,46 @@ if (av.Run("Editor.SubCheckTheme", {theTheme, "polygon", "false", "0"}) = nil) t
   return nil
 end
 
+theFTab = theTheme.GetFTab
+
+'# create string field DateOfCr if it doesn't exist
+if (theFTab.FindField("DateOfCr") = nil) then
+  av.Run("Editor.SubCreateField", {theFTab, "DateOfCr", "16"})
+end
+
 l = theView.ReturnUserPolyLine
 if (l.IsNull) then
   return nil
 else
-  theTheme.GetFtab.BeginTransaction
+  theFtab.BeginTransaction
+  theShpFld = theFTab.FindField("Shape")
+  theDate = theTheme.GetFTab.FindField("DateOfCr")
+
   theTheme.AutoComplete(l)
-  theTheme.GetFtab.EndTransaction  
+
+  '# set timestamp as string for the selected features
+  theBitmap = theFTab.getSelection 
+
+  for each rec in theBitmap
+    theVal = theFTab.ReturnValue (theShpFld, rec)
+    if ((theVal.asString) = "Polyline: Null") then
+      theBitmap.set(rec)
+    else
+      timestampStr = av.Run("Editor.SubCreateDate", {})
+      theFTab.SetValue(theDate,rec,timestampStr)
+
+      theBitmap.clear(rec)
+    end
+  end
+
+  theFtab.EndTransaction  
   av.GetProject.SetModified(true)
 end
+
+'# refresh view
+theTheme.Invalidate (TRUE)
+theView.InvalidateTOC( nil )
+theView.Invalidate
+System.RefreshWindows
 
 

@@ -1,6 +1,10 @@
 ' uses the built-in function View.SplitTool
-' 20.12.2021, A. Boehlen
-'###############################
+
+' ##########################################
+' REV: 08.01.2026, A. Boehlen
+' - Set timestamp for new features
+' - clear selected features and refresh view
+' ##########################################
 
 theView = av.GetActiveDoc
 theTheme = theView.GetEditableTheme
@@ -9,18 +13,51 @@ if (av.Run("Editor.SubCheckTheme", {theTheme, "polyline", "false", "0"}) = nil) 
   return nil
 end
 
+theFTab = theTheme.GetFTab
+
+'# create string field DateOfCr if it doesn't exist
+if (theFTab.FindField("DateOfCr") = nil) then
+  av.Run("Editor.SubCreateField", {theFTab, "DateOfCr", "16"})
+end
+
 l = theView.ReturnUserPolyLine
 if (l.IsNull) then
   return nil
 else
-  theTheme.GetFtab.BeginTransaction
-  theField = theTheme.GetFTab.FindField("Shape")
-  theType = theField.GetType
+  theFtab.BeginTransaction
+  theShpFld = theFTab.FindField("Shape")
+  theDate = theFTab.FindField("DateOfCr")
+  theType = theShpFld.GetType
   if ((theType = #FIELD_SHAPEPOLY) or (theType = #FIELD_SHAPELINE)) then
     theTheme.Split(l)
   end
-  theTheme.GetFtab.EndTransaction  
+
+  '# set timestamp as string for the selected features
+  theBitmap = theFTab.getSelection 
+
+  for each rec in theBitmap
+    theVal = theFTab.ReturnValue (theShpFld, rec)
+    if ((theVal.asString) = "Polyline: Null") then
+      theBitmap.set(rec)
+    else
+      timestampStr = av.Run("Editor.SubCreateDate", {})
+      theFTab.SetValue(theDate,rec,timestampStr)
+
+      theBitmap.clear(rec)
+    end
+  end
+
+  theFtab.EndTransaction  
+
   av.GetProject.SetModified(true)
 end
 
+'# clear selection and refresh view
+theFTab.BeginTransaction
+theTheme.ClearSelected
+theFTab.EndTransaction
+theTheme.Invalidate (TRUE)
+theView.InvalidateTOC( nil )
+theView.Invalidate
+System.RefreshWindows
 

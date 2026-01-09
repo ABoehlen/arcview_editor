@@ -1,12 +1,23 @@
 ' uses the built-in function View.LineTool
-' 20.12.2021, A. Boehlen
-'###############################
+
+' ################################
+' REV: 07.01.2026, A. Boehlen
+' - Check theme
+' - Set timestamp for new features
+' ################################
 
 theView = av.GetActiveDoc
 theTheme = theView.GetEditableTheme
 
 if (av.Run("Editor.SubCheckTheme", {theTheme, "polyline", "false", "0"}) = nil) then
   return nil
+end
+
+theFTab = theTheme.GetFTab
+
+'# create string field DateOfCr if it doesn't exist
+if (theFTab.FindField("DateOfCr") = nil) then
+  av.Run("Editor.SubCreateField", {theFTab, "DateOfCr", "16"})
 end
 
 l = theView.ReturnUserPolyLine
@@ -18,12 +29,18 @@ else
   if (thePrj.IsNull.Not) then
     l = l.ReturnUnprojected(thePrj)
   end
-  theField = theTheme.GetFTab.FindField("Shape")
-  rec = theTheme.GetFTab.AddRecord
-  theTheme.GetFTab.SetValue(theField, rec, l)
-  theTheme.GetFTab.GetSelection.ClearAll
-  theTheme.GetFTab.GetSelection.Set(rec)
-  theTheme.GetFTab.UpdateSelection
-  theTheme.GetFtab.EndTransaction
+  theField = theFTab.FindField("Shape")
+  theDate = theFTab.FindField("DateOfCr")
+  rec = theFTab.AddRecord
+  theFTab.SetValue(theField, rec, l)
+  theFTab.GetSelection.ClearAll
+  theFTab.GetSelection.Set(rec)
+  theFTab.UpdateSelection
+  theFtab.EndTransaction
+  
+  '# set timestamp as string
+  timestampStr = av.Run("Editor.SubCreateDate", {})
+  theFTab.SetValue(theDate,rec,timestampStr)
+  
   av.GetProject.SetModified(true)
 end

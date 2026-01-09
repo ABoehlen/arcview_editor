@@ -9,6 +9,12 @@
 '       makes Features out of the Splitting Lines)
 '
 ' NEEDS: Editable polyline theme
+
+' ##########################################
+' REV: 08.01.2026, A. Boehlen
+' - Set timestamp for new features
+' - clear selected features and refresh view
+' ##########################################
 '
 '*******************************************
 '
@@ -49,6 +55,18 @@ theSelMode = theView.GetSelectMode
 
 theEdtLinThm = theView.GetEditableTheme
 
+if (av.Run("Editor.SubCheckTheme", {theEdtLinThm, "polyline", "false", "0"}) = nil) then
+  return nil
+end
+
+theVTab = theEdtLinThm.GetFTab
+
+'# create string field DateOfCr if it doesn't exist
+if (theVTab.FindField("DateOfCr") = nil) then
+  av.Run("Editor.SubCreateField", {theVTab, "DateOfCr", "16"})
+end
+
+
 '--------------------------------------------------------------------
 
 if (theEdtLinThm = NIL) then
@@ -82,8 +100,10 @@ else
   av.GetProject.SetModified(true)
 end
 
-theVTab = theEdtLinThm.getFTab
+'theVTab = theEdtLinThm.getFTab
 theVTab.rememberSelection
+
+
 
 theEdtLinThm.SubtractShape (thePLShape)
 
@@ -92,6 +112,7 @@ theVTab.Flush
 theBitmap = theVTab.getSelection 
 
 theShpFld = theVTab.FindField("Shape")
+theDate = theVTab.FindField("DateOfCr")
 
 for each rec in theBitmap
   theVal = theVTab.ReturnValue (theShpFld, rec)
@@ -99,6 +120,10 @@ for each rec in theBitmap
   if ((theVal.asstring) = "Polyline: Null") then
     theBitmap.set(rec)
   else
+    '# set timestamp as string
+    timestampStr = av.Run("Editor.SubCreateDate", {})
+    theVTab.SetValue(theDate,rec,timestampStr)
+
     theBitmap.clear(rec)
   end
 end
@@ -109,10 +134,16 @@ theVTab.BeginTransaction
 theEdtLinThm.ClearSelected
 theVTab.EndTransaction
 
-theView.SetSelectMode(theSelMode)
+'# restore the last selection. Currently not in use
+'theView.SetSelectMode(theSelMode)
+'theLastSel = theVTab.GetLastSelection
+'theVTab.SetSelection(theLastSel.clone)
+'theVTab.UpdateSelection
 
-theLastSel = theVTab.GetLastSelection
-theVTab.SetSelection(theLastSel.clone)
+'# refresh view
+theEdtLinThm.Invalidate (TRUE)
+theView.InvalidateTOC( nil )
+theView.Invalidate
+System.RefreshWindows
 
-theVTab.UpdateSelection
 

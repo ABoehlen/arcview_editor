@@ -1,0 +1,11 @@
+' Subroutine creates a new string field
+' 07.01.2026, A. Boehlen
+'######################################
+
+theFTab =  Self.Get(0)
+fldName =  Self.Get(1)
+fldWidth = Self.Get(2)
+
+theNewField = Field.Make(fldName,#FIELD_CHAR,fldWidth.AsNumber,0)
+theFTab.AddFields({theNewField})
+

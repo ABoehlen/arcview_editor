@@ -1,0 +1,26 @@
+theView = av.GetActiveDoc
+theTheme = theView.GetEditableTheme
+
+if((theTheme <> NIL) AND
+  (theTheme.GetFTab.GetSelection.Count > 0) AND
+  ((theTheme.GetFTab.FindField("shape").GetType = #FIELD_SHAPEPOLY) OR
+  (theTheme.GetFTab.FindField("shape").GetType = #FIELD_SHAPELINE) OR
+  (theTheme.GetFTab.FindField("shape").GetType = #FIELD_SHAPEPOINT))) then
+  SELF.SetEnabled(TRUE)
+else
+  SELF.SetEnabled(FALSE)
+end
+
+'# clear selection and refresh view
+theTheme.ClearSelection
+
+for each thm in theView.GetThemes
+  thm.Invalidate (TRUE)
+end
+
+theView.InvalidateTOC( nil )
+theView.Invalidate
+
+System.RefreshWindows
+
+

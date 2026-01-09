@@ -2,7 +2,7 @@
 '#
 '# Filename:     Ext.Make.ave
 '# Author:       Adrian Boehlen
-'# Date:         05.01.2026
+'# Date:         09.01.2026
 '# Version:      0.6
 '#
 '# Purpose:      erstellt die Extension
@@ -14,10 +14,10 @@
 Editor = Extension.Make("$AVHOME\projects\editor\Editor.avx".AsFileName,
 "Editor",av.FindScript("Ext.Inst"),av.FindScript("Ext.Unin"), {"$AVBIN\avdlog.dll".AsFileName})
 
-Editor.SetExtVersion(2)
+Editor.SetExtVersion(3)
 
 '# Beschreibung (Version jeweils anpassen)
-Editor.SetAbout("Editor-Toolbar (v2.7) ")
+Editor.SetAbout("Editor-Toolbar (v3.0) ")
 Editor.SetUnloadScript(av.FindScript("Ext.Unload"))
 
 '# Schaltflaeche und Dialog hinzufuegen

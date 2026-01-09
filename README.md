@@ -3,13 +3,11 @@ Editor is an Avenue extension used in ArcView GIS that provides many useful tool
 
 ## Purpose
 Editor includes tools for convenient editing shapefiles and graphic text elements. There are 7 groups of tools:
-* General tools such as start editing, select and edit attributes
-* Create points
-* Create and edit lines
-* Create and edit polygons
-* General editing tools
-* Create and edit graphic text elements
-* Refresh view and reload default values
+* General editing tools: Tools such as start editing, select and edit attributes
+* Create feature tools: Tools for creating point, line and polygon features
+* Modify features tools: Tools such as reshape, merge, rotate etc. 
+* Edit text tools: Tools for creating and editing graphic text elements
+* Various tools: Refresh view and reload default values
 
 ## Background
 ESRI's ArcView GIS is a rather old (1995 – 2002), but for many purposes still useful GIS application. Due to its age it's very fast on modern hardware and has full support for the still widely used vector data format _Shape_ (SHP).
