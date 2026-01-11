@@ -1,0 +1,14 @@
+' Subroutine refreshes each theme in the view
+' 11.01.2026, A. Boehlen
+'###############################
+
+theView =  Self.Get(0)
+
+for each thm in theView.GetThemes
+  thm.Invalidate (TRUE)
+end
+
+theView.InvalidateTOC( nil )
+theView.Invalidate
+
+System.RefreshWindows

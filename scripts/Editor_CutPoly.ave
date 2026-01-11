@@ -1,7 +1,7 @@
 ' uses the built-in function View.SplitTool
 
 ' ##########################################
-' REV: 09.01.2026, A. Boehlen
+' REV: 11.01.2026, A. Boehlen
 ' - Set timestamp for new features
 ' - clear selected features and refresh view
 ' ##########################################
@@ -15,6 +15,11 @@ end
 
 theFTab = theTheme.GetFTab
 
+'# create string field DateOfCr if it doesn't exist
+if (theFTab.FindField("DateOfCr") = nil) then
+  av.Run("Editor.SubCreateStrField", {theFTab, "DateOfCr", "16"})
+end
+
 l = theView.ReturnUserPolyLine
 if (l.IsNull) then
   return nil
@@ -23,7 +28,7 @@ else
   theField = theTheme.GetFTab.FindField("Shape")
   theDate = theFTab.FindField("DateOfCr")
   theType = theField.GetType
-  if ((theType = #FIELD_SHAPEPOLY) or (theType = #FIELD_SHAPELINE)) then
+  if (theType = #FIELD_SHAPEPOLY) then
     theTheme.Split(l)
   end
   
@@ -36,11 +41,12 @@ else
     if ((theVal.asString) = "Polyline: Null") then
       theBitmap.set(rec)
     else
-      timestampStr = av.Run("Editor.SubCreateDate", {})
+      timestampStr = av.Run("Editor.SubCreateDate", {i})
       theFTab.SetValue(theDate,rec,timestampStr)
 
       theBitmap.clear(rec)
     end
+    i = i + 1
   end
   
   theTheme.GetFtab.EndTransaction 
@@ -51,9 +57,6 @@ end
 theFTab.BeginTransaction
 theTheme.ClearSelected
 theFTab.EndTransaction
-theTheme.Invalidate (TRUE)
-theView.InvalidateTOC( nil )
-theView.Invalidate
-System.RefreshWindows
 
+av.Run("Editor.SubRefreshView", {theView})
 

@@ -4,7 +4,7 @@
 ' HILFE: Creates Circle from Click Point as Center//Creates a Circle of user defined Radius with User Point as Center (Coordinates can be adjusted)
 
 ' ################################
-' REV: 07.01.2026, A. Boehlen
+' REV: 10.01.2026, A. Boehlen
 ' - Set timestamp for new features
 ' ################################
 
@@ -236,12 +236,12 @@ if (anAvail = TRUE) then
 '
     '# create string field DateOfCr if it doesn't exist
     if (theFTab.FindField("DateOfCr") = nil) then
-      av.Run("Editor.SubCreateField", {theFTab, "DateOfCr", "16"})
+      av.Run("Editor.SubCreateStrField", {theFTab, "DateOfCr", "16"})
     end
 
     '# set timestamp as string
     theDateFld = theFTab.FindField("DateOfCr")
-    timestampStr = av.Run("Editor.SubCreateDate", {})
+    timestampStr = av.Run("Editor.SubCreateDate", {0})
     theFTab.SetValue(theDateFld,theRecNo,timestampStr)
 
 
@@ -296,7 +296,7 @@ if ((anAvail = FALSE) or (nuTheme = TRUE)) then
     theFtab.SetValue(theCoordYZentFld, theRecNo, theCentY)
     
     '# set timestamp as string
-    timestampStr = av.Run("Editor.SubCreateDate", {})
+    timestampStr = av.Run("Editor.SubCreateDate", {0})
     theFTab.SetValue(theDateFld,theRecNo,timestampStr)
 
   

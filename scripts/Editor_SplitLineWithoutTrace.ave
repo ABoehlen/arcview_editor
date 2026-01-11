@@ -11,7 +11,7 @@
 ' NEEDS: Editable polyline theme
 
 ' ##########################################
-' REV: 08.01.2026, A. Boehlen
+' REV: 11.01.2026, A. Boehlen
 ' - Set timestamp for new features
 ' - clear selected features and refresh view
 ' ##########################################
@@ -63,7 +63,7 @@ theVTab = theEdtLinThm.GetFTab
 
 '# create string field DateOfCr if it doesn't exist
 if (theVTab.FindField("DateOfCr") = nil) then
-  av.Run("Editor.SubCreateField", {theVTab, "DateOfCr", "16"})
+  av.Run("Editor.SubCreateStrField", {theVTab, "DateOfCr", "16"})
 end
 
 
@@ -114,6 +114,8 @@ theBitmap = theVTab.getSelection
 theShpFld = theVTab.FindField("Shape")
 theDate = theVTab.FindField("DateOfCr")
 
+i = 0
+
 for each rec in theBitmap
   theVal = theVTab.ReturnValue (theShpFld, rec)
 '  msgbox.info(theVal.asstring,"")
@@ -121,9 +123,9 @@ for each rec in theBitmap
     theBitmap.set(rec)
   else
     '# set timestamp as string
-    timestampStr = av.Run("Editor.SubCreateDate", {})
+    timestampStr = av.Run("Editor.SubCreateDate", {i})
     theVTab.SetValue(theDate,rec,timestampStr)
-
+    i = i + 1
     theBitmap.clear(rec)
   end
 end
@@ -141,9 +143,5 @@ theVTab.EndTransaction
 'theVTab.UpdateSelection
 
 '# refresh view
-theEdtLinThm.Invalidate (TRUE)
-theView.InvalidateTOC( nil )
-theView.Invalidate
-System.RefreshWindows
-
+av.Run("Editor.SubRefreshView", {theView})
 

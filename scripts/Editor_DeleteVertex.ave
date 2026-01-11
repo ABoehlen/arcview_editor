@@ -1,7 +1,8 @@
 ' hacked from http://webapp1.dlib.indiana.edu/virtual_disk_library/index.cgi/4288321/FID3756/PROGRAM/ETC/AVEDIT.APR
-' 18.11.2015 A. Boehlen
-' REV: 20.12.2021
-'###############################
+' ##########################################
+' REV: 11.01.2026, A. Boehlen
+' - Check theme
+' ##########################################
 
 theView  = av.GetActiveDoc
 

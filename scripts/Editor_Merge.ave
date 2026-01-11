@@ -1,6 +1,9 @@
 ' uses the built-in function View.UnionGraphics
-' 20.12.2021, A. Boehlen
-'###############################
+' ################################
+' REV: 20.12.2021, A. Boehlen
+' - Check theme
+' ################################
+
 
 theView = av.GetActiveDoc
 

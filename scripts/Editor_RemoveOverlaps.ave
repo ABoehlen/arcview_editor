@@ -1,6 +1,9 @@
 ' uses the built-in function View.SubtractGraphics
-' 20.12.2021, A. Boehlen
-'###############################
+
+' ################################
+' REV: 11.01.2026, A. Boehlen
+' - Check theme
+' ################################
 
 theView = av.GetActiveDoc
 

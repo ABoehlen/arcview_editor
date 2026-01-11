@@ -1,7 +1,7 @@
 ' uses the built-in function View.PointTool
 
 ' ################################
-' REV: 07.01.2026, A. Boehlen
+' REV: 10.01.2026, A. Boehlen
 ' - Check theme
 ' - Set timestamp for new features
 ' ################################
@@ -18,7 +18,7 @@ theFTab = theTheme.GetFTab
 
 '# create string field DateOfCr if it doesn't exist
 if (theFTab.FindField("DateOfCr") = nil) then
-  av.Run("Editor.SubCreateField", {theFTab, "DateOfCr", "16"})
+  av.Run("Editor.SubCreateStrField", {theFTab, "DateOfCr", "16"})
 end
 
 pt = theView.GetDisplay.ReturnUserPoint
@@ -38,7 +38,7 @@ theFTab.GetSelection.Set(rec)
 theFTab.UpdateSelection
 
 '# set timestamp as string
-timestampStr = av.Run("Editor.SubCreateDate", {})
+timestampStr = av.Run("Editor.SubCreateDate", {0})
 theFTab.SetValue(theDate,rec,timestampStr)
 
 av.GetProject.SetModified(true)

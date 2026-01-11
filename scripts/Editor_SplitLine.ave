@@ -1,7 +1,7 @@
 ' uses the built-in function View.SplitTool
 
 ' ##########################################
-' REV: 08.01.2026, A. Boehlen
+' REV: 11.01.2026, A. Boehlen
 ' - Set timestamp for new features
 ' - clear selected features and refresh view
 ' ##########################################
@@ -17,7 +17,7 @@ theFTab = theTheme.GetFTab
 
 '# create string field DateOfCr if it doesn't exist
 if (theFTab.FindField("DateOfCr") = nil) then
-  av.Run("Editor.SubCreateField", {theFTab, "DateOfCr", "16"})
+  av.Run("Editor.SubCreateStrField", {theFTab, "DateOfCr", "16"})
 end
 
 l = theView.ReturnUserPolyLine
@@ -35,16 +35,18 @@ else
   '# set timestamp as string for the selected features
   theBitmap = theFTab.getSelection 
 
+  i = 0
   for each rec in theBitmap
     theVal = theFTab.ReturnValue (theShpFld, rec)
     if ((theVal.asString) = "Polyline: Null") then
       theBitmap.set(rec)
     else
-      timestampStr = av.Run("Editor.SubCreateDate", {})
+      timestampStr = av.Run("Editor.SubCreateDate", {i})
       theFTab.SetValue(theDate,rec,timestampStr)
 
       theBitmap.clear(rec)
     end
+    i = i + 1
   end
 
   theFtab.EndTransaction  
@@ -56,8 +58,5 @@ end
 theFTab.BeginTransaction
 theTheme.ClearSelected
 theFTab.EndTransaction
-theTheme.Invalidate (TRUE)
-theView.InvalidateTOC( nil )
-theView.Invalidate
-System.RefreshWindows
 
+av.Run("Editor.SubRefreshView", {theView})

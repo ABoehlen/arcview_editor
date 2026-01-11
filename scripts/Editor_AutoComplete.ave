@@ -1,7 +1,7 @@
 ' uses the built-in function View.AutoCompleteTool
 
 ' ################################
-' REV: 09.01.2026, A. Boehlen
+' REV: 11.01.2026, A. Boehlen
 ' - Check theme
 ' - Set timestamp for new features
 ' ################################
@@ -17,7 +17,7 @@ theFTab = theTheme.GetFTab
 
 '# create string field DateOfCr if it doesn't exist
 if (theFTab.FindField("DateOfCr") = nil) then
-  av.Run("Editor.SubCreateField", {theFTab, "DateOfCr", "16"})
+  av.Run("Editor.SubCreateStrField", {theFTab, "DateOfCr", "16"})
 end
 
 l = theView.ReturnUserPolyLine
@@ -38,7 +38,7 @@ else
     if ((theVal.asString) = "Polyline: Null") then
       theBitmap.set(rec)
     else
-      timestampStr = av.Run("Editor.SubCreateDate", {})
+      timestampStr = av.Run("Editor.SubCreateDate", {0})
       theFTab.SetValue(theDate,rec,timestampStr)
 
       theBitmap.clear(rec)
@@ -50,9 +50,5 @@ else
 end
 
 '# refresh view
-theTheme.Invalidate (TRUE)
-theView.InvalidateTOC( nil )
-theView.Invalidate
-System.RefreshWindows
-
+av.Run("Editor.SubRefreshView", {theView})
 

@@ -1,8 +1,11 @@
 ' Subroutine creates a string from the current date/time
-' 07.01.2026, A. Boehlen
+' a shift which will be subtracted can by given as argument
+' 10.01.2026, A. Boehlen
 '###############################
 
-timestamp = Date.Now
+i =  Self.Get(0)
+
+timestamp = Date.Now - i.AsSeconds
 timestamp.SetFormat("yyyyMMddhhhhms")
 timestampStr = timestamp.asString
 return timestampStr

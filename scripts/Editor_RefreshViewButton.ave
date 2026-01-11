@@ -1,5 +1,5 @@
 ' refreshes the view window
-' 20.12.2021, A. Boehlen
+' 11.01.2026, A. Boehlen
 '###############################
 
 theView = av.GetActiveDoc
@@ -9,11 +9,4 @@ if (theView.Is(view).Not) then
   return nil
 end
 
-for each thm in theView.GetThemes
-  thm.Invalidate (TRUE)
-end
-
-theView.InvalidateTOC( nil )
-theView.Invalidate
-
-System.RefreshWindows
+av.Run("Editor.SubRefreshView", {theView})
