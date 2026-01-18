@@ -9,8 +9,11 @@
 ''
 
 ' ###############################
-' REV: 04.01.2026, A. Boehlen
+' REV: 18.01.2026, A. Boehlen
 ' - Check view and theme
+' - Return nil when Cancel is pressed
+' - Coverted original button to tool
+' - Set timestamp for new features
 ' ###############################
 
 srcvie = av.GetActiveDoc
@@ -20,9 +23,10 @@ if (srcvie.Is(view).Not) then
   return nil
 end
 
-srcthe = srcvie.GetActiveThemes.Get(0)
+srcthe = srcvie.GetEditableTheme
 
 if (av.Run("Editor.SubCheckTheme", {srcthe, "polyline-or-polygon", "true", "1"}) = nil) then
+  av.Run("Editor.Select", {})
   return nil
 end
 
@@ -32,9 +36,19 @@ srcfld = srctab.GetFields
 rcvfld = srcfld.DeepClone
 rcvfld.Remove(0)
 
-MsgOut = MsgBox.Input("CCW rotation angle:", "Rotate", "90")  
+MsgOut = MsgBox.Input("CCW rotation angle:", "Rotate", "90")
+if (MsgOut = nil) then
+  return nil
+end
 rotang = MsgOut.AsNumber
-srcdel = MsgBox.YesNo("Delete original object(s)?", "Rotate", True) 
+srcdel = MsgBox.YesNo("Delete original object(s)?", "Rotate", True)
+
+'# create string field DateOfCr if it doesn't exist
+if (srctab.FindField("DateOfCr") = nil) then
+  av.Run("Editor.SubCreateStrField", {srctab, "DateOfCr", "16"})
+end
+
+theDate = srctab.FindField("DateOfCr")
 
 srcedt = True
 if (srctab.IsEditable = False) then
@@ -71,6 +85,10 @@ for each srcele in srcrec
       srctab.SetValue(srcref, srcnum, srctab.ReturnValue(srcref, srcele))
     end
   end
+  '# set timestamp as string
+  timestampStr = av.Run("Editor.SubCreateDate", {0})
+  srctab.SetValue(theDate,srcele,timestampStr)
+
 end
 
 if (srcedt = False) then
@@ -80,4 +98,4 @@ end
 if (srcdel) then
   srcvie.Invalidate
 end
- 
+

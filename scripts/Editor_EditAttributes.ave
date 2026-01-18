@@ -27,7 +27,7 @@
 '             Cancel (Discard Edits.)
 
 ' ###############################
-' REV: 09.01.2026, A. Boehlen
+' REV: 18.01.2026, A. Boehlen
 ' - The shape field will not be displayed
 ' - Refresh view after closing the attribute editor
 ' - Use this tool as an alternate identify tool by clicking on a non editable feature.
@@ -122,8 +122,11 @@ for each i in 0..n
 
   numSel = theFTab.getNumSelRecords 
 
-  if (numSel = 0) then exit end
-  if (numSel > 1) then exit end
+  if (numSel = 0) then return nil end
+  if (numSel > 1) then
+    MsgBox.Info("Please click on exactly one feature","Too much features")
+    return nil
+  end
 
   for each sel in theFTab.getSelection
     for each f in lstFields

@@ -57,8 +57,13 @@ if (selection = "true") then
     end
   else
     if (theTheme.GetFTab.GetSelection.Count <> selCount.AsNumber) then
-      MsgBox.Info("Please select " + selCount.AsString + " features.",msgBoxSelT)
-      return nil
+      if (selCount.AsNumber = 1) then
+        av.Run("Editor.Select", {})
+        return nil
+      else
+        MsgBox.Info("Please select " + selCount.AsString + " features.",msgBoxSelT)
+        return nil
+      end
     end
   end
 end
