@@ -1,8 +1,11 @@
 ' uses the built-in function View.SaveEdits
 
 ' ################################
-' REV: 20.12.2021, A. Boehlen
+' REV: 24.01.2026, A. Boehlen
 ' - Check view
+' - Save without yes/no dialog
+' - Start edit session on active theme,
+'   if it is not yet running
 ' ################################
 
 theView = av.GetActiveDoc
@@ -12,27 +15,19 @@ if (theView.Is(view).Not) then
   return nil
 end
 
+active = theView.GetActiveThemes.Get(0)
 editThm = theView.GetEditableTheme
 if (editThm <> nil) then
-  doSave = MsgBox.YesNoCancel("Save edits to "+editThm.GetName+
-  "?","Save Edits",true)
-  if (doSave = nil) then
-    return nil
-  end
-  if (doSave.not) then
-    ' user changed her mind
-    return nil
-  else
-    ' save edits and stop editing
-    if (editThm.StopEditing(TRUE).Not) then
-      ' save failed, remain editing
+  'save edits and stop editing
+  if (editThm.StopEditing(TRUE).Not) then
+    'save failed, remain editing
      MsgBox.Info("Unable to Save Edits, please use the Save Edits As option", "")
-     return nil
-    end   
-    ' restart editing
-    theView.SetEditableTheme(editThm)
-  end
-end  
-
-
+    return nil
+  end   
+  'restart editing
+  theView.SetEditableTheme(editThm)
+else
+  'start editing the active theme
+  theView.SetEditableTheme(active)
+end
 

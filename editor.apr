@@ -99,21 +99,21 @@
 	Scripts:	714
 	Prefs:	715
 	GUI:	723
-	WorkDir:	1679
+	WorkDir:	1682
 	WinX:	3
 	WinY:	2
 	WinW:	1362
 	WinH:	763
 	SerialNumber:	"899941126318"
-	SelColor:	1680
-	GUINames:	1681
-	GUINames:	1682
-	GUINames:	1683
+	SelColor:	1683
 	GUINames:	1684
 	GUINames:	1685
 	GUINames:	1686
 	GUINames:	1687
 	GUINames:	1688
+	GUINames:	1689
+	GUINames:	1690
+	GUINames:	1691
 	TocWidthScale:	1.00000000000000
 )
 
@@ -362,7 +362,7 @@ able must not have more than 20 Fields (because of the limitation of AV's MultiI
 )
 
 (Bitmap.34
-	NumBits:	21
+	NumBits:	25
 	Bits:	00000000 
 )
 
@@ -463,6 +463,7 @@ able must not have more than 20 Fields (because of the limitation of AV's MultiI
 
 (DocWin.50
 	Owner:	49
+	Open:	1
 	X:	251
 	Y:	52
 	W:	712
@@ -524,12 +525,12 @@ able must not have more than 20 Fields (because of the limitation of AV's MultiI
 )
 
 (Numb.60
-	N:	0.17550274223035
+	N:	96.00000000000000
 )
 
 (PointD.61
-	x:	599425.06019301759000
-	y:	200402.78583701552000
+	x:	598980.06566003710000
+	y:	200322.43960189403000
 )
 
 (Numb.62
@@ -633,7 +634,7 @@ able must not have more than 20 Fields (because of the limitation of AV's MultiI
 
 (Bitmap.74
 	NumBits:	9
-	Bits:	00000000 
+
 )
 
 (Legend.75
@@ -1131,7 +1132,7 @@ able must not have more than 20 Fields (because of the limitation of AV's MultiI
 	Name:	"Editor"
 	Creator:	"adrian"
 	CreationDate:	"Sam 06 Apr 2013 14:57:19 CEST"
-	Comments:	"Version 3.2"
+	Comments:	"Version 3.3"
 	GUIName:	"DialogEditor"
 	Win:	149
 	CSMgr:	150
@@ -1341,7 +1342,7 @@ able must not have more than 20 Fields (because of the limitation of AV's MultiI
 (Butn.172
 	InternalName:	"SaveEdits"
 	UseGraphicNfy:	1
-	Help:	"Save edits//"
+	Help:	"Save edits\n(or start edit session if not yet started)//"
 	Icon:	173
 	Click:	"Editor.SaveEdits"
 )
@@ -2290,7 +2291,7 @@ able must not have more than 20 Fields (because of the limitation of AV's MultiI
 (Butn.239
 	InternalName:	"StartEditing"
 	UseGraphicNfy:	1
-	Help:	"Start or stop editing//"
+	Help:	"Start or stop edit session//"
 	Icon:	240
 	Click:	"Editor.ToggleEdit"
 )
@@ -4614,7 +4615,7 @@ able must not have more than 20 Fields (because of the limitation of AV's MultiI
 
 (Butn.413
 	InternalName:	"SaveEdits"
-	Help:	"Save edits//"
+	Help:	"Save edits\n(or start edit session if not yet started)//"
 	Icon:	414
 	Click:	"Editor.SaveEdits"
 )
@@ -4771,7 +4772,7 @@ able must not have more than 20 Fields (because of the limitation of AV's MultiI
 
 (Butn.423
 	InternalName:	"StartEditing"
-	Help:	"Start or stop editing//"
+	Help:	"Start or stop edit session//"
 	Icon:	424
 	Click:	"Editor.ToggleEdit"
 )
@@ -5996,14 +5997,14 @@ led(ThemeCountCorrect and ThemeIs2DPoly)\n"
 	Win:	583
 	CSMgr:	584
 	DocExts:	585
-	Source:	"' uses the built-in function View.SaveEdits\n\n' ################################\n' REV: 20.12.2021, A. Boehlen\n' - Check view\n' ################################\n\ntheView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Info(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\neditThm = theView.GetEditableTheme\nif (editThm <> nil) then\n  doSave = MsgBox.YesNoCancel(\"Save edits to \"+editThm.GetName+\n  \"?\",\"Save Edits\",true)\n  if (doSave = nil) then\n    return nil\n  end\n  if (doSave.not) then\n
-    ' user changed her mind\n    return nil\n  else\n    ' save edits and stop editing\n    if (editThm.StopEditing(TRUE).Not) then\n      ' save failed, remain editing\n     MsgBox.Info(\"Unable to Save Edits, please use the Save Edits As option\", \"\")\n     return nil\n    end   \n    ' restart editing\n    theView.SetEditableTheme(editThm)\n  end\nend  \n\n\n"
+	Source:	"' uses the built-in function View.SaveEdits\n\n' ################################\n' REV: 24.01.2026, A. Boehlen\n' - Check view\n' - Save without yes/no dialog\n' - Start edit session on active theme,\n'   if it is not yet running\n' ################################\n\ntheView = av.GetActiveDoc\n\nif (theView.Is(view).Not) then\n  MsgBox.Info(\"Start this tool from an active View.\",\"\")\n  return nil\nend\n\nactive = theView.GetActiveThemes.Get(0)\neditThm = theView.GetEditableTheme\nif (editThm <> nil) then\n  'save edits and 
+stop editing\n  if (editThm.StopEditing(TRUE).Not) then\n    'save failed, remain editing\n     MsgBox.Info(\"Unable to Save Edits, please use the Save Edits As option\", \"\")\n    return nil\n  end   \n  'restart editing\n  theView.SetEditableTheme(editThm)\nelse\n  'start editing the active theme\n  theView.SetEditableTheme(active)\nend\n"
 )
 
 (DocWin.583
 	Owner:	582
-	X:	219
-	Y:	59
+	X:	443
+	Y:	54
 	W:	782
 	H:	573
 )
@@ -6797,7 +6798,7 @@ GUI <> nil) then\n  '# prüfen, ob die Schaltflaeche schon existiert\n  if(viewGU
 	CSMgr:	700
 	DocExts:	701
 	Source:	"'#########################################################################\n'#\n'# Filename:     Ext.Make.ave\n'# Author:       Adrian Boehlen\n'# Date:         18.01.2026\n'# Version:      0.6\n'#\n'# Purpose:      erstellt die Extension\n'#               Zum Erstellen der Extension NUR dieses Script ausfuehren\n'#\n'#########################################################################\n\n'# Make the extension object \nEditor = Extension.Make(\"$AVHOME\\projects\\editor\\Editor.avx\".AsFileName,\n\"Editor\",av.FindScript(\"
-Ext.Inst\"),av.FindScript(\"Ext.Unin\"), {\"$AVBIN\\avdlog.dll\".AsFileName})\n\nEditor.SetExtVersion(3)\n\n'# Beschreibung (Version jeweils anpassen)\nEditor.SetAbout(\"Editor-Toolbar (v3.2) \")\nEditor.SetUnloadScript(av.FindScript(\"Ext.Unload\"))\n\n'# Schaltflaeche und Dialog hinzufuegen\nSchaltflaeche = ( av.FindGUI( \"View\").GetButtonBar.findbyscript(\"Editor.start\"))  \nEditorDialog = av.FindDialog(\"Editor\")\nEditor.Add( Schaltflaeche)\nEditor.Add(EditorDialog)\n\nfor each aDoc in av.GetProject.GetDocs\n  if (aDoc.Is(SEd)) th
+Ext.Inst\"),av.FindScript(\"Ext.Unin\"), {\"$AVBIN\\avdlog.dll\".AsFileName})\n\nEditor.SetExtVersion(3)\n\n'# Beschreibung (Version jeweils anpassen)\nEditor.SetAbout(\"Editor-Toolbar (v3.3) \")\nEditor.SetUnloadScript(av.FindScript(\"Ext.Unload\"))\n\n'# Schaltflaeche und Dialog hinzufuegen\nSchaltflaeche = ( av.FindGUI( \"View\").GetButtonBar.findbyscript(\"Editor.start\"))  \nEditorDialog = av.FindDialog(\"Editor\")\nEditor.Add( Schaltflaeche)\nEditor.Add(EditorDialog)\n\nfor each aDoc in av.GetProject.GetDocs\n  if (aDoc.Is(SEd)) th
 en\n    if (aDoc.GetName.Contains(\"Editor.\")) then\n      if (aDoc.IsCompiled.Not) then\n        aDoc.Compile\n      end\n      Editor.Add(av.FindScript(aDoc.GetName))\n    end\n  end\nend\n\nEditor.Commit\n"
 	SearchStr:	"unload"
 )
@@ -6901,26 +6902,26 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 
 (NameDict.715
 	Obj:	716
-	Obj:	717
+	Obj:	719
 	Obj:	720
 )
 
 (AVDict.716
-	InternalName:	"Table of Contents Defaults Dialog"
-)
-
-(AVDict.717
 	InternalName:	"Dialog Designer"
-	Key:	718
-	Value:	719
+	Key:	717
+	Value:	718
 )
 
-(AVStr.718
+(AVStr.717
 	S:	"IsVisible"
 )
 
-(Bool.719
+(Bool.718
 	Truth:	1
+)
+
+(AVDict.719
+	InternalName:	"Table of Contents Defaults Dialog"
 )
 
 (AVDict.720
@@ -6942,9 +6943,9 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	Modified:	1
 	Visible:	1
 	MenuBar:	724
-	ButnBar:	842
-	Popups:	885
-	ToolBar:	907
+	ButnBar:	843
+	Popups:	886
+	ToolBar:	908
 	NewScript:	"View.New"
 	OpenScript:	"Doc.Open"
 	ActionScript:	"Doc.Action"
@@ -6952,7 +6953,7 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	OpenUpdateScript:	"Doc.OpenUpdate"
 	ActionUpdateScript:	"Doc.ActionUpdate"
 	Title:	"Views"
-	Icon:	984
+	Icon:	985
 )
 
 (MenuBar.724
@@ -6962,7 +6963,7 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	Child:	785
 	Child:	808
 	Child:	826
-	Child:	837
+	Child:	838
 )
 
 (PMenu.725
@@ -7245,6 +7246,7 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 )
 
 (Choice.759
+	Disabled:	1
 	Help:	"Inserts the contents of the clipboard"
 	HelpTopic:	"Paste"
 	Update:	"View.PasteUpdate"
@@ -7430,6 +7432,7 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 )
 
 (Choice.781
+	Disabled:	1
 	Help:	"Goes back to the previous extent you were viewing"
 	HelpTopic:	"Zoom_Previous"
 	Update:	"View.UndoZoomUpdate"
@@ -7805,6 +7808,7 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	Child:	833
 	Child:	835
 	Child:	836
+	Child:	837
 	Label:	"&Window"
 )
 
@@ -7849,7 +7853,7 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 )
 
 (AVStr.834
-	S:	"editor.apr View1"
+	S:	"editor.apr Editor View1"
 )
 
 (Choice.835
@@ -7860,22 +7864,29 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 )
 
 (Choice.836
-	Help:	"Activates View1"
-	Label:	"&2 View1"
+	Help:	"Activates Editor"
+	Label:	"&2 Editor"
 	Click:	"WindowActivate"
 	Shortcut:	"Keys.None"
 )
 
-(PMenu.837
+(Choice.837
+	Help:	"Activates View1"
+	Label:	"&3 View1"
+	Click:	"WindowActivate"
+	Shortcut:	"Keys.None"
+)
+
+(PMenu.838
 	InternalName:	"Help"
-	Child:	838
 	Child:	839
 	Child:	840
 	Child:	841
+	Child:	842
 	Label:	"&Help"
 )
 
-(Choice.838
+(Choice.839
 	Help:	"Displays the dialog for browsing and searching ArcView's help system"
 	HelpTopic:	"Help_on_Help_Topics"
 	Label:	"Help &Topics..."
@@ -7883,7 +7894,7 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	Shortcut:	"Keys.None"
 )
 
-(Choice.839
+(Choice.840
 	Help:	"Provides instructions for how to obtain help from ArcView"
 	HelpTopic:	"Help_on_How_to_Get_Help"
 	Label:	"&How to Get Help..."
@@ -7891,10 +7902,10 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	Shortcut:	"Keys.None"
 )
 
-(Space.840
+(Space.841
 )
 
-(Choice.841
+(Choice.842
 	Help:	"Provides information about ArcView"
 	HelpTopic:	"About"
 	Label:	"&About ArcView..."
@@ -7902,69 +7913,69 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	Shortcut:	"Keys.None"
 )
 
-(ButnBar.842
-	Child:	843
-	Child:	845
+(ButnBar.843
+	Child:	844
 	Child:	846
-	Child:	848
-	Child:	850
+	Child:	847
+	Child:	849
 	Child:	851
-	Child:	853
-	Child:	855
-	Child:	857
+	Child:	852
+	Child:	854
+	Child:	856
 	Child:	858
-	Child:	860
-	Child:	862
-	Child:	864
+	Child:	859
+	Child:	861
+	Child:	863
 	Child:	865
-	Child:	867
-	Child:	869
-	Child:	871
-	Child:	873
-	Child:	875
-	Child:	877
+	Child:	866
+	Child:	868
+	Child:	870
+	Child:	872
+	Child:	874
+	Child:	876
 	Child:	878
-	Child:	880
-	Child:	882
+	Child:	879
+	Child:	881
 	Child:	883
+	Child:	884
 )
 
-(Butn.843
+(Butn.844
 	Help:	"Save Project//Saves the current project"
 	HelpTopic:	"Save_Project"
-	Icon:	844
+	Icon:	845
 	Click:	"Project.Save"
 )
 
-(AVIcon.844
+(AVIcon.845
 	Name:	"Save"
 	Res:	"Icons.Save"
 
 )
 
-(Space.845
+(Space.846
 )
 
-(Butn.846
+(Butn.847
 	Help:	"Add Theme//Inserts themes into the view"
 	HelpTopic:	"Add_Theme"
-	Icon:	847
+	Icon:	848
 	Click:	"View.Add"
 )
 
-(AVIcon.847
+(AVIcon.848
 	Name:	"AddTheme"
 	Res:	"Icons.AddTheme"
 
 )
 
-(Butn.848
+(Butn.849
 	Help:	"Start Editor toolbar//"
-	Icon:	849
+	Icon:	850
 	Click:	"Editor.start"
 )
 
-(AVIcon.849
+(AVIcon.850
 	Name:	"start_editing2.bmp"
 	Data:	4e442049 6d616765 00010016 00170000 
 	Data:	0228d8d8 d8d8d8d8 d8d8d8d8 d8d8d8d8 
@@ -8070,238 +8081,238 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	Data:	0000
 )
 
-(Space.850
+(Space.851
 )
 
-(Butn.851
+(Butn.852
 	Help:	"Theme Properties//Displays the dialog box to edit properties of the active theme"
 	HelpTopic:	"Theme_Properties"
 	Update:	"View.ActiveThemesUpdate"
-	Icon:	852
+	Icon:	853
 	Click:	"View.ThemeProperties"
 )
 
-(AVIcon.852
+(AVIcon.853
 	Name:	"Props"
 	Res:	"Icons.Props"
 
 )
 
-(Butn.853
+(Butn.854
 	Help:	"Edit Legend//Displays the legends of the active themes"
 	HelpTopic:	"Edit_Legend"
 	Update:	"View.ActiveThemesUpdate"
-	Icon:	854
+	Icon:	855
 	Click:	"View.EditLegendClick"
 )
 
-(AVIcon.854
+(AVIcon.855
 	Name:	"Legend"
 	Res:	"Icons.Legend"
 
 )
 
-(Butn.855
+(Butn.856
 	Help:	"Open Theme Table//Opens the tables of the active themes"
 	HelpTopic:	"Open_Theme_Table"
 	Update:	"View.TabularThemesUpdate"
-	Icon:	856
+	Icon:	857
 	Click:	"View.ShowTable"
 )
 
-(AVIcon.856
+(AVIcon.857
 	Name:	"Table"
 	Res:	"Icons.Table"
 
 )
 
-(Space.857
+(Space.858
 )
 
-(Butn.858
+(Butn.859
 	Help:	"Find//Finds features in the active themes using the text you enter"
 	HelpTopic:	"Find"
 	Update:	"View.TabularThemesUpdate"
-	Icon:	859
+	Icon:	860
 	Click:	"View.Find"
 )
 
-(AVIcon.859
+(AVIcon.860
 	Name:	"Find"
 	Res:	"Icons.Find"
 
 )
 
-(Butn.860
+(Butn.861
 	Disabled:	1
 	Help:	"Locate Address//Locates an address in the active, matchable theme"
 	HelpTopic:	"Locate_Address"
 	Update:	"View.LocateUpdate"
-	Icon:	861
+	Icon:	862
 	Click:	"View.Locate"
 )
 
-(AVIcon.861
+(AVIcon.862
 	Name:	"AddMatch"
 	Res:	"Icons.AddMatch"
 
 )
 
-(Butn.862
+(Butn.863
 	Help:	"Query Builder//Displays the Query Builder to select features with a logical expression"
 	HelpTopic:	"Query_Builder"
 	Update:	"View.AttributeThemesUpdate"
-	Icon:	863
+	Icon:	864
 	Click:	"View.Query"
 )
 
-(AVIcon.863
+(AVIcon.864
 	Name:	"QueryBuilder"
 	Res:	"Icons.QueryBuilder"
 
 )
 
-(Space.864
+(Space.865
 )
 
-(Butn.865
+(Butn.866
 	Help:	"Zoom to Full Extent//Zooms to the extent of all themes"
 	HelpTopic:	"Zoom_to_Full_Extent"
 	Update:	"View.HasDataUpdate"
-	Icon:	866
+	Icon:	867
 	Click:	"View.ZoomFullExtent"
 )
 
-(AVIcon.866
+(AVIcon.867
 	Name:	"ZoomView"
 	Res:	"Icons.ZoomView"
 
 )
 
-(Butn.867
+(Butn.868
 	Help:	"Zoom to Active Theme(s)//Zooms to the extent of active themes"
 	HelpTopic:	"Zoom_to_Active_Theme"
 	Update:	"View.ActiveThemesUpdate"
-	Icon:	868
+	Icon:	869
 	Click:	"View.ZoomToThemes"
 )
 
-(AVIcon.868
+(AVIcon.869
 	Name:	"ZoomTheme"
 	Res:	"Icons.ZoomTheme"
 
 )
 
-(Butn.869
+(Butn.870
 	Help:	"Zoom to Selected//Zooms to the extent of the selected features"
 	HelpTopic:	"Zoom_to_Selected"
 	Update:	"View.SelectableThemesUpdate"
-	Icon:	870
+	Icon:	871
 	Click:	"View.ZoomToSelected"
 )
 
-(AVIcon.870
+(AVIcon.871
 	Name:	"ZoomToSelected"
 	Res:	"Icons.ZoomToSelected"
 
 )
 
-(Butn.871
+(Butn.872
 	Help:	"Zoom In//Zooms in on the center of the display"
 	HelpTopic:	"Zoom_In"
 	Update:	"View.HasDataUpdate"
-	Icon:	872
+	Icon:	873
 	Click:	"View.ZoomIn"
 )
 
-(AVIcon.872
+(AVIcon.873
 	Name:	"ZoomIn"
 	Res:	"Icons.ZoomIn"
 
 )
 
-(Butn.873
+(Butn.874
 	Help:	"Zoom Out//Zooms out from the center of the display"
 	HelpTopic:	"Zoom_Out"
 	Update:	"View.HasDataUpdate"
-	Icon:	874
+	Icon:	875
 	Click:	"View.ZoomOut"
 )
 
-(AVIcon.874
+(AVIcon.875
 	Name:	"ZoomOut"
 	Res:	"Icons.ZoomOut"
 
 )
 
-(Butn.875
+(Butn.876
+	Disabled:	1
 	Help:	"Zoom to Previous Extent//Goes back to the previous extent you were viewing"
 	HelpTopic:	"Zoom_Previous"
 	Update:	"View.UndoZoomUpdate"
-	Icon:	876
+	Icon:	877
 	Click:	"View.UndoZoom"
 )
 
-(AVIcon.876
+(AVIcon.877
 	Name:	"ZoomPrevious"
 	Res:	"Icons.ZoomPrevious"
 
 )
 
-(Space.877
+(Space.878
 )
 
-(Butn.878
+(Butn.879
 	Disabled:	1
 	Help:	"Select Features Using Graphic//Selects features in active themes using selected graphics"
 	HelpTopic:	"Select_Features_Using_Graphic"
 	Update:	"View.SpatialSelectUpdate"
-	Icon:	879
+	Icon:	880
 	Click:	"View.SpatialSelect"
 )
 
-(AVIcon.879
+(AVIcon.880
 	Name:	"SpatialSelect"
 	Res:	"Icons.SpatialSelect"
 
 )
 
-(Butn.880
+(Butn.881
 	Help:	"Clear Selected Features//Unselects the selected features of all active themes"
 	HelpTopic:	"Clear_Selected_Features"
 	Update:	"View.AttributeThemesUpdate"
-	Icon:	881
+	Icon:	882
 	Click:	"View.ClearSelect"
 )
 
-(AVIcon.881
+(AVIcon.882
 	Name:	"SelectNone"
 	Res:	"Icons.SelectNone"
 
 )
 
-(Space.882
+(Space.883
 )
 
-(Butn.883
+(Butn.884
 	Help:	"Help//Gets help about the next button, tool, or menu choice you click"
 	HelpTopic:	"Help_button"
-	Icon:	884
+	Icon:	885
 	Click:	"Help.Tool"
 )
 
-(AVIcon.884
+(AVIcon.885
 	Name:	"HelpTool"
 	Res:	"Icons.HelpTool"
 
 )
 
-(PopupSet.885
-	Child:	886
+(PopupSet.886
+	Child:	887
 )
 
-(Popup.886
-	Child:	887
+(Popup.887
 	Child:	888
 	Child:	889
 	Child:	890
@@ -8321,10 +8332,11 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	Child:	904
 	Child:	905
 	Child:	906
+	Child:	907
 	Label:	"Menu"
 )
 
-(Choice.887
+(Choice.888
 	Disabled:	1
 	Invisible:	1
 	Help:	"Deletes the last entered point on the line or polygon being drawn"
@@ -8334,7 +8346,7 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	Shortcut:	"Keys.None"
 )
 
-(Choice.888
+(Choice.889
 	Help:	"Undo the last edit to features in a theme"
 	HelpTopic:	"Undo_Feature_Edit_on_a_view"
 	Update:	"View.UndoEditUpdate"
@@ -8343,7 +8355,7 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	Shortcut:	"Keys.None"
 )
 
-(Choice.889
+(Choice.890
 	Disabled:	1
 	Help:	"Redo the last edit operation on a theme that was undone"
 	Update:	"View.RedoEditUpdate"
@@ -8352,10 +8364,10 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	Shortcut:	"Keys.None"
 )
 
-(Space.890
+(Space.891
 )
 
-(Choice.891
+(Choice.892
 	Help:	"Turns general snapping on"
 	Update:	"View.ToggleGeneralSnapUpdate"
 	Label:	"Enable General Snapping"
@@ -8363,7 +8375,7 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	Shortcut:	"Keys.None"
 )
 
-(Choice.892
+(Choice.893
 	Help:	"Turns interactive snapping on"
 	Update:	"View.ToggleInteractiveSnapUpdate"
 	Label:	"Enable Interactive Snapping"
@@ -8371,7 +8383,7 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	Shortcut:	"Keys.None"
 )
 
-(Choice.893
+(Choice.894
 	Help:	"Turns snap tolerance cursor off"
 	Update:	"View.ToggleTolCursorUpdate"
 	Label:	"Hide Snap Tolerance Cursor"
@@ -8379,10 +8391,10 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	Shortcut:	"Keys.None"
 )
 
-(Space.894
+(Space.895
 )
 
-(Choice.895
+(Choice.896
 	Disabled:	1
 	Invisible:	1
 	Help:	"Snaps the next entered point to the nearest vertex within the user tolerance"
@@ -8392,7 +8404,7 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	Shortcut:	"Keys.None"
 )
 
-(Choice.896
+(Choice.897
 	Disabled:	1
 	Invisible:	1
 	Help:	"Snaps the next entered point to the nearest line segment"
@@ -8402,7 +8414,7 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	Shortcut:	"Keys.None"
 )
 
-(Choice.897
+(Choice.898
 	Disabled:	1
 	Invisible:	1
 	Help:	"Snaps the next entered point to the nearest node common to two or more features"
@@ -8412,7 +8424,7 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	Shortcut:	"Keys.None"
 )
 
-(Choice.898
+(Choice.899
 	Disabled:	1
 	Invisible:	1
 	Help:	"Snaps the next entered point to the nearest endpoint of an existing line"
@@ -8422,10 +8434,10 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	Shortcut:	"Keys.None"
 )
 
-(Space.899
+(Space.900
 )
 
-(Choice.900
+(Choice.901
 	Help:	"Unselects the selected features in all active themes"
 	Update:	"View.AttributeThemesUpdate"
 	Label:	"Clear Selection"
@@ -8433,7 +8445,7 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	Shortcut:	"Keys.None"
 )
 
-(Choice.901
+(Choice.902
 	Help:	"Zooms in at point where you click to bring up popup menu"
 	Update:	"View.HasDataUpdate"
 	Label:	"Zoom In"
@@ -8441,7 +8453,7 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	Shortcut:	"Keys.None"
 )
 
-(Choice.902
+(Choice.903
 	Help:	"Zooms out from point where you click to bring up popup menu"
 	Update:	"View.HasDataUpdate"
 	Label:	"Zoom Out"
@@ -8449,7 +8461,7 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	Shortcut:	"Keys.None"
 )
 
-(Choice.903
+(Choice.904
 	Help:	"Zooms to the extent of the selected features"
 	Update:	"View.SelectableThemesUpdate"
 	Label:	"Zoom to Selected"
@@ -8457,7 +8469,7 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	Shortcut:	"Keys.None"
 )
 
-(Choice.904
+(Choice.905
 	Help:	"Centers display on point where you click to bring up popup"
 	Update:	"View.HasDataUpdate"
 	Label:	"Pan"
@@ -8465,10 +8477,10 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	Shortcut:	"Keys.None"
 )
 
-(Space.905
+(Space.906
 )
 
-(Choice.906
+(Choice.907
 	Help:	"Opens the shape properties window for editing vertex locations"
 	Update:	"ShapeWin.PopUp Update"
 	Label:	"Shape Properties"
@@ -8476,701 +8488,701 @@ alog entfernen\nviewGUI.GetButtonBar.remove(viewGUI.GetButtonBar.findbyscript( \
 	Shortcut:	"Keys.None"
 )
 
-(ToolBar.907
-	Child:	908
-	Child:	910
-	Child:	912
-	Child:	914
-	Child:	916
-	Child:	918
-	Child:	920
-	Child:	922
-	Child:	924
-	Child:	926
-	Child:	928
-	Child:	947
-	Child:	960
-	Child:	979
+(ToolBar.908
+	Child:	909
+	Child:	911
+	Child:	913
+	Child:	915
+	Child:	917
+	Child:	919
+	Child:	921
+	Child:	923
+	Child:	925
+	Child:	927
+	Child:	929
+	Child:	948
+	Child:	961
+	Child:	980
 )
 
-(Tool.908
+(Tool.909
 	Help:	"Identify//Provides information about a feature"
 	HelpTopic:	"Identify_tool"
 	Update:	"View.IdentifyUpdate"
-	Icon:	909
+	Icon:	910
 	Cursor:	"Cursors.ID"
 	Apply:	"View.Identify"
 )
 
-(AVIcon.909
+(AVIcon.910
 	Name:	"ID"
 	Res:	"Icons.ID"
 
 )
 
-(Tool.910
+(Tool.911
 	Help:	"Pointer//Selects, moves, and resizes graphics"
 	HelpTopic:	"Pointer_tool"
 	Update:	"View.HasDataUpdate"
-	Icon:	911
+	Icon:	912
 	Cursor:	"Cursors.Select"
 	Apply:	"View.Select"
 	Click:	"View.SelectTool"
 )
 
-(AVIcon.911
+(AVIcon.912
 	Name:	"Select"
 	Res:	"Icons.Select"
 
 )
 
-(Tool.912
+(Tool.913
 	Disabled:	1
 	Help:	"Vertex Edit//Adds, moves, and deletes vertices of features and graphics"
 	HelpTopic:	"Vertex_Edit_tool"
 	Update:	"View.SelectToEditUpdate"
-	Icon:	913
+	Icon:	914
 	Cursor:	"Cursors.SelectEdit"
 	Apply:	"View.SelectToEdit"
 	Click:	"View.SelectToEditTool"
 )
 
-(AVIcon.913
+(AVIcon.914
 	Name:	"SelectEdit"
 	Res:	"Icons.SelectEdit"
 
 )
 
-(Tool.914
+(Tool.915
 	Help:	"Select Feature//Selects features in the active themes by pointing or dragging"
 	HelpTopic:	"Select_Feature_tool"
 	Update:	"View.SelectableThemesUpdate"
-	Icon:	915
+	Icon:	916
 	Cursor:	"Cursors.Default"
 	Apply:	"View.SelectPoint"
 )
 
-(AVIcon.915
+(AVIcon.916
 	Name:	"FeatureSelect"
 	Res:	"Icons.FeatureSelect"
 
 )
 
-(Tool.916
+(Tool.917
 	Help:	"Zoom In//Zooms in at a point you click or zooms in on a rectangle you drag"
 	HelpTopic:	"Zoom_In_tool"
 	Update:	"View.HasDataUpdate"
-	Icon:	917
+	Icon:	918
 	Cursor:	"Cursors.ZoomIn"
 	Apply:	"View.ZoomInTool"
 )
 
-(AVIcon.917
+(AVIcon.918
 	Name:	"ZoomInTool"
 	Res:	"Icons.ZoomInTool"
 
 )
 
-(Tool.918
+(Tool.919
 	Help:	"Zoom Out//Zooms out from a point you click or zooms out to include a rectangle you drag"
 	HelpTopic:	"Zoom_Out_tool"
 	Update:	"View.HasDataUpdate"
-	Icon:	919
+	Icon:	920
 	Cursor:	"Cursors.ZoomOut"
 	Apply:	"View.ZoomOutTool"
 )
 
-(AVIcon.919
+(AVIcon.920
 	Name:	"ZoomOutTool"
 	Res:	"Icons.ZoomOutTool"
 
 )
 
-(Tool.920
+(Tool.921
 	Help:	"Pan//Drags the display in the direction you move the cursor"
 	HelpTopic:	"Pan_tool"
 	Update:	"View.HasDataUpdate"
-	Icon:	921
+	Icon:	922
 	Cursor:	"Cursors.Pan"
 	Apply:	"View.Pan"
 )
 
-(AVIcon.921
+(AVIcon.922
 	Name:	"Pan"
 	Res:	"Icons.Pan"
 
 )
 
-(Tool.922
+(Tool.923
 	Help:	"Measure//Measures distance"
 	HelpTopic:	"Measure_tool"
 	Update:	"View.HasDataUpdate"
-	Icon:	923
+	Icon:	924
 	Cursor:	"Cursors.Measure"
 	Apply:	"View.Measure"
 )
 
-(AVIcon.923
+(AVIcon.924
 	Name:	"Measure"
 	Res:	"Icons.Measure"
 
 )
 
-(Tool.924
+(Tool.925
 	Disabled:	1
 	Help:	"Hot Link//Follows a hot link in the active themes"
 	HelpTopic:	"Hot_Link_tool"
 	Update:	"View.HotLinkUpdate"
-	Icon:	925
+	Icon:	926
 	Cursor:	"Cursors.Media"
 	Apply:	"View.HotLink"
 )
 
-(AVIcon.925
+(AVIcon.926
 	Name:	"Media"
 	Res:	"Icons.Media"
 
 )
 
-(Tool.926
+(Tool.927
 	Disabled:	1
 	Help:	"Area of Interest//Sets the view's Area Of Interest for library-based themes"
 	HelpTopic:	"Area_Of_Interest_tool"
 	Update:	"View.AOIToolUpdate"
-	Icon:	927
+	Icon:	928
 	Cursor:	"Cursors.Default"
 	Apply:	"View.AOITool"
 )
 
-(AVIcon.927
+(AVIcon.928
 	Name:	"AOI"
 	Res:	"Icons.AOI"
 
 )
 
-(ToolMenu.928
+(ToolMenu.929
 	Disabled:	1
 	Help:	"Label//Labels a feature in the active theme with data from its table"
 	HelpTopic:	"Label_Tool"
 	Update:	"View.LabelToolUpdate"
-	Icon:	929
+	Icon:	930
 	Cursor:	"Cursors.Tag"
 	Apply:	"View.LabelTool"
-	Child:	930
 	Child:	931
-	Child:	933
-	Child:	935
-	Child:	937
-	Child:	939
-	Child:	941
-	Child:	943
-	Child:	945
+	Child:	932
+	Child:	934
+	Child:	936
+	Child:	938
+	Child:	940
+	Child:	942
+	Child:	944
+	Child:	946
 )
 
-(AVIcon.929
+(AVIcon.930
 	Name:	"Tag"
 	Res:	"Icons.Tag"
 
 )
 
-(Tool.930
+(Tool.931
 	Disabled:	1
 	Help:	"Label//Labels a feature in the active theme with data from its table"
 	HelpTopic:	"Label_Tool"
 	Update:	"View.LabelToolUpdate"
-	Icon:	929
+	Icon:	930
 	Cursor:	"Cursors.Tag"
 	Apply:	"View.LabelTool"
 )
 
-(Tool.931
+(Tool.932
 	Disabled:	1
 	Help:	"Callout Label//Click on a feature and drag in the direction you want the label to appear"
 	HelpTopic:	"Label_Tool"
 	Update:	"View.CalloutUpdate"
-	Icon:	932
+	Icon:	933
 	Cursor:	"Cursors.Tag"
 	Apply:	"View.CalloutLabelTool"
 )
 
-(AVIcon.932
+(AVIcon.933
 	Name:	"CallOutLabel1"
 	Res:	"Icons.CallOutLabel1"
 
 )
 
-(Tool.933
+(Tool.934
 	Disabled:	1
 	Help:	"Bullet Leader Label//Click on a feature and drag in the direction you want the label to appear"
 	HelpTopic:	"Label_Tool"
 	Update:	"View.CalloutUpdate"
-	Icon:	934
+	Icon:	935
 	Cursor:	"Cursors.Tag"
 	Apply:	"View.BulletLeaderLabelTool"
 )
 
-(AVIcon.934
+(AVIcon.935
 	Name:	"CallOutLabel2"
 	Res:	"Icons.CallOutLabel2"
 
 )
 
-(Tool.935
+(Tool.936
 	Disabled:	1
 	Help:	"Banner Label//Click on a feature you want to label"
 	HelpTopic:	"Label_Tool"
 	Update:	"View.CalloutUpdate"
-	Icon:	936
+	Icon:	937
 	Cursor:	"Cursors.Tag"
 	Apply:	"View.ShadowBoxLabelTool"
 )
 
-(AVIcon.936
+(AVIcon.937
 	Name:	"CallOutLabel3"
 	Res:	"Icons.CallOutLabel3"
 
 )
 
-(Tool.937
+(Tool.938
 	Disabled:	1
 	Help:	"U.S. Interstate//Click where you want to place a highway shield"
 	HelpTopic:	"Label_Tool"
 	Update:	"View.CalloutUpdate"
-	Icon:	938
+	Icon:	939
 	Cursor:	"Cursors.Tag"
 	Apply:	"View.Highway1 Apply"
 )
 
-(AVIcon.938
+(AVIcon.939
 	Name:	"BW US Interstate"
 	Res:	"Icons.BW US Interstate"
 
 )
 
-(Tool.939
+(Tool.940
 	Disabled:	1
 	Help:	"U.S. Route//Click where you want to place a highway shield"
 	HelpTopic:	"Label_Tool"
 	Update:	"View.CalloutUpdate"
-	Icon:	940
+	Icon:	941
 	Cursor:	"Cursors.Tag"
 	Apply:	"View.Highway2 Apply"
 )
 
-(AVIcon.940
+(AVIcon.941
 	Name:	"USRoute"
 	Res:	"Icons.USRoute"
 
 )
 
-(Tool.941
+(Tool.942
 	Disabled:	1
 	Help:	"Generic State Hwy//Click where you want to place a highway shield"
 	HelpTopic:	"Label_Tool"
 	Update:	"View.CalloutUpdate"
-	Icon:	942
+	Icon:	943
 	Cursor:	"Cursors.Tag"
 	Apply:	"View.Highway3 Apply"
 )
 
-(AVIcon.942
+(AVIcon.943
 	Name:	"GenericStateHighway"
 	Res:	"Icons.GenericStateHighway"
 
 )
 
-(Tool.943
+(Tool.944
 	Disabled:	1
 	Help:	"Generic Square Hwy//Click where you want to place a highway shield"
 	HelpTopic:	"Label_Tool"
 	Update:	"View.CalloutUpdate"
-	Icon:	944
+	Icon:	945
 	Cursor:	"Cursors.Tag"
 	Apply:	"View.Highway4 Apply"
 )
 
-(AVIcon.944
+(AVIcon.945
 	Name:	"GenericHighway1"
 	Res:	"Icons.GenericHighway1"
 
 )
 
-(Tool.945
+(Tool.946
 	Disabled:	1
 	Help:	"Generic Oval Hwy//Click where you want to place a highway shield"
 	Update:	"View.CalloutUpdate"
-	Icon:	946
+	Icon:	947
 	Cursor:	"Cursors.Tag"
 	Apply:	"View.Highway5 Apply"
 )
 
-(AVIcon.946
+(AVIcon.947
 	Name:	"GenericHighway2"
 	Res:	"Icons.GenericHighway2"
 
 )
 
-(ToolMenu.947
+(ToolMenu.948
 	Help:	"Text//Creates text on the display"
 	HelpTopic:	"Text_tool"
 	Update:	"View.TextToolUpdate"
-	Icon:	948
+	Icon:	949
 	Cursor:	"Cursors.Text"
 	Apply:	"View.TextTool"
 	Click:	"SymWin.DisplayFontPanel"
-	Child:	949
 	Child:	950
-	Child:	952
-	Child:	954
-	Child:	956
-	Child:	958
+	Child:	951
+	Child:	953
+	Child:	955
+	Child:	957
+	Child:	959
 )
 
-(AVIcon.948
+(AVIcon.949
 	Name:	"Text"
 	Res:	"Icons.Text"
 
 )
 
-(Tool.949
+(Tool.950
 	Help:	"Text//Creates text on the display"
 	HelpTopic:	"Text_tool"
 	Update:	"View.TextToolUpdate"
-	Icon:	948
+	Icon:	949
 	Cursor:	"Cursors.Text"
 	Apply:	"View.TextTool"
 	Click:	"SymWin.DisplayFontPanel"
 )
 
-(Tool.950
+(Tool.951
 	Help:	"Callout Text//Click and drag to where you want your text to appear, then enter the text"
 	HelpTopic:	"Text_tool"
 	Update:	"View.TextToolUpdate"
-	Icon:	951
+	Icon:	952
 	Cursor:	"Cursors.Bullseye"
 	Apply:	"View.CalloutTextTool"
 )
 
-(AVIcon.951
+(AVIcon.952
 	Name:	"CallOutText1"
 	Res:	"Icons.CallOutText1"
 
 )
 
-(Tool.952
+(Tool.953
 	Help:	"Bullet Leader Text//Click and drag to where you want your text to appear, then enter the text"
 	HelpTopic:	"Text_tool"
 	Update:	"View.TextToolUpdate"
-	Icon:	953
+	Icon:	954
 	Cursor:	"Cursors.Bullseye"
 	Apply:	"View.BulletLeaderTextTool"
 )
 
-(AVIcon.953
+(AVIcon.954
 	Name:	"CallOutText2"
 	Res:	"Icons.CallOutText2"
 
 )
 
-(Tool.954
+(Tool.955
 	Help:	"Banner Text//Click where you want your label to appear and enter your text"
 	HelpTopic:	"Text_tool"
 	Update:	"View.TextToolUpdate"
-	Icon:	955
+	Icon:	956
 	Cursor:	"Cursors.Bullseye"
 	Apply:	"View.ShadowBoxTextTool"
 )
 
-(AVIcon.955
+(AVIcon.956
 	Name:	"CallOutText3"
 	Res:	"Icons.CallOutText3"
 
 )
 
-(Tool.956
+(Tool.957
 	Help:	"Drop-Shadow Text//Click where you want your text to appear and enter your text"
 	HelpTopic:	"Text_tool"
 	Update:	"View.TextToolUpdate"
-	Icon:	957
+	Icon:	958
 	Cursor:	"Cursors.Target"
 	Apply:	"View.CreateDropShadowText"
 )
 
-(AVIcon.957
+(AVIcon.958
 	Name:	"DropShadowText"
 	Res:	"Icons.DropShadowText"
 
 )
 
-(Tool.958
+(Tool.959
 	Help:	"Spline Text//Adds text that is aligned to a splined baseline"
 	HelpTopic:	"Text_tool"
 	Update:	"View.TextToolUpdate"
-	Icon:	959
+	Icon:	960
 	Cursor:	"Cursors.Bullseye"
 	Apply:	"View.SplineText"
 )
 
-(AVIcon.959
+(AVIcon.960
 	Name:	"TextAligned"
 	Res:	"Icons.TextAligned"
 
 )
 
-(ToolMenu.960
+(ToolMenu.961
 	Help:	"Draw Rectangle//Creates a rectangle on the display"
 	HelpTopic:	"Draw_tool"
 	Update:	"View.PolyToolUpdate"
-	Icon:	961
+	Icon:	962
 	Cursor:	"Cursors.CrossHair"
 	Apply:	"View.RectTool"
 	Click:	"SymWin.DisplayFillPanel"
-	Child:	962
-	Child:	964
-	Child:	966
-	Child:	968
+	Child:	963
+	Child:	965
+	Child:	967
 	Child:	969
-	Child:	971
-	Child:	973
-	Child:	975
-	Child:	977
+	Child:	970
+	Child:	972
+	Child:	974
+	Child:	976
+	Child:	978
 )
 
-(AVIcon.961
+(AVIcon.962
 	Name:	"Rect"
 	Res:	"Icons.Rect"
 
 )
 
-(Tool.962
+(Tool.963
 	Help:	"Draw Point//Creates a point on the display"
 	HelpTopic:	"Draw_tool"
 	Update:	"View.PointToolUpdate"
-	Icon:	963
+	Icon:	964
 	Cursor:	"Cursors.CrossHair"
 	Apply:	"View.PointTool"
 	Click:	"SymWin.DisplayMarkerPanel"
 )
 
-(AVIcon.963
+(AVIcon.964
 	Name:	"Point"
 	Res:	"Icons.Point"
 
 )
 
-(Tool.964
+(Tool.965
 	Help:	"Draw Straight Line//Creates a line on the display"
 	HelpTopic:	"Draw_tool"
 	Update:	"View.GraphicToolUpdate"
-	Icon:	965
+	Icon:	966
 	Cursor:	"Cursors.CrossHair"
 	Apply:	"View.LineTool"
 	Click:	"SymWin.DisplayPenPanel"
 )
 
-(AVIcon.965
+(AVIcon.966
 	Name:	"SelectLine"
 	Res:	"Icons.SelectLine"
 
 )
 
-(Tool.966
+(Tool.967
 	Help:	"Draw Line//Creates a line with two or more points on the display"
 	HelpTopic:	"Draw_tool"
 	Update:	"View.PolyLineToolUpdate"
-	Icon:	967
+	Icon:	968
 	Cursor:	"Cursors.CrossHair"
 	Apply:	"View.PolyLineTool"
 	Click:	"SymWin.DisplayPenPanel"
 )
 
-(AVIcon.967
+(AVIcon.968
 	Name:	"Lines"
 	Res:	"Icons.Lines"
 
 )
 
-(Tool.968
+(Tool.969
 	Help:	"Draw Rectangle//Creates a rectangle on the display"
 	HelpTopic:	"Draw_tool"
 	Update:	"View.PolyToolUpdate"
-	Icon:	961
+	Icon:	962
 	Cursor:	"Cursors.CrossHair"
 	Apply:	"View.RectTool"
 	Click:	"SymWin.DisplayFillPanel"
 )
 
-(Tool.969
+(Tool.970
 	Help:	"Draw Circle//Creates a circle on the display"
 	HelpTopic:	"Draw_tool"
 	Update:	"View.PolyToolUpdate"
-	Icon:	970
+	Icon:	971
 	Cursor:	"Cursors.CrossHair"
 	Apply:	"View.CircleTool"
 	Click:	"SymWin.DisplayFillPanel"
 )
 
-(AVIcon.970
+(AVIcon.971
 	Name:	"Disk"
 	Res:	"Icons.Disk"
 
 )
 
-(Tool.971
+(Tool.972
 	Help:	"Draw Polygon//Creates a polygon on the display"
 	HelpTopic:	"Draw_tool"
 	Update:	"View.PolyToolUpdate"
-	Icon:	972
+	Icon:	973
 	Cursor:	"Cursors.CrossHair"
 	Apply:	"View.PolyTool"
 	Click:	"SymWin.DisplayFillPanel"
 )
 
-(AVIcon.972
+(AVIcon.973
 	Name:	"Poly"
 	Res:	"Icons.Poly"
 
 )
 
-(Tool.973
+(Tool.974
 	Disabled:	1
 	Help:	"Draw Line to Split Feature//Creates a line to split line features"
 	HelpTopic:	"Draw_tool"
 	Update:	"View.SplitLineToolUpdate"
-	Icon:	974
+	Icon:	975
 	Cursor:	"Cursors.CrossHair"
 	Apply:	"View.SplitTool"
 )
 
-(AVIcon.974
+(AVIcon.975
 	Name:	"SplitLine"
 	Res:	"Icons.SplitLine"
 
 )
 
-(Tool.975
+(Tool.976
 	Disabled:	1
 	Help:	"Draw Line to Split Polygon//Creates a line to split polygon features"
 	HelpTopic:	"Draw_tool"
 	Update:	"View.SplitPolyToolUpdate"
-	Icon:	976
+	Icon:	977
 	Cursor:	"Cursors.CrossHair"
 	Apply:	"View.SplitTool"
 )
 
-(AVIcon.976
+(AVIcon.977
 	Name:	"SplitPoly"
 	Res:	"Icons.SplitPoly"
 
 )
 
-(Tool.977
+(Tool.978
 	Disabled:	1
 	Help:	"Draw Line to Append Polygon//Appends a new polygon adjacent to other polygons"
 	HelpTopic:	"Draw_tool"
 	Update:	"View.AutoCompleteUpdate"
-	Icon:	978
+	Icon:	979
 	Cursor:	"Cursors.CrossHair"
 	Apply:	"View.AutoCompleteTool"
 )
 
-(AVIcon.978
+(AVIcon.979
 	Name:	"AutoComplete"
 	Res:	"Icons.AutoComplete"
 
 )
 
-(ToolMenu.979
+(ToolMenu.980
 	Disabled:	1
 	Invisible:	1
 	Help:	"Snap//Sets the general snapping tolerance for the editable theme"
 	HelpTopic:	"Snap_tools"
 	Update:	"View.SnapToolUpdate"
-	Icon:	980
+	Icon:	981
 	Cursor:	"Cursors.Default"
 	Apply:	"View.SnapTool"
-	Child:	981
 	Child:	982
+	Child:	983
 )
 
-(AVIcon.980
+(AVIcon.981
 	Name:	"SnapTool"
 	Res:	"Icons.SnapTool"
 
 )
 
-(Tool.981
+(Tool.982
 	Disabled:	1
 	Invisible:	1
 	Help:	"Snap//Sets the general snapping tolerance for the editable theme"
 	HelpTopic:	"Snap_tools"
 	Update:	"View.SnapToolUpdate"
-	Icon:	980
+	Icon:	981
 	Cursor:	"Cursors.Default"
 	Apply:	"View.SnapTool"
 )
 
-(Tool.982
+(Tool.983
 	Disabled:	1
 	Invisible:	1
 	Help:	"Snap//Sets the interactive snapping tolerance for the editable theme"
 	HelpTopic:	"Snap_tools"
 	Update:	"View.InteractiveSnapToolUpdate"
-	Icon:	983
+	Icon:	984
 	Cursor:	"Cursors.Default"
 	Apply:	"View.InteractiveSnapTool"
 )
 
-(AVIcon.983
+(AVIcon.984
 	Name:	"SnapFeatureTool"
 	Res:	"Icons.SnapFeatureTool"
 
 )
 
-(AVIcon.984
+(AVIcon.985
 	Name:	"Icon"
 	Res:	"View.Icon"
 
 )
 
-(FN.1679
+(FN.1682
 	Path:	"z:/home/adrian/av/av_gis30/arcview/projects/editor"
 )
 
-(TClr.1680
+(TClr.1683
 	Red:	0xffff
 	Green:	0xffff
 )
 
-(AVStr.1681
+(AVStr.1684
 	S:	"View"
 )
 
-(AVStr.1682
+(AVStr.1685
 	S:	"Table"
 )
 
-(AVStr.1683
+(AVStr.1686
 	S:	"Chart"
 )
 
-(AVStr.1684
+(AVStr.1687
 	S:	"Layout"
 )
 
-(AVStr.1685
+(AVStr.1688
 	S:	"Script"
 )
 
-(AVStr.1686
+(AVStr.1689
 	S:	"Project"
 )
 
-(AVStr.1687
+(AVStr.1690
 	S:	"Appl"
 )
 
-(AVStr.1688
+(AVStr.1691
 	S:	"DialogEditor"
 )
 

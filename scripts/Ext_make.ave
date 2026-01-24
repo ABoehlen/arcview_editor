@@ -17,7 +17,7 @@ Editor = Extension.Make("$AVHOME\projects\editor\Editor.avx".AsFileName,
 Editor.SetExtVersion(3)
 
 '# Beschreibung (Version jeweils anpassen)
-Editor.SetAbout("Editor-Toolbar (v3.2) ")
+Editor.SetAbout("Editor-Toolbar (v3.3) ")
 Editor.SetUnloadScript(av.FindScript("Ext.Unload"))
 
 '# Schaltflaeche und Dialog hinzufuegen
